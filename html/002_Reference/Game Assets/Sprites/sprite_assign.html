@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_assign</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_assign</h1>
+
+<h2>Assigns one sprite to another sprite index.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_assign(index, sprite);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr>
+	<td>index</td><td>The index of the sprite to be copied to (ie: over-written).</td></tr>
+	
+	<tr>
+	<td class="alt">sprite</td>
+	<td>The sprite to be copied from.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function takes two previously created (or included) sprite indexes, and copies the image from one to the other. In this way you can copy (or "clone") one sprite into another index. Note that <i>you cannot 
+copy to a game resource</i>. You have to have created the sprite to be copied to previously using the <a href="sprite_add.html"><tt>sprite_add</tt></a> or <a href="sprite_duplicate.html"><tt>
+sprite_duplicate</tt></a> functions.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if sprite_exists(global.Player_Sprite)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var t_spr = sprite_add("player.png", 16, true, true, 0, 0);<br>
+&nbsp;&nbsp;&nbsp;sprite_assign(global.Player_Sprite, t_spr);<br>
+&nbsp;&nbsp;&nbsp;sprite_delete(t_spr);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Player_Sprite = sprite_add("player.png", 16, true, true, 0, 0);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the global variable "Player_Sprite" contains a sprite and if it does it uses sprite_assign to change it for one that has been loaded from an external file. If it does not contain a sprite 
+one is loaded and it's index is stored in that variable.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_merge.html">sprite_merge</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_assign
+-->

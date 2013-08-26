@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>fps</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>fps</h1>
+  
+<h2>Returns the frames per second.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">fps</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+In <i>GameMaker:Studio</i> there are two main variables that can be used to tell the speed at which your game runs. the <a href="../Rooms/room_speed.html"><tt>room_speed</tt></a> (as specified in 
+the room editor) and the <tt>fps</tt> (frames per second). These values are often confused, but basically one is the number of game steps that <i>GameMaker:Studio</i> is completing in a second, while the 
+other is the number of cpu steps that GameMaker:Studio is completing in a second, and this value is generally much higher than the room speed, but will drop as your game gets more complex and uses more 
+processing power to maintain the set room speed.
+<br>
+<br>
+
+This <b>read-only</b> variable returns the current fps as an integer value. please note that the function will only update once every step of your game and so may appear to "jump" from one value to another, 
+but this is quite normal.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if debug_mode<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_text(32, 32, "FPS = " + string(fps));<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if the game is in debug mode and if it is it will display the current fps on the screen.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Miscellaneous</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="cursor_sprite.html">cursor_sprite</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+fps
+-->

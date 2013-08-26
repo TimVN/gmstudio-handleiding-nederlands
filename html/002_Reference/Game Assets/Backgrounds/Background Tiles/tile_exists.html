@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_exists</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_exists</h1>
+
+<h2>Checks if a given tile exists in the room.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_exists(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the tile to check for.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check wither the tile indexed exists in the room or not. Please note that if you check for a tile by its id and its id is uninitialised, an error will be thrown.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !tile_exists(tile)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;tile = tile_add(bck_Room1, 0, 0, 32, 32, mouse_x, mouse_y, -1100);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if a tile that was indexed in the variable "tile" still exists in the room, and if it does not it creates a new tile at the mouse position and stores the new index in the variable "tile".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_add.html">tile_add</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_exists
+-->

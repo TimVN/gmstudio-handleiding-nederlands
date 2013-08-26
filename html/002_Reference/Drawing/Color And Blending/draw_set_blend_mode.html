@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_set_blend_mode</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_set_blend_mode</h1>
+
+<h2>Sets the blend mode for drawing.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_set_blend_mode( mode );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>mode</td>
+	<td>The blend mode constant to set to (see the table below).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When <i>GameMaker:Studio</i> goes to draw a pixel there is a source color (the color of the pixel we're going to draw) and a destination color(the color that's already in the pixel we're drawing to), so when 
+determining the new color of the pixel, the source and destination colors are calculated according to the choosen blend mode. Each component of the colors is stored as a floating point value between 0 and 1, 
+and the new color is calculated by multiply each component of the source color by some factor and by multiplying each component of destination color by some other factor and then adding the results together 
+component by component.
+<br>
+<br>
+
+This function permits you to set the blend mode in four basic ways using the following constants:
+<br>
+<br>
+
+<div class="compat">
+<table>
+	<tr><th>Constant</th><th>Description</th><th>Extended Modes</th></tr>
+
+	<tr><td>bm_normal</td><td>Normal blending (the default blend mode).</td><td>(bm_src_alpha, bm_inv_src_alpha)</td></tr>
+	
+	<tr class="alt"><td>bm_add</td><td>Additive blending. Luminosity values of light areas are added.</td><td>(bm_src_alpha, bm_one)</td></tr>
+	
+	<tr><td>bm_subtract</td><td>Subtractive blending. Luminosity values of light areas are subtracted.</td><td>(bm_zero, bm_inv_src_color)</td></tr>
+	
+	<tr class="alt"><td>bm_max</td><td>Max blending. Similar to additive blending.</td><td>(bm_src_alpha, bm_inv_src_color)</td></tr>
+</table>
+</div>
+
+<p>
+<br>
+<br>
+As you can see these modes are really composites of extended blend modes and those can be found on the page describing <a href="draw_set_blend_mode_ext.html"><tt>draw_set_blend_mode_ext</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_blend_mode( bm_add );<br>
+draw_circle_color(100, 100, 50, c_white, c_black, 0);<br>
+draw_set_blend_mode( bm_normal );
+</p>
+<p>
+This will turn the black into transparency, creating a 'glow' effect from the white being strong on the outside and gradually weakening further from the circle centre. The blend mode is reset after the circle 
+is drawn to ensure additive blending is not also applied to everything else after it.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Color And blending</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_set_blend_mode_ext.html">draw_set_blend_mode_ext</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_set_blend_mode
+bm_normal
+bm_add
+bm_subtract
+bm_max
+-->

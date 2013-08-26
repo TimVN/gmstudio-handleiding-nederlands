@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>HTTP Event</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>HTTP Event</h1>
+
+<h2>This is the sub event that will be triggered by any http call-backs received.</h2>
+
+<p>
+The HTTP Event is one that is triggered by the call back from one of the <a href="../../002_Reference/Asynchronous%20Functions/index.html"><tt>http_</tt> functions</a>, like 
+<a href="../../002_Reference/Asynchronous%20Functions/http_post_string.html"><tt>http_post_string</tt></a>. It actually generates a ds_map (more commonly known as a "dictionary") that is exclusive to this event 
+and is stored in the special variable <b>async_load</b> (please see the individual functions for code examples that explain the use of this event in further detail). This ds_map has the following structure :
+<blockquote>
+	<ol>
+		<li><b>"url": </b>The complete URL you requested.</li><br>
+		
+		<li><b>"result": </b>The data received (string only).</li><br>
+		
+		<li><b>"http_status": </b>The raw http status code (if available). This returns the standard web status code for most browsers, eg: 304 for "Not Modified" or 204 for "No Content", etc...</li><br>
+		
+		<li><b>"id": </b>The ID which was returned from the command. If you fire off a series of <tt>http_</tt> requests then you need to know which one you are getting the reply to, and so you would use this 
+		value to compare to the value you stored when you originally sent the request to find the right one.</li><br>
+		
+		<li><b>"status": </b> Returns a value of less than 0 for an error.</li>
+		
+	</ol>
+</blockquote>
+
+<p>
+That is for when you use the <tt>http_post_string()</tt> function, but each of the <tt>http_</tt> functions will return a slightly different map, so please refer to the manual entry for each function to find out 
+the precise data that is returned for it.
+<br>
+<br>
+
+<p>
+<i><b>NOTE : </b>The variable <tt>async_load</tt> is only valid in these events, as the ds_map that is points to is created at the start of the event, then deleted again at the end, with this variable being 
+reset to a value of -1.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>As <tt>async_load</tt> creates a <a href="../../002_Reference/Data%20Structures/DS%20Maps/index.html"><tt>ds_map</tt></a>, these functions are particularly useful when coupled with the 
+<a href="../../002_Reference/File%20Handling/json_encode.html"><tt>json_encode</tt></a> and <a href="../../002_Reference/File%20Handling/json_decode.html"><tt>json_decode</tt></a> functions.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">More About Async Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Dialogs.html">Dialogs Event</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+XSS
+http event
+async_load
+-->

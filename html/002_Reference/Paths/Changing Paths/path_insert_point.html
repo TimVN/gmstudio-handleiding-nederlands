@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_insert_point</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_insert_point</h1>
+  
+<h2>Inserts a point into the given path at a set position.</h2>
+  
+<h3><b>Syntax :</b></h3>
+<p class="code">path_insert_point(index, n, x, y, speed);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to insert the point into.</td></tr>
+	
+	<tr><td>n</td>
+	<td>The defining point to insert the new point BEFORE.</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate (relative to the path) of the new point.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate (relative to the path) of the new point.</td></tr>
+	
+	<tr><td>speed</td>
+	<td>The speed factor of the point.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can insert a new point into a path (the path can have been created in the path editor or through code using <a href="path_add.html"><tt>path_add</tt></a>). The point will be 
+added into the path </i>before</i> the point "n" that is specified in the function.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+path_insert_point(mypath, 0, 50, 50, 100);
+</p>
+<p>
+This will insert a point at the very beginning of the path indexed in the variable "mypath", at (50,50), with a speed factor of 100%.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_delete_point.html">path_delete_point</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_insert_point
+-->

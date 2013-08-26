@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_play_sound</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_play_sound</h1>
+
+<h2>Plays the indicated sound.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_play_sound(index, priority, loop);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sound to play.</td></tr>
+	
+	<tr class="alt"><td>priority</td>
+	<td>Set the channel priority for the sound.</td></tr>
+
+	<tr><td>loop</td>
+	<td>Sets the sound to loop or not.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Index
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can play any sound resource that is not background music (for that use <a href="audio_play_music.html"><tt>audio_play_music</tt></a>). You provide the sound index and asign it a 
+priority, which is then used to determine how sounds are dealt with when the number of sounds playing is over the limit set by the function <a href="audio_channel_num.html">
+<tt>audio_channel_num</tt></a>. Lower priority sounds will be stopped in favour of higher priority sounds, and the priority value can be any real number (the actual value is arbitrary, and can be from 0 
+to 1 or 0 to 100, as <i>GameMaker:Studio</i> will prioritise them the same). The final argument is for making the sound loop and setting it to <tt>true</tt> will make the sound loop until it is stopped 
+and setting it to <tt>false</tt> will play the sound once only.
+<br>
+<br>
+
+This function will also return a unique index number for the sound being played which can then be stored in a variable so that you can then pause it or stop it with the appropriate functions. This means that if 
+you have multiple instances of the same sound playing at any one time you can target just one instance of that sound to deal with using the audio functions.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if health &lt;= 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;lives -= 1;<br>
+&nbsp;&nbsp;&nbsp;audio_play_sound(snd_PlayerDead, 10, false);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the "health" global variable and if it is less than or equal to 0, it will remove 1 from the "lives" global variable and play a sound.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_play_sound_at.html">audio_play_sound_at</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_play_sound
+-->

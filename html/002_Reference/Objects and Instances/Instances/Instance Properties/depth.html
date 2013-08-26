@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>depth</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>depth</h1>
+
+<h2>Sets the depth of the instance.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">depth</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When you create an object you can assign it an initial <i>depth</i> which defines how the instances of that object will be drawn in the room when the game is being played and this variable can be used to 
+get and to change the depth of the instance while the game is running. In <i>GameMaker:Studio</i> a low depth (of negative numbers like -1000) means that the instance will be drawn "closer" to the player 
+and on top of all instances with a lower depth, while a high depth (of positive numbers like 1000) means that the instance will be drawn "further away" from the player and beneath those instances that have 
+a lower depth.
+<br>
+<br>
+
+<img class="center" src="depth_image.png"></img>
+
+<br>
+<br>
+<i><b>NOTE : </b>Instances of an object that have the <b>same</b> depth can be drawn above or below each other even when they appear to be placed one on top of the other in the room editor. If you want 
+to guarantee that something is drawn over or under everything else, you should always set the depth correctly.</i>
+<br>
+<br>
+
+<i><b>WARNING : </b>You <b>cannot</b> set the depth of an instance in it's draw event (all other events are fine). This may lead to some unexpected behaviour and even crash your game!</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+depth = -y;
+</p>
+<p>
+The above code will set the depth of the instance to the negative value of it's y position in the room (this is very handy for isometric games).
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="alarm.html">alarm</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+depth
+-->
+

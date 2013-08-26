@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_get_y</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_get_y</h1>
+
+<h2>Returns the y coordinate of a given path's given position.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">path_get_y(ind, pos);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to check.</td></tr>
+	
+	<tr><td>pos</td>
+	<td>How far through the path to check. Between 0 (start) and 1 (end).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can get the y coordinate of a position on any given path. 0 is the start of the path, 1 is the end of the path, and anything inbetween equates to the normalised distance along the length of 
+the path. This value needn't be a defining point of the path, it can be anywhere on it.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+y = path_get_y( path0, 0.5 );
+</p>
+<p>
+This will set the calling instance's y to the y coordinate of the point at exactly halfway through path0.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Path Information</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="path_get_closed.html">path_get_closed</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_get_y
+-->

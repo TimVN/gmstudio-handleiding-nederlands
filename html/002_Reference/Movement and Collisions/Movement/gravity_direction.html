@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>gravity_direction</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>gravity_direction</h1>
+  
+<h2>The direction of gravity for the instance.</h2>
+  
+<h3> <b>Syntax :</b> </h3>
+<p class="code">gravity_direction;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+All instances in <i>GameMaker:Studio</i> have certain "built in" properties that you can use and set to govern how they look and behave. <tt>Gravity_direction</tt> is one of those properties 
+and can be used to set the direction of movement when the instances <a href="gravity.html"><tt>gravity</tt></a> is greater than 0. Note that directions in <i>GameMaker:Studio</i> 
+are usually calculated as 0° being right, 90° being up, 180° being left and 270° being down.<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if place_meeting(x, y, obj_switch)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;gravity_direction += 180;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will change the gravity_direction if the player object meets an instance of "obj_switch".
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Moving Around</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="hspeed.html">hspeed</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+gravity_direction
+-->

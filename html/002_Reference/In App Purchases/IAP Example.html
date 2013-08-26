@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>IAP Example</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>IAP Example</h1>
+
+<h2>This section gives a simple example of how to setup IAP in your games.</h2>
+
+<p>
+For the purpose of this example, we will use the Android target module as that is the simplest to set up and use, but the general outline given here is more or less the same for iOS (Windows 8 is more 
+complicated. Please see the Windows 8 section of the main <a href="index.html">In App Purchases</a> page). Note that this section deals with client side purchases only... for server side information please 
+refer to the page on <a href="IAP%20Server%20Setup.html">IAP Server Setup</a>.
+<br>
+<br>
+
+<h3>Setting Up The Store</h3>
+<p>
+Since testing your app in real-time is essential for IAP to work correctly, it is recommended that you upload a version of your game to the Google Store as soon as possible for testing. You can even make a 
+specific "test app" as long as you make sure you use the same android package URL as you intend your "real" game to have (ie: com.MacSweeney Games.CatchTheHaggis), or the iaps won't be found by your real 
+app later. The full testing process would go something like this:
+<blockquote>
+	<ol>
+		<li>Go to the <a href="../../001_Advanced%20Use/Global%20game%20settings/Android%20Tab.html">Global Game Settings - Android Tab</a> and take note of your app id (ie: com.MacSweeney Games.CatchTheHaggis) and 
+		have a look at your release version. Note that it automatically increments each time you compile an .apk, so you should be aware that this app id <i>must be the <b>same</b> as</i> (or greater than) 
+		the app id that you publish on google play.</li><br>
+		
+		<li>Now go to the <a href="../../001_Advanced%20Use/Global%20game%20settings/In%20App%20Purchases%20Tab.html">Global Game Settings - In App Purchases Tab</a> and enable in app purchases. You need to put your 
+		Android public key that you get when you register your developer account on google play in the space provided too.</li><br>
+		
+		<li>Upload the *.apk (with In App Purchasing enabled) to the store.</li><br>
+		
+		<li>Give to your IAP a unique <b>iap id</b>. This can be anything, but whatever you decide, try and keep it consistent throughout your apps, as it will make tracking purchases and adding them in later 
+		much simpler.	For example, you can use a simple numeric code for each purchase: 1000, 1001, 1002, 1003 etc...</li><br>
+		
+		<li>Ensure that the billing information for your Google Checkout Account is filled in and has been tested <i>and</i> approved, otherwise you can't proceed to use In App Purchases.
+	<ol>
+</blockquote>
+<p>
+It is worth remembering that you <i>can't test IAP using the YoYo Runner</i>. So you will have to create the final *.apk (using the Create Executable option from the IDE) or, if you wish to test on multiple devices, 
+it is suggested that you use some third party solution (like <a href="https://www.dropbox.com/" target="_blank">DropBox</a>) to compile your .apk file and open it on your test devices via wi-fi.
+<br>
+<br>
+
+There are two basic types of in app purchase: Consumables, and Non-Consumables, with the fundamental difference between the two being that the first one can be bought multiple times, while the second can 
+only be bought once. The following sections explain how to set up each of these types of purchase:
+
+<blockquote>
+	<ol>
+		<li><a href="Consumables.html">Consumables</a><br> 
+		<li><a href="Non-Consumables.html">Non-Consumables</a><br> 
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="IAP%20Testing.html">IAP Testing</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+IAP Example
+purchase example
+-->

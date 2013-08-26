@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_stack_pop</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_stack_pop</h1>
+
+<h2>Pops the value from the top of the stack.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_stack_pop(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the data structure to pop from.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real or String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will <i>pop</i> the top value off of the ds_stack, removing it from the stack and returning the value to be stored in a variable.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !ds_stack_empty(move_stack)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var xx, yy;<br>
+&nbsp;&nbsp;&nbsp;xx = ds_stack_pop(move_stack);<br>
+&nbsp;&nbsp;&nbsp;yy = ds_stack_pop(move_stack);<br>
+&nbsp;&nbsp;&nbsp;move_towards_point(xx, yy, 4);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the ds_stack indexed in the variable "move_stack" to see if it is empty, and if it is not, it then pops the top two values from the stack and uese them to set 
+a direction for movement.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Stacks</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_stack_push.html">ds_stack_push</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_stack_pop
+-->

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Main Actions - Set 2</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>Main Actions - Set 2</h1>
+
+<h2>This section deals with some of the main actions you will use when working with <i>GameMaker:Studio</i>.</h2>
+
+<p>
+The main action sets are full of the most important actions that you will need when working with <i>GameMaker:Studio</i>, and the second set, marked "main2" in the object properties tab, deals with timing, 
+showing information, game control and resource control.
+<br>
+<br>
+
+<h3>Timing</h3>
+<p>
+<img src="../../images/set_alarm.png" align="middle" align="left"><b>Set Alarm</b>
+<br>
+With this action you can set one of the twelve alarm clocks for the instance. 
+You select the number of steps and the alarm clock. After the indicated 
+number of steps, the instance will receive the corresponding alarm event. 
+You can also increase or decrease the value by checking the <b>Relative</b> box.  
+If you set the alarm clock to a value less than or equal to 0 you switch it off, 
+so the event is not generated.
+<br>
+<br>
+
+<i><b>NOTE:</b> An alarm with no actions in it will not run. However, even with just a comment and no code, the alarm will count down.</i>
+<br>
+<br>
+
+<img src="../../images/timeline_set.png" align="middle" align="left"><b>Set Time Line</b>
+<br>
+With this action you set the particular 
+time line for an instance of an object. You indicate the time line and the 
+starting position within the time line (0 is the beginning). Also you indicate
+whether the time line should start immediately and whether it should loop at the end.
+<br>
+<br>
+
+<img src="../../images/timeline_position.png" align="middle" align="left"><b>Time Line Position</b>
+<br>
+With this action you can change the position 
+in the current time line (either absolute or relative). This can be used to skip 
+certain parts of the time line or to repeat certain parts.
+<br>
+<br>
+
+<img src="../../images/timeline_speed.png" align="middle" align="left"><b>Time Line Speed</b>
+<br>
+With this action you can change the speed of the time line (either absolute or relative).
+A speed of 1 is the normal speed. When you e.g. set it to 2 the actions will happen twice
+as fast and when you set it to 0.5 twice as slow. You can also set a negative speed, in which
+case the time line is played backwards.
+<br>
+<br>
+
+<img src="../../images/timeline_start.png" align="middle" align="left"><b>Start Time Line</b>
+<br>
+This action starts the time line from its current position (if it is paused or stopped).
+<br>
+<br>
+
+<img src="../../images/timeline_pause.png" align="middle" align="left"><b>Pause Time Line</b>
+<br>
+This action pauses the time line. Use the start action to let it continue.
+<br>
+<br>
+
+<img src="../../images/timeline_stop.png" align="middle" align="left"><b>Stop Time Line</b>
+<br>
+This action stops the time line and sets the position back to 0.
+<br>
+<br>
+
+<h3>Info</h3>
+<p>
+<img src="../../images/message.png" align="middle" align="left"><b>Display Message</b>
+<br>
+With this action you can display a message in a dialog box. You simply type in 
+the message. If you use a # symbol in the message text it will be interpreted 
+as a new line character. (Use \# to get the # symbol itself.) If the message 
+text starts with a quote or double quote symbol, it is interpreted as an 
+expression. See below for more information about expressions. 
+<br>
+<br>
+
+<p>
+<img src="../../images/Event_URLOpen.png" align="middle" align="left"><b>URL Open</b>
+<br>
+With this action you can tell your game to open a web page. You need to specify the complete URL for this to work.
+<br>
+<br>
+
+<h3>Game</h3>
+<p>
+<img src="../../images/restart_game.png" align="middle" align="left"><b>Restart Game</b>
+<br>
+With this action you restart the game from the beginning.
+<br>
+<br>
+
+<img src="../../images/end_game.png" align="middle" align="left"><b>End Game</b>
+<br>
+With this action you end the game.
+<br>
+<br>
+<i><b>NOTE :</b> If the target module for your game is HTML5, this function will end the game but will not close the tab or browser.</i>
+<br>
+<br>
+<i><b>WARNING :</b> If the target module for your game is iOS or Windows Phone then this action may block your device, and as such it is strongly recommended that you do not use it for that platform except as 
+a dev tool. Your final game will also be rejected if this action is used when submitting to the respectibe app store.</i>
+<br>
+<br>
+
+<img src="../../images/save_game.png" align="middle" align="left"><b>Save Game</b>
+<br>
+With this action you can save the current game status. You specify the 
+filename for saving (the file is created in the working directory for 
+the game). Later the game can be loaded with the next action. (Please
+realize that only the basic game status is save. Things that are for
+example not saved are the current sound that is playing, and advanced
+aspects like the contents of data structures, particles, etc.)
+<br>
+<br>
+
+<img src="../../images/load_game.png" align="middle" align="left"><b>Load Game</b>
+<br>
+Load the game status from a file. You specify the file name. Make sure 
+the saved game is for the same game and created with the same version 
+of <i>GameMaker</i>. Otherwise an error will occur. (To be precise, 
+the game is loaded at the end of the current step. So some actions after 
+this one are still executed in the current game, not the loaded one!)
+<br>
+<br>
+
+<h3>Resources</h3>
+<p>
+<img src="../../images/replace_sprite.png" align="middle" align="left"><b>Replace Sprite</b>
+<br>
+This action can be used to replace a sprite from the contents of a file. 
+You indicate the sprite you want to replace, the filename 
+and the number of subimages in the sprite. 
+Many different images file formats are supported, e.g. .png, .jpg, .tif, and .gif.
+For a gif file the number of subimages is automatically decided based on the 
+number of subimages in the gif file. Other settings for the sprite, e.g. 
+whether it is transparent or not, are not changed. You can use this action 
+to avoid storing all sprites in the program itself. For example, at the beginning of a 
+level you can replace sprites by the actual character sprites you want 
+to use. DON'T change a sprite that is at that moment being used in an instance in 
+the room. This might give unwanted effects with collisions.
+<br>
+<br>
+
+<img src="../../images/replace_sound.png" align="middle" align="left"><b>Replace Sound</b>
+<br>
+With this action you can replace a sound by the contents of a file (.wav, .mid, or .mp3). 
+You specify the sound and the filename. This avoids having to store all the sounds in the 
+game itself. For example, you can use different pieces of background music and pick the 
+one you want to play. DON'T change a sound while it is playing.
+<br>
+<br>
+
+<img src="../../images/replace_background.png" align="middle" align="left"><b>Replace Background</b>
+<br>
+With this action you can replace a background by the contents of a file. 
+Many different images file formats are supported, e.g. .png, .jpg, .tif, and .gif.
+You specify the background and the filename. This avoids having to store all the backgrounds 
+in the game itself. DON'T change a background that is visible.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Actions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="003_Control%20actions.html">Control Actions</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sound actions
+game actions
+alarm clocks
+timing
+-->

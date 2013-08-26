@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>position_destroy</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>position_destroy</h1>
+
+<h2>Destroys all instances that collide with a given position.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">position_destroy(x, y);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of where to destroy colliding instances.</td></tr>
+	
+	<tr class="alt"><td>y</td>
+	<td>The y coordinate of where to destroy colliding instances.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function simply destroys all instances that are found to be in collision with the specified position. Collisions are based on the mask of the instances, and if any part of the mask over-laps with the 
+target point it then the function will destroy that instance.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if mouse_check_button_pressed(mb_left)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;position_destroy(mouse_x, mouse_y);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+This will destroy all instances that collide with the position of the mouse cursor when the left mouse button is pressed.
+</p>
+  
+<<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Collision Checking</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="collision_circle.html">collision_circle</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+position_destroy
+-->

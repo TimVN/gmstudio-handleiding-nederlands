@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_set_alpha_test_ref_value</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_set_alpha_test_ref_value</h1>
+
+<h2>Sets the reference value used by the alpha testing.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_set_alpha_test_ref_value(value);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>value</td>
+	<td>Sets the reference value for alpha testing from 0 to 255 (default value is 0)</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will set the reference value for the alpha testing (when it has been enabled using the <a href="draw_set_alpha_test.html"><tt>draw_set_alpha_test</tt></a>). This is the "cut-off" threshold 
+at which pixels with alpha will not be drawn.
+<br>
+<br>
+
+Basically, if you have this value set to 0 and you have <a href="../texture_set_interpolation.html">texture interpolation</a> turned on, you can still get visual errors at the edges of overlapping objects. This 
+is because you can have <i>almost</i> completely transparent areas that block things drawn behind them, but if you set this reference value to, for example, 254 (i.e. one below maximum), this guarantees that 
+only 100% opaque pixels are going to be drawn. You can also turn texture interpolation off, which would normally allow you to use the default values with no problems and no need to use this function at all, 
+however a lot depends on the source artwork.
+<br>
+<br>
+
+<i><b>NOTE: </b>This is an advanced drawing feature, so if you are not sure whether you need it or not, or don't know exactly what it does, you are probably better off not using it as it can seriously corrupt 
+how your game is drawn.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_alpha_test(true);<br>
+draw_set_alpha_test_ref_value(128);<br>
+<p>
+The above code will switch on alpha testing and set the test threshold to 128 (only pixels with an alpha over 0.5 will be drawn).
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_get_alpha_test.html">draw_get_alpha_test</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_set_alpha_test_ref_value
+-->

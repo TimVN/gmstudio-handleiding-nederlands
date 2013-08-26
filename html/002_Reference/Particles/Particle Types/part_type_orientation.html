@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_type_orientation</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_type_orientation</h1>
+
+<h2>
+Sets the angle of the particle type.
+</h2>
+<p><br></p>
+
+<h3>Syntax :</h3>
+<p class="code">part_type_orientation( ind, ang_min, ang_max, ang_incr, ang_wiggle, ang_relative );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the particle type to change.</td></tr>
+	
+	<tr><td>ang_min</td>
+	<td>The minimum starting angle of the particles.</td></tr>
+	
+	<tr><td>ang_max</td>
+	<td>The maximum starting angle of the particles.</td></tr>
+	
+	<tr><td>ang_incr</td>
+	<td>The increase (or decrease if set negative) of the angle in degrees per step.</td></tr>
+	
+	<tr><td>ang_wiggle</td>
+	<td>The amount the angle wiggles clockwise/counterclockwise per step.</td></tr>
+	
+	<tr><td>ang_repative</td>
+	<td>Whether to set its angle relative to the direction of the particle's motion (true) or not (false).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is used to determine the orientacion of the particle sprite when it is created and can also be used to make the particle orientacion increase or decrease over it's lifetime. The minimum 
+and maximum orientation values default at 0 but these values can be changed to randomise the orientation following the standard <i>GameMaker:Studio</i> directions of 0� being right, 90� being 
+up, 180� being left and 270� being down. If you set them to the same value the particles will all be created with the same orientation.
+<br>
+<br>
+
+You can also set an increment value which will add (if a positive number) or subtract (if a negative number) an amount of degrees to the orientation over its lifetime. This value can be a 
+minimum of (+/-) 0.01.
+<br>
+<br>
+
+You can set the "wiggle" factor too, the same as other particle functions. This is a value that will be added or subtracted randomly to the orientation each step of the particles lifetime. Obviously
+larger values are more pronounced than smaller ones, and this value can even be a negative with the maximum range being between -20 and 20.
+<br>
+<br>
+
+Finally, you can choose to have the orientation relative or not, which means that while the particle has a direction (and speed) the particle sprite will be orientated around that vector. Bear in mind 
+that if you have the particle speed set to reduce and it reaches 0, the lack of speed sets the direction to the default value of 0� and so a relative orientation will cause the particle sprite to "jump" 
+to a different angle.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+part_type_shape(particle2, pt_shape_spark);<br>
+part_type_size(particle2, 0.10, 0.50, 0.01, 0);<br>
+part_type_scale(particle2, 0.30, 0.30);<br>
+part_type_color1(particle2, 8454143);<br>
+part_type_alpha1(particle2, 0.50);<br>
+part_type_speed(particle2, 4, 4, -0.07, 1);<br>
+part_type_direction(particle2, 0, 359, 0, 20);<br>
+part_type_orientation(particle2, 0, 359, 0, 20, 1);<br>
+part_type_blend(particle2, 1);<br>
+part_type_life(particle2, 1, 5);<br>
+</p>
+<p>
+The above code will set various particle values including the orientation which will be random value between 0� and 359�. It will also have a random amount added to it of anywhere between 0 
+and 20 each step too, and the orientation is relative to the direction of motion.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Types</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_type_color_hsv.html">part_type_color_hsv</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_type_orientation
+-->

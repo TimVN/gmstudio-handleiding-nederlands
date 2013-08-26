@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>gamepad_axis_value</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>gamepad_axis_value</h1>
+
+<h2>Returns a value based on the current axis position.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">gamepad_axis_value(device, axisIndex);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>device</td>
+	<td>Which gamepad device "slot" to check.</td></tr>
+	
+	<tr class = "alt"><td>axisIndex</td>
+	<td>The axis index to check (see the <a href="index.html">constants list</a>).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to get the value of the different axes from a given gamepad. The return value will be between -1 and 1 for each of the available horizontal and vertical axes (the constants used by 
+this function can be found listed <a href="index.html">here</a>).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+direction = point_direction(0, 0, gamepad_axis_value(0, gp_axislh), gamepad_axis_value(0, gp_axislv));<br>
+hspeed = lengthdir_x(gamepad_axis_value(0, gp_axislh), direction) * 5;<br>
+vspeed = lengthdir_y(gamepad_axis_value(0, gp_axislv), direction) * 5;<br>
+</p>
+<p>
+The above code sets the speed and direction of the instance based on the returned values of the left analogue controller of the gamepad plugged into device "slot" 0.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GamePad Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="gamepad_button_check.html">gamepad_button_check</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+gamepad_axis_value
+-->

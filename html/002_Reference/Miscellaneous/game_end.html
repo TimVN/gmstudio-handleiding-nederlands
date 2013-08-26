@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>game_end</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href=".././style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>game_end</h1>
+
+<h2>Closes the game.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">game_end();</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns:</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can end the game (and the <a href="../../000_Using%20GameMaker/Events/other%20Event.html">Game End Event</a> will be triggered). Please note that this function has the following restrictions:
+<blockquote>
+	<ul>
+		<li>It will report an error on the Windows 8 and iOS modules as it is against the conditions of their respective Marketplaces.
+		<li>It will silently fail on the HTML5 module.
+		<li>It will work on Windows (including Steam Workshop), Windows Phone, Android, Linux and Mac.
+	</ul>
+</blockquote>
+<p>
+
+<p>
+<br>
+</p>
+
+<h3> <b>Example :</b> </h3>
+<p class="code">
+if keyboard_check_pressed(vk_escape) game_end();
+</p>
+<p>
+This would end the game if the player presses the "escape" key.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Miscellaneous</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="game_restart.html">game_restart</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+game_end
+-->

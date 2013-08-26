@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>filename_change_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>filename_change_ext</h1>
+  
+<h2>Returns the indicated file name, changing the extension to a new one.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">filename_change_ext(fname, newext);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>fname</td>
+	<td>The file to use.</td></tr>
+
+	<tr class="alt"><td>newext</td>
+	<td>The new extension to use.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+<p>
+This function returns the indicated file name with the extension (including the dot) changed to the new extension. By using an empty string as the new extension you can remove the extension part all together.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ext = filename_change_ext(file_find_first(working_directory + "\*.*", 0), "");<br>
+</p>
+<p>
+The above code gets the name of the file (as a string) with the extension part removed.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File System Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="file_exists.html">file_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+filename_change_ext
+-->

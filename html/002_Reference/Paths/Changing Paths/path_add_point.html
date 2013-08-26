@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_add_point</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_add_point</h1>
+
+<h2>Adds a point to the given path.</h2>
+  
+<h3><b>Syntax :</b></h3>
+ <p class="code">path_add_point(index, x, y, speed);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to add the point to.</td></tr>
+	
+	<tr><td>x</td>
+	<td> The x coordinate of the new point.</td></tr>
+	
+	<tr><td>y</td>
+	<td> The y coordinate of the new point.</td></tr>
+	
+	<tr><td>speed</td>
+	<td>The speed factor of the point (default value is 100).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can adda point to the specified path and set its speed factor. This point is added onto the end of the path, irrespective of the position of the point, and the factor is 
+equal to the percentage of <a href="../path_speed.html"><tt>path_speed</tt></a> that the following instance actually goes at when it reaches this point in the path. If you wish to place a 
+path point at some other position that is not the end, you should use <a href="path_insert_point.html"><tt>path_insert_point</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+path = path_add();<br>
+var i;<br>
+i = 0;<br>
+repeat(10)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;path_add_point(path0, x + lengthdir_x(50, i), y+ lengthdir(50, i), 100);<br>
+&nbsp;&nbsp;&nbsp;i += 36;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will create a circular path around the x/y position of the instance running the code.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_change_point.html">path_change_point</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_add_point
+-->

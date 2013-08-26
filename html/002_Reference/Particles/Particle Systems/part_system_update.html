@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_system_update</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_system_update</h1>
+
+<h2>Updates the positions of the particles in a given system.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_system_update(ind);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the particle system to update.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will advance the given particle system one step in game time and can be used to simulate the particle system behaviour when automatic updating is off, or it can be used to advance 
+a particle system to a specifi point all in one step. For example, if you have a particle system for snow, and you want it to appear that the snow is falling right from the moment the player enters 
+the room then you may wish to advance your snow particles for a few seconds in the create event of an instance so that the first time they are drawn, there are particles all over the screen (the 
+code example below shows this). You can also use this function when automatic updating of the system is switched off by the function <a href="part_system_automatic_update.html"><tt>
+part_system_automatic_update</tt></a> to move the sytem along.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+repeat (room_speed * 3)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;part_system_update(global.RainSys);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will advance the particle system indexed in the global variable "RainSys" by 3 seconds.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Systems</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_system_drawit.html">part_system_drawit</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_system_update
+-->

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>file_text_open_from_string</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>file_text_open_from_string</h1>
+
+<h2>Creates a temporary text file from a string for reading.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">file_text_open_from_string(string);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>string</td>
+		<td>The string to create the file from.</td></tr>
+
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will create a text file from a string and open it for reading, returning the file "handle" that should be used in all further file function calls to read from this file. Note that this file is temporary 
+and <i>read only</i>, and as such it will be removed from memory the moment it is closed.
+<br>
+<br>
+
+<br>
+<i><b>NOTE : </b>You can only have a maximum of 32 files open at any one time. You should also <b>always</b> close files when finished as this frees the memory associated with the file.</i>
+<br>
+<br>
+
+<i><b>WARNING!</b> This function may not work as you expect due to GameMaker:Studio being sandboxed! Please see the section on <a href="../File%20System%20Limits.html">File System Limits</a> 
+for more information.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+file = file_text_open_from_string(reset_str);
+</p>
+<p>
+The above code takes the string stored in the variable "reset_str" and uses it to create a read-only text file. The "handle" for this file is then stored in the variable "file" for all further file functions to use.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Text Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="file_text_read_real.html">file_text_read_real</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!--KEYWORDS
+file_text_open_from_string
+-->

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_set_precision</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+  <h1>path_set_precision</h1>
+  
+<h2>Sets the precision of the given path.</h2>
+  
+<h3><b>Syntax :</b></h3>
+<p class="code">path_set_precision(index, prec);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to change.</td></tr>
+	
+	<tr><td>prec</td>
+	<td>The precision of the path. Must be an integer between 1 and 8.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can change the "smoothness" of a path. This value must be between 1 and 8, with a low value creating straighter edges with sharper curves between points, while a higher 
+value will round the points and make the path a lot more "curvey". Note that this function will have no visible effect if the path has not been set to smooth in the path editor or using the function 
+<a href="path_set_kind.html"><tt>path_set_kind</tt></a>. This function changes the actual path resource, and so will permanently affect how the path is used by all instances in the game 
+from the moment the function is used until the end of the game.
+<br>
+<br>
+
+<img class="center" src="setprecision.png"></img>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+path_set_precision(path0, 2);
+</p>
+<p>
+This will set path0's precision to 2.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_shift.html">path_shift</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_set_precision
+-->

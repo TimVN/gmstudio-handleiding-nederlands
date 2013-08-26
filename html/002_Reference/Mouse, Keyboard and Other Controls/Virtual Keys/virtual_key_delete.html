@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>virtual_key_delete</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>virtual_key_delete</h1>
+  
+<h2>
+Hides a given created virtual key previously shown on the screen of the device.
+</h2>
+<p>
+  
+<h3>Syntax :</h3>
+<p class="code">virtual_key_delete(index);</p>
+<p>
+<br>
+</p>
+ 
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the virtual key to delete.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+If your game has different rooms or instances to control menus and gameplay and other things, then it is probable that you will need to change the position and key maps of your virtual keys at some point.
+For that you can use this function to delete the old ones before creating the new ones (if necessary). Note, however, that the virtual keys will be automatically removed from the room at it's end, so this 
+function is only necessary when you wish to manually remove the keys before the room itself has finished.
+<br>
+<br>
+
+<p>
+<br>
+</p>  
+
+<p>
+<h3>Example :</h3>
+<p class="code">
+virtual_key_delete(global.Left);
+</p>
+
+<p>
+The above code deletes the virtual key indexed in the global variable "global.Left".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Virtual Keys</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="virtual_key_add.html">virtual_key_add</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+virtual_key_delete
+-->

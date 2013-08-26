@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_get_alpha</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_get_alpha</h1>
+
+<h2>Gets the current draw alpha value.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_get_alpha()</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns the current value of the draw alpha, which will range between 0 (fully transparent) and 1 (fully opaque). The draw alpha affects the transparency of all draw functions, and can 
+be set with the <a href="draw_set_alpha.html"><tt>draw_set_alpha</tt></a> function.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if draw_get_alpha() != 1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_set_alpha(1);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code first checks the current draw alpha and then if it is not set to 1 it sets it to 1.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Color And Blending</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_get_color.html">draw_get_color</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_get_alpha
+-->

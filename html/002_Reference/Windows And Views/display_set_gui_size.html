@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>display_set_gui_size</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>display_set_gui_size</h1>
+  
+<h2>Scales the GUI to the given width or height.</h2>
+  
+<h3> <b>Syntax :</b> </h3>
+<p class="code">display_set_gui_size(width, height);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>width</td>
+	<td>The width of the GUI.</td></tr>
+	
+	<tr class="alt"><td>height</td>
+	<td>The height of the GUI.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b>N/A
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3> <b>Description</b></h3>
+<p>
+This function will only affect things drawn in the <a href="../../000_Using%20GameMaker/Events/Draw%20GUI%20Event.html">Draw GUI Event</a> and can be used to set a specific width and height for all GUI 
+components in that event, and no matter what size of display or window is used to display the GUI, it will be scaled to fit correctly. Should you wish to use the default (1:1) values for the screen size, you 
+can set the width and height to -1.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+display_set_gui_size(768, 1024);
+</p>
+<p>
+The above code will lock the draw GUI event to the given width and height, scaling all components to fit the device or target display using that proportion.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows and Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="display_get_gui_width.html">display_get_gui_width</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+display_set_gui_size
+-->

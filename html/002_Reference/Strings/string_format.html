@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>string_format</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>string_format</h1>
+  
+<h2>Turns a real number into a string using your own formatting.</h2>
+
+<h3><b>Syntax :</b></h3>
+<p class="code">string_format(val, tot, dec);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>val</td>
+	<td>The real number to be turned into a string.</td></tr>
+	
+	<tr class="alt"><td>tot</td>
+	<td>The total number of places of the main number to be shown. Zeroes or spaces will be inserted to match this.</td></tr>
+	
+	<tr><td>dec</td>
+	<td>The number of decimal places to be included.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>String</p>
+  
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Turns a real number into a string using your own formatting, where you can choose how many "places" are saved to the string and how many decimal places are saved also. Both can be very handy, some games 
+prefer to display a score as a set number of digits, while control over decimal places can be good for a high accuracy the two decimal places of <tt>string()</tt> cannot provide. If the number of places specified is 
+greater than the value to be shown and/or the number plus the decimal places that have been specified is less than the total places, then spaces will be added before the value to make up the difference (see the 
+example below).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+str1 = string_format(1234, 8, 0);<br>
+str2 = string_format(pi, 1, 10);<br>
+str3 = string_format(pi, 5, 5);<br>
+</p>
+<p>
+This will set str1 to "&nbsp;&nbsp;&nbsp;&nbsp;1234", str2 to "3.1415926535" and str3 to "&nbsp;&nbsp;&nbsp;&nbsp;3.14159".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Strings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="string_insert.html">string_insert</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+string_format
+-->

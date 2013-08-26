@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_emitter_create</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_emitter_create</h1>
+
+<h2>Create a new audio emitter.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_emitter_create();</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function creates a new audio emitter and returns the index for it. This index should be stored in a variable for all further functions that relate to this emitter, and then when it is no longer needed it 
+should be removed from memory using the function <a href="audio_emitter_free.html"><tt>audio_emitter_free</tt></a> to prevent memory leaks which may eventually crash your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+s_emit = audio_emitter_create();<br>
+</p>
+<p>
+The above code creates a new audio emitter and asigns its index to the variable "s_emit".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_emitter_exists.html">audio_emitter_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_emitter_create
+-->

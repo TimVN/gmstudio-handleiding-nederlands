@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>facebook_init</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>facebook_init</h1>
+  
+<h2>This code initialises Facebook.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">facebook_init(appKey)</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Before using any of the Facebook functions you <i>must</i> call this function to initialise the Facebook API and tell <i>GameMaker:Studio</i> that you are going to be using the Facebook 
+specific functions. This should be done <i>only once</i> in the game and can be done at any time, but it is recommended that you call this function right at the start before anything else. 
+Note too, that even if you use <a href="facebook_logout.html"><tt>facebook_logout</tt></a> at some point in your game you will not need to use this function again to log in. 
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3> <b>Example :</b> </h3>
+<p class="code">
+facebook_init();<br>
+permissions = ds_list_create();<br>
+ds_list_add(permissions,"publish_stream");<br>
+facebook_login(permissions);<br>
+</p>
+<p>
+The above code initialises Facebook, then creates a ds_list to hold the specific permissions that you wish to request, and finally logs in using these permissions.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Facebook</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="facebook_login.html">facebook_login</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+facebook_init
+-->

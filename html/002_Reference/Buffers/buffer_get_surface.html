@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>buffer_get_surface</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>buffer_get_surface</h1>
+  
+<h2>Copy one buffer (or part of) to another.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">buffer_get_surface(index, surface, mode, offset, modulo);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the buffer to use.</td></tr>
+	
+	<tr class="alt"><td>surface</td>
+	<td>The index of the surface to use.</td></tr>
+	
+	<tr><td>mode</td>
+	<td>The data to get from the surface (see the list of constants below).</td></tr>
+	
+	<tr class="alt"><td>offset</td>
+	<td>The data offset value.</td></tr>
+
+	<tr><td>modulo</td>
+	<td></td></tr>
+			
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can write the information from a surface to a given buffer. Both the surface and the buffer must have been created previously. You can choose the copy "mode" for the data being stored 
+which is set by the constants listed below, as well as the offset and modulo values.
+<br>
+<br>
+
+<div class="compat">
+	<table>
+		<tr><th>Constant</th><th>Description</th></tr>
+		<tr><td>buffer_surface_copy</td><td>Copies all data from the surface.</td></tr>
+		<tr class="alt"><td>buffer_surface_grayscale</td><td>Only copies the saturation values from the surface.</td></tr>
+		<tr><td>buffer_surface_mask</td><td></td></tr>
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+buffer_get_surface(buff, screen_surf, buffer_surface_copy, 0, 0);
+</p>
+<p>
+The above code will copy the data stored in the surface indexed in the variable "screen_surf" to the buffer indexed in the variable "buff" with no offset.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Buffers</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="buffer_get_size.html">buffer_get_size</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+buffer_get_surface
+buffer_surface_copy
+buffer_surface_grayscale
+buffer_surface_mask
+--> 

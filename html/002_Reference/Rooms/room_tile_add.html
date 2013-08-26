@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_tile_add</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_tile_add</h1>
+
+<h2>Add a new tile to a room and return its index.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_tile_add(ind, back, left, top, width, height, x, y, depth);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the room to add the tile to.</td></tr>
+	
+	<tr class="alt"><td>back</td>
+	<td>The background from which the tile is taken.</td></tr>
+	
+	<tr><td>left</td>
+	<td>The x coordinate of the left side of the tile relative to the background.</td></tr>
+	
+	<tr class="alt"><td>top</td>
+	<td>The y coordinate of the top side of the tile relative to the background.</td></tr>
+	
+	<tr><td>width</td>
+	<td>The width of the tile.</td></tr>
+	
+	<tr class="alt"><td>height</td>
+	<td>The height of the tile.</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of where to place the tile.</td></tr>
+	
+	<tr class="alt"><td>y</td>
+	<td>The y coordinate of where to place the tile.</td></tr>
+	
+	<tr><td>depth</td>
+	<td>The depth of the tile in the room.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can add a tile to any room from any background. You specify the position within the background to get the tile from and the position within the room as well as the depth that 
+the tile should have. The function returns a unique id number for that tile that you can use for further tile functions.
+<br>
+<br>
+
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+global.rm = room_add();<br>
+room_assign(rm_Base, global.rm);<br>
+room_tile_add(global.rm, tl_grass, 0, 0, 256, 32, 0, 400, 10000);<br>
+</p>
+<p>
+The above code will add a new room to the game and then copy the contents of the room indexed as "rm_Base" into it. It will then add a tile into the room taken from the background indexed as "tl_grass".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_tile_add_ext.html">room_tile_add_ext</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_tile_add
+-->

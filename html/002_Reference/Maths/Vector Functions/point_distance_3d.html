@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>point_distance_3d</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>point_distance_3d</h1>
+  
+<h2>Returns the length of a vector comprised of the specified components.</h2>
+  
+<h3> <b>Syntax:</b></h3>
+<p class="code">point_distance_3d(x1, y1, z1, x2, y2, z2);</p>
+  
+<p>
+<br>
+</p>
+ 
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x1</td>
+	<td>The x coordinate of the first component of the vector</td></tr>
+	
+	<tr  class="alt"><td>y1</td>
+	<td>The y coordinate of the first component of the vector</td></tr>
+	
+	<tr><td>z1</td>
+	<td>The z coordinate of the first component of the vector</td></tr>
+	
+	<tr class="alt"><td>x2</td>
+	<td>The x coordinate of the second component of the vector</td></tr>
+	
+	<tr><td>y2</td>
+	<td>The y coordinate of the second component of the vector</td></tr>
+	
+	<tr class="alt"><td>z2</td>
+	<td>The z coordinate of the second component of the vector</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Real</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function takes the supplied components of the vector and returns the length (distance) of the vector. It works in exactly the same way as <tt>point_distance()</tt> but with the addition of factoring in 
+the z value (depth) for use in 3D space.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<h3>Example :</h3>
+<p class="code">
+var inst, ex, ey, ez;<br>
+inst = instance_nearest(x, y, enemy);<br>
+if inst<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;ex = inst.x;<br>
+&nbsp;&nbsp;&nbsp;ey = inst.y;<br>
+&nbsp;&nbsp;&nbsp;ez = inst.z;<br>
+&nbsp;&nbsp;&nbsp;if point_distance_3d(x, y, z, ex, ey, ez) < 200<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance_create(x, y, obj_Missile)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will get the x and y and z coordinates of the nearest enemy and then use them to check the distance (length) of the vector formed by them and the player coordinates. If the value is less than 200, the 
+player object will create an instance of "obj_Missile".<br>
+<br>
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<p>
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Vector Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="dot_product.html">dot_product</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+point_distance_3d
+-->

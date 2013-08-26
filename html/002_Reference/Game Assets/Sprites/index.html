@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Sprites</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Sprites</h1>
+
+<h2>This section deals with the functions relating to sprite assets.</h2>
+
+<p>
+Sprites are generally the visual representations of objects within the game you are creating, although they can be used for many other purposes. A sprite is either a single image, drawn with any drawing 
+program you like, or a set of images that, when played one after another, looks like a looping animation. <i>GameMaker:Studio</i> has a number of functions that can be used for getting information 
+about specific sprites, or for changing those that are in your game, or even for loading into an application your own sprites from a source image file.
+<br>
+<br>
+
+<h3>Sprite Information</h3>
+
+<p>
+The following functions can be used to get information about a sprite asset. Please note that these functions get the information from the <i>base</i> sprite (ie. the sprite asset) and not from the sprite as 
+it is being used in an instance. For example, you can use <i>instance variable</i> <a href="../../Objects%20and%20Instances/Instances/Instance%20Properties/sprite_width.html"><tt>sprite_width</tt></a> to get 
+the width of the sprite that an instance is using and this width will take into account any scaling that may have been applied. However, if you need to know the width of a sprite as it would be normally, with 
+no transforms applied, you would need to use the <tt>sprite_get_width()</tt> function below. For more information on the sprite instance variables see the section on 
+<a href="../../Objects%20and%20Instances/Instances/Instance%20Properties/index.html">Instance Properties</a>.
+<blockquote>
+<ol>
+	<li><a href="sprite_get_name.html">sprite_get_name</a>
+	<li><a href="sprite_get_number.html">sprite_get_number</a>
+	<li><a href="sprite_get_width.html">sprite_get_width</a>
+	<li><a href="sprite_get_height.html">sprite_get_height</a>
+	<li><a href="sprite_get_xoffset.html">sprite_get_xoffset</a>
+	<li><a href="sprite_get_yoffset.html">sprite_get_yoffset</a>
+	<li><a href="sprite_get_bbox_bottom.html">sprite_get_bbox_bottom</a>
+	<li><a href="sprite_get_bbox_left.html">sprite_get_bbox_left</a>
+	<li><a href="sprite_get_bbox_right.html">sprite_get_bbox_right</a>
+	<li><a href="sprite_get_bbox_top.html">sprite_get_bbox_top</a>
+	<li><a href="sprite_get_tpe.html">sprite_get_tpe</a>
+	<li><a href="sprite_get_texture.html">sprite_get_texture</a>
+</ol>
+</blockquote>
+
+<h3>Sprite Manipulation</h3>
+
+<p>
+The functions below are all related to changing the sprite asset (resource) itself. This means that the majority of these functions will affect <i>all instances</i> that reference the sprite being changed, it also 
+means that you must take great care to ensure that a sprite exists before referencing it, or to make sure it is not being referenced before changing it.
+<blockquote>
+<ol>
+	<li><a href="sprite_exists.html">sprite_exists</a>
+	<li><a href="sprite_add.html">sprite_add</a>
+	<li><a href="sprite_replace.html">sprite_replace</a>
+	<li><a href="sprite_duplicate.html">sprite_duplicate</a>
+	<li><a href="sprite_assign.html">sprite_assign</a>
+	<li><a href="sprite_merge.html">sprite_merge</a>
+	<li><a href="sprite_create_from_screen.html">sprite_create_from_screen</a>
+	<li><a href="sprite_add_from_screen.html">sprite_add_from_screen</a>
+	<li><a href="sprite_create_from_surface.html">sprite_create_from_surface</a>
+	<li><a href="sprite_add_from_surface.html">sprite_add_from_surface</a>
+	<li><a href="sprite_collision_mask.html">sprite_collision_mask</a>
+	<li><a href="sprite_set_offset.html">sprite_set_offset</a>
+	<li><a href="sprite_delete.html">sprite_delete</a>
+	<li><a href="sprite_set_alpha_from_sprite.html">sprite_set_alpha_from_sprite</a>
+ 	<li><a href="sprite_set_cache_size.html">sprite_set_cache_size</a>
+ 	<li><a href="sprite_set_cache_size_ext.html">sprite_set_cache_size_ext</a>
+ 	<li><a href="sprite_save.html">sprite_save</a>
+ 	<li><a href="sprite_save_strip.html">sprite_save_strip</a>	
+</ol>
+</blockquote>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Game Assets</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../index.html"></a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite information
+sprite manipulation
+--> 

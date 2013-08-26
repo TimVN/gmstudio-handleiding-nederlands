@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_type_alpha2</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_type_alpha2</h1>
+
+<h2>Sets a particle type to start at one alpha value and fade to another throughout its lifespan.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_type_alpha2(ind, alpha1, alpha2);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the particle type to change.</td></tr>
+	
+	<tr><td>alpha1</td>
+	<td>The start alpha of the particle.</td></tr>
+	
+	<tr><td>alpha2</td>
+	<td>The end alpha of the particle.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to set an alpha value (transparency) gradient for each particle created of the given type. The first alpha is that which all particles will start with, and the second alpha 
+is the one on with which the particle will end with, and a smooth gradient change will occur to the alpha over the particles lifetime from one to the other. This can be from 0 (transparent) to 1 (opaque).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+part_type_alpha2(global.Snow_Part, 0, 1);
+</p>
+<p>
+The above code will set all particles created of the particle type indexed in the global variable "Snow_Part" to have an alpha value of 0 (transaparent) and then fade in to have an alpha of 1 (opaque) 
+at the end of their lifetime.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Types</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_type_alpha3.html">part_type_alpha3</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_type_alpha2
+-->

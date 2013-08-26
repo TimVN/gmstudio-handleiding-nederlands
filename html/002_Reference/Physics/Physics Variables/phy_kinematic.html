@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>phy_kinematic</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>phy_kinematic</h1>
+  
+<h2>Returns whether the instance is a kinematic body or not.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">phy_kinematic;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read-only</b> variable will return <tt>true</tt> if the instance is classed as being a kinematic object, or <tt>false</tt> if it is not. A kinematic instance is one that has infinite mass (a density of 0) 
+but can move. So, to make an instance kinematic, you would first create a static instance and then set one or more of the instance variables related to movement (ie: <a href="phy_speed_x.html"><tt>
+phy_speed_x</tt></a>).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !phy_kinematic<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;phy_speed_x = 5;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the instance is kinematic and if it is not, it sets the horizontal speed to 5.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Physics Variables</a>
+	</div>
+	<div style="float:right">
+		next : <a href="phy_inertia.html">phy_inertia</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+phy_kinematic
+kinematic
+--> 

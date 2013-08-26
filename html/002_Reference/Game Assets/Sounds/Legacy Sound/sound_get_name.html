@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sound_get_name</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sound_get_name</h1>
+
+<h2>Returns the resource name of the given sound.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sound_get_name(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sound to check.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return the name of the given resource <i>as a string</i>. Note that this is not the same as the sound index and cannot be used to reference the sound in any of the functions.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var title;<br>
+title = sound_get_name(global.Music);<br>
+draw_text(32, 32, "Now Playing :" + title);<br>
+</p>
+<p>
+The above code gets the name of the sound resource indexed in the global variable "Music" and then displays it on the screen.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Legacy Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sound_play.html">sound_play</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sound_get_name
+-->

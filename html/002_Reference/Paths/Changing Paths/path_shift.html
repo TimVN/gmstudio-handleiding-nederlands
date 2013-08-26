@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_shift</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_shift</h1>
+  
+<h2>Shifts the given path any number of pixels horizontally and vertically.</h2>
+
+<h3><b>Syntax :</b></h3>
+  <p class="code">path_shift( index, xshift, yshift );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to change.</td></tr>
+	
+	<tr><td>xshift</td>
+	<td>The number of horizontal pixels to shift the path. Negative=left, positive=right.</td></tr>
+	
+	<tr><td>yshift</td>
+	<td>The number of vertical pixels to shift the path. Negative=up, positive=down.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can shift a path along the horizontal and vertical axis. Please note that this will have no visible effect in-game if the instance following the path being shifted follows it 
+relatively (rather than absolutely) as the path's position is disregarded then. This function changes the actual path resource, and so will permanently affect how the path is used by all instances in the game 
+from the moment the function is used until the end of the game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+path_scale( path0, 50, -50 );
+</p>
+<p>
+This would shift path0 50 pixels right, and 50 pixels upwards.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="path_add_point.html">path_add_point</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_shift
+-->

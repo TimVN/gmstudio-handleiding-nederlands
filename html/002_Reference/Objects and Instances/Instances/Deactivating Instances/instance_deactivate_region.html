@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>instance_deactivate_region</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>instance_deactivate_region</h1>
+  
+<h2>Deactivates all instances inside (or outside) the given region.</h2>
+
+<h3> <b>Syntax :</b> </h3>
+<p class="code">instance_deactivate_region(left, top, width, height, inside, notme);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>left</td>
+		<td>The x coordinate of the left of the rectangular region to deactivate.</td></tr>
+		
+		<tr class="alt"><td>top</td>
+		<td>The y coordinate of the top of the rectangular region to deactivate.</td></tr>
+		
+		<tr><td>width</td>
+		<td>The width of the region to deactivate.</td></tr>
+		
+		<tr class="alt"><td>height</td>
+		<td>The height of the region to deactivate.</td></tr>
+		
+		<tr><td>inside</td>
+		<td>Whether to deactivate instances on the inside of the region (true) or the outside (false).</td></tr>
+		
+		<tr class="alt"><td>notme</td>
+		<td>Whether to exclude the calling instance from deactivation (true) or not (false).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+ 
+<p>
+<b>Returns:</b> N/A
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can define a region within the room to deactivate instances that have previously been activated. This region can either be flagged as "inside" or "outside" as demonstrated in the 
+following image:
+
+<img class="center" src="instance_deactivate_region.png"></img>
+
+<p>
+You can see in the image above that the "apple" instance is always inactive because, even if the sprite itself doesn't overlap the region, the bounding box does. So, instances are considered to be within the 
+region specified when their <i>bounding box</i> overlaps with it, and the state of the collision mask (precise or not) is <b>not</b> taken into consideration. 
+<br>
+
+<p>
+<br>
+</p>
+	
+<h3><b>Example :</b> </h3>
+<p class="code">
+instance_activate_all();<br>
+instance_deactivate_region(view_xview[0] - 64, view_yview - 64, view_wview[0] + 128, view_hview + 128, false, false);<br>
+</p>
+
+<p>
+The above code activates all instances and then deactiavtes a region within the room.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Deactivating Instances</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+instance_deactivate_region
+-->

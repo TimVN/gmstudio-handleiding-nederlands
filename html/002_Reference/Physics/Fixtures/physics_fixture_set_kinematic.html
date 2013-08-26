@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_set_kinematic</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_set_kinematic</h1>
+  
+<h2>This function indicates that the fixture is indicated to behave kinematically.</h2>
+  
+<h3> <b>Syntax:</b></h3>
+<p class="code">physics_fixture_set_kinematic(fixture)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>the index of the fixture</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+There will be certain instances in a physics based game which you want to move around but do not wish to be acted on by forces such as gravity, nor forces incurred by collisions with dynamic objects (think of moving 
+platforms in a platform game, for example). For such objects simply setting the density of a fixture to 0 will mean that the physics will assume that the object is intended to be static. However, should you set the 
+<tt>phy_speed_x</tt>, <tt>phy_speed_y</tt> or <tt>phy_angular_velocity</tt> variables for an instance that has had such a fixture bound to it, it will be converted into a kinematic object and begin movement. 
+Change the instance from static to kinematic mid-simulation can be expensive in terms of processing (depending on the state of the instances in the physics world) and therefore it is recommended to set the fixture to 
+be kinematic using this function prior to binding it to an instance, so that it will be unaffected by collisions and forces (such as gravity) but may move with constant linear and/or angular velocity.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+physics_fixture_set_kinematic(fix_Cloud);
+<p>
+The code above will indicate that the fixture indexed in "fix_Cloud" should be marked as kinematic.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_set_awake.html">physics_fixture_set_awake</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_set_kinematic
+kinematic instances
+physics kinematic
+--> 

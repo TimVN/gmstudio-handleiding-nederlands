@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>instance_deactivate_all</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>instance_deactivate_all</h1>
+  
+<h2>Deactivates all instances in the room.</h2>
+  
+<h3> <b>Syntax :</b> </h3>
+<p class="code">instance_deactivate_all(notme);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>notme</td>
+		<td>Whether to keep the calling instance activated (true) or not (false).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> N/A
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will deactivate <b>all</b> instances that are in the room at the moment that the code is run. This may include the instance running the code if the "notme" flag is set to <tt>false</tt>, but 
+normally you would want that instance to be active, in which case the "notme" flag should be set to <tt>true</tt>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+	
+<h3><b>Example :</b> </h3>
+<p class="code">
+instance_deactivate_all(true);<br>
+instance_activate_region(view_xview[0] - 64, view_yview - 64, view_wview[0] + 128, view_hview + 128, false, false);<br>
+</p>
+<p>
+The above code deactivates all instances except the one that is running the code and then actiavtes a region within the room.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Deactivating Instances</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="instance_deactivate_object.html">instance_deactivate_object</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+instance_deactivate_all
+-->

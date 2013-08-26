@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>mp_linear_step_object</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>mp_linear_step_object</h1>
+  
+<h2>This makes an instance try to get to a position while checking for all instances of the specified object.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">mp_linear_step_object(xgoal, ygoal, stepsize, obj);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>xgoal</td>
+	<td>The target x position.</td></tr>
+	
+	<tr class="alt"><td>ygoal</td>
+	<td>The target y position.</td></tr>
+	
+	<tr><td>stepsize</td>
+	<td>The speed the instance moves in pixels per step.</td></tr>
+	
+	<tr class="alt"><td>obj</td>
+	<td>The object that is to block the path. Can be an object index, an instance id or the special keyword ,<b>all</b></td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you tell an instance to take a "step" towards a specific point, specified by the xgoal and ygoal values.  The size of the step (which is how many pixels the instance should move each step) 
+is indicated by the stepsize, and if the instance is already at the position it will stop and not move any further, contrary to other, simpler functions like <a href="../Movement/move_towards_point.html">
+<tt>move_towards_point</tt></a>. The stepsize is also the distance "ahead" that the object will check each step for a collision, and you can choose whether the instance stops at a collision with an object 
+or instance of your choice.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if mp_linear_step_object(mouse_x, mouse_y, 5, obj_Wall)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;instance_create(x,y,obj_Explosion);<br>
+&nbsp;&nbsp;&nbsp;instance_destroy();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will make the object move towards the mouse at a speed of 5 pixels per step, only checking for collisions with the object "obj_Wall". Once it reaches the mouse position it will create an object 
+"obj_Explosion" and destroy itself.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Motion Planning</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="mp_linear_path.html">mp_linear_path</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+mp_linear_step_object
+-->

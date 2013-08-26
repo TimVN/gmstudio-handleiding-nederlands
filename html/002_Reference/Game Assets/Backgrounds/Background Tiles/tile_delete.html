@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_delete</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_delete</h1>
+
+<h2>Deletes a given tile in the room.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_delete(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the tile to delete.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can remove a tile from the current room. This is not permanent and if the player leaves the room and returns to it again, the tile will be recreated again (if it was placed 
+in the room editor and the room is not persistent).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if mouse_check_button_pressed(mb_left)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var tile;<br>
+&nbsp;&nbsp;&nbsp;tile = tile_layer_find(-1000, mouse_x, mouse_y);<br>
+&nbsp;&nbsp;&nbsp;if tile_exists(tile) tile_delete(tile);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check for a press of the left mouse button, and then check the mouse position for a tile. If there is one found, that tile is deleted from the room.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_set_background.html">tile_set_background</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_delete
+-->

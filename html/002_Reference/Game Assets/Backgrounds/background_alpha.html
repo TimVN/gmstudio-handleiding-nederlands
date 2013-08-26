@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_alpha</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_alpha</h1>
+
+<h2>Returns or sets the alpha of any background within a room.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">background_alpha[0...7]</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable array returns the alpha (transparency) value of any one of the 8 backgrounds (numbered form 0 - 7 within the array) of the current room. This value can be anywhere between 0 and 1, where 0 
+indicates that the background is completly transparent and 1 (the default value) indicates that the background is completly opaque.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if background_alpha[0] &lt;1 background_alpha[0] = 1;
+</p>
+<p>
+The above code checks the alpha value for background0 and if it is less than 1, it sets it to 1.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_blend.html">background_blend</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_alpha
+-->

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Using An Extension</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+
+<h1>Using An Extension</h1>
+
+<h2>This section details how to use extensions in <i>GameMaker:Studio</i>.</h2>
+
+<p>
+As you can see from the following screen, <I>GameMaker:Studio</i> can use various types of extension :
+
+<img class="center" src="Extension_Resources.png">
+
+The three main types of extension available are those made from the GameMaker Language, JavaScript extensions, and Dynamic-Link librar extensions where GML ones can be used on all target 
+platforms and *.js ones only on HTML5 and *.dll ones only on Windows. Be aware too, that some <b>gex</b> files that are available on the internet use a combination of all these types and 
+so you should consult the documentation provided with the extension to see which platforms you can use it with.
+<br>
+<br>
+
+The extensions resource tree follows the format of <i>Extension</i> >>> <i>Included File</i> >>> <i>Functions and Constants</i> and before you go any further you should double click on 
+the included files to bring up the <b>Extension File Properties Dialogue</b> where you can select the target platform for the extension. You can select no targets (the extension will not be used) 
+or one or more depending on what type of file it is and thew support for it from the available platforms. Please note that this selection can also be linked to change through the use of 
+<a href="../007_Configurations.html">Configurations</a>.
+<br>
+<br>
+
+<h3>Functions</h3>
+<p>
+<div style="float:left"><img src="Function_Icon.png"></div> <p>The icon on the left is the <b>Function</b> icon and it shows us that the extension we are using has a function that can be called 
+using GML from an object or a script in our game. These functions can take arguments, return values and act just like any other GML function, only they use the extension to do the work and not 
+<i>GameMaker:Studio</i>. You can right-click on a function and select <b>Properties</b> (or simply double click on it) and you will get the function properties window which looks like this :
+
+<img class="center" src="Function_Properties.png">
+
+The <b>Name</b> is the name of the function in GML, and the <b>External Name</b> is the name of the function as the dll sees it. This part cannot be left blank, and must be filled in correctly, even 
+if the function name is the same as the <b>Name</b> you have supplied previously. Below that is the <b>Help</b> section, where you would put in the correct syntax for the function which will then be 
+shown in the script and code windows at the bottom of the screen. The <b>Return Type</b> is what the function returns, either a double (number) or a string (text) and if you are using a dll, you will also 
+get a <b>Type</b> section which defines the calling convention used. Finally you have a list of the arguments that the function takes and whether they are doubles or strings.
+<br>
+<br>
+
+<h3>Constants</h3>
+<p>
+<div style="float:left"><img src="Constant_Icon.png"></div> <p>An extension can also contain <i>Constants</i>, which are basically named values you can use rather than having to type the same 
+text or numbers everytime you wish to have a certain value. For example, the GML constant <tt>c_blue</tt> is a constant for the value $0048ff and is certainly much easier to remember than the hexadecimal 
+value! if you right-click on a constant and select <b>Properties</b> (or simply double click on it), the following window comes up :
+
+<img class="center" src="Constant_Properties.png">
+
+Here you can simply change the name of the constant (be aware that this may affect how the extension works) and the value that it represents.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Extension Packages</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Creating%20Extensions.html">Creating An Extension</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+extension constants
+extension functions
+-->

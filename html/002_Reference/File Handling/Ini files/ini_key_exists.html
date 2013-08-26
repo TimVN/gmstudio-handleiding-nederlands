@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ini_key_exists</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ini_key_exists</h1>
+  
+<h2>Returns whether or not a key in an open .ini file exists.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">ini_key_exists(section, key);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>section</td>
+		<td>The section in the open .ini file to check a key in.</td></tr>
+		
+		<tr><td>key</td>
+		<td>The key to check for.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function checks to see if a key exists in the currently open ini. This is not a necessary check to prevent errors as, when a key does not exist, reading from a non-existent key will just 
+return a defaulted value. It can be useful to see if an ini file has saved specific data and a few other things, however.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ini_open('savedata.ini');<br>
+if !ini_key_exists('save1', 'name')<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.name = 'Player1';<br>
+&nbsp;&nbsp;&nbsp;}<br>
+ini_close();
+</p>
+<p>
+This will set variable global.name to 'Player1' if no such key as "name" exists.
+</p>
+  
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Ini Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ini_section_exists.html">ini_section_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+ini_key_exists
+--> 

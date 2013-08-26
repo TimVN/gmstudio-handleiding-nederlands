@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_bind</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_bind</h1>
+  
+<h2>This function binds a fixture to an instance.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_fixture_bind(fixture, target)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>the fixture that is to be bound</td></tr>
+	
+	<tr class="alt"><td>target</td>
+	<td>the target instance that is to receive the fixture (can be an instance id, an object id, <i>other</i>, or <i>all</i>)</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: N/A</b>
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Once we have defined our fixture it has to be bound to an instance. This means that its <i>properties</i> are transfered to the selected instance, <b>not the actual fixture itself</b>, so that one fixture can 
+be bound to multiple instances if all are to have the same properties. You can specify an object index for the target and all instances present in the room at the time will receive that fixtures properties (but not 
+any new instances of the object created later), or you can use the special keywords <i>other</i> and <i>all</i>. You can even specify a parent object and all children instances with that parent will also receive 
+the fixture. Once the fixture has been bound to all the instances that you need, it can be deleted if no longer necessary and the instances with that fixtures properties will not be affected and maintain those 
+properties.
+<br>
+<br>
+
+If the fixture you are binding is a box (rectangle) or circle shape, then it will be bound to the instance with the center of mass being positioned at the origin of the instance, and polygon fixtures are bound based on 
+the position of the points <i>relative</i> to the origin.
+
+<img class="center" src="physics_fixture_bind_image.png"></img>
+
+<br>
+<br>
+<i><b>Note : </b>Fixtures should be removed when no longer needed as failure to do so may cause a memory leak which will slow down and eventually crash your game.</i>
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var fix, inst;<br>
+fix = physics_fixture_create();<br>
+physics_fixture_set_circle_shape(fix, 16);<br>
+physics_fixture_set_density(fix, 1.0);<br>
+inst = instance_create(x, y, genericBodyObject);<br>
+physics_fixture_bind(fix, inst);<br>
+physics_fixture_delete(fix);<br>
+</p>
+<p>
+The code above will create a fixture and assign its index to the variable "fix". It then defines the shape and density of the fixture before binding it to the instance that was created with the index stored in the 
+variable "inst". Finally, the fixture is deleted to prevent memory leaks as it is no longer needed.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_set_collision_group.html">physics_fixture_set_collision_group</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_bind
+bind fixtures
+--> 

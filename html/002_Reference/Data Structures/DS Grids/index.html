@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>DS Grids</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>DS Grids</h1>
+
+<h2>This section explains the various functions that can be used to create and manipulate ds_grids</h2>
+
+<p>A ds_grid is basically a type of <a href="../../001_GML%20Language%20Overview/401_06_arrays.html">two-dimensional array</a>. You define the grid by setting its integer width and height, which then 
+sets the total number of "cells" within the grid (the width and height multiplied) and these cells are then used to hold different data values (real numbers or strings).
+<br>
+<br>
+
+<img class="center" src="ds_grid_basic.png"></img>
+
+This type of structure allows you to set and retrieve the value of cells in the grid by giving the x and y index of it (which starts with 0 for both the x and the y axis and goes up to the width - 1 and the height -1). 
+But you can also set the value in specific grid regions, add single values, and retrieve the sum, maximum, minimum, and mean value over a given region, making this data structure the most versatile of all those 
+available to you.
+<br>
+<br>
+
+<i><b>NOTE : </b>As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will 
+slow down and eventually crash your game.</i>
+<br>
+<br>
+
+<br>
+The following functions exist that deal with DS grids.
+<br>
+<br>
+
+<blockquote>
+	<ol>
+		<li><a href="ds_grid_create.html">ds_grid_create</a><br>
+		<li><a href="ds_grid_destroy.html">ds_grid_destroy</a><br>
+		<li><a href="ds_grid_width.html">ds_grid_width</a><br>
+		<li><a href="ds_grid_height.html">ds_grid_height</a><br>
+		<li><a href="ds_grid_resize.html">ds_grid_resize</a><br>
+		<li><a href="ds_grid_clear.html">ds_grid_clear</a><br>
+		<li><a href="ds_grid_set.html">ds_grid_set</a><br>
+		<li><a href="ds_grid_set_disk.html">ds_grid_set_disk</a><br>
+		<li><a href="ds_grid_set_grid_region.html">ds_grid_set_grid_region</a><br>
+		<li><a href="ds_grid_set_region.html">ds_grid_set_region</a><br>	
+		<li><a href="ds_grid_shuffle.html">ds_grid_shuffle</a><br>
+		<li><a href="ds_grid_sort.html">ds_grid_sort</a><br>
+		<li><a href="ds_grid_get.html">ds_grid_get</a><br>
+		<li><a href="ds_grid_get_max.html">ds_grid_get_max</a><br>
+		<li><a href="ds_grid_get_mean.html">ds_grid_get_mean</a><br>
+		<li><a href="ds_grid_get_min.html">ds_grid_get_min</a><br>
+		<li><a href="ds_grid_get_sum.html">ds_grid_get_sum</a><br>
+		<li><a href="ds_grid_get_disk_max.html">ds_grid_get_disk_max</a><br>
+		<li><a href="ds_grid_get_disk_mean.html">ds_grid_get_disk_mean</a><br>
+		<li><a href="ds_grid_get_disk_min.html">ds_grid_get_disk_min</a><br>
+		<li><a href="ds_grid_get_disk_sum.html">ds_grid_get_disk_sum</a><br>
+		<li><a href="ds_grid_add.html">ds_grid_add</a><br>
+		<li><a href="ds_grid_add_region.html">ds_grid_add_region</a><br>
+		<li><a href="ds_grid_add_disk.html">ds_grid_add_disk</a><br>
+		<li><a href="ds_grid_add_grid_region.html">ds_grid_add_grid_region</a><br>
+		<li><a href="ds_grid_multiply.html">ds_grid_multiply</a><br>
+		<li><a href="ds_grid_multiply_disk.html">ds_grid_multiply_disk</a><br>
+		<li><a href="ds_grid_multiply_region.html">ds_grid_multiply_region</a><br>
+		<li><a href="ds_grid_multiply_grid_region.html">ds_grid_multiply_grid_region</a><br>
+		<li><a href="ds_grid_value_exists.html">ds_grid_value_exists</a><br>
+		<li><a href="ds_grid_value_disk_exists.html">ds_grid_value_disk_exists</a><br>
+		<li><a href="ds_grid_value_x.html">ds_grid_value_x</a><br>
+		<li><a href="ds_grid_value_y.html">ds_grid_value_y</a><br>
+		<li><a href="ds_grid_value_disk_x.html">ds_grid_value_disk_x</a><br>
+		<li><a href="ds_grid_value_disk_y.html">ds_grid_value_disk_y</a><br>
+		<li><a href="ds_grid_copy.html">ds_grid_copy</a><br>
+		<li><a href="ds_grid_read.html">ds_grid_read</a><br>
+		<li><a href="ds_grid_write.html">ds_grid_write</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Data Structures</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../DS Priority Queues/index.html">DS Priority Queues</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+grids
+ds_grid
+-->
+.

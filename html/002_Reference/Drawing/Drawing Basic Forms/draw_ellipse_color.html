@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_ellipse_color</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_ellipse_color</h1>
+
+<h2>Draws an ellipse with a two-color radial gradient.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_ellipse_color(x1, y1, x2, y2, col1, col2, outline);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x1</td>
+	<td>The x coordinate of the left of the ellipse.</td></tr>
+
+	<tr class="alt"><td>y1</td>
+	<td>The y coordinate of the top of the ellipse.</td></tr>
+
+	<tr><td>x2</td>
+	<td>The x coordinate of the right of the ellipse.</td></tr>
+
+	<tr class="alt"><td>y2</td>
+	<td>The y coordinate of the bottom of the ellipse.</td></tr>
+
+	<tr><td>col1</td>
+	<td>The color of the center.</td></tr>
+
+	<tr class="alt"><td>col2</td>
+	<td>The color of the edge.</td></tr>
+
+	<tr><td>outline</td>
+	<td>Whether the ellipse is an outline (true) or filled in (false).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can draw either an outline of an ellipse or a filled ellipse by defining a rectangular area that will then have the ellipse created to fit. If it is filled you can define the interior and 
+exterior fill colors. If these colors are not the same, you will get a gradient effect from one to the other (the color settings will over-ride the base color set with the function 
+<a href="../Color%20And%20Blending/draw_set_color.html"><tt>draw_set_color</tt></a>). You can define how precise the drawing is with the function <a href="draw_set_circle_precision.html">
+<tt>draw_set_circle_precision</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_ellipse_color(50, 50, 200, 100, c_black, c_white, false);
+</p>
+<p>
+This would draw a filled-in, horizontally-stretched ellipse with a black center and white edge.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Drawing Basic Forms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_line.html">draw_line</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_ellipse_color
+-->

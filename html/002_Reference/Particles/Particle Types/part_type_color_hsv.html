@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_type_color_hsv</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_type_color_hsv</h1>
+
+<h2>Set the particle color from a hue, saturation and value range.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_type_color_hsv(ind, hmin, hmax, smin, smax, vmin, vmax);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the particle type to change.</td></tr>
+	
+	<tr><td>hmin</td>
+	<td>The minimum the final color's hue component can be.</td></tr>
+	
+	<tr><td>hmax</td>
+	<td>The maximum the final color's hue component can be. </td></tr>
+	
+	<tr><td>smin</td>
+	<td>The minimum the final color's saturation component can be.</td></tr>
+	
+	<tr><td>smax</td>
+	<td>The maximum the final color's saturation component can be.</td></tr>
+	
+	<tr><td>vmin</td>
+	<td>The minimum the final color's value component can be.</td></tr>
+	
+	<tr><td>vmax</td>
+	<td>The maximum the final color's value component can be.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set a hue, saturation and value range for all particles of the given type. You supply a minimum value and a maximum value for each of the three components and the 
+particles created will have a random color based on the given range of parameters. In this way you can create particles of the same hue but different saturations, or of different hues but the same 
+value (luminosity) etc... All values must be between 0 and 255.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+part_type_hsv(global.Stars, 0, 255, 0, 255, 255, 255 );
+</p>
+<p>
+The above code sets each particle emitted of the particle type indexed in the global variable "Stars" to have different colors and saturations, but the same value (luminosity).
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Types</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_type_color_mix.html">part_type_color_mix</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_type_color_hsv
+-->

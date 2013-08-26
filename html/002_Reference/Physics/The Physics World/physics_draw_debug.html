@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>physics_draw_debug</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+</head>
+<body>
+
+<h1>physics_draw_debug</h1>
+  
+<h2>
+This function draws a basic schematic of the physics properties for the instance.
+</h2>
+<p>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_draw_debug()</p>
+<p>
+
+  
+<p>
+<b>Returns: N/A</b>
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When creating a physics system in <i>GameMaker:Studio</i>, it is often important to have a visual representation of what is actually happening with an instance. This can be achieved by using 
+<tt>physics_draw_debug</tt>, which draws a schematic outline of the physical properties associated with the instance running the code. Here is an image of how it looks :
+<br>
+
+<img class="center" src="physics_draw_debug_instance_image.png"></img>
+
+<p>
+It should be noted that for this to work it <i>must</i> be in the draw event of the instance, and it will be drawn using the currently defined draw color.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_color(c_red);<br>
+physics_draw_debug();<br>
+</p>
+<p>
+The code above will draw a representation of the physical properties associated with that instance using the color red.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">The Physics World</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_pause_enable.html">physics_pause_enable</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_draw_debug
+--> 

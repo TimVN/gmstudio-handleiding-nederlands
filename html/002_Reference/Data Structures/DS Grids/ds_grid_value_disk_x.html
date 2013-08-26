@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_grid_value_disk_x</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_grid_value_disk_x</h1>
+
+<h2>Finds the x position of a value found within a circular region of a grid.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_grid_value_disk_x(index, xm, ym, r, val);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>index</td>
+		<td>The index of the grid.</td></tr>
+
+		<tr class="alt"><td>xm</td>
+		<td>The x position of the disk on the grid.</td></tr>
+
+		<tr><td>ym</td>
+		<td>The y position of the disk on the grid.</td></tr>
+
+		<tr class="alt"><td>r</td>
+		<td>The radius of the disk on the grid.</td></tr>
+
+		<tr><td>val</td>
+		<td>The value to find.</td></tr>
+
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns:</b> Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can get the x coordinate (within the given grid disc-shaped region) of the value being searched for. Be aware that if the value being searched for does not exists, the function will 
+return 0, so it is a good idea to check if the values exists <i>first</i> with <a href="ds_grid_value_disk_exists.html"><tt>ds_grid_value_disk_exists</tt></a> then run this function (along with the 
+<a href="ds_grid_value_disk_y.html"><tt>ds_grid_value_disk_y</tt></a> function) to get the exact position within disc being searched.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if ds_grid_value_disk_exists(grid, 5, 5, 5, val)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;xpos = ds_grid_value_disk_x(grid, 5, 5, 5, val);<br>
+&nbsp;&nbsp;&nbsp;ypos = ds_grid_value_disk_y(grid, 5, 5, 5, val);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks a ds_grid for a specific value within a disk region. if it is found, it then stores the x and y position of the value in two variables for later use.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Grids</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_grid_value_disk_y.html">ds_grid_value_disk_y</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_grid_value_disk_x
+-->

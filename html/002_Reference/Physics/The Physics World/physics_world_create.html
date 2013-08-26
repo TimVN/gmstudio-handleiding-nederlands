@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_world_create</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_world_create</h1>
+  
+<h2>Creates the physics system in the room specified.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_world_create(pixeltometrescale);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>pixeltometrescale</td>
+	<td>defines the ratio of pixels on screen to metres in the real world. A ratio of 32:1 will be specified as 1/32 (or 0.03125).</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Even if you have defined the physics for your objects, without a world to place them in they will default to the traditional <i>GameMaker:Studio</i> collision system, so you need this function to create the 
+physics system for the specified room either in an object event, or the creation code of the room itself (it can also be defined without using code in the room editor). This function will associate a physics "world" 
+with the roomand all instances created in the room will behave using the physics that has been defined for them and the world itself.
+<br>
+<br>
+
+<img class="center" src="physics_world_create_image.png"></img>
+
+<p>
+You'll notice that we have an argument that defines a ratio between pixel size and metres. This is because the physics functions work using real-world measurements and thus we must translate pixel coordinates 
+and pixel sizesinto these real-world measurements using a "pixel to metre scale". You'll want to adjust the <i>pixeltometrescale</i> setting until the average pixel size of the objects you are using translates roughly 
+into simulated physics objects of an appropriate size, and above you can see that we have set it to 32 pixels being the equivalent of 1 metre. It should be noted that the physics system will work with larger and 
+smaller ratios, but that the best performance is when the real world measurements ofyour objects are no less than 0.1 metres and no more than 50 metres.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+physics_world_create(1/32)
+</p>
+<p>
+The above code will create a physics world in the current room with a scale ratio of 32 pixels being the equivalent of 1 metre.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">The Physics World</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_world_gravity.html">physics_world_gravity</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_world_create
+--> 

@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>font_add</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>font_add</h1>
+
+<h2>Creates a new font resource from a standard Web Font, and returns its index.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">font_add(name, size, bold, italic, first, last);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>name</td>
+	<td>The name of the font to be added (eg 'Arial').</td></tr>
+	
+	<tr><td>size</td>
+	<td>The size, in points, of the font.</td></tr>
+	
+	<tr><td>bold</td>
+	<td>Whether the font is bold (true) or not (false).</td></tr>
+	
+	<tr><td>italics</td>
+	<td>Whether the font is italic (true) or not (false).</td></tr>
+	
+	<tr><td>first</td>
+	<td>The first character to include (if you're unsure, go for 32).</td></tr>
+	
+	<tr><td>last</td>
+	<td>The last character to include (if you're unsure, go for 128).</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to add a font to your game from those fonts that are installed on the system it is running on. You can define the size of the font (in points), as well as whether the font should be 
+<b>bold</b> or <i>italic</i>, and you can also define the range of characters to include (for a full table of available characters and their UTF8 value see <a href="font_tables.html">Font tables</a>). The 
+function returns an <i>index</i> value that should be stored in a variable as this will be needed in all further codes that refer to this font. 
+<br>
+<br>
+
+<i><b>NOTE : </b>This function is for the <b>HTML5 target module only!</b></i>
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+<br>
+<br>
+
+The following table shows the fonts that are standard across all browsers and that can be used without problems. Any other font may or may not exist on the computer or device that is running your game, so the 
+use of this function should be limited to these standard fonts:
+<br>
+<br>
+
+<div class="compat">
+<table>
+<tr><th>Windows Font Name</th><th>Mac Font Name</th><th>Font Family</th></tr>
+
+	<tr><td>Arial</td><td>Arial / Helvetica</td><td>sans-serif</td></tr>
+	<tr><td>Arial Black</td><td>Arial Black / Gadget</td><td>sans-serif</td></tr>
+	<tr><td>Comic Sans MS</td><td>Comic Sans MS</td><td>cursive</td></tr>
+	<tr><td>Courier New</td><td>Courier New</td><td>monospace</td></tr>
+	<tr><td>Georgia</td><td>Georgia</td><td>serif</td></tr>
+	<tr><td>Impact</td><td>Impact / Charcoal</td><td>sans-serif</td></tr>
+	<tr><td>Lucida Console</td><td>Monaco</td><td>monospace</td></tr>
+	<tr><td>Lucida Sans Unicode</td><td>Lucida Grande</td><td>sans-serif</td></tr>
+	<tr><td>Palatino Linotype / Book Antiqua</td><td>Palatino</td><td>serif</td></tr>
+	<tr><td>Tahoma</td><td>Geneva</td><td>sans-serif</td></tr>
+	<tr><td>Times New Roman</td><td>Times New Roman / Times</td><td>serif</td></tr>
+	<tr><td>Trebuchet MS</td><td>Trebuchet MS</td><td>sans-serif</td></tr>
+	<tr><td>Verdana</td><td>Verdana / Geneva</td><td>sans-serif</td></tr>
+	<tr><td>Georgia</td><td>Georgia</td><td>serif</td></tr>
+	<tr><td>Symbol</td><td>Symbol</td><td>N/A</td></tr>
+	<tr><td>Webdings</td><td>Webdings</td><td>N/A</td></tr>
+	<tr><td>Wingdings</td><td>Zapf Dingbats</td><td>N/A</td></tr>
+	<tr><td>MS Sans Serif</td><td>Geneva</td><td>sans-serif</td></tr>
+	<tr><td>MS Serif</td><td>New York</td><td>sans-serif</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+<br>
+
+<i><b>NOTE : </b>When you load a font into GameMaker:Studio you must remember to remove it again (with <a href="font_delete.html"><tt>font_delete</tt></a>) when no longer needed, otherwise 
+there is risk of a memory leak which will slow down and eventually crash your game.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+newfont = font_add( 'Arial', 24, true, true, 32, 128);<br>
+</p>
+<p>
+This will create a new font that is 24pt in size, uses "Arial"  which is bold and italic and the index for this new font is stored in the variable "newfont". The font range includes capital and lower case letters, 
+numbers and all common punctuation.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fonts</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="font_add_sprite.html">font_add_sprite</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+font_add
+-->

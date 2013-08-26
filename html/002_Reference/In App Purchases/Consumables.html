@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Consumables</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Consumables</h1>
+
+<h2>This section gives a simple example of how to setup a consumable purchase.</h2>
+
+<p>
+A <i>consumable</i> in app purchase is something that can be bought more than once. These typically include some kind of in-game credit, or an extra powerup, or even extra time or energy. Basically, anything that 
+can be used up and replaced is considered a consumable. These can be an excellent source of income from any game that is structured to permit them, but you should be careful not to abuse them as players will quickly 
+tire of your game if they feel that they <i>must</i> buy your consumables to continue playing. So, generally, it is a good idea to make all aspects of your game available without buying consumables (all be it with 
+considerable effort, or "grinding" by the player), and have the player <i>choose</i> to use them rather than force the player into spending money.
+<br>
+<br>
+
+<h3>Activating The Consumable</h3>
+<p>
+For this example, we are just going to let the user buy some extra in-game "coins" so that they can "buy" extras from the inventory of the game. For this we need to use the function <a href="iap_activate.html">
+<tt>iap_activate</tt></a> (which would normally be placed in the <a href="../../000_Using%20GameMaker/Events/other%20Event.html">Game Start Event</a> of the first object, in the first room of your game):
+<br>
+<br>
+<p class="code">
+var purchaseList, purchase1;<br>
+purchaseList = ds_list_create();<br>
+purchase1 = ds_map_create();<br>
+ds_map_add(purchase1, "id", "10001");<br>
+ds_map_add(purchase1, "title", "Extra Coins");<br>
+ds_list_add(purchaseList, purchase1);<br>
+iap_activate(purchaseList);<br>
+ds_map_destroy(purchase1);<br>
+ds_list_destroy(purchaseList);<br>
+</p>
+
+<p>
+<br>
+You can add in a price and a description into the <tt>ds_map</tt> for the purchase if you wish, but these are not necessary as the price will be set by you on the store and the description is just a convenience for 
+you to display later should you wish. You also do not need to provide the download URL, nor a local path as we are not downloading any content at all.
+<br>
+<br>
+
+<h3>Purchasing The Consumable</h3>
+<p>
+Once that has been done, we need to have an event that actually sends off a buy request. Now, there are many ways that this can be done, but it is recommended that you do this in some way outside of the main 
+game loop and have checks in place to test and see if the device is connected and the store is available. For example, you could have a menu button that when pressed creates the IAP buy object, deactivates all other 
+instances and then does it's checks and "listens" for replies from the store in the IAP Async event. In this way, it is obvious to the user that there is a purchase being processed and they can do nothing else until it is 
+either finalised or cancelled.
+<br>
+<br>
+
+So, we create a new object for in app purchases and add this code into the object (in the mouse pressed event, for example):
+<br>
+<br>
+<p class="code">
+if iap_store_status() == "Available"<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;//The store is available so send off the purchase order...<br>
+&nbsp;&nbsp;&nbsp;iap_acquire("10001");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;//the store is not available so do some error handling here...<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+
+<p>
+<br>
+That code will send off the purchase request and now you will have to wait for the call-back from it.
+<br>
+<br>
+
+<h3>Handling The Purchase</h3>
+<p>
+The actual purchase itself will be handled by the asynchronous <a href="../../001_Advanced%20Use/More%20About%20Async%20Events/IAP.html"> IAP Event</a>, which will be triggered when the purchase goes through 
+(or when the store changes status). An example of the necessary code for this event would be as follows:
+<br>
+<br>
+<p class="code">
+var i, q;<br>
+q = iap_event_queue();<br>
+repeat(ds_queue_size(q))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;i = ds_queue_dequeue(q);<br>
+&nbsp;&nbsp;&nbsp;if i == 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if iap_is_purchased("10001")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Coins += 200;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iap_consume("10001");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Add further code to notify the user, save to ini, reactivate the game instances etc...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;//You may want to add additional checks here for other purchases if you have them<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+
+<p>
+<br>
+Note the use of <a href="iap_consume.html"><tt>iap_consume</tt></a> in the above code. This will reset the purchase flag so that the same consumable can be bought again at a later date.
+<br>
+<br>
+
+That is basically it for consumables. They are quite simple to set up and use, as long as you keep the information correct, and have error and status checks in the appropriate places to make sure that the end 
+user has a smooth and friendly experience.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Non-Consumables.html">Non-Consumables</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+consumables
+-->

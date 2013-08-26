@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The "Repeat" Statement</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The "Repeat" Statement</h1>
+
+<h2>This section explains how to use "repeat".</h2>
+<p>
+
+A "repeat" statement has the form
+<br>
+<br>
+<p class="code">
+repeat (&lt;expression&gt;) &lt;statement&gt;
+</p>
+<p>
+<br>
+The statement is repeated the number of times indicated by the rounded value of the expression. For example, the following program creates five balls at random positions.
+<br>
+<br>
+<p class="code">
+{<br>
+repeat (5) instance_create(random(400), random(400), obj_ball);<br>
+}<br>
+</p>
+<p>
+<br>
+This can be very useful to avoid typing out the same code multiple times, or for using arrays, or for counting through a number of operationes etc... For example :
+<br>
+<br>
+<p class="code">
+{<br>
+var i, total;<br>
+i = 0;<br>
+total = 0;<br>
+repeat (10)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;total += array[i];<br>
+&nbsp;&nbsp;&nbsp;i += 1<br>
+&nbsp;&nbsp;&nbsp;}<br>
+draw_text(32, 32, total);<br>
+}<br>
+</p>
+<p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_09_while.html">The "While" Statement</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+repeat
+--> 

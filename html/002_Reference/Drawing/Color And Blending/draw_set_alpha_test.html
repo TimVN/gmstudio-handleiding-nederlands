@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_set_alpha_test</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_set_alpha_test</h1>
+
+<h2>Enable or disable alpha testing in your game.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_set_alpha_test(enable);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>enable</td>
+	<td>Set to <tt>true</tt> or <tt>false</tt> to enable or disable alpha testing.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will enable or disable alpha testing for your game (by default this is disabled). By switching alpha testing on you can then use the companion function <a href="draw_set_alpha_test_ref_value.html">
+<tt>draw_set_alpha_test_ref_value</tt></a> to set the "cut-off" value at which all alpha values will be set to 0. The image below shows the difference that can be seen when alpha testing is switched on or off:
+<br>
+<br>
+
+<img class="center" src="alpha_test_on_off.png"></img>
+
+<i><b>NOTE: </b>This function may negatively affect performance on iOS, Android and Windows Phone devices.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_alpha_test(true);<br>
+draw_set_alpha_test_ref_value(128);<br>
+<p>
+The above code will switch on alpha testing and set the test threshold to 128 (only pixels with an alpha over 0.5 will be drawn).
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_set_alpha_test_ref_value.html">draw_set_alpha_test_ref_value</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_set_alpha_test
+-->

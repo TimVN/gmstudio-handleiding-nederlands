@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>speed</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>speed</h1>
+  
+<h2>The speed of the object.</h2>
+  
+<h3> <b>Syntax :</b> </h3>
+<p class="code">speed</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+All instances in <i>GameMaker:Studio</i> have certain "built in" properties that you can use and set to govern how they look and behave. <tt>speed</tt> is one of those properties 
+and defines how many pixels the instance will move every step. Unlike <a href="hspeed.html"><tt>hspeed</tt></a> and  <a href="vspeed.html"><tt>vspeed</tt></a>, <tt>speed</tt>
+has no direction associated it with it as this is governed by the <a href="direction.html"><tt>direction</tt></a> value of the instance, but it can have a negative value, in which case the 
+instance will travel in the opposite direction to that set by the <tt>direction</tt> function (ie: <tt>direction</tt> - 180°).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check(vk_up) speed = 2;
+if keyboard_check(vk_left) direction += 5;<br>
+if keyboard_check(vk_right) direction -= 5;<br>
+</p>
+<p>
+The above code will use the arrow keys to set the speed and direction of the instance.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Moving Around</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="x.html">x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+speed
+-->

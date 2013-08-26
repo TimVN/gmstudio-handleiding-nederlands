@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>network_send_broadcast</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>network_send_broadcast</h1>
+  
+<h2>Broadcast data to a range of IPs.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">network_send_broadcast(socket, port, buffer, size);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>socket</td>
+	<td>The id of the socket to use.</td></tr>
+	
+	<tr class="alt"><td>port</td>
+	<td>The port that the server will use.</td></tr>
+	
+	<tr><td>buffer</td>
+	<td>The id of the buffer to get the data from.</td></tr>
+	
+	<tr class="alt"><td>size</td>
+	<td>The size (in bytes) of the data.</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can broadcast the data from a buffer locally to a range of IP addresses (for more information on buffers see <a href="../Buffers/index.html">Reference - Buffers</a>). The range is 
+limited to that of the device running the server, such that if the device has an IP of 92.168.11.130, then the data will be broadcast over the range 92.168.11.*. The function will return the number of bytes 
+of data sent, or a number less than 0 if the send has failed.
+<br>
+<br>
+
+<i><b>NOTE: </b>This function will only work when used with UDP.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>If you are using the <b>Free</b> version of <i>GameMaker:Studio</i> this function is not available. For more details see <a href="../../000_Using%20GameMaker/Versions.html">here</a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+buffer_seek(broadcast_buffer, buffer_seek_start, 0);<br>
+buffer_write(broadcast_buffer, buffer_string, global.ServerName);<br>
+network_send_broadcast(server, 6511, broadcast_buffer, buffer_tell(broadcast_buffer));<br>
+</p>
+<p>
+The above code writes the name string of the current server (stored in "global.ServerName"), then writes it to a binary buffer with the id "broadcast_buffer". This data is then broadcast locally to a range 
+of IPs (the device IP is currently implied as the broadcast base range) to port 6511. 
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Networking</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="network_send_packet.html">network_send_packet</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+network_send_broadcast
+--> 

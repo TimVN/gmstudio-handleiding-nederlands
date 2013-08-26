@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_type_exists</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_type_exists</h1>
+
+<h2>Checks to see if a given particle type exists.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_type_exists(ind);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the particle type to check for.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check to see if the given particle type indexed exists in the game or not. Note that if the variable being checked is an uninitialised variable (that a particle type
+would otherwise have its index assigned to) this will throw an error.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !part_type_exists(global.p1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.p1 = part_type_create();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the global variable "p1" stores the index of a particle type and if it does not it creates one.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Types</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_type_create.html">part_type_create</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_type_exists
+-->

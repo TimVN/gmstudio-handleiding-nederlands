@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_exists</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_exists</h1>
+
+<h2>Checks whether the given sound exists.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_exists(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sound to check the existence of.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns whether a sound exists (<tt>true</tt>) or not (<tt>false</tt>). Note that if the index you search for has not been initialised previously, this function will cause an error as it is searching 
+for non-existent asset indices. The sound to check can either be a single instance of a sound (the index for individual sounds being played can be stored in a variable when using the 
+<a href="audio_play_sound.html"><tt>audio_play_sound</tt></a> or <a href="audio_play_sound_at.html"><tt>audio_play_sound_at</tt></a> functions) or a sound asset.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if audio_exists(global.Music)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;audio_play_music(global.Music, true);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if a sound exists. If it does it is set to play in a loop.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_get_type.html">audio_get_type</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_exists
+-->

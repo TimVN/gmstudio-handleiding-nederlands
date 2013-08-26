@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_model_create</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_model_create</h1>
+  
+<h2>Creates a new model and returns its index.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_model_create()</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function must be called before you can define a new model, and it returns the index of that model which must be stored in a variable and referenced in all further functions that you wish to use 
+with that model. As with most created resources, when you no longer need the model you should remove it from memory by using the <a href="d3d_model_destroy.html"><tt>d3d_model_destroy</tt></a> 
+function or else you will have a memory leak that will slow down and eventually crash your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+model[2] = d3d_model_create();<br>
+d3d_model_primitive_begin(model[2], pr_trianglestrip);<br>
+d3d_model_vertex(model[2], 100, 100, 0);<br>
+d3d_model_vertex(model[2], 100, 200, 0);<br>
+d3d_model_vertex(model[2], 150, 150, 200);<br>
+d3d_model_vertex(model[2], 100, 200, 0);<br>
+d3d_model_vertex(model[2], 200, 200, 0);<br>
+d3d_model_vertex(model[2], 150, 150, 200);<br>
+d3d_model_vertex(model[2], 200, 200, 0);<br>
+d3d_model_vertex(model[2], 100, 100, 0);<br>
+d3d_model_vertex(model[2], 150, 150, 200);<br>
+d3d_model_vertex(model[2], 100, 100, 0);<br>
+d3d_model_vertex(model[2], 100, 200, 0);<br>
+d3d_model_vertex(model[2], 200, 200, 0);<br>
+d3d_model_primitive_end();<br>
+</p>
+<p>
+The above code will define a tetrahedron and add it to the model indexed by the variable "model[2]".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Models</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_model_destroy.html">d3d_model_destroy</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_model_create
+--> 

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>iap_is_purchased</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>iap_is_purchased</h1>
+  
+<h2>Indicates whether or not a product has been purchased.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">iap_is_purchased(product_id);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>product_id</td>
+	<td>The Apple Store/Google Play product id for the purchase in reverse URL format, eg: "com.MacSweeney Games.CTC.LevelPack".</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Boolean</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can find out if the product you are checking has been bought previously or not. If it has then the function returns <tt>true</tt> and if not then it returns <tt>false</tt>.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var purchased;<br>
+purchased = iap_is_purchased(string(ds_map_find_value(p_Map, "id")));<br>
+if purchased<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_text(32, 32,  "Purchase : confirmed");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_text(32, 32, "Purchase : unconfirmed");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code gets the product id from a ds_map and then uses that to test and see if it has been bought or not, displaying a different message depending on the result.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="iap_product_status.html">iap_product_status</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+iap_is_purchased
+-->

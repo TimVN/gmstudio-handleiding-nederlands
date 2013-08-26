@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>surface_get_height</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>surface_get_height</h1>
+
+<h2>Finds the pixel height of a surface.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">surface_get_height(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the surface to get the height of.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function simply returns the height, in pixels, of the indexed surface.
+<br>
+<br>
+
+<i><b>NOTE : </b>When working with surfaces there is the possibility that they can cease to exist at any time due to them being stored in vRam. You should <b>ALWAYS</b> check that a surface 
+exists using <a href="surface_exists.html"><tt>surface_exists</tt></a> before referencing them directly. For futher information see <a href="index.html">Surfaces</a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+sh = surface_get_height(surf);
+</p>
+<p>
+The above code will store the height of the surface indexed in the variable "surf" in the variable "sh".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Surfaces</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="surface_get_width.html">surface_get_width</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+surface_get_height
+-->

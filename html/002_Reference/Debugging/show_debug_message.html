@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>show_debug_message</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>show_debug_message</h1>
+
+<h2>Show a debug message in the compiler window.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">show_debug_message(string);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>string</td>
+	<td>The custom debug message to show.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will create a custom debug message that is shown in the compiler window at runtime.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3> <b>Example :</b> </h3>
+<p class="code">
+if !instance_exists(obj_Exit)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;show_debug_message("Exit not created!");<br>
+&nbsp;&nbsp;&nbsp;game_end();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if an instance exists and if it does not, a debug message is shown in the compile window and the game is ended.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Miscellaneous</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="debug_mode.html">debug_mode</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+show_debug_message
+-->

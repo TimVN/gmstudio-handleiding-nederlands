@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_joint_get_value</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_joint_get_value</h1>
+  
+<h2>This function tests a joint and returns a value depending on the type of joint being tested and the constant being used.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_joint_get_value(joint, value)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>joint</td>
+	<td>The index of the joint that you wish to test</td></tr>
+	
+	<tr class="alt"><td>value</td>
+	<td>The constant for the joint property that you wish to test</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b> Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+By using a series of predefined constants, you can ask <i>GameMaker:Studio</i> to tell you a number of things about the state of any given joint. This is very useful as it gives you the ability to delete joints or change 
+an instances behaviour depending on whatever your needs are at the time. There are a number of constants that can be used in this function and they can be found here: <a href="Physics%20Joint%20Constants.html">
+Physics Joint Constants</a>, but be aware that complex calculations are done when you call these, so they sould be used with care and only when necessary and note that <i>many are unique to a specific type 
+of joint</i>.
+<br>
+<br>
+
+If the property does not exist (if, for example, you check a pulley joint for prismatic translation) then -1 will be the return value.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var reactionForceX, reactionForceY, reactionForce; <br>
+if shipJoint <br>
+&nbsp;&nbsp;&nbsp;{ <br>
+&nbsp;&nbsp;&nbsp;reactionForceX = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x); <br>
+&nbsp;&nbsp;&nbsp;reactionForceY = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x); <br>
+&nbsp;&nbsp;&nbsp;reactionForce = sqrt((reactionForceX + reactionForceX) + (reactionForceY + reactionForceY)); <br>
+&nbsp;&nbsp;&nbsp;if reactionForce > 2 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_delete_joint(shipJoint); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipJoint = -1; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+&nbsp;&nbsp;&nbsp;} <br>
+</p>
+<p>
+The above code checks to see if the variable "shipJoint" holds a joint index and if it does, it then calculates the force being apllied to that joint using the two constants. Finally, if the total force is greater than 2, 
+the joint is deleted.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Joints</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_joint_set_value.html">physics_joint_set_value</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_joint_get_value
+--> 

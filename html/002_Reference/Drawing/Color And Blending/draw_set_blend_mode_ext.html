@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_set_blend_mode_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_set_blend_mode_ext</h1>
+
+<h2>Sets an extended blend mode for drawing.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_set_blend_mode_ext( src, dest );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>src</td>
+	<td>Source (see constants above).</td></tr>
+	
+	<tr><td>dest</td>
+	<td>Destination (see constants above)</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When <i>GameMaker:Studio</i> goes to draw a pixel there is a source color (the color of the pixel we're going to draw) and a destination color(the color that's already in the pixel we're drawing to), so when 
+determining the new color of the pixel, the source and destination colors are calculated according to the choosen blend mode. Each component of the colors is stored as a floating point value between 0 and 1, 
+and the new color is calculated by multiply each component of the source color by some factor and by multiplying each component of destination color by some other factor and then adding the results together 
+component by component.
+<br>
+<br>
+
+This function permits you to set the different component parts that should be factored together to create a custom blend mode. The source and destination both have a red, green, blue and alpha component, and 
+in the following chart the source's RGBA are considered (Rs, Gs, Bs, As) while the destination's are (Rd, Gd, Bd, Ad). The eleven constants that are available for use can be either source or destination (or both) 
+when used in this function.
+<br>
+<br>
+
+<div class="compat">
+<table>
+	<tr><th>Constant</th><th>Blend factor (Red, Green, Blue, Alpha)</th></tr>
+
+	<tr><td>bm_zero</td><td>(0, 0, 0, 0)</td></tr>
+	
+	<tr class="alt"><td>bm_one</td><td>(1, 1, 1, 1)</td></tr>
+	
+	<tr><td>bm_src_color</td><td>(Rs, Gs, Bs, As)</td></tr>
+	
+	<tr class="alt"><td>bm_inv_src_color</td><td>(1-Rs, 1-Gs, 1-Bs, 1-As)</td></tr>
+	
+	<tr><td>bm_src_alpha</td><td>(As, As, As, As)</td></tr>
+	
+	<tr class="alt"><td>bm_inv_src_alpha</td><td>(1-As, 1-As, 1-As, 1-As)</td></tr>
+	
+	<tr><td>bm_dest_alpha</td><td>(Ad, Ad, Ad, Ad)</td></tr>
+	
+	<tr class="alt"><td>bm_inv_dest_alpha</td><td>(1-Ad, 1-Ad, 1-Ad, 1-Ad)</td></tr>
+	
+	<tr><td>bm_dest_color</td><td>(Rd, Gd, Bd, Ad)</td></tr>
+	
+	<tr class="alt"><td>bm_inv_dest_color</td><td>(1-Rd, 1-Gd, 1-Bd, 1-Ad)</td></tr>
+	
+	<tr><td>bm_src_alpha_sat</td><td>(f, f, f, 1) where f = min(As, 1-Ad)</td></tr>
+	</table>
+</div>
+
+<p>
+<br>
+<br>
+It can be quite difficult to visualise how these different blend modes work, so below you can find a simple chart that shows the basic interaction of a single sprite being drawn with different 
+combinations of blend modes over a single background. Please note that the actual results of the blend mode you use will very much depend on the color in the sprite, the alpha value of the 
+sprite and the color and alpha of the background.
+
+<img class="center" src="blendmode_chart.png"></img>
+
+<br>
+<br>
+
+<blockquote>
+	<i><b>WARNING!:</b> Not all blend modes are available on all platforms. Android, Tizen, iOS, and HTML5 without WebGL enabled will <b>not</b> be able to display the following modes correctly:
+	<br>
+	<br>
+	<ul>
+		<li>bm_src_color
+		<li>bm_inv_src_color
+		<li>bm_dest_color
+		<li>bm_inv_dest_color
+		<li>bm_src_alpha_sat
+	</ul>
+	</i>
+</blockquote>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_blend_mode_ext(bm_src_alpha, bm_one);<br>
+draw_circle_color(100, 100, 50, c_white, c_black, 0);<br>
+draw_set_blend_mode(bm_normal);
+</p>
+<p>
+This will turn the black into transparency, creating a 'glow' effect from the white being strong on the outside and gradually weakening further from the circle centre. The blend mode is reset after 
+the circle is drawn to ensure additive blending is not also applied to everything else after it.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Color And blending</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_set_alpha_test.html">draw_set_alpha_test</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_set_blend_mode_ext
+bm_zero
+bm_one
+bm_src_color
+bm_inv_src_color
+bm_src_alpha
+bm_inv_src_alpha
+bm_dest_alpha
+bm_inv_dest_alpha
+bm_dest_color
+bm_inv_dest_color
+bm_src_alpha_sat
+-->

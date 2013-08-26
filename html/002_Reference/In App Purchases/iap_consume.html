@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>iap_consume</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>iap_consume</h1>
+  
+<h2>Clears the purchase status of unmanaged purchases.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">iap_consume(purchase_id);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>purchase_id</td>
+	<td>This can either be the Apple Store/Google Play id string, an URL id,  or an index into the available purchases ds_list.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>N/A</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used for clearing the purchase status of any unmanaged purchases (for example, in-game credits). The purchase_id can be either an integer index into the main purchases list, the explicit 
+Apple Store/Google Play id string, or you can pass through the actual identifier name(eg: ".extralevels"), similar to the way that <a href="iap_acquire.html"><tt>iap_acquire</tt></a> works.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if mouse_check_button_pressed(mb_left)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;iap_consume(".extralevels")<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will clear the purchase status when the mouse button is pressed.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="iap_event_queue.html">iap_event_queue</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+iap_consume
+-->

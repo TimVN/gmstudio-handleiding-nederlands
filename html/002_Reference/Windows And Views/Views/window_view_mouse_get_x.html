@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>window_view_mouse_get_x</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>window_view_mouse_get_x</h1>
+
+<h2>Returns the x coordinate of the mouse in the window with respect to the given view.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">window_view_mouse_get_x( id );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the view to compare the mouse position to.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return the mouse x position relative to the view selected. The following image illustrates how this works:
+<br>
+<br>
+
+<img class="center" src="View_mousexy.png"></img>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if mouse_check_button_pressed(mb_left)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var xx, yy;<br>
+&nbsp;&nbsp;&nbsp;xx = window_view_mouse_get_x(0);<br>
+&nbsp;&nbsp;&nbsp;yy = window_view_mouse_get_y(0);<br>
+&nbsp;&nbsp;&nbsp;if xx &gt; 100 &amp;&amp; xx &lt; 32 &amp;&amp; yy &gt; 0 &amp;&amp; yy &lt; 32<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b_press[0] = true;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check for a mouse button being pressed, and if it is it then gets the mouse position relative to the view[0] and compares it to see if a variable should be set to true.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="window_view_mouse_get_y.html">window_view_mouse_get_y</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+window_view_mouse_get_x
+-->

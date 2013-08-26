@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_map_copy</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_map_copy</h1>
+  
+<h2>Copies the contents of an entire map into another id.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">ds_map_copy(id, source);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>id</td>
+		<td>The id of the map you are copying <b>to</></td></tr>
+		
+		<tr class="alt"><td>source</td>
+		<td>The id of the map you are copying <b>from</b></td></tr>
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> N/A
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to copy the contents of one map into another one that you have previously created using ds_map_create(). If the ds_map that is being copied <i>to</i> is not empty, then this function will 
+clear it first before copying. The original ds_map remains un-changed by this process.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+inventory_2 = ds_map_create();<br>
+ds_map_copy(inventory_2, inventory_1);
+</p>
+<p>
+The above code will create a new map and assign it to the variable "inventory_2". It will then copy the contents of the ds_map indexed in the variable "inventory_1" to this new map.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Maps</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_map_replace.html">ds_map_replace</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!--KEYWORDS
+ds_map_copy
+-->

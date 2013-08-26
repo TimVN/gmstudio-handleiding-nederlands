@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_set_density</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_set_density</h1>
+  
+<h2>This function sets the density of a fixture.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_fixture_set_density(fixture, density)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>the index of the fixture</td></tr>
+	
+	<tr class="alt"><td>density</td>
+	<td>the density of the fixture calculated as kg/m&sup2;</i></td></tr>
+
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+The density of something is defined as its mass per unit volume, which basically means <i>how much mass is crammed into the space it takes up in the world</i>. So, a balloon would have a low density as 
+it has little mass that occupies a large space, while a lead bar would have a high density as it has a great mass, yet occupies little space.
+<br>
+<br>
+
+<img class="center" src="physics_fixture_set_density_image.png"></img>
+
+<p>
+In the <i>GameMaker:Studio</i> 2D physics world mass is calculated automatically for you from the values you input for the <b>density</b> and by the <b>surface area</b> of the shape you define for 
+the fixture. This will have a direct impact on how much inertia a fixture has as well as how it reacts to collisions and forces, so if you make a small shape with a high density it will have a very large mass (like a 
+bar of lead), but if you define a large shape with a low density it will have a much smaller mass (like a balloon).
+<br>
+<br>
+
+<i><b>Note : </b>If you wish the instance that is going to recieve the fixture to be static (ie: immobile in the game world) then the density should be set to 0, essentially giving it an infinite density.</i>
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+physics_fixture_set_density(fix_Balloon, 0.1);
+<p>
+The code above will set the density of the fixture indexed in "fix_Ballon" to 0.1.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_set_friction.html">physics_fixture_set_friction</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_set_density
+density
+--> 

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>d3d_transform_stack_push</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>d3d_transform_stack_push</h1>
+  
+<h2>Pushes the current transformation onto the stack.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_transform_stack_push()</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Pushes the current transformation onto the stack, and returns whether there was room on the stack (true) to push it there or not (false).
+<br>
+<br>
+
+<i><b>Note : </b>If you forget to "pop" transformations you will at some moment run out of room on the stack.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_transform_stack_pop();<br>
+d3d_transform_add_rotation_axis(1, 0, 0, 5);<br>
+d3d_transform_stack_push();<br>
+d3d_transform_set_identity();<br>
+</p>
+<p>
+The above code will pop the previous transformation from the stack, then add a rotation over the x axis, before finally pushing the final transform back onto the stack again.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_transform_stack_pop.html">d3d_transform_stack_pop</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+d3d_transform_stack_push
+--> 

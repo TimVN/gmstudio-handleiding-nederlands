@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Objects</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Objects</h1>
+
+<h2>This section outlines the functions related to an objects properties.</h2>
+
+<p>
+<i>GameMaker:Studio</i> gives you a number of functions that permit you to get various details about an object. Note, an object is <i>not</i> an instance (an in-game entity), it is purely a resource from which all 
+instances are created. This means that the return values of these functions may be different to the actual values shown by instances in the room, as once an instance is created it can be changed through code 
+and D'n'D actions.<br>
+
+<blockquote>
+	<ol>
+		<li><a href="object_exists.html">object_exists</a><br>
+		<li><a href="../Instances/Instance%20Properties/object_index.html">object_index</a><br>
+		<li><a href="object_get_depth.html">object_get_depth</a><br>
+		<li><a href="object_get_mask.html">object_get_mask</a><br>
+		<li><a href="object_get_name.html">object_get_name</a><br>
+		<li><a href="object_get_parent.html">object_get_parent</a><br>
+		<li><a href="object_get_persistent.html">object_get_persistent</a><br>
+		<li><a href="object_get_solid.html">object_get_solid</a><br>
+		<li><a href="object_get_sprite.html">object_get_sprite</a><br>
+		<li><a href="object_get_visible.html">object_get_visible</a><br>
+		<li><a href="object_is_ancestor.html">object_is_ancestor</a><br>
+	</ol>
+</blockquote>
+
+<p>
+There are also a number of functions that permit you set the properties for an object. It should be noted that any instances of this object that already exist in the room <i>may not be affected by 
+these functions</i>, but all new instances of this object created in the room will be, so it is recommened that you never change an objects properties when instances of that object are present 
+in the current room.
+
+<blockquote>
+	<ol>
+		<li><a href="object_set_depth.html">object_set_depth<br></a>
+		<li><a href="object_set_mask.html">object_set_mask<br></a>
+		<li><a href="object_set_persistent.html">object_set_persistent<br></a>
+		<li><a href="object_set_solid.html">object_set_solid<br></a>
+		<li><a href="object_set_sprite.html">object_set_sprite<br></a>
+		<li><a href="object_set_visible.html">object_set_visible<br></a>
+	 </ol>
+</blockquote>
+ 
+<p>
+Finally, you can also use certain functions to generate events from code within a specific instance or object. These functions can be very useful, especially when dealing with 
+<a href="../../../001_Advanced%20Use/More%20about%20Objects/Parents.html">Parents and Children</a>, and are outlined in the following section:
+
+<blockquote>
+	<ol>
+		<li><a href="Generating%20Events/index.html">Generating Events<br></a>
+	</ol>
+</blockquote>
+	
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Objects and Instances</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="../Instances/index.html">Instances</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_get_point_speed</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_get_point_speed</h1>
+
+<h2>Returns the speed setting of a given path's given defining point.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">path_get_point_speed(index, n);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to check.</td></tr>
+	
+	<tr><td>n</td>
+	<td>The point identity to check.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can get the speed of the point (as defined in the <a href="../../../001_Advanced%20Use/004_Paths.html">Path Editor</a> or when you dynamically add a path point using 
+<a href="../Changing%20Paths/path_add_point.html"><tt>path_add_point()</tt></a>) expressed as a percentage. So, if you have a path point set to 50 in the path editor, this function would 
+return 50 when used.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if path_get_point_speed(c_path, 0) != 100<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;path_change_point(c_path, 0, path_get_point_x(c_path, 0), path_get_point_x(c_path, 0), 100);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+the above code checks the path point "0" of the path indexed by "c_path" to see if the speed is not equal to 100. If it is not then it sets the speed of that point to 100.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Path Information</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_get_point_x.html">path_get_point_x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_get_point_speed
+-->

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>array_length_2D</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>array_length_2D</h1>
+  
+<h2>Returns the length of a given dimension of a 2D array.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">array_length_2D(array, n);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>array</td>
+		<td>The array to check.</td></tr>
+		
+		<tr><td>n</td>
+		<td>The entry of the array to get the length of.</td></tr>
+
+	</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can get the length (number of entries) of a the second dimension of an array. You supply the entry number for the first dimension and the function will return the number of second 
+dimension entries that the array has (to find the length of the first dimension use the function <a href="array_length_1D.html"><tt>array_length_1D</tt></a>). The function will return 0 if the variable 
+given is not an array or is a 1D array.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+for (var i = array_length_1D(a); i &gt; -1; i--;)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;for (var j = array_length_2D(a, i); j &gt; -1; i--;)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a[i, j] = -1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will loop through a 2D array and set each entry to -1.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back: <a href="401_06_arrays.html">Arrays</a>
+	</div>
+	<div style="float:right">
+		Next: <a href="is_array.html">is_array</a>
+	</div> 
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+array_length_2D
+--> 

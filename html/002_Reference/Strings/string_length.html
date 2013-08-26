@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>string_length</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>string_length</h1>
+
+<h2>Returns the number of characters comprising a given string.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">string_length(str);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>str</td>
+	<td>The string to measure the number of characters of.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns the number of characters comprising a given string. It can be useful for things like working out when to limit a custom text entry's character length (eg: capping a player's 
+name to 10 characters). Remember that this is different to <a href="string_width.html"><tt>string_width</tt></a> in that it measures the number of <i>characters</i> in the string, not its width 
+as drawn on the screen in pixels.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+if string_length(name) > 10<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;name = string_copy(name, 1, 10);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+This will check if the string of name is greater than ten characters and if it is, it will copy and use the first ten characters only.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Strings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="string_letters.html">string_letters</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+string_length
+-->

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_set_collision_group</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_set_collision_group</h1>
+  
+<h2>This function permits fixtures to be grouped to avoid or force collisions.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_fixture_set_collision_group(fixture, group)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>the fixture that is to be bound</td></tr>
+	
+	<tr class="alt"><td>group</td>
+	<td>the group that this fixture is assigned to (either a positive value, 0, or a negative value)</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: N/A</b>
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Once you have created your fixture you can define it as being part of a collision group. This means that you can tell instances with that fixture to <i>always</i> collide or <i>never</i> collide with other instance 
+that have fixtures bound to them with the same collision group. The values that can be assigned are based on positive or negative numbers, with 0 being the default value (meaning that the instance with this 
+fixture setting is ignored unless a collision event is created for it). Here is an image to help explain :<br>
+<br>
+<br>
+
+<img class="center" src="physics_fixture_set_collision_group_image.png"></img>
+
+<p>
+As you can see, setting collision groups can be very useful to create complex phyisical bodies that interact with the physical world around them, but not with each other. However, it should be noted that due to 
+the complexity of calculating collsions based on groups like this, it is recommened that you try to keep the number of groups in use in any one room to an absolute minimum.<br>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+physics_fixture_set_collision_group(fix_Wheel, -1);
+</p>
+<p>
+The code above will set the fixture indexed in the variable "fix_Wheel" to be part of the group "-1".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_delete.html">physics_fixture_delete</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_set_collision_group
+collision groups
+--> 

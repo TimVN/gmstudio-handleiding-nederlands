@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_is_overlay_activated</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_is_overlay_activated</h1>
+  
+<h2>Check to see if the overlay is currrently active.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_is_overlay_activated();</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Boolean
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to find out if the user has the Steam Overlay active or not. If the overlay is active and visible to the user the function will return <tt>true</tt>, and if it is not, then it 
+will return <tt>false</tt>. An example of what this function can be used for would be for polling the Steam API for the overlay so that you can pause your game while the overlay is being shown.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if steam_is_overlay_activated()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Pause = true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if the Steam overlay is active and if it is it will set the global variable "Pause" to true.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_create_leaderboard.html">steam_create_leaderboard</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_is_overlay_activated
+-->

@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Advertising and Analytics</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Advertising and Analytics</h1>
+
+<h2>These functions are provided for integrating advertising and analytics services.</h2>
+
+<p>
+There are a number of different companies that offer mechanisms to add advertising to your games, and there are others that permit you to integrate some form of analytics (so that you can see how your game 
+is expanding in the given market place). <i>GameMaker:Studio</i> has a number of functions included as standard to make adding these services a simple matter.
+<br>
+<br>
+
+<i><b>NOTE: </b>This functionality is limited to the <a href="../../000_Using%20GameMaker/Versions.html">Professional Version</a> of <i>GameMaker:Studio</i>.</i>
+<br>
+<br>
+
+<h3>In Game Advertising</h3>
+<p>
+Once you have set up your advertising provider in the <a href="../../001_Advanced%20Use/Global%20game%20settings/Advertising%20Tab.html">Global Game Settings - Advertising Tab</a>, you will need to 
+write them into your game using the following simple functions to control how the adverts are used and displayed:
+<blockquote>
+	<ol>
+		<li><a href="ads_enable.html">ads_enable</a><br> 
+		<li><a href="ads_disable.html">ads_disable</a><br>
+		<li><a href="ads_move.html">ads_move</a><br> 
+		<li><a href="ads_get_display_width.html">ads_get_display_width</a><br> 
+		<li><a href="ads_get_display_height.html">ads_get_display_height</a><br> 
+	</ol>
+</blockquote>
+
+<p>
+We also support basic interstitial ads from Admob with the following functions:
+<blockquote>
+	<ol>
+		<li><a href="ads_interstitial_available.html">ads_interstitial_available</a><br>
+		<li><a href="ads_interstitial_display.html">ads_interstitial_display</a><br>
+	</ol>
+</blockquote>	
+
+<p>
+Apart from these basic ads, some ad providers (like Supersonic and AdColony) offer more interactive interstitial ads that can be used to generate <i>virtual currency</i> for the user. However for these ads to 
+function correctly you will need to have set up your own database to record the currencies for each player, which also means you should create your own login system to get the player id, or have some mechanism 
+in place to identify each installation of your game to the database.
+<br>
+<br>
+
+When you activate one of these ads it can be an "offerwall"  (essentially a page to promote several different advertising campaigns) or a video and when the player watches an ad or clicks on an offer, the ad 
+company calls your callback on the server you have set up to award the currency to the player. Note that it could be 15 minutes after the player has watched the movie (or clicked an offer) or it could be instantaneous 
+so you <i>must</i> have that backend database set up and active 24 hours a day.
+<br>
+<br>
+
+<i><b>NOTE : </b>To retrieve the currency for your player, you will need to use the <a href="../Asynchronous%20Functions/http_get.html"><tt>http_get</tt></a> and 
+<a href="../Asynchronous%20Functions/http_post_string.html"><tt>http_post_string</tt></a> functions.</i>
+<br>
+<br>
+
+The following functions exist for ads from these companies:
+<blockquote>
+	<ol>
+		<li><a href="ads_setup.html">ads_setup</a><br> 
+		<li><a href="ads_engagement_available.html">ads_engagement_available</a><br> 
+		<li><a href="ads_engagement_launch.html">ads_engagement_launch</a><br> 
+		<li><a href="ads_engagement_active.html">ads_engagement_active</a><br> 
+	</ol>
+</blockquote>
+
+<h3>Testing Ads</h3>
+<p>
+Certain providers provide the possibility to test ads on your device before you actually finalize their use and so <i>GameMaker:Studio</i> inlcudes the option to switch testing on in the 
+<a href="../../001_Advanced Use\Global game settings\Advertising Tab.html">Global Game Settings - Advertising Tab</a>. This option will affect your app differently depending on the target platform and 
+the provider selected.
+
+<blockquote>
+	<h4>Android</h4>
+	<p>
+	On Android devices when testing is active, all ads will be displayed with a blue background that permits you to see what position and area is being used for the ad as well as see how well the test 
+	ads fit the specified ad space. Not all ad providers permit ad testing so below is a brief summary of those that do and how to set them up:
+	<br>
+	<br>
+		<blockquote>
+			<ul>
+				<li><b>AdMob</b> - You must first run your game <i>once</i> with AdMob ads enabled (but <b>not</b> testing!), making sure that your key0 advertising key is correct and using the 
+				<a href="ads_enable.html">ads_enable</a> function. If you then look at the ADB console output, near the bottom you should see the following line:
+			
+				<img class="center" src="Admob_Identifier.png"></img>
+			
+				The <i>device id</i> number should then be copied into the appropriate space on the Advertising tab of the global Game Settings, and you should now flag the "test Ads" check-box to switch ad testing 
+				on. When you run your game again, this will be confirmed to be working by the ADB console output showing the message “Admob using test adverts”.</li><br>
+			
+				<li><b>Ad Colony</b> - You can see their test videos and offerwalls by configuring the test options through your pofile page on their site <a href="http://www.adcolony.com/">
+				http://www.adcolony.com/</a></li><br>
+				
+				<li><b>Millennial Media</b> - You should set the key0 app id to be "<b>28911</b>" and flag the "Test Ads" check-box to start receiveing test ads on your device. This will also raise the number of 
+				event logs that are registered to make debugging easier.</li>
+				
+			</ul>
+		</blockquote>
+	
+	<h4>iOS</h4>
+	<p>
+	iOS ad testing is limited to only a few companies currently and these are listed below along with instructions on how to set them up:
+	<br>
+	<br>
+		<blockquote>
+			<ul>
+				<li><b>AdMob</b> - Unlike on Android devices, Admob for iOS simply needs to be activated on the Advertising tab and have the "Test Ads" check-box ticked and it will then work as it should, sending 
+				test ads and ignoring clicks.</li><br>
+				
+				<li><b>iAds</b> iAds will only use test ads if you are running a <i>signed distribution build</i> and this is regardless of the settings in <i>GameMaker:Studio</i> as it is done automatically by iAds.</li><br>
+				
+				<li><b>Millennial Media</b> – As with Android, the event log levels are increased to debug levels, but instead of having a universal testing app id, you must register your device id on the 
+				<a href="http://mmedia.com">mmedia.com</a> site to receive test ads.
+			
+			</ul>
+		</blockquote>
+		
+	<h4>HTML5</h4>
+	<p>
+	Currently the support for testing ads on HTML5 has to be configured through the contol panel of your developer account with the chosen company, with the "Test Ads" option in the Global Game Settings 
+	doing nothing at the moment. It is simply provided to make integrating future advertising partners easier.
+	<br>
+	<br>
+	
+	<h4>Windows Phone</h4>
+	<p>
+	To test ads with Windows phone, you will need to still input the different ad unit ids that you wish to have (either with real ids from the Microsoft pubCenter or with "fake" values which the SDK will use to 
+	simlulate a real ad) into the different sections and select the ad type you wish to display. Then tick the "Test Ads" option in the Global game Settingds to see them. Note that the emulator will <i>always</i> 
+	show test ads, no matter what settings you have.
+	<br>
+	<br>
+	
+</blockquote>
+
+<h3>Pocket Change</h3>
+<p>
+Pocket Change is a universal loyalty currency which permits you to Gift users Pocket Change tokens by playing your games and these tokens travel with the user between games. The user can then exchange them 
+for real world gifts, like discount cards and specialist products meaning that this is an excellent option when you are thinking about user retention. The Pocket Change integrated api for <i>GameMaker:Studio</i> 
+is incredibly simple to use, but will require that you are <a href="https://pocketchange.com/" target="_blank">signed up for the Pocket Change</a> service first.
+<br>
+<br>
+
+When you have done that, you can use the following functions in your games (don't forget to set up the game correctly in the 
+<a href="../../001_Advanced%20Use/Global%20game%20settings/PocketChange%20Tab.html">Global Game Settings - Pocket Change Tab</a>):
+<blockquote>
+	<ol>
+		<li><a href="pocketchange_display_reward.html">pocketchange_display_reward</a><br> 
+		<li><a href="pocketchange_display_shop.html">pocketchange_display_shop</a><br> 
+	</ol>
+</blockquote>
+
+<h3>Analytics</h3>
+<p>
+Your game can be tracked by different Analytics providers (principally <a href="http://www.flurry.com/" target="_blank">Flurry</a> and <a href="http://www.google.com/analytics/" target="_blank">
+Google Analytics</a>) which can be set up in the special <a href="../../001_Advanced%20Use/Global%20game%20settings/Analytics%20Tab.html">Global Game Settings - Analytics Tab</a>. In general, the analytics 
+are autonomoous, with each provider tracking the product and making the information available through their own web pages, but there are two extra functions supplied by <i>GameMaker:Studio</i> to 
+permit you to send a text event to the analytics provider which you can then use to track special features from within your game:
+<blockquote>
+	<ol>
+		<li><a href="analytics_event.html">analytics_event</a><br>
+		<li><a href="analytics_event_ext.html">analytics_event_ext</a><br> 
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../016_Misc functions/index.html">Miscellaneous Functions</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+analytics
+advertising
+offerwall
+virtual currency
+Pocket Change
+-->

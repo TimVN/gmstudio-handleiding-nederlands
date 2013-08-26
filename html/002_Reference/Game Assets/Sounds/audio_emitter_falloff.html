@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_emitter_falloff</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_emitter_falloff</h1>
+
+<h2>Changes the audio fall-off distance for an emitter.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_emitter_falloff(emitter, falloff_ref, falloff_max, falloff_factor);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>emitter</td>
+	<td>The index of the emitter to change.</td></tr>
+	
+	<tr class="alt"><td>falloff_ref</td>
+	<td>The falloff reference relative to the listener (clamp).</td></tr>
+
+	<tr><td>falloff_max</td>
+	<td>The maximum falloff distance relative to the listener.</td></tr>
+	
+	<tr class="alt"><td>falloff_factor</td>
+	<td>The falloff factor (default 1).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the fall-off distance for an emitter. This is the distance from the <i>listener</i> the emitter has to be before the sound will have "fallen off" to a volume of 0. The default value for this 
+is 100, but beware of setting this to any value lower than 1 as that will make any sound played through this emitter inaudible to the <i>listener</i>, however any other value will cause the sound to fade away the 
+further that the emitter is from the <i>listener</i>.
+<br>
+<br>
+
+How the sound itself is heard will depend on the falloff reference (which is the distance under which the volume for the source would normally drop by half) and the 
+roll off factor (which affects the sound past the falloff reference distance only). The default factor is normally 1, and the effect of the different falloff values will depend on the model choosen.
+<br>
+<br>
+
+For a complete guide to the different falloff models and how these values are used, please see the function <a href="audio_falloff_set_model.html"><tt>audio_falloff_set_model</tt></a>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+s_emit = audio_emitter_create();<br>
+audio_emitter_position(s_emit, x, y, 0);<br>
+audio_emitter_falloff(s_emit, 100, 300, 1);<br>
+</p>
+<p>
+The above code creates an audio emitter and assigns it's index to the variable "s_emit". This emitter is then placed at the position of the instance creating it and is given a fall-off distance of 
+300, meaning that when the emitter is further than 300 pixels from the <i>listener</i> position it will be silent. Its falloff factor is the default 1 and the falloff reference is 100, so at 100 pixels 
+from the listener the falloff will start. 
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_emitter_gain.html">audio_emitter_gain</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_emitter_falloff
+-->

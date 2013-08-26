@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_get_stat_avg_rate</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_get_stat_avg_rate</h1>
+  
+<h2>Get the value of an average statistic.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_get_stat_avg_rate(stat_name);
+
+<p>
+<br>
+</p>
+ 
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>stat_name</td>
+		<td>The name of the statistic to get (a string).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can get the value of a specific <b>average</b> statistic. The statistic should have been previously defined on the Steamworks control panel accounts page for 
+your game and the string that is passed to the function should match that used as the <b>API Name</b> on the control panel.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example:</h3>
+<p class="code">
+var avg = steam_get_stat_avg_rate("PointsPerHour");<br>
+draw_text(8, 8, "PPH = " + string(avg);<br>
+</p>
+<p>
+The above code gets the current value for the average statistic "PointsPerHour" and draws it on the screen.
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_reset_all_stats.html">steam_reset_all_stats</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_get_stat_avg_rate
+-->

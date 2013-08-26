@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>gamepad_set_vibration</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>gamepad_set_vibration</h1>
+
+<h2>Controls the device vibration</h2>
+
+<h3>Syntax :</h3>
+<p class="code">gamepad_set_vibration(device, left_motor, right_motor);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>device</td>
+	<td>Which gamepad device "slot" to check.</td></tr>
+	
+	<tr class="alt"><td>left_motor</td>
+	<td>The amount of vibration from the left motor from 0 to 1.</td></tr>
+	
+	<tr><td>right_motor</td>
+	<td>The amount of vibration from the right motor from 0 to 1.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the vibration of the gamepad motors, with either motor using a value from 0 (no vibration) to 1 (full vibration). Note that there is no time limit on this function, so you will need 
+to use a variable or an alarm to switch of the vibration (set motors to 0) after a given time has passed otherwise the gamepad will continue to vibrate indefinitely.
+<br>
+<br>
+
+<i><b>NOTE:</b> this function is currently only available for the standard <b>Windows</b> target module.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if lives = 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;gamepad_set_vibration(0, 1, 1);<br>
+&nbsp;&nbsp;&nbsp;alarm[0] = room_speed / 2;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code would be used (for example) in a collision event to make the gamepad plugged into "slot" 0 vibrate for half a second, with the alarm that is set being used to switch it off again once that time 
+has passed.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GamePad Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="gamepad_is_supported.html">gamepad_is_supported</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+gamepad_set_vibration
+-->

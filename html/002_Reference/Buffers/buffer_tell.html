@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>buffer_tell</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>buffer_tell</h1>
+  
+<h2>Get the current "seek" position within the buffer.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">buffer_tell(buffer);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>buffer</td>
+	<td>The index of the buffer to use.</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When you read or write data to a buffer using the <a href="buffer_read.html"><tt>buffer_read</tt></a> or <a href="buffer_write.html"><tt>buffer_write</tt></a> the current "seek" position is 
+advanced by the bytes written or read, and with this function you can get the current "seek" position for use in other buffer functions. For example, if your buffer alignment is set to 4 bytes and you write 
+a single piece of data which is 1 byte in size then do a <tt>buffer_tell</tt>, you'll get an return value of 1. However, if you write another piece of data, also 1 byte in size, then do a <tt>buffer_tell</tt>, 
+you'll get a return value of 5 as the alignment has "padded" the data to that position.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var pos = buffer_tell(buff);
+buffer_seek(buff, buffer_seek_start, 0);<br>
+val[0] = buffer_read(buff, buffer_S16);<br>
+val[1] = buffer_read(buff, buffer_S16);<br>
+val[2] = buffer_read(buff, buffer_S16);<br>
+buffer_seek(buff, buffer_seek_start, pos);<br>
+</p>
+<p>
+The above code will store the current seek position within the buffer indexed in the variable "buff" to the local variable "pos". The buffer seek position will then be set to the start of the buffer, and three pieces 
+of data are read into an array, before finally re-setting the buffer seek position to where it was previously. 
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Buffers</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="buffer_peek.html">buffer_peek</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+buffer_tell
+--> 

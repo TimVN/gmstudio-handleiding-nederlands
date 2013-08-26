@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>font_set_cache_size</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>font_set_cache_size</h1>
+
+<h2>Sets the size of the cache for a given font.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">font_set_cache_size(ind, max);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the font to change the cache size of.</td></tr>
+	
+	<tr class="alt"><td>max</td>
+	<td>The maximum number of cached copies of the font that can be stored.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When performing image blending and coloring, HTML5 cannot do it dynamically in the same way an executable could be performed. Therefore <i>GameMaker:Studio</i> has to temporarily save a blended 
+copy of the images and load them in when needed. This function sets how many blended copies of the given font can be cached before old ones are overwritten. The default value is 4.
+<br>
+<br>
+
+<i><b>NOTE : </b>for sprite fonts you should be using the equivalent function for sprites, <a href="../Sprites/sprite_set_cache_size.html"><tt>sprite_set_cache_size</tt></a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+font_set_cache_size(fnt_MainMenu, 2);
+</p>
+<p>
+This will set the font cache of the font indexed in the variable "fnt_MainMenu" to 2 copies.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fonts</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="font_exists.html">font_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+font_set_cache_size
+font cache
+-->

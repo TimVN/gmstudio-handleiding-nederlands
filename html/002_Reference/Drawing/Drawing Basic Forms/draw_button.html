@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_button</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_button</h1>
+
+<h2>Draws a simple button of any size, either pressed or unpressed.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_button(x1, y1, x2, y2, up);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x1</td>
+	<td>The x coordinate of the left of the button</td></tr>
+	
+	<tr class="alt"><td>y1</td>
+	<td>The y coordinate of the top of the button</td></tr>
+	
+	<tr><td>x2</td>
+	<td>The x coordinate of the right of the button</td></tr>
+	
+	<tr class="alt"><td>y2</td>
+	<td>The y coordinate of the bottom of the button</td></tr>
+	
+	<tr><td>up</td>
+	<td>Whether the button is up (<tt>true</tt>) or down (<tt>false</tt>)</td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will draw a very simple, rectangular "button" using the currently selected draw color and alpha where the <i>up</i> argument defines how the bevelled edge effect looks, as shown in the image below:
+
+<img class="center" src="draw_button.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_button(100, 100, 200, 150, !mouse_check_button(mb_left));
+<p>
+This will draw a button which will appear pressed if the left mouse button is held down.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Drawing Basic Forms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_healthbar.html">draw_healthbar</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_button
+-->

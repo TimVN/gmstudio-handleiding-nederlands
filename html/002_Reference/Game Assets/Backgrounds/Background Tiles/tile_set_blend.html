@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_set_blend</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_set_blend</h1>
+
+<h2>Sets a tile's blending.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_set_blend(index, color);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the tile to set.</td></tr>
+	
+	<tr><td>color</td>
+	<td>The color to blend the tile with.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set a color to be blended with the tile. The default value for the blend color is -1 (which represents the constant <tt>c_white</tt>) but any color value can be used. 
+This is not permanent and if the player leaves the room and returns to it again, the tile will have it's original blend color (if it was placed in the room editor and the room is not persistent).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tile;<br>
+tile = tile_layer_find(-1000, mouse_x, mouse_y);<br>
+if tile_get_blend(tile) != -1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;tile_set_blend(tile, c-white);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will first get the index of a tile at the mouse position with a depth of -1000 and then use that value to check whether the tile blend is anything other than the default -1. If it is 
+it sets the tile blend to white (no blending).
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_set_depth.html">tile_set_depth</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_set_blend
+-->

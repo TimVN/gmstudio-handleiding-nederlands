@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>screen_save_part</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>screen_save_part</h1>
+
+<h2>Saves a screenshot of a defined area of the game window as a .png to a given filename.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">screen_save_part(fname,x,y,w,h);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>fname</td>
+	<td>The filename for the screenshot to save</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of the top left corner of the area of the screen to capture</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of the top left corner of the area of the screen to capture</td></tr>
+	
+	<tr><td>w</td>
+	<td>The width of the area of the screen to capture</td></tr>
+	
+	<tr><td>h</td>
+	<td>The height of the area of the screen to capture</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can save a screenshot of a part of the game as it currently appears in the game window or browser. The selection coordinates are based on the <i>absolute</i> size of the display, so (0,0) is always 
+the top left hand corner of the screen. Below is an image that shows how this function works:
+
+<img class="center" src="screen_save.png"></img>
+
+The file will be saved to the working directory of the game, which in windows is located at <i>"C:\Users\YOURUSERNAME\AppData\Local\YOURGAMENAME\"</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>This function does not work on the HTML5 target.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(ord("S"))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;screen_save_part(working_directory + "\Screeens\Screen_"+string(num)+".png", 0, 0, 100, 100)<br>
+&nbsp;&nbsp;&nbsp;num += 1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+<p>
+The above code takes a screenshot of a part of the game screen that is 100 pixels square when the user presses the "S" key. This screen shot is saved to a specific directory and numbered using a variable which is then incremented.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+<div style="float:left">
+	Back : <a href="index.html">Windows and Views</a>
+</div>
+<div style="float:right">
+	Next : <a href="display_reset.html">display_reset</a>
+</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+screen_save_part
+-->

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>timeline_running</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>timeline_running</h1>
+
+<h2>Sets a time line to run or stop.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">timeline_running;</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable holds current state of the assigned time line and will return <tt>true</tt> if it is running and </tt> false if it is not. You can also set this variable to either <tt>true</tt> or <tt>false</tt> 
+to start and stop the time line at any time. it should be noted that a stopped time line is <i>not</i> reset, and so starting it again at a later time will start it from the exact moment that it was stopped at.
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !timeline_running<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;timeline_position = 0;<br>
+&nbsp;&nbsp;&nbsp;timeline_running = true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if the instance is running a time line, and if it is not then it resets the assigned time line to start at the first moment and then starts it.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Timelines</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="timeline_speed.html">timeline_speed</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+timeline_running
+-->

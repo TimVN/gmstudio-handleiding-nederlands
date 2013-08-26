@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Obsolete Transition Functions</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Obsolete Transition Functions</h1>
+  
+<h2>
+These functions deal with splash screens and videos.
+</h2>
+<p>
+  
+<h3> <b>Function List :</b> </h3>
+<div class="param">
+<table>
+	<tr><th>Function</th><th>Description</th></tr>
+
+	<tr><td>transition_kind</td><td>Indicates the next room transition. You can use the following builtin values</td></tr>
+	
+	<tr class="alt"><td>transition_steps</td><td>Indicates the number of steps in the transition. The more steps, the longer the transition takes. Default is 80.</td></tr>
+
+	<tr><td>transition_define</td><td>You can actually create your own transitions. To this end you must define a script (possibly in an extension package) to do the transition. 
+	With this function you can then add the transition to the system. kind is the index of the transition (either a new one or an existing transitions). name is the name of the script. 
+	Note that the name of the script is a string! So there must be quotes around it. Note that this is really advanced stuff. The script must take five arguments: a surface with the image 
+	of the previous room, a surface with the image of the next room, the width of the surfaces, the height of the surfaces, and the fraction of the transition (between 0 and 1). It must then 
+	draw the image using the two surfaces. </td></tr>
+	
+	<tr class="alt"><td>transition_exists</td><td>This function returns whether a transition of the indicated kind exists.</td></tr>
+	
+</table>
+</div>
+
+<h3> <b>Why These Are Obsolete</b> </h3>
+<p>
+These functions have been removed due to the fact that they more or less "take over" control of the device to work. They are also incompatible with the way <i>GameMaker:Studio</i> now handles graphics.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Obsolete Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Obsolete%20File%20Functions.html">File Functions</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+transition_kind (obsolete)
+transition_steps (obsolete)
+transition_define (obsolete)
+transition_exists (obsolete)
+--> 

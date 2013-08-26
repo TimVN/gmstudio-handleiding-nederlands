@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_grid_add_region</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_grid_add_region</h1>
+
+<h2>Adds the given value to all cells in a region.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_grid_add_region(index, x1, y1, x2, y2, val);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the grid.</td></tr>
+	
+	<tr class="alt"><td>x1</td>
+	<td>The x position of the left of the region in the grid.</td></tr>
+	
+	<tr><td>y1</td>
+	<td>The y position of the top of the region in the grid.</td></tr>
+	
+	<tr class="alt"><td>x2</td>
+	<td>The x position of the right of the region in the grid.</td></tr>
+	
+	<tr><td>y2</td>
+	<td>The y position of the bottom of the region in the grid.</td></tr>
+	
+	<tr class="alt"><td>val</td>
+	<td>The value to add to the region cells.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to add a given value (real or string) to all the values of the cells found within the defined area of a grid. The value to be added must be of the same type as that held within the grid cells, 
+ie: you cannot add a string to a real or vice-versa, and for strings this corresponds to concatenation.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ds_grid_add_region(grid, 2, 4, 5, 5, ".");
+</p>
+<p>
+This would add "." to all the strings held in the cells within the defined region of the ds_grid referenced by the variable "grid".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Grids</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_grid_add_disk.html">ds_grid_add_disk</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_grid_add_region
+-->

@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>url_open_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>url_open_ext</h1>
+  
+<h2>Opens a URL on a browser with a specific target.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">url_open_ext(url, target);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>url</td>
+		<td>The URL (website address) to link to.</td></tr>
+		
+		<tr  class="alt"><td>target</td>
+		<td>This is the target area to open the URL in.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This will open the specified URL on the browser of the chosen target device, or, if you are using the HTML5 module, in the currently open browser. The "target" parameter that you specify is the 
+same as the standard JavaScript "name" value when you use the <tt>open()</tt> method, and you should be aware that all but '_self' may result in the browser blocking, or asking the user if they wish to allow it.
+<br>
+<br>
+Valid targets are :<br>
+<blockquote>
+
+	<b>'_self'</b> : Opens the linked document in the same frame as it was clicked (this is default).<br>
+	<b>'_blank'</b> : Opens the linked document in a new window or tab.<br>
+	<b>'_parent'</b> : Opens the linked document in the parent frame.<br>
+	<b>'_top'</b> : Opens the linked document in the full body of the window.<br>
+
+</blockquote>
+<p>
+
+<i><b>NOTE: </b>On the Windows 8 (JS) target platform, this function <b>will</b> work, but additional parameters will be ignored and the default browser will be launched with the given url.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+url_open_ext( 'http://yoyogames.com', '_blank');
+</p>
+<p>
+This would open the YoYo Games homepage in a new window.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">HTML5</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="url_open_full.html">url_open_full</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!--KEYWORDS
+url_open_ext
+-->

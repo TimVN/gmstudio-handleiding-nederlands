@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_set_restitution</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_set_restitution</h1>
+  
+<h2>This function sets the restitution value of a fixture.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_fixture_set_restitution(fixture, restitution)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>The index of the fixture</td></tr>
+	
+	<tr class="alt"><td>restitution</td>
+	<td>The restitution of the fixture (usually between 0 and 1)</i></i></td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+In physics, restitution is defined as "the return of an object or system to its original state after elastic deformation", but as the fixtures in the <i>GameMaker:Studio</i> are really rigid bodies and cannot be 
+deformed, restitution is really a way of saying how "bouncy" the fixture is. This setting will affect how much an object "bounces" when it collides with other objects and is co-dependant on other forces that act on 
+the instance like gravity and friction, and is usually a value between 0 and 1 (higher values can be used but may give un-predictable results). Here is an illustration of how it works:
+<br>
+<br>
+
+<img class="center" src="physics_fixture_set_restitution_image.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+physics_fixture_set_restitution(fix_Ball, 0.9);
+<p>
+The code above will set the restitution of the fixture indexed in "fix_ball" to 0.9.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_set_sensor.html">physics_fixture_set_sensor</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_set_restitution
+set restitution
+bounciness
+--> 

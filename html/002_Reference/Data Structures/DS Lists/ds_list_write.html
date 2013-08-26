@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_list_write</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_list_write</h1>
+
+<h2>Writes the data structure out as a string.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_list_write(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the data structure to write.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns a string which can then be stored or transferred to another data structure using the <a href="ds_list_read.html"><tt>ds_list_read</tt></a> function.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var str;<br>
+ini_open("save.ini");<br>
+str =ds_list_write(list);<br>
+ini_write_string("Lists", "0", str);<br>
+ds_list_clear(list);<br>
+ini_close();<br>
+</p>
+<p>
+The above code opens an ini file and then writes a string containing the information stored in the ds_list indexed in the variable "list". The list is then cleared and the ini file closed.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Lists</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_list_create.html">ds_list_create</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_list_write
+-->

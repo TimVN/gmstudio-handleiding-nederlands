@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>solid</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>solid</h1>
+
+<h2>Sets the solid flag for the object to true or false.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">solid</p>
+  
+<p>
+<br>
+</p>
+ 
+<p><b>Returns : </b>Boolean</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+An instance can be flagged as <tt>solid</tt> through the object properties, or by changing the value of this variable. If <tt>solid</tt> is true, a special collision event is generated whereby the instance 
+is returned automatically to the position it was at in the step previous to the collision. If it is set to false, all collisions must be dealt with through the collision event.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+with (object_index)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;solid = !solid;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the "solid" flag of all instances that have the same object_index as that which is running the code and if "solid" is false it is changed to true.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="visible.html">visible</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+solid
+-->

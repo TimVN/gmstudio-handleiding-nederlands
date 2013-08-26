@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_delete</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_delete</h1>
+
+<h2>Deletes the background from memory, freeing the memory used.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">background_delete(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the background to be deleted.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This  function will delete a background from the game, freeing any memory that was reserved for it. This is a <i>permanent</i> removal, and if the asset that you delete was included as part of the game's resources, 
+not even restarting the game (unless you close the application first) will recover it. This is a very important function for those mements when you need to create and change backgrounds from external resources and 
+should always be used to remove those assets that are no longer needed by a game, or to clear an indexed asset from a variable before re-assigning another asset to that same variable.
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var bck;<br>
+bck = background_create_from_screen(0, 0, 320, 320, false, false);<br>
+background_assign(bck_Custom, bck)
+background_delete(bck);<br>
+</p>
+<p>
+The above code creates a local variable and then stores the index of the background created from the screen. This background is then assigned to the asset indexed in the variable "bck_Custom" before being 
+removed from memory again.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_exists.html">background_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_delete
+-->

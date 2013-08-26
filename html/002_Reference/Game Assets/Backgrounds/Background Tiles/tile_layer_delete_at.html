@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_layer_delete_at</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_layer_delete_at</h1>
+
+<h2>Deletes the tile(s) at a given depth and position.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_layer_delete_at(depth, x, y);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>depth</td>
+	<td>The depth of a tile to be deleted.</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x position at which to delete a tile.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position at which to delete a tile.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can delete only those tiles that overlap with the given point and that are on the specified depth. This is not permanent and if the player leaves the room and returns to it 
+again, the tile layer will be recreated (unless the room is persistent).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var i;<br>
+i = 1000;<br>
+repeat(3)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;tile_layer_delete_at(i, mouse_x, mouse_y);<br>
+&nbsp;&nbsp;&nbsp;i -= 1000;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will loop through three different tile depths and delete any tiles that are found at the mouse x/y position.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_layer_depth.html">tile_layer_depth</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_layer_delete_at
+-->

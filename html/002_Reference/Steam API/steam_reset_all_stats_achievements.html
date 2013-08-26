@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_reset_all_stats_achievements</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_reset_all_stats_achievements</h1>
+  
+<h2>Reset all statistics and achievements.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_reset_all_stats_achievements();
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> N/A
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can reset all the statistics and achievements for you game to their default values (as defined in the Steamworks control panel for your game). It is recommended that you only use 
+this function as a debug tool when developing your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example:</h3>
+<p class="code">
+ini_open("Save.ini");<br>
+if global.Version != ini_read_real("Data", "Version", 0)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;ini_write_real("Data", "Version", global.Version);<br>
+&nbsp;&nbsp;&nbsp;steam_reset_all_stats_achievements();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+ini_close();
+</p>
+<p>
+The above code checks a stored value in an ini file against that of a global variable and if they are different, it resets the statistics and achievements for the game.
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_is_cloud_enabled_for_app.html">steam_is_cloud_enabled_for_app</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_reset_all_stats
+-->

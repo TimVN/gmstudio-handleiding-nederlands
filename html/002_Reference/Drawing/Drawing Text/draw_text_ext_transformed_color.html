@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_text_ext_transformed_color</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_text_ext_transformed_color</h1>
+
+<h2>The most general of draw functions, changing color, scaling, angle and spacing.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_text_ext_transformed_color(x, y, string, sep, w, xscale, yscale, angle, c1, c2, c3, c4, alpha);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of the drawn string.</td>
+	</tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of the drawn string.</td>
+	</tr>
+	
+	<tr><td>string</td>
+	<td>The string to draw.</td>
+	</tr>
+	
+	<tr><td>sep</td>
+	<td>The distance in pixels between lines of text.</td>
+	</tr>
+	
+	<tr><td>w</td>
+	<td>The maximum width in pixels of the string.</td>
+	</tr>
+	
+	<tr><td>xscale</td>
+	<td>The horizontal scale.</td>
+	</tr>
+	
+	<tr><td>yscale</td>
+	<td>The vertical scale.</td>
+	</tr>
+	
+	<tr><td>angle</td>
+	<td>The angle of the text.</td>
+	</tr>
+	
+	<tr><td>c1</td>
+	<td>The color for the top left of the drawn text.</td>
+	</tr>
+	
+	<tr><td>c2</td>
+	<td>The color for the top right of the drawn text.</td>
+	</tr>
+	
+	<tr><td>c3</td>
+	<td>The color for the bottom right of the drawn text.</td>
+	</tr>
+	
+	<tr><td>c4</td>
+	<td>The color for the bottom left of the drawn text.</td>
+	</tr>
+	
+	<tr><td>alpha</td>
+	<td>The alpha for the text.</td>
+	</tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is a combination of the base <a href="draw_text.html"><tt>draw_text</tt></a> function with the <a href="draw_text_ext.html"><tt>draw_text_ext</tt></a>, 
+<a href="draw_text_transformed.html"><tt>draw_text_transformed</tt></a> and <a href="draw_text_color.html"><tt>draw_text_color</tt></a> functions. As such, this is the most general of 
+all functions for drawing text and gives a large amount of flexability when drawing.
+<br>
+<br>
+
+<i><b>NOTE : </b>Gradient blending is not available for the HTML5 target unless WebGL is enabled.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_halign(fa_center);<br>
+draw_set_valign(fa_middle);<br>
+draw_text_ext_transformed_color(200, 200, "My name is" + global.name +".", 20, 200, 0.5, 0.5, 180, c_blue, c_blue, c_navy, c_navy, 1);<br>
+</p>
+<p>This will draw the given text with a blue to dark blue downward gradient, at position (200,200) in the room, rotated to be upside down and at half the normal point size of the font. There will be 20 
+pixels between each line should there be more than one line drawn and each line will have a maximum width of 200 pixels.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing text</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_set_font.html">draw_set_font</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_text_ext_transformed_color
+-->

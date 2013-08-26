@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_goto_next</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_goto_next</h1>
+
+<h2>This is used to jump to the next room.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_goto_next();</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns:</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can make your game go to the next one as listed in the resource tree at the time the game was compiled. if this room does not exist, and error will be thrown and the game will 
+be forced to close.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if room_exists(room_next(room)) room_goto_next();
+</p>
+<p>
+The above code will check to see if there is another room after the current one and if so it will go to that room.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_goto_previous.html">room_goto_previous</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_goto_next
+-->

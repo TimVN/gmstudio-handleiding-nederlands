@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>buffer_peek</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>buffer_peek</h1>
+  
+<h2>Read data from a buffer at the given position.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">buffer_peek(buffer, offset, type);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>buffer</td>
+	<td>The index of the buffer to use.</td></tr>
+	
+	<tr class="alt"><td>offset</td>
+	<td>The offset position (in bytes) within the buffer to read the given data from.</td></tr>
+	
+	<tr><td>type</td>
+	<td>The type of data that is to be read from the buffer (see the list of constants <a href="buffer_read.html">here</a>).</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real/String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With the <a href="buffer_read.html"><tt>buffer_read</tt></a> function, you can read data from the given buffer at the current "seek" position, with each piece of data being read advancing this position by the 
+bytes being read or written. However, it may be necessary for you to read a given piece of data without wanting to change the current seek position, and that's when you would use this function. You simply supply 
+the function with a buffer id, and then an offset position (from the buffer start) within that buffer to read from, as well as the data type that you are wanting to read.
+<br>
+<br>
+
+<i><b>NOTE:</b> Using the incorrect data type for the data being read will result in erroneous values!</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var red = buffer_peek(buff, 1, buffer_u8);<br>
+var green = buffer_peek(buff, 2, buffer_u8);<br>
+var blue = buffer_peek(buff, 3, buffer_u8);<br>
+image_blend = make_color_rgb(red, green, blue);<br>
+</p>
+<p>
+The above code will get three values from three different positions within the buffer indexed in the variable "buff" and then use those values to set the image blend of the instance.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Buffers</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="buffer_poke.html">buffer_poke</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+buffer_peek
+--> 

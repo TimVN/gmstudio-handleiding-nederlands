@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>mp_grid_add_cell</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>mp_grid_add_cell</h1>
+  
+<h2>Marks the indicated cell as being forbidden to the path-finding functions.</h2>
+
+  
+<h3>Syntax :</h3>
+<p class="code">mp_grid_add_cell(id, h, v);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>id</td>
+	<td>Index of the mp_grid that is to be used</td></tr>
+	
+	<tr class="alt"><td>h</td>
+	<td>Horizontal position of the cell in the grid</td></tr>
+	
+	<tr><td>v</td>
+	<td>Vertical position of the cell in the grid</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> N/A</p>  
+<p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function we can mark individual cells within the mp_grid as being "forbidden" meaning that the path finding functions will not ever cross them. Now, normally you work in x/y <i>room</i> coordinates, 
+and not in mp_grid <i>cell</i> coordinates. So lets consider the following image which shows how the two can correlate :
+<br>
+<br>
+
+<img class="center" src="mp_grid_add_cell_image.png"></img>
+
+<p>
+As you can see the mp_grid is numbered as a series of cells (starting at 0,0 in the upper left corner), and when you place this grid over the room there is a direct correlation between the room coordinates (which also 
+start at 0,0 in the top left) and the cells within the grid. In the image you can see that an instance at the position 260,130 falls on the grid cell 8,4. You can calculate mathematically the exact cell that a position lands 
+on easily by either dividing the number by the grid resolution and then rounding down <i>or</i> (if you are using power of 2 grid resolutions like 8, 16, 32 etc...) you can use the bitwise operators. It should be noted 
+that the bitwise operation is faster. The example below shows both methods.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+with (obj_Wall)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;mp_grid_add_cell(grid, floor(x / 32), floor(y / 32));<br>
+&nbsp;&nbsp;&nbsp;}<br>
+with (obj_Door)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;mp_grid_add_cell(grid, x>>5, y>>5);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will make all "obj_Wall" and all obj_Door add their equivalent cell positions into the mp_grid indexed in the variable "grid". In the first part of the example, this is done by taking the x/y coordinates of the 
+object and dividing them by the resolution of the grid (using <tt>floor</tt> to keep the values as integers), and in the second part (since the grid resolution is a power of 2) it is done by bit-shifting the x,y coordinates 5 
+places to the right.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Motion Planning</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="mp_grid_add_instances.html">mp_grid_add_instances</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+mp_grid_add_cell
+-->

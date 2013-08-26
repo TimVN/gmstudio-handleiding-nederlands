@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_background_part</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_background_part</h1>
+
+<h2>Draws part of a background at a given position.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_background_part(back, left, top, width, height, x, y);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr>	<th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>back</td>
+	<td>The index of the background to draw.</td></tr>
+	
+	<tr class="alt"><td>left</td>
+	<td>The x position on the background of the top left corner of the area to draw.</td></tr>
+	
+	<tr><td>top</td>
+	<td>The y position on the background of the top left corner of the area to draw.</td></tr>
+	
+	<tr class="alt"><td>width</td>
+	<td>The width of the area to draw.</td></tr>
+	
+	<tr><td>height</td>
+	<td>The height of the area to draw.</td></tr>
+
+	<tr class="alt"><td>x</td>
+	<td>The x coordinate of where to draw the background.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of where to draw the background.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can draw part of any background at a given position within the room. As with <a href="draw_background.html"><tt>draw_background</tt></a> you can specify a background, but you then 
+need to specify the <i>relative coordinates</i> within the background of an area to select for drawing. This means that a left position of 0 and a top position of 0 would be the top left corner of the background 
+and all further coordinates should be taken from that position.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_background_part(bck_Sky, 8, 8, 32, 32, x, y);
+</p>
+<p>
+This will draw a 32x32 area 8px by 8px in from the top left of the background indexed in "bck_Sky", at the instances (x,y) position.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing Sprites And Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_background_part_ext.html">draw_background_part_ext</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_background_part
+-->

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_transform_stack_discard</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_transform_stack_discard</h1>
+  
+<h2>Removes the top transformation from the stack.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_transform_stack_discard()</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Removes the top transformation from the stack but does not make it the current one. Returns whether there was a transformation on the stack.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_transform_stack_top();<br>
+d3d_transform_add_rotation_axis(1, 0, 0, 5);<br>
+d3d_transform_stack_discard();<br>
+d3d_transform_set_identity();<br>
+</p>
+<p>
+The above code will apply the transformation from the top of the stack, add a rotation over the x axis to it, and then discard the transform from the stack at the end.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_transform_stack_discard
+--> 

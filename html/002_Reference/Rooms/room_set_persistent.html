@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_set_persistent</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_set_persistent</h1>
+
+<h2>Sets whether a given room is persistent or not.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_set_persistent( ind, val );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the room to set the persistence of.</td></tr>
+	
+	<tr class="alt"><td>val</td>
+	<td>Whether the room shall be persistent (true) or not (false).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can change (or set) the persistence of any room in your game <i>except the current one</i>. A room with persistence flagged as <tt>true</tt> it will maintain the state of all instances 
+within that room if the player leaves and then returns, whereas if persistence is flagged as <tt>false</tt> it will be reset to the initial state every time. You should note that a persistent room uses considerably 
+more memory than a normal room and it is not recommended to have too many of them in your game. 
+<br>
+<br>
+
+<i><b>NOTE : </b>This function will <b>NOT</b> work to switch off persistence if the room has already been visited! A persistent room, once visited, is held in memory and to switch off persistence 
+you should go to that room and set the <a href="room_persistent.html"><tt>room_persistent</tt></a> variable to false and then exit the room again.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+global.myroom = room_add();<br>
+room_set_width(global.myroom, 640);<br>
+room_set_height(global.myroom, 480);<br>
+room_set_caption(global.myroom,  'Game Room');<br>
+room_set_persistent(global.myroom, true);
+</p>
+<p>
+This will create a new room and store it's index in the variable "global.myroom". It will then set its width to 640 pixels, its height to 480 pixels, its caption to  'Game Room' and its persistence to 'true'.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_set_view.html">room_set_view</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_set_persistent
+-->

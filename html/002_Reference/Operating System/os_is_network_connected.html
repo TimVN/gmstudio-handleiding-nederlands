@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>os_is_network_connected</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>os_is_network_connected</h1>
+  
+<h2>Checks to see if the device has an internet connection or not.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">os_is_network_connected()</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check and see if your device currently has an internet connection and it will return <tt>true</tt> if it does, or <tt>false</tt> if it does not.
+<br>
+<br>
+
+<i><b>NOTE: </b>This function checks the internal device API that controls connections and so may return true if there is a bluetooth connection, a wifi connection, or even just a normal 
+network connection that permits internet access.<i>
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if os_is_network_connected()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;facebook_init();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the device has a connection to the internet and if so initialises the <i>GameMaker:Studio</i> Facebook API.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Operating Systems</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="os_get_config.html">os_get_config</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+os_is_network_connected
+--> 

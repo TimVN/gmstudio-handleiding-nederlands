@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The Step Events</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The Step Events</h1>
+
+<h2>The step events are one of the many events that can be triggered in an instance and may contain code or actions.</h2>
+
+<p>
+<b><img src="../../images/Event_Step.png" align="middle" align="left">The Step Events</b>
+<br>
+
+<i>GameMaker:Studio</i> splits time into <b>steps</b> with the room speed defining how many of these steps there are supposed to be per second. A step, is basically the loop that runs constantly with all the events 
+being checked and triggered as necessary while the game runs, so as you can imagine, the <b>Step Event</b> is an event that is checked every single step of the game while the instance exists.
+<br>
+<br>
+
+The step event is actually comprised of three <i>sub</i> events that are outlined below :
+
+<img class="center" src="Step_Menu.png">
+<br>
+<br>
+
+For most things the standard step event will be fine to use, but sometimes you want a bit more control over what code runs and at what time, so for that you are provided with the begin and end step events. All three are 
+checked every step, but their order will <i>never</i> vary even through future updates to the <i>GameMaker:Studio</i> engine, which means that this is the only reliable method of making sure that something always happens 
+before something else. So what can the step event be used for? Well, it can be used for actions or code that needs to be executed continuously. For example, if one object should follow another, here you can adapt the direction 
+of motion towards the object we are following to keep it moving smoothly behind. Be careful with this event though! Don't put many complicated actions in the step event of objects, especially if you are planning on having 
+lots of instances of the object in your game room, as this might slow the game down.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Collision%20Event.html">The Collision Event</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+step event
+begin step event
+end step event
+-->

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The "Continue" Statement</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The "Continue" Statement</h1>
+
+<h2>This section covers the "continue" statement.</h2>
+<p>
+
+The continue statement has the form :
+<br>
+<br>
+<p class="code">
+continue
+</p>
+
+<p>
+<br>
+If used inside of a statement that forms a loop (<a href="401_08_repeat.html">repeat</a>, <a href="401_09_while.html">while</a>, <a href="401_10_do.html">do... until</a> or <a href="401_11_for.html">for</a>), 
+it will immediately jump back to the beginning of the loop as if the loop had run through and looped back (if used outside of a loop it acts as an exit statement, exiting the event). Below is an example of it's use in a "for" loop :
+<br>
+<br>
+
+<p class="code">
+{<br>
+var i;<br>
+for (i = 0; i &lt; 10; i += 1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if array[i] = "" continue;<br>
+&nbsp;&nbsp;&nbsp;array[i] = "";<br>
+&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</p>
+
+<p>
+<br>
+The above code will skip back to the beginning of the loop if the array[i] value is already an empty string.
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_15_exit.html">The "Exit" Statement</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+continue
+--> 

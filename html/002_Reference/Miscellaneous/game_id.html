@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>game_id</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>game_id</h1>
+  
+<h2>Returns the unique game identifier.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">game_id</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read only</b> variable returns the unique identifier for the game you have created. You can use this if you need a unique file name, or anything else that needs something to identify your game only. This can be set in the 
+<a href="../../001_Advanced%20Use/Global%20game%20settings/index.html">Global Game Settings</a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3> <b>Example :</b> </h3>
+<p class="code">
+ini_open("Score.ini");<br>
+ini_write_real("Scores","0",score + game_id);<br>
+ini_close();<br>
+</p>
+<p>
+The above code performs a very basic encryption on the score by adding the game_id to it before saving. On reading it back into the game you would deduct the game_id to get the correct value again.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Miscellaneous</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="game_end.html">game_end</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+game_id
+--> 

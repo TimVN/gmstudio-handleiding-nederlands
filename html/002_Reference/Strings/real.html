@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>real</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>real</h1>
+
+<h2>Takes a string and returns it into a real number.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">real( str );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>str</td>
+	<td>The string to be converted to a real value.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Real</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to turn a given string into a real number. When using this function, numbers, minus signs, decimal points and exponential parts in the string are taken into account, 
+while other characters (such as letters) will cause an error to be thrown. If you know, or suspect, that a string may have other characters then you can use <a href="string_digits.html">
+<tt>string_digits()</tt></a> to remove all non-numeric characters, before using this function to turn the resulting string into a real number.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+var t_str;<br>
+t_str = string_digits(input_str);<br>
+age = real(t_str);<br>
+</p>
+<p>
+The above code will take the input string, strip it of all chracters other than numbers and then set the variable "age" to hold the real number value of the return string.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Strings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="string.html">string</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+real
+-->

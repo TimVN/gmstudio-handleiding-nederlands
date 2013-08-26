@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sound_add</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sound_add</h1>
+
+<h2>Adds a new sound from a given file.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sound_add(fname, kind, preload);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>fname</td>
+	<td>The filename of the sound to add.</td></tr>
+	
+	<tr><td>kind</td>
+	<td>The kind of sound it should be added as (<b>legacy Feature</b>) 0=normal, 1=background, 2=3D, 3=multimedia player, for things like MP3s).</td></tr>
+	
+	<tr><td>preload</td>
+	<td>Whether the sound should preload into memory immediately (true) or not (false) (<b>legacy Feature</b>) .</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will load a sound file from an external source. This file can be either a *.wav or a *.mp3. The last two arguments are a left over from previous versions of <i>GameMaker</i> and can be set to 0
+as they have no effect on the function.
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>Depending on the target platform that is chosen you are limited as to where you can save and load files from. See <a href="../../../File%20Handling/index.html">Reference - Files</a> for more information.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>You should be aware that if you are using this function in your HTML5 target game to load resources from an external server, then, due to XSS protection in browsers, attempts to load resources 
+from across domains can be blocked and may appear to return blank results.</i>
+<br>
+<br>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+global.newsound=sound_add(working_directory + '\hello.wav', 0, 0);<br>
+sound_play(global.newsound);
+</p>
+<p>
+This will add a new sound and store the index of this sound in the variable "global.newsound", from file 'hello.wav' and then play it.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Legacy Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sound_replace.html">sound_replace</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sound_add
+-->

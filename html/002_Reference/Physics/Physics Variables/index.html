@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Physics Variables</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Physics Variables</h1>
+  
+<h2>Objects have certain variables associated with them automatically when used in the physics world.</h2>
+
+<p>
+As with the "traditional" collisions and movement system, the physics system also has a series of instance variables assigned to each instance of an object when it is created. Some of these properties can be 
+defined by the user in GML, but many are read-only and still more are only applicable in the collision event.
+<br>
+<br>
+
+<h3>Variables</h3>
+<p>
+The following variables exists in <i>all</i> physics enabled objects and they can be read to and written to (ie: changed) using code from instances and scripts:
+<blockquote>
+	<ol>
+		<li><a href="phy_active.html">phy_active</a><br>
+		<li><a href="phy_angular_velocity.html">phy_angular_velocity</a><br>
+		<li><a href="phy_linear_velocity_x.html">phy_linear_velocity_x</a><br>
+		<li><a href="phy_linear_velocity_y.html">phy_linear_velocity_y</a><br>
+		<li><a href="phy_speed_x.html">phy_speed_x</a><br>
+		<li><a href="phy_speed_y.html">phy_speed_y</a><br>
+		<li><a href="phy_position_x.html">phy_position_x</a><br>
+		<li><a href="phy_position_y.html">phy_position_y</a><br>
+		<li><a href="phy_rotation.html">phy_rotation</a><br>
+		<li><a href="phy_fixed_rotation.html">phy_fixed_rotation</a><br>
+		<li><a href="phy_bullet.html">phy_bullet</a><br>
+	</ol>
+</blockquote>
+
+<h3>Read Only Variables</h3>
+<p>
+Certain variables are <b>read-only</b> variables, which means that the information they contain cannot be changed through instance code or scripts (but it <i>can</i> be changed internally by 
+<i>GameMaker:Studio</i> which is why these are variables and not <b>constants</b>). The following table shows the <b>read-only</b> variables that exist in <i>all</i> physics enabled objects:
+<blockquote>
+	<ol>
+		<li><a href="phy_com_x.html">phy_com_x</a><br>
+		<li><a href="phy_com_y.html">phy_com_y</a><br>
+		<li><a href="phy_dynamic.html">phy_dynamic</a><br>
+		<li><a href="phy_kinematic.html">phy_kinematic</a><br>
+		<li><a href="phy_inertia.html">phy_inertia</a><br>
+		<li><a href="phy_mass.html">phy_mass</a><br>
+		<li><a href="phy_sleeping.html">phy_sleeping</a><br>
+	</ol>
+</blockquote>
+
+<h3>Collision Only Variables</h3>
+<p>
+Finally, there are a number of temporary variables that exist in physics enabled objects and are created <i>only in the collision event</i>. These variables are like those listed above and are <b>read-only</b>:
+<blockquote>
+	<ol>
+		<li><a href="phy_collision_points.html">phy_collision_points</a><br>
+		<li><a href="phy_collision_x.html">phy_collision_x</a><br>
+		<li><a href="phy_collision_y.html">phy_collision_y</a><br>
+		<li><a href="phy_col_normal_x.html">phy_col_normal_x</a><br>
+		<li><a href="phy_col_normal_y.html">phy_col_normal_y</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Physics</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="The Physics World/index.html">The Physics World</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics variables
+--> 

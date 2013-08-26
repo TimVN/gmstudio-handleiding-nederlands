@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Physics Functions</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>Physics Functions</h1>
+
+<h2><i>GameMaker:Studio</i> has extensive, yet easy to use, physics functions based on the Box2D (v2.1.2/Box2dWeb-2.1.a.3) open source physics library.</h2>
+
+<p>
+The integration of a dedicated physics library to <i>GameMaker:Studio</i> means that you can now take control over all aspects of the physical behaviour of objects within your game world, particularly 
+collisions and object interaction. The "traditional" collision system (which <i>GameMaker:Studio</i> defaults to) is a "reactive" system, where you check for a collision and <i>then</i> 
+react to that collision with code that you place in individual objects. This is fine for simple games, but when you have a large number of objects and have to code how they all react to different situations in the 
+game world, it quickly becomes obvious that this system is just not enough! That's when you have to turn to the <i>GameMaker:Studio</i> physics system!
+<br>
+<br>
+
+The physics system works in a very different way to normal collisions. It is more of a "passive" system where you define a series of properties for your objects in the game world, as well as the properties of the 
+game world itself, before any collisions or interactions occur. These coded "rules" will then govern the way everything in your game world interacts. In this way, with a few simple code and the correct room setup, 
+you can create very complex interactions between objects and the world which will occur and resolve <i>without</i> you having to code for every single possible outcome.
+<br>
+<br>
+
+There are a few things that you should note when working with the <i>GameMaker:Studio</i> physics world :
+<br>
+<br>
+
+<blockquote>
+	<ul>
+		<li>The physics system exists "apart" from the basic room and instance structure of <i>GameMaker:Studio</i> meaning that its timings and functions are not necessarily tied into 
+		the room speed and step order like everything else.</li><br>
+
+		<li>The physics system replaces many of the normal instance functions... for example, rather than set a speed and a direction for an instance, if it has been declared as being a fully simulated physical body, 
+		you would use a <i>force</i> or <i>impulse</i> to get it to move around in the game world. This takes a bit of getting used to, so experiment with the physics functions and get to know how everything works 
+		before trying to integrate them into your project.</li><br>
+
+		<li>You should limit the number of instances that are created, as well as the number of collisions and collision groups that the physics world has to deal with. You <i>cannot</i> have thousands of instances, 
+		all with physical properties and collisions and expect everything to work fine due to the fact that physics requires some pretty intensive calculations, so limit yourself and optimise where possible. </li></br>
+
+		<li>When setting up collisions, use parents as much as possible since the collision system has a limited number of <i>collision bits</i> available to assign to instances for Box2D to detect collisions. For 
+		example, if you have five different wall objects, don't check for five collisions, rather, create a parent object and assign it to the five walls then have ONE collision check with the parent. The physical 
+		properties of the objects are <i>not inherited</i> only the collisions. In this way you can keep your game optimised and error free.</li></br>
+		
+		<li>Try not to move instances from one point of the room to another in any way other than using the physics functions (ie: do not set the x/y coordinates manual). Although this can be done and 
+		in some circumstances it may be necessary, this is generally to be avoided due to the unpredictable results that it may have on the physics engine, especially when trying to resolve collisions.</li></br>
+		
+		<li>Care should be taken when binding fixtures, as they can be bound to objects and instances independantly. This means that if you bind a fixture to (for example) "o_Wall", <b>all</b> instances 
+		of that object will get the fixture. If you only want to bind a fixture to one instance, then use that instance's id in the appropriate function.</li></br>
+		
+		<li>Please be aware that due to differences in floating point precision you may find that an html5 version of your game may exhibit subtly different behaviour to the Windows version, though each version 
+		will be self-consistent across subsequent executions.</li></br>
+		
+		<li>To prevent instabilities in the physical simulation Box2D constrains to upper limits the amount a body may rotate and translate within a single update. The apparent limitations will vary according to the 
+		accuracy of the physical simulation in accordance with the number of updates and update speed of the physics world, and also in accordance with the physics world scaling. This means that (for example) if 
+		you have a world update speed of 60, the maximum movement speed would be 20.</li>
+	</ul>
+</blockquote>
+
+<p>
+Information on the physics functions can be found on the following pages:
+
+<blockquote>
+	<ol>
+		<li><a href="The%20Physics%20World/index.html">The Physics World</a><br>
+		<li><a href="Forces/index.html">Forces</a><br>
+		<li><a href="Fixtures/index.html">Fixtures</a><br>
+		<li><a href="Joints/index.html">Joints</a><br>
+		<li><a href="Physics%20Variables/index.html">Physics Variables</a><br>
+	</ol>
+</blockquote>
+
+<p>
+Finally, there are a couple of special physics function which may be useful for more advanced physics simulations. The first is for testing for possible collisions at a specific point in the room, and the second 
+is for generating custom mass and inertia properties within an instance :
+
+<blockquote>
+<ol>
+	<li><a href="physics_test_overlap.html">physics_test_overlap</a><br>
+	<li><a href="physics_mass_properties.html">physics_mass_properties</a><br>
+</ol>
+</blockquote>
+	
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../Asynchronous Functions/index.html">Asynchronous Functions</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics
+Box 2D
+physics limitations
+-->

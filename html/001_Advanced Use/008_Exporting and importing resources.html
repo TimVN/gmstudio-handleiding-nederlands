@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Importing Resources</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>Importing Resources</h1>
+
+<h2>This allows you to copy resources from one game to another.</h2>
+
+<p>
+In previous versions of <i>GameMaker</i> it was a complicated business to import and export files from one project to another, and if you weren't careful you could end up with a corrupt game or loss of 
+data. Thankfully, that has all changed with <i>GameMaker:Studio</i> as the <tt>*.gmx</tt> format makes sharing resources between projects a simple and painless procedure.
+<br>
+<br>
+
+When you save your project, <i>GameMaker:Studio</i> creates a number of special files in the game directory (this can be found easily through the drop down 
+<a href="../000_Using%20GameMaker/Drop%20Down%20Menus/The%20Help%20Menu.html">Help Menu</a>) with the extension <tt>*.gmx</tt> and a sub-extension that indicates the resource type (eg: a room resource 
+would be called <tt>game_room.room.gmx</tt>). These <tt>*.gmx</tt> files contain all the information that <i>GameMaker:Studio</i> needs to define the object, sound or whatever resource, and you can 
+add these into a new project simply by right clicking on the resource tree and selecting <b>Add Existing Resource</b>, which will open a standard file selector where you can browse to the file you wish to import.
+<br>
+<br>
+
+You can select multiple files in this way too and they will all be imported into <i>GameMaker:Studio</i>, but they must all have the same sub-extension (ie: you can load ten <tt>*.object.gmx</tt> at once, 
+but not a <tt>*.sound.gmx</tt> and a couple of <tt>*.sprite.gmx</tt>). It should also be noted, that if you add an object resource into your game, if it has a sprite associated with it <i>this sprite will not 
+be imported</i>. You have to make sure that any sprites your object needs have been imported from their appropriate <tt>*.sprite.gmx</tt>. The same goes for any rooms that you import, as they will be missing 
+the objects that they contained if you have not imported them previously. So, it is always best to import sprites, sound, fonts and other resources <i>before</i> objects, and those you should import <i>before</i> 
+rooms.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advanced Use Index</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Extensions/index.html">Extension Packages</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+importing resources
+merging games
+working together
+collaborating
+-->

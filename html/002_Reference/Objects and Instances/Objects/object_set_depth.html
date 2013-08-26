@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>object_set_depth</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>object_set_depth</h1>
+  
+<h2>Sets the depth of the given object.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">object_set_depth(index, depth);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the object to change.</td></tr>
+	
+	<tr class="alt"><td>vis</td>
+	<td>The new depth of the object.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>N/A</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the depth of a specific object. This means that all instances of this object that are created <i>after the depth has been changed</i> will be created at this 
+new depth, while instances that are already in the room may not be affected. Please note that this is not an instance function! You can set the depth of individual instances and so have ten 
+instances at ten different depths, but if you change the depth of the object, all instances that are created of that object will start with that depth.
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !instance_exists(obj_Bonus) object_set_depth(obj_Bonus, 10000);
+</p>
+<p>
+The above code checks to see if an instance of "obj_Bonus" exists and if it does not then the object depth is changed.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Objects</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="object_set_mask.html">object_set_mask</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+object_set_depth
+-->

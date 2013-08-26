@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_enable_drawevent</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_enable_drawevent</h1>
+
+<h2>Enables or disables the draw event.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_enable_drawevent(enable);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>enable</td>
+	<td>Enable (<tt>true</tt>) or disable (<tt>false</tt>) the draw event for all instances.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can choose to enable (<tt>true</tt>) or disable (<tt>false</tt>) the draw event for <b>all instances in the game</b>, thus giving you control over how and when things are draw, 
+useful if you wish to implement a "frame skip" technique. Note that this doesn't just prevent instances drawing to the screen, it suppresses the draw event completely meaning that care should be taken since 
+any game logic that is present in that event will not be run either.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+frame_skip ++;<br>
+if (frame_skip mod 5) == 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_enable_drawevent(true);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_enable_drawevent(false);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+<p>
+The above code checks a variable and if it returns <tt>true</tt>, it enables the draw event, otherwise the draw event is disabled.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="texture_get_width.html">texture_get_width</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_enable_drawevent
+frame skip
+disable drawing
+-->

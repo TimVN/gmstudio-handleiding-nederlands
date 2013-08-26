@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>delta_time</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>delta_time</h1>
+  
+<h2>The time passed in microseconds between one step and another.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">delta_time</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+The purpose of delta timing is to eliminate the effects of the lag or slowness of computers that try to handle complex graphics or a lot of code. It is a value that can be added on to the speed of objects so that 
+they will eventually move at the same speed, regardless of lag. This is achieved in <i>GameMaker:Studio</i> by using the <b>read only</b> variable <tt>delta_time</tt> every step as it measures the time 
+that has passed between one step and the next in microseconds (1microsecond is 1,000,000th of a second). Therefore the variable <tt>delta_time</tt> can be used to calculate how much faster (for example) a 
+game character has to move to make up for a lag spike in the game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<h3> <b>Example :</b> </h3>
+<p class="code">
+speed = spd * (ot - delta_time);
+ </p>
+<p>
+The above code will set the speed of the instance using delta-time to correct for lag. The variable "ot" would be used to hold the previously calculated delta_time value so that the ratio can be used to multiply the 
+base speed value (held in the variable "spd") and so get a consistent speed for the instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Date And Time Functions</a>
+	</div>
+	<div style="float:right">
+		Next :<a href="get_timer.html">get_timer</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!--KEYWORDS
+delta_time
+-->

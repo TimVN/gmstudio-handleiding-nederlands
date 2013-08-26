@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>3D Drawing</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>3D Drawing</h1>
+
+<h2>This section details all the functions available for drawing primitives and shapes in 3D.</h2>
+
+<p>
+The problem with drawing in the traditional (2D) way is that a sprite or polygon always lies in the xy-plane, that is, all corners have the same depth. For true 3D you want to be able to have vertices at different 
+depths, and this depth is called the z-axis. So from this moment on we will talk about z-coordinate rather than depth, and we will specify coordinates as (x,y,z) tuples. It should also be noted that unless the 
+color or alpha is set by the function itself, you can use <a href="../../Color%20And%20Blending/draw_set_color.html"><tt>draw_set_color</tt></a> and 
+<a href="../../Color%20And%20Blending/draw_set_alpha.html"><tt>draw_set_alpha</tt></a> to set the drawing color and alpha of the object being drawn.
+<br>
+<br>
+
+For drawing basic primitives in 3D mode with these x,y,z coordinates we have the following functions : 
+
+<blockquote>
+<ol>
+	<li><a href="d3d_primitive_begin.html">d3d_primitive_begin</a>
+	<li><a href="d3d_vertex.html">d3d_vertex</a>
+	<li><a href="d3d_vertex_color.html">d3d_vertex_color</a>
+	<li><a href="d3d_primitive_end.html">d3d_primitive_end</a>
+</ol>
+</blockquote>
+
+
+<P>
+For drawing textured primitives in 3D mode with these x,y,z coordinates we have the following functions (to end drawing use the <tt>d3d_primitive_end()</tt> function above) : 
+
+<blockquote>
+<ol>
+	<li><a href="d3d_primitive_begin_texture.html">d3d_primitive_begin_texture</a>
+	<li><a href="d3d_vertex_texture.html">d3d_vertex_texture</a>
+	<li><a href="d3d_vertex_texture_color.html">d3d_vertex_texture_color</a>
+</ol>
+</blockquote>
+
+<P>
+You are not limited to just drawing your own shapes made from primitives either , as <i>GameMaker:Studio</i> has a set of functions that allow you to draw pre-defined shapes at any point in the 
+3D environment, with (or without) a texture mapping too (note that these functions can also be used with <a href="../3D%20Setup/d3d_set_culling.html">backface culling</a> switched on) : 
+
+<blockquote>
+<ol>
+	<li><a href="d3d_draw_block.html">d3d_draw_block</a>
+	<li><a href="d3d_draw_cylinder.html">d3d_draw_cylinder</a>
+	<li><a href="d3d_draw_cone.html">d3d_draw_cone</a>
+	<li><a href="d3d_draw_ellipsoid.html">d3d_draw_ellipsoid</a>
+	<li><a href="d3d_draw_wall.html">d3d_draw_wall</a>
+	<li><a href="d3d_draw_floor.html">d3d_draw_floor</a>
+</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Working With 3D</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="../3D%20Projections/index.html">3D Projections</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+3D primitives
+--> 
+
+

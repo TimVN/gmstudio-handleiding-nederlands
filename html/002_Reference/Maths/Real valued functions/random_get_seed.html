@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>random_get_seed</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>random_get_seed</h1>
+  
+<h2>Returns the current random seed.</h2>
+  
+<h3><b>Syntax :</b></h3>
+<p class="code">random_get_seed();</p>
+  
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Real</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+To generate a random number <i>GameMaker:Studio</i> starts with a random <i>seed</i> number. With this function you can retrieve that seed, which can then be stored to reproduce a specific 
+series of random events. For example, say you have a procedurally generated game, but want the player to be able to go back to previously discovered areas. Well, at the start of each area, you 
+can store the random seed with this function and so every time you need to go back there, you can use <a href="random_set_seed.html"><tt>random_set_seed</tt></a> to set the seed to what it 
+was previously and so force <i>GameMaker:Studio</i> to reproduce the same set of "random" functions that it used previously.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+ini_open("Save.ini")<br>
+ini_write_real("Levels", string(level), random_get_seed());<br>
+ini_close();<br>
+</p>
+<p>
+The above code will get the random seed and store it in an ini file.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Real Number Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="randomize.html">randomize</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+random_get_seed
+-->

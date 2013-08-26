@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>IAP Testing</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>IAP Testing</h1>
+
+<h2>This section deals with testing the in app purchases for your game.</h2>
+
+<p>
+Testing In App Purchases can be tricky business and each platform requires it's own setup. The following sections bruiefly explain how to get the testing process set up correctly for the platforms that support it.
+<br>
+<br>
+
+<h3>iOS</h3>
+<p>
+For in app purchase testing with the iOS module, you must fullfill the following requirements:
+<blockquote>
+	<ul>
+		<li>For testing on iOS, you <b>must</b> have ticked the "Sandbox Mode" option in the <a href="../../001_Advanced%20Use/Global%20game%20settings/In%20App%20Purchases%20Tab.html">
+		Global Game Settings - In App Purchases Tab</a>, although your app will not properly simulate communication with the store since it uses a local proxy file to simulate the store state for the app.</li><br>
+		
+		<li>You will need to have created a new App Id in your iTunes Connect profile, with in app purchases enabled.</li><br>
+		
+		<li>The product must be added to iTunes Connect and the "Cleared for Sale" checkbox marked otherwise testing will not work.</li><br>
+		
+		<li>You will need a "Test User" to your iTunes Connect account, and have signed out of your normal account on your test device. When testing, use the test user information when prompted.</li><br>
+	</ul>
+</blockquote>
+
+
+<h3>Android</h3>
+<p>
+Android devices can use in app purchases on either the Google Play Store or the Amazone App Store. For Google Play, setup is simple and after programming your app, you can test it easily by creating an executable, 
+uploading it to your Google Play developers page and making sure to enable the in app purchases from the appropriate section. <b>You do not need to publish the app yet</b>. Please note the following:
+<blockquote>
+	<ul>
+		<li>For testing purposes on Google Play, the version number of your test <tt>*.apk</tt> has to be the same (it may accept a higher version number) as the version of the APK you’ve uploaded.</li><br>
+		
+		<li>On Google Play, until you’ve <i>published</i> a title the only accounts that will be able to make purchases are test accounts you’ve registered at the given test URLs (under “Edit Profile – Test Accounts”)</li>
+	</ul>
+</blockquote>
+<p>
+For testing in app purchases with Amazon, things are slightly more complicated. You cannot upload a test apk to the Amazon servers, rather you have to add a special test <tt>*.apk</tt> to your device, along with 
+some <tt>json</tt> which contains the purchase list. To get started, you will need to download and install the <a href="https://developer.amazon.com/sdk.html" target="_blank">Amazon Mobile App SDK</a>, 
+then follow these instructions:
+<blockquote>
+	<ul>
+		<li>Find the folder in the Amazon SDK labelled "InAppPurchasing" and copy the contents to the same folder wher you have your Android SDK <b>adb.exe</b> (normally something like 
+		"C:Program Files/sdk/platform-tools", although the exact location will depend on where you have installed the sdk).</li><br>
+		
+		<li>You will now have to open a command prompt and go to the Android ADB folder, then install the Amazon apk onto your device with the following "adb install amazonsdktester.apk" (make sure that your 
+		device is connected by USB to your computer!)</li><br>
+		
+		<li>Now open the "amazon.sdktester.json" file in a text editor and add in your purchase details <i>as they are in your game</i>. Here is an example of how the finished json would look:
+		<br>
+		<br>
+			&nbsp;&nbsp;&nbsp;{<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"purchasestest.levels" : {<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"itemType": "ENTITLED",<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price": 0.99,<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Level Pack",<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "Additional Levels",<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"smallIconUrl": "http://thotprocess.files.wordpress.com/2007/06/calvin-hob-evil.jpg"<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"purchasestest.credits" : {<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"itemType": "CONSUMABLE",<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"price": 0.99,<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Credits",<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "Additional Credits",<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"smallIconUrl": "http://thotprocess.files.wordpress.com/2007/06/calvin-hob-evil.jpg"<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+			&nbsp;&nbsp;&nbsp;}<br>
+			<br>
+			
+		<li>Save the file once you have added in your details and go back to the adb command console and type: "adb push amazon.sdktester.json /mnt/sdcard/amazon.sdktester.json". This will add the file 
+		to your device's root directory.</li><br>
+		
+		<li>Finally, tick the Amazon box in the <a href="../../001_Advanced%20Use/Global%20game%20settings/In%20App%20Purchases%20Tab.html">Global Game Settings</a> and <i>GameMaker:Studio</i> will now automatically 
+		detect that you are testing your game and use the test application to check your purchase against the json that you have just installed.</li></br>		
+	</ul>
+</blockquote>
+
+
+<h3>Windows 8</h3>
+<p>
+The Windows 8 target works with In App Purchases, but there are a few important differences with how it works compared to iOS and Android:
+<blockquote>
+	<ul>
+		<li>For testing on Windows 8, you <b>must</b> have ticked the "Sandbox Mode" option in the <a href="../../001_Advanced%20Use/Global%20game%20settings/In%20App%20Purchases%20Tab.html">
+		Global Game Settings - In App Purchases Tab</a>, although your app will not properly simulate communication with the store since it uses a local proxy file to simulate the store state for the app.</li><br>
+		
+		<li>You <i>must</i> have the “Use Internet” checkbox enabled in the <a href="../../001_Advanced%20Use/Global%20game%20settings/Win8%20Tab.html">Global Game Settings - Windows 8 Tab</a> to successfully 
+		download from a content_url.</li><br>
+		
+		<li>Consumable purchases are not explicitly supported by the Windows Store. There are workarounds to be found on the Microsoft Developers forums and support for <a href="iap_consume.html">
+		<tt>iap_consume</tt></a> simply clears the flag interrogated for <a href="iap_is_downloaded.html"><tt>iap_is_downloaded</tt></a> and the set of files downloaded for the purchase.</li><br>
+		
+		<li>Because the Windows Store is configured such that to change the in-app purchases available for a game means you <i>must</i> update your game and submit a new version to them, we do not support 
+		proprietary server activity. i.e. you can only call <a href="iap_activate.html"><tt>iap_activate</tt></a> with a list of available purchases.</li><br>
+	</ul>
+</blockquote>
+
+
+<h3>Windows Phone</h3>
+<p>
+Windows Phone in app purchases are simply set up by creating your game with the necessary code and doing either:
+<blockquote>
+	<ul>
+		<li>Tick the "Sandbox Mode" option in the <a href="../../001_Advanced%20Use/Global%20game%20settings/In%20App%20Purchases%20Tab.html"> Global Game Settings - In App Purchases Tab</a> to simulate communication with the store.</li>
+	</ul>
+</blockquote>
+<p>
+Or:
+<blockquote>
+	<ul>
+		<li>Create your app and upload it to the Windows Phone store, marking it as a "beta" project. You can then test your purchases directly.
+	</ul>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="IAP%20Server%20Setup.html">IAP Server Setup</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+testing IAP
+purchase testing
+Amazon Store
+Google Play
+iTunes Connect
+-->

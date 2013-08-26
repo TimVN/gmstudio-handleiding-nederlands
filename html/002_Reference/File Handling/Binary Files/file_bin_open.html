@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>file_bin_open</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>file_bin_open</h1>
+  
+<h2>Opens the file with the indicated name.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">file_bin_open(fname, mode);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>fname</td>
+	<td>The name of the file to read from.</td></tr>
+	
+	<tr class="alt"><td>mode</td>
+	<td>the indicator of what can be done with the file.</td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>real.
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will open the binary file with the indicated name. The mode indicates what can be done with the file:
+<ul>
+	<li>0 = reading
+	<li>1 = writing
+	<li>2 = both reading and writing
+</ul>
+<p>
+When the file does not exist it is created, and the function returns the id of the file that must be used in the other functions. You can open multiple files at the same time (32 max), 
+but don't forget to close them once you are finished with them.
+<br>
+<br>
+
+<br>
+<i><b>WARNING!</b> This function may not work as you expect due to GameMaker:Studio being sandboxed! Please see the section on <a href="../File%20System%20Limits.html">File System Limits</a> 
+for more information.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>These functions <b>do not</b> work when the target module is HTML5</i>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+file = file_bin_open('myfile.bin', 2);
+</p>
+<p>
+This would open a file from the same directory as the game, and assign its index to the variable "file".
+<p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Binary Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="file_bin_rewrite.html">file_bin_rewrite</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+file_bin_open
+-->

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>analytics_event</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>analytics_event</h1>
+  
+<h2>Send an analytics event to your analytics provider.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">analytics_event(string)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>string</td>
+	<td>A string to send to the provider.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will send the specified text to the analytics provider that you have set up through the <a href="../../001_Advanced%20Use/Global%20game%20settings/Analytics%20Tab.html">Global Game Settings - 
+Analytics Tab</a>. This function can be used to create a custom analytic to track something outside of the scope of the provider being used.
+<br>
+<br>
+ 
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if hs_new<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;analytics_event("New hiscore of " + string (score));<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check a variable to see if it is <tt>true</tt> and if it is then a special analytics event will be triggered with the specified string.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advertising and Analytics</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="analytics_event_ext.html">analytics_event_ext</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+analytics_event
+-->

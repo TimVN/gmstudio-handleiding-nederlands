@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_resume_music</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_resume_music</h1>
+
+<h2>Resumes the current music track after it has been paused.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_resume_music();</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can resume a music track that is currently paused (after using the function <a href="audio_pause_music.html"><tt>audio_pause_music</tt></a>).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(ord("P"))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Pause = !global.Pause;<br>
+&nbsp;&nbsp;&nbsp;if global.Pause<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio_pause_music();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio_resume_music();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks for a press of the keyboard key "P" and if it detects one it sets the global variable "Pause" to <tt>true</tt> or </tt>false</tt> and then either pauses the music or it resumes 
+the music from its paused state depending on the returned value. 
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_resume_all.html">audio_resume_all</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_resume_music
+-->

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>instance_deactivate_object</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>instance_deactivate_object</h1>
+  
+<h2>Deactivates all instances of a given object in the room, or a particular instance if you provide an id.</h2>
+
+<h3> <b>Syntax :</b> </h3>
+<p class="code">instance_deactivate_object(obj);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>obj</td>
+		<td>The object or instance to deactivate (the keyword <b>all</b> can also be used).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> N/A
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can deactivate a single instance or all instances of a specific object from all those that have been activated previously. 
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b> </h3>
+<p class="code">
+instance_deactivate_object(obj_Enemy);<br>
+instance_activate_region(view_xview[0] - 64, view_yview - 64, view_wview[0] + 128, view_hview + 128, false, false);<br>
+</p>
+<p>
+The above code deactivates all instances of the object "obj_Enemy" and then actiavtes a region within the room.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Deactivating Instances</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="instance_deactivate_region.html">instance_deactivate_region</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+instance_deactivate_object
+-->

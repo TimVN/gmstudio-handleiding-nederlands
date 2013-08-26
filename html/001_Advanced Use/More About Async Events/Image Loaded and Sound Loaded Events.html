@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Image Loaded and Sound Loaded Events</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>Image Loaded and Sound Loaded Events</h1>
+
+<h2>This is the sub event that will be triggered by any resource call-backs received.</h2>
+
+<p>
+These two events are triggered when you load an image or a sound into <i>GameMaker:Studio</i>, as long as you have used a valid URL with the applicable load file function. For example say you want to 
+load a background image, and only change the current background to the new one when it has loaded. Well you would have something like this in a create event or an alarm event (for example):
+<br>
+<br>
+
+<p class="code">
+back = background_add("http://www.angusgames.com/game/background1.png", 0, 0);
+</p>
+
+<p>
+This will now start to load the image into the device or the browser, but it will <i>not</i> block <i>GameMaker:studio</i> while it waits for the file to be loaded. Instead <i>GameMaker:Studio</i> will keep 
+running as normal until the image is loaded and the call back triggers the <b>Image Loaded</b> event, where a <a href="../../002_Reference/Data%20Structures/DS%20Maps/index.html"<tt>ds_map</tt></a> 
+(more commonly known as a "dictionary") is created and stored in the special variable <b>async_load</b>. The map contains the following information:
+
+<blockquote>
+<ol>
+	<li><b>"filename": </b>The complete path to the file you requested.</li><br>
+	
+	<li><b>"id": </b>The ID of the resource that you have loaded. This will be the same as the variable that you have assigned the resource to.</li><br>
+	
+	<li><b>"status": </b> Returns a value of less than 0 for an error.</li>
+</ol>
+</blockquote>
+
+<p>
+You would then assign the newly loaded image to a background in this event. The above is also true for sprites and sounds, with a ds_map being generated for each of these resources as shown above, and the 
+following code example demonstrates how the returned information would be used in this event:
+
+<p class="code">
+if ds_map_find_value(async_load, "id") == back<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if ds_map_find_value(async_load, "status") >= 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background_index[0] = back<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+
+<p>
+The above code will first check the id of the ds_map that has been created, then check the status of the callback. If the value is greater than or equal to 0 (signalling success) the result from the callback will 
+then be used to set the background index to the newly loaded image.
+<br>
+<br>
+
+<p>
+<i><b>NOTE : </b>The variable <tt>async_load</tt> is only valid in these events, as the ds_map that is points to is created at the start of the event, then deleted again at the end, with this variable being 
+reset to a value of -1.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">More About Async Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="HTTP.html">HTTP Event</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+image loaded event
+sound loaded event
+async_load
+Image Loaded and Sound Loaded Events
+-->

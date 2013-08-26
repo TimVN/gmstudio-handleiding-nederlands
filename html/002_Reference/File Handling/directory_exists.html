@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>directory_exists</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>directory_exists</h1>
+  
+<h2>Returns whether the indicated directory exists.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">directory_exists(dname)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>dname</td>
+	<td>The name of the directory to look for.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return <tt>true</tt> if the indictaed directory exists or <tt>false</tt> if it does not. The specified name must include the full path, not a relative path and you cannot access any directories 
+from out-with the game bundle as all games are sandboxed.
+<br>
+<br>
+
+<br>
+<i><b>WARNING!</b> This function may not work as you expect due to GameMaker:Studio being sandboxed! Please see the section on <a href="File%20System%20Limits.html">File System Limits</a> 
+for more information.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if directory_exists(working_directory + "\Saves\")<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;file = file_find_first(working_directory + "\Saves\*.doc", fa_readonly);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+This will check to see if the specified directory exists then, if it does, go there and return the first "read only" <tt>doc</tt> file found.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File Handling</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="directory_create.html">directory_create</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+directory_exists
+--> 

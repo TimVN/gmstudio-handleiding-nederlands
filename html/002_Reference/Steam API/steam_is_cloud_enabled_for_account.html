@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_is_cloud_enabled_for_account</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_is_cloud_enabled_for_account</h1>
+  
+<h2>Check to see if Steam Cloud storage is enabled for the current user.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_is_cloud_enabled_for_account();
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Boolean
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check to make sure that the Steam Cloud service is enabled by the user in their Steam Client settings. It will return <tt>true</tt> if it is and <tt>false</tt> otherwise. Note 
+that this does not automatically mean that you can store data to the Cloud, as it will also have to have been enabled for your game (you can check this using the function 
+<a href="steam_is_cloud_enabled_for_app.html"><tt>steam_is_cloud_enabled_for_app</tt></a>). If the Steam Cloud is enabled for your game, but the user has it switched off locally, you can still 
+use the Cloud functions to store and retrieve data from a local copy of all files, it will just not upload them to the cloud on the game end, nor synchronise on the game start.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example:</h3>
+<p class="code">
+if steam_is_cloud_enabled_for_account<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;steam_file_share("Save.txt");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the user has the Steam Cloud enabled and if it returns <tt>true</tt>, it will then synchronise the given file.
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_get_quota_total.html">steam_get_quota_total</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_is_cloud_enabled_for_account
+-->

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>facebook_status</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>facebook_status</h1>
+  
+<h2>This function returns the status of the facebook connection.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">facebook_status()</p>
+<p>
+<br>
+</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can poll Facebook for the current status of the connection. One of the following strings is returned (note that they are always returned in capital letters):
+<blockquote>
+<ul>
+	<li><b>AUTHORISED :</b> This means that the user has logged in correctly and that the connection is good.
+	<li><b>PROCESSING :</b> This is returned when the login process (or any other Facebook function) is currently un-resolved.
+	<li><b>IDLE : </b> This is returned when the connection has been initialised but no further action has been taken.
+	<li><b>FAILED :</b> This means that the user has not logged in correctly, usually due to a connection error.
+	<li><b>DENIED :</b> This is for when the user does not agree to the requested permissions or when the <a href="facebook_init.html"><tt>facebook_init()</tt></a> has not been run.
+</ul>
+</blockquote>
+   
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+switch (facebook_status())<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case "AUTHORISED": global.Auth = true; instance_destroy(); break;<br>
+&nbsp;&nbsp;&nbsp;case "FAILED": facebook_login(permissions); alarm[0] = 30; break;<br>
+&nbsp;&nbsp;&nbsp;case "DENIED": instance_destroy(); break;<br>
+&nbsp;&nbsp;&nbsp;default: alarm[0] = 30;<br>
+}<br>
+</p>
+<p>
+The above code would be run in an alarm and checks the status of Facebook to see if the user has logged in correctly. If the return string is "AUTHORISED", a global variable is set to true and the game continues, 
+if the return string is "FAILED" the game will request that the user logs in again and then repeat the alarm to check the status once more. 
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Facebook</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="facebook_accesstoken.html">facebook_accesstoken</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+AUTHORISED
+PROCESSING
+IDLE
+FAILED
+DENIED
+facebook_status
+-->

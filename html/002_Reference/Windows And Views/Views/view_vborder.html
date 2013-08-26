@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>view_vborder</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>view_vborder</h1>
+
+<h2>Size of vertical border for view following.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">view_hborder[0...7]</p>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable sets the vertical border width for view following. You can set the view to follow a specific instance using the <a href="view_object.html"><tt>view_object</tt></a> variable (or in the 
+<a href="../../../001_Advanced%20Use/More%20about%20rooms/Views.html">room editor</a>) and by setting this value you can control how near or far from the edge of the view the instance needs to be before the view will move. For example, 
+if you have a view height of 240 and set the vertical view border to 120, the object that the view must follow will always be in the middle of the view. However, make the vertical view border 0 and the instance must be right on the edge 
+of the view before it will move.
+<br>
+<br>
+
+<img class="center" src="View_hvbor.png"></img>
+<br>
+<br>
+
+<i><b>NOTE : </b>if you are not setting the x and y position of the view manually, the view never leaves the boundaries of the room. This means that when the view reaches the edge of a room, the horizontal and vertical borders are 
+ignored and the instance will move freely within the view.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+view_hbor[0] = view_wview[0] / 2;<br>
+view_vbor[0] = view_hview[0] / 2;<br>
+</p>
+<p>
+The above code will set the view follow borders to half the width and height of the view, effectively forcing the view to always be centered on the follow object.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="view_hspeed.html">view_hspeed</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+view_vborder
+-->

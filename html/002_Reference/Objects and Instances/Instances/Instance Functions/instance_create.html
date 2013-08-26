@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>instance_create</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>instance_create</h1>
+
+<h2>Creates an instance of a given object at a given position.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">instance_create(x, y, obj);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x</td>
+	<td>The x position the object will be created at.</td></tr>
+
+	<tr class="alt"><td>y</td>
+	<td>The y position the object will be created at.</td></tr>
+
+	<tr><td>obj</td>
+	<td>The object to create an instance of.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can create a new instance of the specified object at any given point within the room. This function returns the <a href="../../Instances/Instance%20Properties/id.html"><tt>id</tt></a> 
+of the new instance which can then be stored in a variable or used to access that instance. Note that this function will also call the create event of the instance being created <i>before</i> continuing with 
+the code or actions for the event that used the function.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<p><b>Example :</b></p>
+<p class="code">
+var inst;<br>
+inst = instance_create(x, y, obj_Bullet);<br>
+with (inst)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;speed = other.shoot_speed;<br>
+&nbsp;&nbsp;&nbsp;direction = other.image_angle;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code creates anew instance of the object "obj_Bullet" and stores the instance id in a variable. This variable is then used to assign <tt>speed</tt> and <tt>direction</tt> to the new instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="instance_destroy.html">instance_destroy</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+instance_create
+-->

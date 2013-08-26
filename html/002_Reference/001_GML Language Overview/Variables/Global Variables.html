@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Global Variables</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Global Variables</h1>
+
+<h2>This section explains what global variables are and how to use them.</h2>
+
+<p>
+A basic desription of a global variable is one that, once declared, belongs to no instance in particular and yet can be accessed by all. Just like local variables, global variables must be declared, but unlike 
+a local variable, a global variable remains in memory until the end of the game. So, you can create a global variable to keep track of (for example) the number of bullets that the player has and then just 
+update this variable at different points in the game. A global variable does not belong to any specific instance and can be accessed, changed and used by all instances at any time, but any change made 
+to the variable are "global", in that all instances using the variable will be affected by the change. Let's have a look at an example:
+<br>
+<br>
+
+<p class="code">
+globalvar food;<br>
+food = 5;<br>
+</p>
+
+<p>
+<br>
+So, we have created a new variable called "food" and we have declared it as global. Now, any instance can use and change this variable in any way and all other instances will "see" this. For example we could 
+have a food object that the player collides with and in the collision event we have:
+<br>
+<br>
+
+<p class="code">
+food +=1; <br>
+</p>
+
+<p>
+<br>
+We also have another object that draws this value like this: <br>
+<br>
+
+<p class="code">
+draw_text(32, 32, "food = " + string(food));<br>
+</p>
+
+<p>
+<br>
+With global variables we can change values and see those changes reflected in all instances of the objects that reference this variable. As with local variables you have to take care not to name your global 
+variables the same as any instance variables as that will cause you problems and make bugs creep into your games! We can actually call global variables in another way to help with this problem, and that is by 
+using the word "global" and a "." before the variable. The following example illustrates this and is exactly the same as the one given above:
+<br>
+<br>
+
+<p class="code">
+global.food = 5;<br>
+</p>
+
+<p>
+<br>
+With this method, we will now have to use "global" everytime we wish to use the variable like so : <br>
+<br>
+
+<p class="code">
+global.food += 1;<br>
+</p>
+<p class="code">
+draw_text(32, 32, "food = " + string(global.food));<br>
+</p>
+
+<p>
+<br>
+<i>GameMaker:Studio</i> has a collection of "built in" global variables too, so you should be aware of them as you may name one of your instance variables the same or wish to have your own global variable 
+with the same name and wonder why you are getting errors! They are easy to spot, however, as they are shown in a different color in the code editor and also come up in the auto-complete bar at the bottom. 
+the majority of built in global variables are very specific and will only be used on rare occasions, but there are three in particular which are very useful and you can find out more about them from the pages 
+listed below:
+<br>
+<br>
+
+<blockquote>
+	<ol>
+		<li><a href="score.html">score</a>
+		<li><a href="health.html">health</a>
+		<li><a href="lives.html">lives</a>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../Variables/index.html">Variables And Variable Scope</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Instance%20Variables.html">Instance Variables</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+global variables
+globalvar
+-->

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>buffer_base64_decode</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>buffer_base64_decode</h1>
+  
+<h2>Decode a base64 encoded string into a buffer.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">buffer_base64_decode(string);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>string</td>
+		<td>The base64 encoded string to decode</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can decode a base64 encoded string (created using the <a href="buffer_base64_encode.html"><tt>buffer_base64_encode</tt></a> function) into a buffer. This function 
+will create the buffer (as a 1 byte aligned "grow" buffer") and return the unique index for the buffer which should be used in all further function calls.
+<br>
+<br>
+
+<i><b>NOTE: </b> It's important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer 
+that you have created you should free it up again using <a href="buffer_delete.html"><tt>buffer_delete</tt></a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ini_open("Save.ini");<br>
+buff = buffer_base64_decode(ini_read_string("Save", "Slot1", ""));<br>
+ini_close();
+</p>
+<p>
+The above code will open an ini file and then read a string from it into the decode function. This function will return a buffer index, which is stored in the variable "buff", containing the data previously 
+encoded and saved. The ini file is then closed.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Buffers</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="buffer_base64_decode_ext.html">buffer_base64_decode_ext</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+buffer_base64_decode
+--> 

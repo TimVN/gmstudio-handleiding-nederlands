@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_get_top</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_get_top</h1>
+
+<h2>Returns the top coordinate of a given tile from its background.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_get_top(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the tile to check.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is used to get the top (y axis) local position <i>within the background image asset</i> of the specified tile. It is important to realise that the value returned is in relation to the background 
+image used to create the tile, where the top left corner is the (0,0) position, and is <i>not</i> the position of the resource within the room.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tile, ww, hh, ll, tt;<br>
+tile = tile_layer_find(-1000, mouse_x, mouse_y);<br>
+ww = tile_get_width(tile);<br>
+hh = tile_get_height(tile);<br>
+ll = tile_get_left(tile);<br>
+tt = tile_get_top(tile);<br>
+tile_add(bck_Tileset, ll, tt, ww, hh, posx, posy, -1000);<br>
+</p>
+<p>
+The above code will first get the index of a tile at the mouse position with a depth of -1000 and then use that value to store various attributes in local variables. These attributes are then used to 
+add a new tile into the room.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_get_x.html">tile_get_x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_get_top
+-->

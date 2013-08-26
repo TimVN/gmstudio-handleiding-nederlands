@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>The Android Tab</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>The Android Tab</h1>
+
+<h2>This section deals with the Android tab of the Global Games Settings Window.</h2>
+
+<p>
+This Android tab is split into two separate <i>sub-tabs</i> (accessible on the left of the window) to make changing and updating the information for your game clearer and less complicated. These tabs are 
+explained in the following sections.
+
+<h3>General</h3>
+<p>
+
+<img class="center" src="Android_General_Tab.png"></img>
+
+The first thing to do is fill in the details about your game, including its <b>Display Name</b>, its <b>Package Name</b> and the <b>Version</b> info. The package name can only be made up of letters 
+from A-Z and numbers 0-9, with no symbols or other characters at all and should follow the format <i>“com.domain.myapp”</i>.
+<br>
+<br>
+
+Once that is done you will need to give your game <b>Icons</b> and a <b>Splash Screen</b>. The icons should be authored as a individual *.png files with sizes of 36x36px, 48x48px, 72x72px 
+and 170x170px. The splash screen should be the size of the first room in your game as this is what will briefly be shown while the game assets are being loaded. Smaller or larger images are 
+permitted but will be scaled to fit.
+<br>
+<br>
+
+Once you have configured the game details and presentation graphics, there are two more available options :
+<br>
+<br>
+
+<blockquote>
+	<ul>
+		<li><b>Architectures</b> - This is the CPU type that your game will support. The most common ones are chosen by default (99% of all devices use these), but you can choose those 
+		that you think appropriate. Bare in mind that each one will add about 1MB to the final apk size, don't go ticking them all unless this is not a problem!</li><br>
+
+		<li><b>Orientation</b> - Here you can choose to lock the game to a specific orientation by checking either landscape, portrait, or both.</li><br>
+	</ul>
+</blockquote>
+
+<p>
+You can also see that there is an option marked <i>iCade Support</i>. You can select this to enable the Android version of the iCade to work with your game, or to enable bluetooth gamepads. See the functions for 
+<a href="../../002_Reference/Mouse, Keyboard and Other Controls/GamePad Input/index.html">GamePad Input</a>.
+<br>
+<br>
+
+Beneath the <i>iCade Support</i> check-box, you can find the <i>haptic Effects</i> check-box. Enabling this will permit the use of haptic effects (vibration) in your game, but it is dependant of you accepting 
+the Immersion EULA that pops up. If you decline to accept the agreement, then haptic effects will not be enabled, and if you have code for them in your game, the game will fail to compile. For more 
+information on the <i>GameMaker:Studio</i> haptic effects, see the section <a href="../../002_Reference/Mouse, Keyboard and Other Controls/Immersion Haptics/index.html">Immersion Haptics</a>.
+<br>
+<br>
+
+The final option on this tab deals with the <b>Install Location</b> for your game. This can either be set to <i>auto</i>, in which case the game will be installed to the location chosen by the user on their 
+device, or it can be set to <i>Prefer External</i> which will always try to install the game to the external storage of the device.
+<br>
+<br>
+
+<h3>Graphics</h3>
+<p>
+
+<img class="center" src="Android_Graphics_Tab.png"></img>
+
+The graphics tab has two sections to it, the <b>Options</b> and the <b>Texture Pages</b>. The first of these controls the display options for your game, with the first one being the <b>Interpolate Colors 
+Between Pixels</b> flag. This turns on interpolation, which basically "smooths" pixels, so for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edge graphics it is better left on.
+<br>
+<br>
+
+Next, you can set the <b>Screen color Depth</b> to either <b>16bit</b> or <b>24bit</b>. This will affect the compatability with some older devices if it is set to 24bit, and will also increase the <i>ashmem</i> 
+that is needed (this is the shared memory on Android devices).
+<br>
+<br>
+
+The last option here is the <b>Device Support</b> for your game. You can choose to support any device, or only those that have a GPU. Basically, if your game has any advanced drawing functions like 
+alpha blending, additive blending, surfaces, etc... you should limit it to those devices that have a GPU otherwise you run the risk of getting negative comments and poor rating for your game due to graphical 
+errors or crashes on older devices.
+<br>
+<br>
+
+Finally there is the option to set the size of the <b>Texture Page</b>. The default (and most compatible) size is 1024x1024, but you can choose from anywhere between 256x256 up to 2048x2048.
+There is also a button marked <b>View</b> which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be 
+very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary.
+<br>
+<br>
+
+<i><b>NOTE : </b>Be aware that the larger the size of the texture page, the less compatible your game will be.</i>
+<br>
+<br>
+
+<h3>Social</h3>
+<p>
+
+<img class="center" src="Android_Amazon_Tab.png"></img>
+
+This tab permits you to enable social functions for your Android game with either <b>Amazon GameCircle</b> or <b>Google Play</b>. Both markets permits you to add achievements and leaderboards 
+for your games in a simple way, allowing worldwide highscores as well as local ones. Once you have ticked the appropriate checkboxes, you will need to code the functionality into your game using the 
+<a href="../../002_Reference/Social Gaming/Achievements and Leaderboards/index.html">Achievements and Leaderboards</a> functions.
+<br>
+<br>
+
+If you are using <b>GameCircle</b>, you can also enable <b>WhisperSync</b> which is an Amazon based cloud storage service (see the section on 
+<a href="../../002_Reference/Cloud Services/index.html">Cloud Services</a> for more information).
+<br>
+<br>
+
+If you use <b>Google Play</b> you will need to add your <i>App Id</i> into this tab for the functions to work (this can be found from your Google Play Developers dashboard).
+<br>
+<br>
+
+<h3>Permissions</h3>
+<p>
+
+<img class="center" src="Android_Permissions_Tab.png"></img>
+
+From this tab you can change some of the permissions that your game may request within the <b>Android Manifest</b>. <i>GameMaker:Studio</i> allocate permissions automatically as required, however 
+you may find you require a permission for your game that we haven't assigned in which case tick the requisite permission box on the tab. The list below outlines those that are available:
+
+<blockquote>
+	<ul>
+		<li><b>WRITE_EXTERNAL_STORAGE</b> - Will permit your game to write to external storage.</li><br>
+		
+		<li><b>READ_PHONE_STATE</b> - Allow read only access to the phone state.</li><br>
+
+		<li><b>ACCESS_NETWORK_STATE</b> - Permit your game to access information about networks.</li><br>
+
+		<li><b>INTERNET</b> - Permit your game to open network sockets.</li><br>
+
+		<li><b>BLUETOOTH</b> - Will permit your game to connect to paired bluetooth devices.</li><br>
+		
+	</ul>
+</blockquote>
+
+<p>
+<i><b>NOTE: </b>If you are not sure that you need these, you should probably just leave them un-checked by default and let GameMaker:Studio deal with the permissions for your game.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Global Game Settings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Win8 Phone Tab.html">The Windows Phone Tab</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+Android Settings
+ARM
+Mips
+architectures
+lock orientation
+Amazon
+Game Circle
+permissions
+WhisperSync
+Google Play
+Enable Haptics
+bluetooth gamepads
+-->

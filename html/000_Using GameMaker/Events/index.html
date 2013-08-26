@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Events</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Events</h1>
+
+<h2><i>GameMaker:Studio</i> uses what is called an event driven approach, and this section of the manual outlines how that works.</h2>
+
+<p>
+So, what are events? Basically, these are discreet moments in the game loop where things are made to happen based on what you have programmed for them. You see <i>GameMaker:Studio</i> works with 
+cycles of these events - from the moment a room is started to the moment it is finished there is a <i>game loop</i> running where every <i>step</i> (a step is a moment in game time, governed by the room 
+speed setting) a series of events are run, and you can choose to place code or DnD actions in your instances that respond to these events. Let's look at a typical object setup with events and actions:
+<br>
+<br>
+<img class="center" src="../../images/form_event_panel.png">
+
+<p>
+As you can see in our example object there are a number of events listed that it should respond to, but initially when you create an object this list is empty and you must decide which events you need and what 
+instances of that object should do when those events are triggered. To add events into the object, you press the <b>Add Event</b> button found at the bottom of the events list which will bring up the following 
+window:
+<br>
+<br>
+<img class="center" src="../../images/form_event_selector.png">
+
+
+<p>
+That is the list of all the basic events which an object can respond to, although some of those events also have <i>sub</i> events to further define behaviours. For example, if you add a <b>Key Press</b> event 
+you will then get a further window popping up with the sub events that allow you to select <i>which</i> key the object should respond to. Once you have selected your event, you can then add your DnD actions or 
+code into the <b>Actions</b> section on the right of the event list, which means that you are telling <i>GameMaker:Studio</i> that when this event is triggered, these actions should be performed. here is an 
+example image to illustrate this:
+<br>
+<br>
+<img class="center" src="../../images/Add_Action.png">
+
+<p>
+You can change the order of the actions in the list by pressing and holding the left mouse button and then dragging to move the selected DnD action icon. Note that if you hold the &lt;Alt&gt; key while dragging, 
+you can make a copy of the action. You can even use drag-and-drop between action lists for different objects, either by having them both open and literally dragging the DnD action icons between them, or you can 
+click with the right mouse button on an action which will open a menu where you can edit, cut, copy, paste and even delete actions (deleting can also be done by using the &lt;Del&gt; key). You can select multiple 
+actions for cutting, copying, or deleting by holding the &lt;Shift&gt; key or &lt;Ctrl&gt; key and clicking on a series of action icons, and pressing &lt;Ctrl&gt;&lt;A&gt; will select all actions. Finally, when you hold 
+your mouse at rest above an action, a longer description is given of the action in a pop up window so that you can see what it does without actually having to open it.
+<br>
+<br>
+
+There are two further buttons available at the bottom of the events list, <b>Delete</b> and <b>Change</b>. As you may well imagine, the <b>Delete</b> button will permanently remove the currently selected
+event </i>and all its associated actions</i> from the object (Events without any actions assigned to them will automatically be deleted when you close the form so there is no need to delete them manually). The 
+<b>Change</b> button can be used to change the current event into another one, and in this way transfer all the associated actions to the new event (if the event you try to change to has already been defined then 
+nothing will happen). These actions can also be accomplished by simply right clicking on the event and selecting the appropriate choice from the pop up menu that will open.
+<br>
+<br>
+
+In this way you can "build" behaviours that are triggered by specific events in your game by just adding in more actions or more code (you are not limited to the amount you can add for each event). If you wish to know 
+more about all the available actions then you can go to the <a href="../Actions/index.html">Actions</a> section of the manual, and the <a href="../../002_Reference/index.html">Reference</a> section 
+has all the information you need on the available code functions.
+
+<h3>Event Order</h3>
+<p>
+It should also be noted that the exact order that the events are going to occur in each step cannot be clearly stated, simply because it depends on the internal workings of <i>GameMaker:Studio</i>, which is 
+subject to change as the software develops. However there <i>are</i> certain events that always run in the same order. The first set of events that will always happen the same way are those that occur when 
+a room is first entered and the order of events for that is:
+<br>
+<br>
+
+<blockquote>
+<ul>
+	<li><b><a href="Create%20Event.html">Create Event</b></a> of all instances
+	<li><b><a href="../../001_Advanced%20Use/More%20about%20rooms/index.html">Instance Creation Code</b></a> of all instances
+	<li><b><a href="other%20Event.html">Game Start Event</b><a> (this will only be run in the very first room of the game)
+	<li><b><a href="../Rooms/Settings%20Tab.html">Room Creation Code</b></a>
+	<li><b><a href="other%20Event.html">Room Start Event</b></a> of all instances
+</ul>
+</blockquote>
+
+<p>
+Other than those specific events, the only known order that will always occur in the same way no matter what belongs to the three step events and the two draw events. These will always remain consistent, so 
+if you have code that relies on specific timing during each step of your game, you should use:
+<br>
+<br>
+<blockquote>
+<ul>
+	<li><b>Begin Step Event</b>
+	<li><b>Step Event</b> - The step event is executed just <i>before</i> instances are put in their new positions.
+	<li><b>End Step Event</b>
+</ul>
+</blockquote>
+
+<p>
+Two of the three sub events for drawing are also always dealt with in the same order as follows (the Resize event is triggered differently):
+<br>
+<br>
+<blockquote>
+<ul>
+	<li><b>Draw Event</b>
+	<li><b>Draw GUI Event</b>
+</ul>
+</blockquote>
+
+<p>
+The sections below deal with each available event :
+<br>
+<br>
+
+<P>
+	<img src="../../images/Event_Create.png" align="middle" align="left"><a href="Create%20Event.html">Create Event</a><br>
+	<img src="../../images/Event_Destroy.png" align="middle" align="left"><a href="Destroy%20Event.html">Destroy Event</a><br>
+	<img src="../../images/Event_Timer.png" align="middle" align="left"><a href="Alarm%20Event.html">Alarm Events</a><br>
+	<img src="../../images/Event_Step.png" align="middle" align="left"><a href="Step%20Event.html">Step Events</a><br>
+	<img src="../../images/Event_Collision.png" align="middle" align="left"><a href="Collision%20Event.html">Collision Event</a><br>
+	<img src="../../images/Event_Keyboard.png" align="middle" align="left">
+	<img src="../../images/Event_Keypress.png" align="middle" align="left">
+	<img src="../../images/Event_Keyrelease.png" align="middle" align="left"><a href="Keyboard%20Event.html">Keyboard Events</a><br>
+	<img src="../../images/Event_Mouse.png" align="middle" align="left"><a href="Mouse%20Event.html">Mouse Event</a><br>
+	<img src="../../images/Event_Other.png" align="middle" align="left"><a href="other%20Event.html">Other Events</a><br>
+	<img src="../../Images/Event_Draw.png" align="middle" align="left"><a href="Draw%20Event.html">Draw Events</a><br>
+	<img src="../../images/Event_Web.png" align="middle" align="left"><a href="Async%20Event.html">Asynchronous Events</a><br>
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Using GameMaker:Studio</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="../Actions/index.html">Actions</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+events
+adding events
+deleting events
+changing events
+event order
+-->

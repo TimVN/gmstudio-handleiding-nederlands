@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Settings</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Settings</h1>
+
+<h2>Each room has a number of settings that you can change by clicking on the <b>settings</b> tab.</h2>
+
+<p>
+<img class="center" src="../../images/form_room_settings.png">
+
+This tab is where you set the basic details of your room and should be your first stop whenever you create a new room. The following settings are available :
+<br>
+<br>
+<h3>Name</h3>
+<p>
+The "Name" of your room is the unique identifier that you can use to direct <i>GameMaker:Studio</i> to the correct resource. This name is really just a "pointer" as it holds the internal id of the room and "points" 
+<i>GameMaker:Studio</i> to the correct resource when it is referenced. This means that it is very important that <i>no other resource has the same name</i> as this will cause conflicts and cause unexpected 
+errors within your game. This name is what you will use in all code and actions that move the player from room to room or change room properties.
+<br>
+<br>
+
+<h3>Width and Height</h3>
+<p>
+As you can imagine, a room has to have a size and this is defined by the values that you input for its width and height, in pixels. Be careful here, as it's very easy to say "I'm making a space game, lets have a room 100,000 x 100,000 
+pixels!" That is a recipe for disaster! <i>GameMaker:Studio</i> is powerful, but there are limits, and so when dealing with rooms it's much better to keep them as small as possible and then optimise your game around them, 
+especially if you are making a game for mobile devices or the web.
+<br>
+<br>
+
+<h3>Speed</h3>
+<p>
+The room speed is defined as being the number of steps per second that <i>GameMaker:Studio</i> should run at. This is <i>not</i> the same as the fps (frames per second) which can (and usually does!) give a different value. 
+The room speed is the speed at which <i>GameMaker:Studio</i> ticks over and is a constant value, however the fps will fluctuate and is the actual speed at which the game is running. The typical room speeds for a game are 
+30 or 60, but some people like to set it slightly higher to 100 or 120. There are many arguments about which room speed is the ideal, but the actual answer depends on what type of game you are making, the size of the room, 
+the number of instances and how intensive the code is. For example, if you have a large room (anything over 1024 px) and a room speed of 30, the game may appear "choppy" as the larger the area you are looking at, the easier 
+it is for the eye to perceive low room speeds, but if the game is intensive then setting the room speed to 100 may cause the game to "lag" as the fps drops due to the amount of processing being done. So take care with this value 
+and try to always adjust it to what your game needs.
+<br>
+<br>
+
+<h3>Persistent</h3>
+<p>
+Normally, when you leave a room and return to the same room later, that room is reset to its initial settings. This is usually fine for most games but it is normally not what you want in, for example, an RPG or any non-linear game, 
+where you want to come and go between rooms and have them be way you left it the last time. Checking the box labeled <b>Persistent</b> will do exactly that. The room status will be remembered and when you return to it 
+later, it will be exactly the same as you left it, with it only being reset to the start state when the game is reset. Note that there is one exception to this - if you marked certain <i>objects</i> as being persistent, instances of this 
+object will not stay in the room but move to the next room.
+<br>
+<br>
+
+<h3>Creation Code</h3>
+<p>
+If you click on this button you will open a code editor. This editor allows you to input functions and code that will be run at the start of the room, <i>after</i> the create event of all instances but <i>before</i> their room 
+start event.
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Creating Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Backgrounds%20Tab.html">Backgrounds</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room settings
+room name
+room width
+room height
+room speed
+room persistence
+room creation code
+frames per second
+SurfaceRT canvas limit
+-->

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_priority_find_max</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_priority_find_max</h1>
+
+<h2>Returns the value in the priority queue with the largest priority.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_priority_find_max(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the priority queue to use.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real or String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can find the value stored in the priority queue with the highest priority, and if more than one value has the same priority, the one that was added to the priority queue first will be 
+the one to get returned. However, unlike <a href="ds_priority_delete_max.html"><tt>ds_priority_delete_max</tt></a>, this function will not remove the value from the queue.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if ai_move<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;script_execute(ds_priority_find_max(ai_priority);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks an instance variable and if it returns <tt>true</tt> it will execute a script indexed in the priority queue with the highest priority value.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Priority Queues</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_priority_find_min.html">ds_priority_find_min</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_priority_find_max
+-->

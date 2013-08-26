@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_create_from_screen</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_create_from_screen</h1>
+
+<h2>Creates a background by copying the given area from the screen.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">background_create_from_screen(x, y, w, h, removeback, smooth);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x</td>
+	<td>The x position to copy from.</td></tr>
+	
+	<tr class="alt"><td>y</td>
+	<td>The y position to copy from.</td></tr>
+	
+	<tr><td>w</td>
+	<td>The width of the area to be copied (from the x position).</td></tr>
+	
+	<tr class="alt"><td>h</td>
+	<td>The height of the area to be copied (from the y position).</td></tr>
+	
+	<tr><td>removeback</td>
+	<td>Indicates whether to make all pixels with the selected color (left-bottom pixel) transparent.</td></tr>
+	
+	<tr class="alt"><td>smooth</td>
+	<td>Indicates whether to smooth the edges if transparent.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can create a background from an image on the screen. The screen is defined as the area of the game window where everything is displayed, so the x and y coordinates that you must 
+input are relative to the (0,0) position of the game window (the top left corner). The width and height arguments are in pixels and define the width and height of the part of the screen to use.
+<br>
+<br>
+
+Setting the "removeback" argument to <tt>true</tt> will remove a color from the background, by checking the <i>bottom left</i> pixel of the selected area for the color there and then using that as the color 
+to be removed.
+<br>
+<br>
+
+If you choose the "removeback" option, you may also want <i>GameMaker:Studio</i> to smooth the edges of the background by setting the "smooth" argument to <tt>true</tt>. All this does is create a 
+semi-transparent border around the edges of the background after it has had a color removed.
+<br>
+<br>
+
+<i><b>NOTE : </b>When you create a background in GameMaker:Studio with this method you must remember to remove it again (with <a href="background_delete.html"><tt>background_delete</tt></a>) 
+when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(vk_enter)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if !background_exists(bck_custom)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bck_custom = background_create_from_screen(0, 0, 32, 32, false, false);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if a background has been assigned to the variable "bck_custom" when a key is pressed. If the check returns <tt>false</tt>, a background is created form the screen and it's 
+index is stored.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_create_from_surface.html">background_create_from_surface</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_create_from_screen
+-->

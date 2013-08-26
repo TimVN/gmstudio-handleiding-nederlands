@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_list_insert</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_list_insert</h1>
+
+<h2>Inserts the given value to any position in the list.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_list_insert(id, pos, val);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the list to add to.</td></tr>
+	
+	<tr><td>pos</td>
+	<td>The position to add the value, where 0 corresponds to the very beginning of the list and the final position is ds_list_size(id)-1.</td></tr>
+	
+	<tr><td>val</td>
+	<td>The value to add to the list.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will add the given value into the list at the given position. if the list contains more values after the given position, their position will be shifted up one to make room making the list larger by one.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ds_list_insert(list, 9, score);
+</p>
+<p>
+The above code will add the value stored in the variable "score" into the 10th positoin of the list indexed by the variable "list" (lists are counted from 0, so a ten value list is numbered from 0 - 9).
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Lists</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_list_replace.html">ds_list_replace</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_list_insert
+-->

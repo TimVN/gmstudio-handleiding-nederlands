@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The Sprite Editor Edit Menu</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The Sprite Editor Edit Menu</h1>
+
+<h2>This section explains the edit menu functions associated with the <i>GameMaker:Studio</i> sprite editor.</h2>
+
+
+<p>
+<img class="center" src="Edit_Menu.png">
+
+The edit menu contains a number of commands related to the edition of sub-images within the sprite (most of these commands are the same as those found on the toolbar as buttons) :
+<br>
+<br>
+
+<ul>
+	<li><b>Undo : </b>This will undo the last action, and you can repeatedly undo consecutive actions with this button, but note that the number of undos that can be performed is limited to 16.<br></li>
+	<br>
+
+	<li><b>Redo : </b>If you have used the undo function, you can use this to go back to the state that you undid. This is limited to the number of undos that you have done previously.<br></li>
+	<br>
+	
+	<li><b>Cut : </b>You can use this to "cut" a sub image out of the list of sub-images. This cut image is stored to the clipboard and can then be pasted into another part of the same sprite, another sprite resource 
+	or even into some other program, independent of <i>GameMaker:Studio</i>. Please note that the transparencies may not be the same when pasted into another program.<br></li>
+	<br>
+	
+	<li><b>Copy : </b>This button will copy the currently selected sub-image into the clipboard for use in another place, either the same sprite, another sprite or even an alternate program.<br></li>
+	<br>
+	
+	<li><b>Paste : </b>You can use this button to paste whatever image you have previously stored in the clipboard (with cut, or copy) into the current sprite as a new sub-image. If the pasted image is larger or smaller than the current 
+	sprite, you will be shown the "Inserting Image" window (see "Add A Sprite From A File", above). If the image has been copied from a source other than <i>GameMaker:Studio</i>, then transparencies may 
+	not be the same.<br></li>
+	<br>
+	
+	<li><b>Erase : </b>As you might imagine, this command erases one or all images to a particular color. The following window will open when you select this :
+	
+	<img class="center" src="Erase_Image.png">
+
+	What this does is it removes all the current pixel information, but not the sub-image itself, and replaces it with a single color of your choice. You can also adjust the transparency and select whether you want to erase all the 
+	sub-images, or just the currently selected one.<br></li>
+	<br>
+	
+	<li><b>Delete : </b> Delete the currently selected sub-image, removing it from the sprite completely.<br></li>
+	<br>
+	
+	<li><b>Move Left : </b>Move the currently selected sub-image one position to the left in the sequence.<br></li>
+	<br>
+	
+	<li><b>Move Right : </b>Move the currently selected sub-image one position to the right in the sequence.<br></li>
+	<br>
+	
+	<li><b>Add Empty : </b>Add a new empty sub-image at the end of the sequence.<br></li>
+	<br>
+	
+	<li><b>Insert Empty : </b>Insert a new empty sub-image before the currently selected subimage.<br></li>
+	<br>
+	
+	<li><b>Edit : </b>Edit the currently selected sub-image using the built-in image editor. More on this in the section <a href="Editing Sub-images.html">Editing Sub-images.</a><br></li>
+	<br>
+	
+	<li><b>Set Transparency Background : </b> Here you can indicate how the transparent area of the sprites should be shown in the sprite editor. You can either use a customizable block pattern, or a color that you can change
+	by clicking on the color box, as shown in the following image (note that this does not affect the sprite itself, only how you view it in the editor) :
+	
+	<img class="center" src="Background_Settings.png">
+
+	<br></li>
+</ul>
+
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../Editing%20Sprites.html">Editing Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Transform%20Menu.html">The Sprite Editor Transform Menu</i></a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+set transparency background
+erase
+-->

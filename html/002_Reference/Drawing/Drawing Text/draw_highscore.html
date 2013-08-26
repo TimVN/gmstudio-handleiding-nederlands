@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_highscore</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_highscore</h1>
+  
+<h2>Draws the highscore table in the room in the indicated box using the current font.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">draw_highscore( x1, y1, x2, y2 );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x1</td>
+	<td>The x coordinate of the left of the highscore rectangle.</td></tr>
+	
+	<tr><td>y1</td>
+	<td>The y coordinate of the top of the highscore rectangle.</td></tr>
+	
+	<tr><td>x2</td>
+	<td>The x coordinate of the right of the highscore rectangle.</td></tr>
+	
+	<tr><td>y2</td>
+	<td>The y coordinate of the bottom of the highscore rectangle.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This simple function will draw the current list of internally stored high scores using the currently set font, color and alpha values within the specified rectangle. You provide the coordinates 
+for the upper left corner and lower right corner of the rectangular are to draw the text, and <i>GameMaker:Studio</i> will take care of the rest, with spacing and position being done 
+automatically.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_highscore(100, 100, room_width - 100, room_height -100);
+</p>
+<p>
+This would draw the highscore table in a rectangle in the middle of the room with a 100px border.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing Text</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_set_font.html">draw_set_font</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_highscore
+-->

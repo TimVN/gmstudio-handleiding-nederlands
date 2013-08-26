@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>joystick_direction</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>joystick_direction</h1>
+  
+<h2>Returns the direction of movent for the joystick.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">joystick_direction(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the joystick (1 or 2).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>vk_numpad1...9
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return a virtual key code for the numberpad buttons depending on direction being pressed by the joystick/gamepad with the given id, as shown in the image below. The id can be either 
+1 or 2 as <i>GameMaker:Studio</i> only accepts input from a maximum of two joysticks/gamepads.
+<br>
+<br>
+
+<i><b>NOTE : </b>This function is only available for Windows.</i>
+<br>
+<br>
+
+<img class="center" src="js_direction.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+switch (joystick_direction(1))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case vk_numpad1: direction = 225; break;<br>
+&nbsp;&nbsp;&nbsp;case vk_numpad2: direction = 270; break;<br>
+&nbsp;&nbsp;&nbsp;case vk_numpad3: direction = 315; break;<br>
+&nbsp;&nbsp;&nbsp;case vk_numpad4: direction = 180; break;<br>
+&nbsp;&nbsp;&nbsp;case vk_numpad6: direction = 0; break;<br>
+&nbsp;&nbsp;&nbsp;case vk_numpad7: direction = 135; break;<br>
+&nbsp;&nbsp;&nbsp;case vk_numpad8: direction = 90; break;<br>
+&nbsp;&nbsp;&nbsp;case vk_numpad9: direction = 45; break;<br>
+&nbsp;&nbsp;&nbsp;}
+</p>
+<p>
+The above code uses the returned value of the <tt>joystick_direction</tt> function to set the direction of movement for the instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Joystick Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="joystick_check_button.html">joystick_check_button</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+joystick_direction
+-->

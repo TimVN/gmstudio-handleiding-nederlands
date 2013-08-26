@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_width</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_width</h1>
+
+<h2>Returns the width of the currently assigned sprite.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">sprite_width</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read only</b> variable returns the width of the sprite that has been assigned to the instance. This width is returned in pixels and will be dependant on the <a href="image_xscale.html">
+<tt>image_xscale</tt></a>. If you need the un-scaled width you should use <a href="../../../Game%20Assets/Sprites/sprite_get_width.html"><tt>sprite_get_width</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if sprite_width != sprite_get_width(sprite_index)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;image_xscale = 1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the width of the sprite assigned to the instance running the code against the width of the sprite resource and if it is not the same, it resets the <tt>image_xscale</tt> to 1,
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_xoffset.html">sprite_xoffset</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_width
+-->

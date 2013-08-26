@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_primitive_end</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_primitive_end</h1>
+  
+<h2>Ends the process of defining a primitive in 3D.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_primitive_end()</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function must be called when you have finished defining the points of your primitive. If you do not call this funtion, <i>nothing will be drawn</i> as this effectively tells <i>GameMaker:Studio</i> that you have finished 
+and that it can now draw the defined primitive.
+<br>
+<br>
+
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_primitive_begin(pr_trianglelist);<br>
+d3d_vertex_color(100, 100, 0, c_blue, 0.1);<br>
+d3d_vertex_color(100, 200, 0, c_blue, 0.1);<br>
+d3d_vertex_color(150, 150, 200, c_red, 1);<br>
+d3d_vertex_color(100, 200, 0, c_blue, 0.1);<br>
+d3d_vertex_color(200, 200, 0, c_blue, 0.1);<br>
+d3d_vertex_color(150, 150, 200, c_red, 1);<br>
+d3d_vertex_color(200, 200, 0, c_blue, 0.1);<br>
+d3d_vertex_color(100, 100, 0, c_blue, 0.1);<br>
+d3d_vertex_color(150, 150, 200, c_red, 1);<br>
+d3d_vertex_color(100, 100, 0, c_blue, 0.1);<br>
+d3d_vertex_color(100, 200, 0, c_blue, 0.1);<br>
+d3d_vertex_color(200, 200, 0, c_blue, 0.1);<br>
+d3d_primitive_end();<br>
+</p>
+<p>
+The above code will draw a tetrahedron standing on the z=0 plane with its top colored red and fully opaque at z = 200, while it's base will be blue and transparent.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_primitive_begin_texture.html">d3d_primitive_begin_texture</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_primitive_end
+--> 

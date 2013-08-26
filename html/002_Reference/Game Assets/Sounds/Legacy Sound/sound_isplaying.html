@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sound_isplaying</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sound_isplaying</h1>
+
+<h2>Checks to see if a given sound is playing.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sound_isplaying(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sound to check for.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check to see if an instance of the sound index is playing currently (<tt>true</tt>) or not (<tt>false</tt>). Please note that if you do this check a moment after the indexed sound is 
+supposed to have started it may return <tt>false</tt> erroneously as the spound system has not had enough time to initialise the sound properly.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !sound_isplaying(snd_Music)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;sound_play(snd_GameOver);<br>
+&nbsp;&nbsp;&nbsp;instance_create(x, y, obj_GameOver_Menu);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the sound to see if it is still playing and if it is not, it plays another sound and creates a new instance.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Legacy Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sound_volume.html">sound_volume</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sound_isplaying
+-->

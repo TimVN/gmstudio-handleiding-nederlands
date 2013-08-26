@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ads_move</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ads_move</h1>
+  
+<h2>This code moves displaying ads in your game room.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">ads_move(x, y, num)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x</td>
+	<td>The new x position in the room.</td></tr>
+	
+	<tr class="alt"><td>y</td>
+	<td>The new y position in the room.</td></tr>
+	
+	<tr><td>num</td>
+	<td>The advert number to display (0 - 4).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can move displaying ads to the given position <i>within the GUI</i>. The "num" that you supply is the number of the advertising key that you wish to use as defined in the 
+<a href="../../001_Advanced%20Use/Global%20game%20settings/Advertising%20Tab.html">Global Game Settings - Advertising Tab</a>, and will generate an advert of the size specified for that 
+key.
+<br>
+<br>
+   
+<h3>Example :</h3>
+<p class="code">
+ads_move(display_get_gui_width() - ads_get_display_width(0), 0, 0);
+</p>
+<p>
+The above code will set an advert to display at the top right-hand of the display.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advertising and Analytics</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ads_get_display_width.html">ads_get_display_width</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ads_move
+-->

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>timeline_index</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>timeline_index</h1>
+
+<h2>Returns the time line index for the instance.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">timeline_index;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable holds the index of the time line currently associated with the instance. You can set this to a particular time line to use that one, or set it to -1 to stop using a time line for the instance (if 
+no time line is defined for the instance, -1 is returned too). Note that this does <i>not</i> start the time line - for that use the variable <a href="timeline_running.html"><tt>timeline_running</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if timeline_exists(global.tl)
+{
+timeline_index = global.tl;
+}
+</p>
+<p>
+The above code will assign the instance running the code a time line indexed in the variable "global.tl" if that time line exists.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Timelines</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="timeline_running.html">timeline_running</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+timeline_index
+-->

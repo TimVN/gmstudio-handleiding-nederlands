@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Drawing Sprites And Backgrounds</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Drawing Sprites And Backgrounds</h1>
+
+<h2>This section contains all the functions available for drawing the graphics assets.</h2>
+
+<p>
+Even though you can set up backgrounds in the room editor and you can assign sprites to instances, often this is not flexible enough for the game you are making. For example, if you have an instance that 
+has to draw a menu, you may want to display various button sprites at a time, or if you have a game with scrolling parrallax backgrounds you will need to be able to set them through code in a controller 
+instance of some type. In these situations you should be using the following functions which can draw sprite and background assets anywhere in the room with some of the functions also permiting you to 
+manipulate the shape, size, color and alpha of the sprite to achieve special effects.
+<br>
+<br>
+
+<h3>Sprites</h3>
+<p>
+You can assign a sprite to an instance and by default <i>GameMaker:Studio</i> will draw it with the properties given by the various <a href="../../Objects%20and%20Instances/Instances/Instance%20Properties/index.html">
+sprite variables</a>, however if you add anything into the draw event, you are "taking control" and must tell <i>GameMaker:Studio</i> exactly what to draw. This means that if you must use the following 
+functions to define exactly what it is the instance is to draw and where abouts in the room it is to draw it:
+<blockquote>
+	<ol>
+		<li><a href="draw_self.html">draw_self</a><br>
+		<li><a href="draw_sprite.html">draw_sprite</a><br>
+		<li><a href="draw_sprite_ext.html">draw_sprite_ext</a><br>
+		<li><a href="draw_sprite_general.html">draw_sprite_general</a><br>
+		<li><a href="draw_sprite_part.html">draw_sprite_part</a><br>
+		<li><a href="draw_sprite_part_ext.html">draw_sprite_part_ext</a><br>
+		<li><a href="draw_sprite_stretched.html">draw_sprite_stretched</a><br>
+		<li><a href="draw_sprite_stretched_ext.html">draw_sprite_stretched_ext</a><br>
+		<li><a href="draw_sprite_pos.html">draw_sprite_pos</a><br>
+		<li><a href="draw_sprite_tiled.html">draw_sprite_tiled</a><br>
+		<li><a href="draw_sprite_tiled_ext.html">draw_sprite_tiled_ext</a><br>
+	</ol>
+</blockquote>			
+			
+<h3>Backgrounds</h3>
+<p>
+Although the <a href="../../../000_Using%20GameMaker/Rooms/Backgrounds%20Tab.html">Room Editor Backgrounds Tab</a> has a number of options for setting up backgrounds, it is often more useful to draw them 
+using code. To that end, <i>GameMaker:Studio</i> has the following functions that permit you to draw background assets in a number of different ways:
+<br>
+<br>
+
+<i><b>NOTE : </b>Don't forget that adding any code into the draw event of an instance will switch off the automatic drawing of the sprite for that instance, so if you need to draw the sprite and a background 
+you should use the functions above in combination with those listed here.</i>
+<blockquote>
+	<ol>
+		<li><a href="draw_background.html">draw_background</a><br>
+		<li><a href="draw_background_ext.html">draw_background_ext</a><br>
+		<li><a href="draw_background_part.html">draw_background_part</a><br>
+		<li><a href="draw_background_part_ext.html">draw_background_part_ext</a><br>
+		<li><a href="draw_background_stretched.html">draw_background_stretched</a><br>
+		<li><a href="draw_background_stretched_ext.html">draw_background_stretched_ext</a><br>
+		<li><a href="draw_background_tiled.html">draw_background_tiled</a><br>
+		<li><a href="draw_background_tiled_ext.html">draw_background_tiled_ext</a><br>
+		<li><a href="draw_background_general.html">draw_background_general</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Drawing</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../Joystick Input/index.html">Joystick Input</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+-->

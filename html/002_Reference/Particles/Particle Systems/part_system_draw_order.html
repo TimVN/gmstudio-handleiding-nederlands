@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_system_draw_order</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_system_draw_order</h1>
+
+<h2>Sets the order in which new particles are drawn.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_system_draw_order(ind, oldtonew);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the particle system to change.</td></tr>
+	
+	<tr><td>oldtonew</td>
+	<td>Whether old particles should be drawn behind newer ones (true) or vice versa (false).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the way in which particles are drawn when created on the screen. The default system uses an old>new look (the function is set to <tt>true</tt>), where old 
+particles are drawn at a higher depth than newer ones and so appear "beneath" them new particles, but by setting this function to <tt>false</tt> you can reverse this order and have the new 
+particles drawn higher and so appear "beneath" the older ones. The images below illustrate this, with the image on the left being the default value of <tt>true</tt> and the image on the right 
+being <tt>false</tt>:
+
+<center><img src="frontback.gif"></img>		<img src="backfront.gif"></img></center>
+
+<p>
+<br>
+</p>
+
+<p>
+<i><b>NOTE : </b>When the particles are being drawn with an additive blend mode, the effect of this function may not always be obvious.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+mysystem = part_system_create();<br>
+part_system_clear( mysystem, 1 );
+</p>
+<p>
+This will create a new particle system with the index mysystem.
+It will then set its particles to draw newer particles atop older ones.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Systems</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_particles_create.html">part_particles_create</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_system_draw_order
+-->

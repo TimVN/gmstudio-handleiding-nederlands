@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>iap_activate</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>iap_activate</h1>
+  
+<h2>Enables support for making in-app purchases.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">iap_activate(product_index);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>product_index</td>
+	<td>Either a string (to query custom server) or a real number (of a ds_list index).</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>N/A</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function enables support for making in-app purchases and prepares <i>GameMaker:Studio</i> by supplying the product server index for your game, or a ds_list that holds a series of 
+ds_maps with the information on each available purchase. If you are using a proprietry product server, the product index should be as a string and use the reverse URL format that is common 
+to device packages, eg: "com.MacSweeney Games.CatchTheClown", and this will be used to query your server for the set of available purchases for the game (for further information on setting 
+up a proprietry server, please see the section <a href="../../001_Advanced%20Use/Global%20game%20settings/In%20App%20Purchases%20Tab.html">Global Game Settings - In App Purchases Tab.</a>
+<br>
+<br>
+
+If you are not using your own server to store the available purchases for your game, then you will need to tell <i>GameMaker:Studio</i> all the available purchase options by setting them in 
+individual ds_maps, which are then stored within a ds_list. The individual purchase maps that are to be stored in the ds_list should have the following format of key-value pairs:
+<br>
+<br>
+
+<blockquote>
+	<ul>
+		<li>"<b>id</b>" - The Apple Store/Google Play product id for the purchase, eg: "LevelPack".<br><br>
+		<li>"<b>title</b>" - The name of the purchase, eg: "Level Pack 1".<br><br>
+		<li>"<b>description</b>" - The description of the purchase, eg: "Level Pack 1 for Catch The Clown".<br><br>
+		<li>"<b>price</b>" - The price of the purchase, eg: "$1.00".<br><br>
+		<li>"<b>content_url</b>" - The URL from which the content will be downloaded from (this must be a ZIP file with a flat hierarchy ie. no sub-folders), eg: 
+		"ExtraLevels2.zip"<br><br>
+		<li>"<b>local_path</b>" - The local path within the working directory where the purchased files are stored (Do not use leading or trailing slashes), eg: "ExtraLevels/1".<br><br>
+		<li>"<b>type</b>" - <b><i>Windows Phone Only!</i></b> The type of purchase which should be either "Consumable" or "Durable". "Durable" is the default value (non-consumable).<br>
+	</ul>
+</blockquote>		
+
+<p>
+<br>
+<br>
+<i><b>NOTE : </b>All the key/value pairs that comprise a purchase map are strings!</i>
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var purchaseList, purchase1;<br>
+purchaseList = ds_list_create();<br>
+purchase1 = ds_map_create();<br>
+ds_map_add(purchase1, "id", "LevelPack");<br>
+ds_map_add(purchase1, "title", "ExtraLevels1");<br>
+ds_map_add(purchase1, "description", "Level Pack 1 for Catch The Clown");<br>
+ds_map_add(purchase1, "price", "$1.00");<br>
+ds_map_add(purchase1, "content_url", "ExtraLevels2.zip");<br>
+ds_map_add(purchase1, "local_path", "ExtraLevels/1");<br>
+ds_list_add(purchaseList, purchase1);<br>
+iap_activate(purchaseList);<br>
+ds_map_destroy(purchase1);<br>
+ds_list_destroy(purchaseList);<br>
+</p>
+<p>
+The above code will create a ds_list and a ds_map, which is then populated by the information for making a purchase. this map is added to the list and then actiavted as an available purchase 
+for the game. finally the ds_list and ds_map are removed to prevent memory leaks as they are no longer needed.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="iap_status.html">iap_status</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+iap_activate
+-->

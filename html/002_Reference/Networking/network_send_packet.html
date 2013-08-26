@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>network_send_packet</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>network_send_packet</h1>
+  
+<h2>Send a GameMaker:Studio formatted packet of data over the network.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">network_send_packet(socket, buffer, size);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>socket</td>
+	<td>The id of the socket to use.</td></tr>
+	
+	<tr class="alt"><td>buffer</td>
+	<td>The id of the buffer to get the data from.</td></tr>
+	
+	<tr><td>size</td>
+	<td>The size (in bytes) of the data.</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can send a data "packet" through the network. The function takes the <i>socket id</i> to connect through and then you must supply the <i>buffer id</i> which contains the 
+data to be sent (for more information on buffers see <a href="../Buffers/index.html">Reference - Buffers</a>) and finally the size (in bytes) of the data packet. Packets sent with this function are 
+formatted such that the <i>GameMaker:Studio</i> game receiving the data can correctly "split" the packets correctly, and the function will return the number of bytes of data sent, or a number less 
+than 0 if the send has failed.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+buff = buffer_load("player_save.dat");<br>
+network_send_packet(sock, buff, buffer_get_size(buff));<br>
+</p>
+<p>
+The above information loads a previously saved buffer data into memory and returns the buffer id to be stored in the variable "buff". This complete buffer is then send as a packet over the network using the socket 
+identified by the variable "sock".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Networking</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="network_send_raw.html">network_send_raw</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+network_send_packet
+--> 

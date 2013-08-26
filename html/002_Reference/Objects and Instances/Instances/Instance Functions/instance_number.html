@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>instance_number</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>instance_number</h1>
+
+<h2>Returns the number of active instances of a given object.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">instance_number( obj );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>obj</td>
+	<td>The object to total the number of instances of.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this <b>read only</b> variable you can find out how many active instances of the specified object exists in the room. Please note that those instances which have been deactivated with the 
+<a href="../Deactivating%20Instances/index.html"><tt>instance_deactivate</tt></a> functions will not be included in this check.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<p><b>Example :</b></p>
+<p class="code">
+if instance_number(object_index) &lt; 50
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;instance_create(random(room_width), random(room_height), object_index);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check the number of instances that are created form the same object as the current instance and then if there are less than 50, create another one at a random position within the room.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="instance_place.html">instance_place</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+instance_number
+-->

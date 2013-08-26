@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>keyboard_get_map</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>keyboard_get_map</h1>
+  
+<h2>Gets the currently mapped ascii code for the selected key.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">keyboard_get_map(key);</p>
+ 
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th>	<th>Description</th></tr>
+	
+	<tr><td>key</td>
+	<td>This is the key that you wish to get the mapped value from</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Sometimes you may wish to get the ascii code for a mapped key (to see if it is already mapped, for example) which is what this function returns.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_get_map(ord("A")) = ord("A")<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;keyboard_set_map(ord("A"), keyboard_lastkey);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above example code will first check and see if "A" has been mapped to another key, and if it hasn't it will map it to the last key that the user has pressed.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Keyboard Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="keyboard_unset_map.html">keyboard_unset_map</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+keyboard_get_map
+-->

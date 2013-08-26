@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>font_get_last</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>font_get_last</h1>
+
+<h2>Returns the index of the last character in a given font.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">font_get_last(ind);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>Index of the font to check.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When defining a font in <i>GameMaker:Studio</i>, you can define a range of characters to include. This is because the font itself is actually included with your game (for legal reasons) but an <i>image</i> of the font 
+is included on a texture page and that is what your game will use (just like any other graphics asset). This means that you will want to keep the number of characters that you use to a minimum and specify only the range 
+of characters that your game will need so as to keep texture memory as optimised as possible. This function can be used to find the last character (as an UTF8 value) that was used when your font asset was added 
+to your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+num = font_get_last(fnt_Main);
+</p>
+<p>
+The above code will store the ASCii value of the last letter of the font range for the font indexed in "fnt_Main".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fonts</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="font_get_italic.html">font_get_italic</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+font_get_last
+-->

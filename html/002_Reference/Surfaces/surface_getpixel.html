@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>surface_getpixel</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>surface_getpixel</h1>
+
+<h2>Returns the color of the pixel corresponding a position in the surface.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">surface_getpixel(index, x, y);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the surface.</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x position on the surface from which to get the pixel.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position on the surface from which to get the pixel.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to get the color of a specific pixel from a surface, using the local coordinates of the surface where (0,0) is the top left corner. This function should <i>not</i> be used 
+very often as it is extremely slow and may cause a pause in your game.
+<br>
+<br>
+
+<i><b>NOTE : </b>When working with surfaces there is the possibility that they can cease to exist at any time due to them being stored in vRam. You should <b>ALWAYS</b> check that a surface 
+exists using <a href="surface_exists.html"><tt>surface_exists</tt></a> before referencing them directly. For futher information see <a href="index.html">Surfaces</a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+col = surface_getpixel(surf, 56, 78 );
+</p>
+<p>
+This will return the color of the pixel at coordinates (56,78) of the surface indexed in the variable "surf".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Surfaces</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="surface_free.html">surface_free</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+surface_getpixel
+-->

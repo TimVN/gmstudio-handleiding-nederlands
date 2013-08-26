@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>friction</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>friction</h1>
+  
+<h2>The friction to apply to the object.</h2>
+  
+<h3> <b>Syntax :</b> </h3>
+<p class="code">friction</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+All instances in <i>GameMaker:Studio</i> have certain "built in" properties that you can use and set to govern how they look and behave. <tt>Friction</tt> is one of those properties 
+and can be used to slow the instance down over time when the <a href="speed.html"><tt>speed</tt></a> is greater than zero. It works simply by subtracting an amount from the speed 
+every step until the object has a speed of 0, so if the friction is set to, for example, 0.1 and the speed of the instance is 1 (1 pixel per step), it will slow down and stop after 10 steps have 
+passed. Note too that the friction is applied to positive and negative speeds equally with the net result always being that the object has a speed of 0 after a given time.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if abs(speed) &#62; 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;friction=0.05;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;friction=0;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will only apply friction if the instance's <a href="../../Maths/Real%20valued%20functions/abs.html">absolute</a> speed is above 0.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Moving Around</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="gravity.html">gravity</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+friction
+-->

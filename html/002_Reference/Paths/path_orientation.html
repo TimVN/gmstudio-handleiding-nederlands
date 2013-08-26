@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>path_orientation</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>path_orientation</h1>
+  
+<h2>Sets the rotation of the path.</h2>
+  
+<h3><b>Syntax :</b></h3>
+<p class="code">path_orientation;</p>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns:</b> Real.</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable holds the current orientacion of the path. When a path is created, its orientation is the default 0 degrees, but you can set this value to anyhing you wish using this. Remember that in 
+<i>GameMaker:Studio</i> (unless you are using physics) the angles are calculated counter-clockwise, so setting the path orientation to 90° would rotate the path to the <i>left</i>.
+<br>
+<br>
+
+<img class="center" src="pathrotated.png"></img>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+mypath = path_duplicate(choose(path_1, path_2, path_3, path_4));<br>
+path_orientacion = 90;<br>
+</p>
+<p>
+The above code duplicates a random, pre-made path resource into the variable "mypath". This new path is then rotated 90°.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="path_reverse.html">path_reverse</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_orientation
+-->

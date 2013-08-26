@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_set_projection</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_set_projection</h1>
+  
+<h2>This function can be used to modify the view matrix.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_set_projection(xfrom, yfrom, zfrom, xto, yto, zto, xup, yup, zup)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>xfrom</td>
+	<td>The x coordinate of the position to look from.</td></tr>
+	
+	<tr class="alt"><td>yfrom</td>
+	<td>The y coordinate of the position to look from.</td></tr>
+	
+	<tr><td>zfrom</td>
+	<td>The z coordinate of the position to look from.</td></tr>
+	
+	<tr class="alt"><td>xto</td>
+	<td>The x coordinate of the position to look to.</td></tr>
+
+	<tr><td>yto</td>
+	<td>The x coordinate of the position to look to.</td></tr>
+	
+	<tr class="alt"><td>zto</td>
+	<td>The x coordinate of the position to look to.</td></tr>
+
+	<tr><td>xup</td>
+	<td>The x coordinate of the "up" vector.</td></tr>
+	
+	<tr class="alt"><td>yup</td>
+	<td>The y coordinate of the "up" vector.</td></tr>
+
+	<tr><td>zup</td>
+	<td>The z coordinate of the "up" vector.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Allthough this function is called <tt>d3d_set_<b>projection</b></tt> it is really used to modify the <b>view</b> matrix, <i>not</i> the projection matrix. As such, you should first initialise the 
+projection matrix using the other projection function <a href="d3d_set_projection_ext.html"><tt>d3d_set_projection_ext</tt></a>, then use this function to move the view (camera) around within the 
+projection.
+<br>
+<br>
+
+To set the view you first need to define the position you look from, which is indicated by the parameters (xfrom, yfrom, zfrom). Next you must specify the direction you look in and this is done by giving a second 
+point to look towards with the arguments (xto, yto, zto). Finally, you can still rotate the camera around the line from the viewpoint to the looking point, and to specify this we must give an "up" vector, that is, 
+the direction that is upwards in the camera. This is given by the last three arguments (xup, yup, zup).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_set_projection(100, 100, 10, 200, 100, 10, 0, 0, 1);
+</p>
+<p>
+The above code creates a typical first person shooter view.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Projections</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_set_projection_ext.html">d3d_set_projection_ext</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_set_projection
+--> 

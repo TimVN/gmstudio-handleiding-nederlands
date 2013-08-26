@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_set_visible</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_set_visible</h1>
+
+<h2>Sets a tile's visibility.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_set_visible(index, visible);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the tile to set.</td></tr>
+	
+	<tr><td>visible</td>
+	<td>The visibility of the tile. true=visible, false=invisible.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Like instances, tiles can be flagged as visible or invisible. This function can change that flag, and by setting it to <tt>true</tt> you make the tile visible, or by setting it to <tt>false</tt> you can set 
+it to invisible. This is not permanent and if the player leaves the room and returns to it again, the tile will be visible (if it was placed in the room editor and the room is not persistent).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tile;<br>
+tile = tile_layer_find(-1000, mouse_x, mouse_y);<br>
+if !tile_get_visible(tile)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;tile_set_visible(tile, true);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will first get the index of a tile at the mouse position with a depth of -1000 and then use that value to check whether the tile is visible or not, and if not set the tile to visible.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_set_alpha.html">tile_set_alpha</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_set_visible
+-->

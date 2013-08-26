@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Loading Sprites</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Loading Sprites</h1>
+
+<h2>In this section of the manual you can learn about sprites and how to create them with the <i>GameMaker:Studio</i> sprite editor.</h2>
+
+<p>
+Sprites are generally the visual representations of objects within the game you are creating. As such, a sprite is either a single image, drawn with any drawing program you like, 
+or a set of images that, when played one after another, looks like a looping animation. For example, the following 10 images form a sprite for a character who is waving his arms 
+while skydiving.
+<br>
+<br>
+
+<img class="center" src="../images/sprite.png">
+
+<p>
+And the actual finished animation would look like this when placed in a game :
+<br>
+<br>
+<img class="center" src="../images/sprites_anim_1.gif">
+
+<p>
+That looks pretty good, eh? Most games need you to make sprites like this for all the things in your game world, from enemies to powerups, from walls to menus, and when you start to make a game you normally collect or 
+create a set of nice sprites for the objects you are going to use. A considerable number of useful sprites are bundled with  <i>GameMaker:Studio</i> to help you get started and other collections of useful sprites 
+can be found on the <i>YoYoGames</i> website which can all be used as "place holders" until you have enough confidence to make your own or get together with an artist, but please note that the bundled sprites 
+are <i>not for distribution</i> in any finished works that you make. You can also find many more sprites on the web, normally in the form of png strips or animated gifs.
+<br>
+<br>
+
+To create a sprite, choose the item <b>Create Sprite</b> from the <b>Resources</b> menu, or use the corresponding button on the toolbar. Either will cause the following window to open :
+<br>
+<br>
+
+<img class="center" src="../images/form_sprite.png">
+<br>
+<br>
+
+As you can probably see, the top left of the window has a field for the "Name" of the sprite. All sprites (and all other resources) must have a name given to them so that you (and <i>GameMaker:Studio</i>!) can 
+identify them easily, although you should note that the actual name itself is really just a variable which holds a number that "points" to the resource, in this case a sprite. It's best to give each sprite a descriptive name 
+so that you can identify at a glance whether a particular resource is a sprite or an object or anything else, and many people do this by prefixing or suffixing the resource with the letters "spr". For example, the above sky 
+diver sprite could be called <b>spr_SkyDiver</b> or <b>SkyDiver_spr</b>. Even though this is not strictly required, you are strongly advised to use only letters and digits and the underscore symbol (_) in a name of 
+a sprite (and any other resource) and to let it start with a letter, not a number as this will become very important once you start using code.
+<br>
+<br>
+
+<i><b>NOTE : </b>If you are using the <b>Free</b> version of <i>GameMaker:Studio</i> you are limited to a maximum of 20 sprites per game. For more details see 
+<a href="../000_Using%20GameMaker/Versions.html">here</a>.</i>
+<br>
+<br>
+<br>
+<br>
+
+To load a sprite, click on the button <b>Load Sprite</b>. A special file dialog window opens in which you can choose the sprite you want to import into <i>GameMaker:Studio</i> :
+<br>
+<br>
+
+<img class="center" src="../images/sprite_dialog.png">
+<br>
+<br>
+
+The left part is a fairly standard file selector in which you can navigate around your computer and select the sprite that you want to import. On the right you have a preview of the sprite image you select and some basic 
+information about its size. Here you can also indicate a couple of things that you'd like <i>GameMaker:Studio</i> to do when you import the sprite, like make opaque (remove any transparent parts), remove the 
+background color (if it has one) making it transparent, or whether to smooth the edges of the sprite (only if it is transparent), which can greatly improve its appearance. When you have found the sprite you need and 
+selected the transparency options you like, press <b>Open</b> to load the sprite into <i>GameMaker:Studio</i>. 
+<br>
+<br>
+
+<i>GameMaker:Studio</i> can load many different formats of graphics file, including jpeg, bmp, png and gif. There are a couple of things that should be noted when loading different files :
+
+<blockquote>
+<ul>
+	<li>When you load an animated gif, the different images of the animation automatically form the sprite subimages.<br>
+	<br>
+	<li>When the file name ends with _stripXX, where XX a number, it is considered to contain a strip of XX subimages next to each other, and <i>GameMaker:Studio</i> will import it as such. For example, an image file 
+	with name <tt>ball_strip4.png</tt> is assumed to contain 4 subimages and will be split up as such when loaded.<br>
+	<br>
+	<li>If you have a sprite strip image that you wish to load into <i>GameMaker:Studio</i> which does not have the above-mentioned format, this must be done from the 
+	<a href="../001_Advanced%20Use/More%20about%20sprites/Edit%20Menus/File%20Menu.html">Sprite Editor File Menu</a>.<br>
+	<br>
+	<li>Although jpeg images are supported, it is best to avoid using this file type as, due to the compression used, the images are generally of poorer quality than either png or bmp.
+</ul>
+</blockquote>
+
+<p>
+Once the sprite is loaded you are returned to the sprite properties window where the first subimage is shown on the right of the screen. When there are multiple subimages, you can cycle through them using the arrow buttons 
+that appear beside the partof the window labelled "Show", and, should you make any changes to the sprite, you can then save it again using the "Save" button.
+<br>
+<br>
+
+For a more in depth look at the sprite editor in <i>GameMaker:Studio</i> you can go to the <a href="../001_Advanced%20Use/More%20about%20sprites/index.html">Advanced Section</a> of this manual.
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Using GameMaker:Studio</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="006_Sounds%20and%20music.html">Sounds And Music</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+adding sprites
+sprites
+loading sprites
+gif files
+png files
+jpg files
+bmp files
+-->

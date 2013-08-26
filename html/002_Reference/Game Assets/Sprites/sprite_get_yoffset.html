@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_get_yoffset</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_get_yoffset</h1>
+
+<h2>Finds the yoffset of a sprite.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_get_yoffset(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sprite to find the yoffset of.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+
+</p>
+<h3>Description</h3>
+<p>
+When you define a sprite in the sprite editor, you need to set the <i>origin</i> for that sprite. This is the point at which the sprite will be "attached" or "drawn" when used with an instance. This function 
+returns the relative offset for for the y-axis of the origin based on the upper left corner being the 0,0 position, with a +y being down and a -y being up from this. The following image illustrates this:
+<br>
+<br>
+
+<img class="center" src="spr_xyoffset.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if y - sprite_get_yoffset(sprite_index) &lt; 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;y = sprite_get_yoffset(sprite_index);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will ensure that an instance is maintained within the room based on the sprite (so the sprite is always visible).
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_get_bbox_bottom.html">sprite_get_bbox_bottom</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_get_yoffset
+-->

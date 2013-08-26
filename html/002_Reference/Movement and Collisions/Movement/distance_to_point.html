@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>distance_to_point</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>distance_to_point</h1>
+
+<h2>Returns the distance between the calling instance and a given point, in pixels.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">distance_to_point(x, y);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x</td>
+	<td>The x position to check.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position to check.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function calculates the distance from the edge of the bounding box of the calling instance to the specified x/y position in the room, with the return value being in pixels. Note that if the calling 
+object have no sprite or no mask defined, the results will be incorrect.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if distance_to_point(obj_Player.x, obj_Player.y) &#60; range<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;canshoot = true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check for the distance to the player object x/y position and if it is less than the value stored in the variable "range" the variable "canshoot" is set to true.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Moving Around</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="motion_add.html">motion_add</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+distance_to_point
+-->

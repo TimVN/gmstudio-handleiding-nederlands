@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_text_transformed</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_text_transformed</h1>
+
+<h2>Draw text with scaling and rotation.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_text_transformed(x, y, string, xscale, yscale, angle);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of the drawn string.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of the drawn string.</td></tr>
+	
+	<tr><td>string</td>
+	<td>The string to draw.</td></tr>
+	
+	<tr><td>xscale</td>
+	<td>The horizontal scale (default 1).</td></tr>
+	
+	<tr><td>yscale</td>
+	<td>The vertical scale(default 1).</td></tr>
+	
+	<tr><td>angle</td>
+	<td>The angle of the text.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will draw text in a similar way to <a href="draw_text.html"><tt>draw_text</tt></a> only now you can choose to scale the text along the horizontal or vertical axis (effectively stretching 
+or shrinking it) and also have <i>GameMaker:Studio</i> draw it at an angle (where 0 is normal and every degree over 0 rotates the text anti-clockwise).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_halign(fa_center);<br>
+draw_set_valign(fa_middle);<br>
+image_angle += 1;<br>
+draw_text_transformed(room_width / 2, room_height / 2, "GAME OVER!", 2, 2, image_angle);<br>
+</p>
+<p>
+The above code will draw the given text in the middle of the room, spinning round and scaled to twice it's original size.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing text</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_text_ext_color.html">draw_text_ext_color</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_text_transformed
+-->

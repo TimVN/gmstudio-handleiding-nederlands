@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>file_text_read_string</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>file_text_read_string</h1>
+
+<h2>Reads a string from a given opened text file.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">file_text_read_string(fileid);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fileid</td>
+	<td>The id of the file to read from.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can read a string from a text file and the function returns that value to be used or stored in a variable. 
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var i, file;<br>
+file = file_text_open_read(working_directory + "\hiscore.txt");<br>
+for (i = 0; i &lt; 10; i += 1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;scr[i] = file_text_read_real(file);<br>
+&nbsp;&nbsp;&nbsp;file_text_readln(file);<br>
+&nbsp;&nbsp;&nbsp;scr_name[i] = file_text_read_string(file);<br>
+&nbsp;&nbsp;&nbsp;file_text_readln(file);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+file_text_close(file);<br>
+</p>
+<p>
+The above code opens a file for reading and then loops through the lines of the file reading alternately a real number value and a string into two different arrays for future use. The file is then 
+closed when the loop has finished.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Text Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="file_text_readln.html">file_text_readln</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+file_text_read_string
+-->

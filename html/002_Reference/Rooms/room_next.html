@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_next</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_next</h1>
+
+<h2>This will return the index of the room after the given room id.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_next(numb);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>numb</td>
+	<td>The index of the base room to check from.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can retrieve the index of the room <i>after</i> the room input into the function. For example you can use the <b>read only</b> variable <a href="room.html"><tt>room</tt></a> 
+to get the index of the current room and then use this function to find the room that follows it in the resource tree. If there is no room after the  one you input then -1 is returned.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if room_next(room) != -1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;room_goto(room_next(room));<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if the next room exists and if so, it will go to it.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_previous.html">room_previous</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_next
+-->

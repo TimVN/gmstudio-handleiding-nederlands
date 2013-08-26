@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>IAP Event</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>IAP Event</h1>
+
+<h2>This is the sub event that will be triggered by any IAP call-backs received.</h2>
+
+<p>
+This event can only be triggered by the <a href="../../002_Reference/In%20App%20Purchases/index.html">In App Purchases</a> functions and will return some very specific results depending on the target module that is 
+used as well as the functions being called. The following circumstances are those that will trigger this event:
+<blockquote>
+<ol>
+	<li>The store state changes.</li><br>
+	<li>A product changes state:<br>
+	<ul>
+		<li>On confirmation from iOS store.
+		<li>On purchase.
+		<li>On completion of downloaded files.
+	</ul>
+</ol>
+</blockquote>
+<p>
+Along with this event there is a special function that can be called to get a <a href="../../002_Reference/Data%20Structures/DS%20Queues/index.html"><tt>ds_queue</tt></a> of values so that you can check to see 
+if any of the above criteria have been met and react accordingly. For more information on this function please see 
+<a href="../../002_Reference/In%20App%20Purchases/iap_event_queue.html"><tt>iap_event_queue</tt></a>.
+<br>
+<br>
+
+<p>
+<i><b>NOTE : </b>The <tt>ds_queue</tt> created by the above function is only valid in this event, as it is automatically deleted at the end of the event by GameMaker:Studio.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">More About Async Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Cloud.html">Cloud Events</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+IAP Event
+-->

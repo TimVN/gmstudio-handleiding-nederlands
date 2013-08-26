@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_download_friends_scores</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_download_friends_scores</h1>
+  
+<h2>Download only those scores that have been posted by friends from the given leaderboard.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_download_friends_scores(lb_name);
+
+<p>
+<br>
+</p>
+ 
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>lb_name</td>
+		<td>The name of the leaderboard that you are downloading the scores from (a string).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can retrieve <i>only</i> the scores on the leaderboard that belong to those people that are marked as "friends" in the Steam client. So, if your leaderboard has 200 entries, and 50 of them 
+are your friends, this function will retrieve only those 50 results. The leaderboard name is a string that was defined when you created the leaderboard using the function 
+<a href="steam_create_leaderboard.html"><tt>steam_create_leaderboard</tt></a>, and the function will return a value which can then be used to identify the call-back in the 
+<a href="../../001_Advanced%20Use/More%20About%20Async%20Events/Steam.html">Steam Async Event</a>, or it will return -1 if it has failed. 
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example:</h3>
+<p class="code">
+score_get = steam_download_friends_scores("Game Scores");<br>
+</p>
+<p>
+This will send off a request to the Steam Server for the users friends scores from the given leaderboard and will store the <b>async id</b> of the request in the variable "score_get". 
+This will then be handled in the <b>Steam Async Event</b>, as shown in the Extended Example for <a href="steam_download_scores.html"><tt>steam_download_scores</tt></a>.
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_set_achievement.html">steam_set_achievement</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_download_friends_scores
+-->

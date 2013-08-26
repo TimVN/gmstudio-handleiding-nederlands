@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_draw_block</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_draw_block</h1>
+  
+<h2>Draws a simple 3D block.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_draw_block(x1, y1, z1, x2, y2, z2, tex, hrepeat, vrepeat)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x1</td>
+	<td>The initial x coordinate of the block.</td></tr>
+	
+	<tr class="alt"><td>y1</td>
+	<td>The initial y coordinate of the block.</td></tr>
+	
+	<tr><td>z1</td>
+	<td>The initial z coordinate of the block.</td></tr>
+	
+	<tr class="alt"><td>x2</td>
+	<td>The opposite x coordinate of the block.</td></tr>
+
+	<tr><td>y2</td>
+	<td>The opposite y coordinate of the block.</td></tr>
+	
+	<tr class="alt"><td>z2</td>
+	<td>The opposite z coordinate of the block.</td></tr>
+
+	<tr><td>tex</td>
+	<td>The id of the texture to use (-1 for no texture)</td></tr>
+	
+	<tr class="alt"><td>hrepeat</td>
+	<td>Amount of horizontal repetitions for the texture.</td></tr>
+
+	<tr><td>vrepeat</td>
+	<td>Amount of vertical repetitions for the texture.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function draws a simple block in 3D space. You set the first corner coordinates (x1,y1,z1) and then the coordinates for the <i>opposite</i> corner. You can also specify a texture for the block and the amount of 
+times that you wish this texture to be repeated vertically and horizontally. If you do not wish to use a texture you can set this to -1 and the hrepeat and vrepeat values will be ignored.
+<br>
+<br>
+
+<i><b>Note</b> :If the texture has to repeat over the block, the source texture must be a power of 2 in size (eg: 8x8, 128x128, 256x256 etc...), otherwise you can use any size texture.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tex;<br>
+tex = background_get_texture(bck_Wall);<br>
+d3d_draw_block(20, 20, 20, 80, 40, 200, tex, 1, 1);<br>
+d3d_draw_block(200, 300, -10, 240, 340, 100, tex, 1, 1);<br>
+</p>
+<p>
+The above code stores a texture in the variable "tex" and then uses it to texture two blocks that have been drawn at different positions.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_draw_cylinder.html">d3d_draw_cylinder</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_draw_block
+--> 

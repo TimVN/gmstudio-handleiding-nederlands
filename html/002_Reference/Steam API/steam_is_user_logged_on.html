@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_is_user_logged_on</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_is_user_logged_on</h1>
+  
+<h2>Check to see if the user is logged onto the Steam Workshop.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_is_user_logged_on();</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> String
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return <tt>true</tt> if the Steam client currently has a live connection to the Steam servers. If it returns <tt>false</tt>, it means there is no active connection due to either a 
+networking issue on the local machine, or the Steam server being down or busy.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+  
+<h3>Example :</h3>
+<p class="code">
+if steam_is_user_logged_on()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;steam_publish_workshop_file("SaveData.txt", "", "Save Text", "Workshop saved text file");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if the user is logged onto the Steam server and if so it will publish a file to the Workshop.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_activate_overlay.html">steam_activate_overlay</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_is_user_logged_on
+-->

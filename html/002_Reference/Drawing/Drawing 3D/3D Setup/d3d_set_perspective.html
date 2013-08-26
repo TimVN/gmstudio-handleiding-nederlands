@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>d3d_set_perspective</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>d3d_set_perspective</h1>
+  
+<h2>Switches on or off perspective projection.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_set_perspective(enable)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>enable</td>
+		<td>Enables (true) or disables (false) perspective projection</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This turns on (or off) perspective projection. With a perspective projection instances that have a greater depth will appear smaller, so when the depth is 0 it is equal to the original size and the viewpoint for the camera is 
+placed at a distance above the room. This default distance is equal to the width of the room as that gives a reasonable starting projection, and only instances in front of the camera are drawn. Don't use instances with a 
+depth smaller than 0 (or at least not smaller than -w where w is the width of the room or the view).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_set_perspective(true)
+</p>
+<p>
+The above code switches on perspective projection.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Setup</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_set_depth.html">d3d_set_depth</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+d3d_set_perspective
+--> 

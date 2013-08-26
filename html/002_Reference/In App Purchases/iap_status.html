@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>iap_status</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>iap_status</h1>
+  
+<h2>Allows you to track the status of the in app purchasing system.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">iap_status();</p>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Real</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function allows you you to track the status of the <i>GameMaker:Studio</i> in app purchasing system and returns a ds_map with the following two key/value pairs:
+
+<blockquote>
+	<ul>
+		<li>“<b>status</b>” - This key indicates the overall status of the in app purchase system and can return the following values:
+			<blockquote>
+				<ol>
+					<li>"Not Enabled"
+					<li>"Not Available"
+					<li>"Loading"
+					<li>"Available"
+					<li>"Processing Order"
+					<li>"Error" (This means that something went wrong with the transaction itself.)
+					<li>"Failed" (This means that the attempt to retrieve the content_url went wrong.)
+				</ol>
+			</blockquote>
+		<li>“<b>purchases</b>” - If the set of available purchases has been retrieved correctly, the value of this key is a ds_list with each entry being a ds_map containing all the information for each available 
+		purchase (see <a href="iap_activate.html"><tt>iap_activate</tt></a> for more information on these maps) as well as an additional key entry marked "status". This extra  “status” key hold a value that 
+		indicates the purchase status of the item, and can be one of the following:
+			<blockquote>
+				<ol>
+					<li>"Purchased"
+					<li>"Available"
+					<li>"Unavailable"
+				</ol>
+			</blockquote>		
+		Please note that for a 100% correct check of the purchase you should use the function <a href="iap_is_purchased.html"><tt>iap_is_purchased</tt></a>.
+	</ul>
+</blockquote>
+
+<p>
+<i><b>NOTE: </b>The <tt>ds_map</tt> returned is created by this function and maintened by <i>GameMaker:Studio</i> for all further calls. This means that you should <b>not</b> remove it from memory.</i>
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+status_map = iap_status();
+</p>
+<p>
+The above code requests the purchase status for the current game.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="iap_store_status.html">iap_store_status</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+iap_status
+-->

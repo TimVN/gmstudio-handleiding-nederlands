@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>phy_collision_x</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>phy_collision_x</h1>
+  
+<h2>Returns the x position of a collision point.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">phy_collision_x;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read-only</b> array returns the x position of all points detected in a collision between two physics enabled instances.
+<br>
+<br>
+
+<i><b>NOTE : </b>This variable is only available in the collision event of a physics enabled instance.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var i;<br>
+for(i = 0; i &lt; phy_collision_points; i += 1;)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;part_particles_create(global.Sname, phy_collision_x[i], phy_collision_y[i], global.Spark, 5);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code creates particles at all the defined points of a collision between two physics enabled instances.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Physics Variables</a>
+	</div>
+	<div style="float:right">
+		next : <a href="phy_collision_y.html">phy_collision_y</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+phy_collision_x
+--> 

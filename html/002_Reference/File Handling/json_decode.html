@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>json_decode</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>json_decode</h1>
+  
+<h2>This function takes a JSON object string and decode it as a ds_map.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">json_decode(string)</p>
+<p>
+<br>
+</p>
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>string</td>
+	<td>The JSON format string that you are passing to the function for decoding</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>ds_map id
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+JSON (JavaScript Object Notation) is a lightweight data-interchange format which is easy for to read and write, for both people and machines. It is built on two basic structures :
+<blockquote>
+<ul>
+	<li>A collection of name/value pairs, called a <a href="../Data%20Structures/DS%20Maps/index.html"><tt>ds_map</tt></a> in <i>GameMaker:Studio</i> but also known as a "dictionary" or "object".
+	<li>An ordered list of values, called a <a href="../Data%20Structures/DS%20Lists/index.html"><tt>ds_list</tt></a> in <i>GameMaker:Studio</i> but this can also be called an "array" or "sequence".
+</ul>
+</blockquote>
+<p>
+With this function, you can decode a piece of JSON and convert it into a <tt>ds_map</tt>, ready for use in <i>GameMaker:Studio</i>, and if the JSON decode to have a heirarchy of lists and maps within 
+the central ds_map, these are decoded too and also created for you. If the string you are trying to decode is <i>not</i> valid, then a ds_map is still created for you, but it will contain only one key ("default"), 
+and it will contain the entire input string as that keys value. Normally you would know what keys the JSON decode to, but if not then you can use the <a href="../Data%20Structures/DS%20Maps/ds_map_size.html">
+<tt>ds_map_size</tt></a>, <a href="../Data%20Structures/DS%20Maps/ds_map_find_first.html"><tt>ds_map_find_first</tt></a> and <a href="../Data%20Structures/DS%20Maps/ds_map_find_next.html">
+<tt>ds_map_find_next</tt></a> functions to parse the map and get the neccessary information.
+<br>
+<br>
+
+<i><b>Note : </b>Even though GameMaker:Studio creates the necessary ds_maps and lists, it is <b>up to you</b> to destroy them when you are finished so as to prevent memory leaks. </i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var map;<br>
+map = json_decode( argument0 );<br>
+if ds_map_exists(map, "default")<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;ds_map_destroy(map);<br>
+&nbsp;&nbsp;&nbsp;return false;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Name =  ds_map_find_value(map, "name");<br>
+&nbsp;&nbsp;&nbsp;global.Scr = ds_map_find_value(map, "score");<br>
+&nbsp;&nbsp;&nbsp;global.Hiscores = ds_list_create();<br>
+&nbsp;&nbsp;&nbsp;ds_list_copy(global.Hiscores, ds_map_find_value(map, "scorelist"));<br>
+&nbsp;&nbsp;&nbsp;ds_list_destroy(ds_map_find_value(map, "scorelist"));<br>
+&nbsp;&nbsp;&nbsp;ds_map_destroy(map);<br>
+&nbsp;&nbsp;&nbsp;return true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above script will parse a string using <tt>json_decode</tt>. It then checks to see if the resulting map contains the key "default" and if it does then it returns "false", indicating that the input string is 
+not a valid JSON object format, and destroys the ds_map. However if it does not have a default value, the returned ds_map is then used to get the user name, the current user score and the current highscore 
+<i>list</i> which are all copied into global variables. The decoded map (and the list it contains) are then destroyed to prevent memory leaks and a value of "true" returned to indicate that the operation has 
+been successful.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File Handling</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="md5_string_utf8.html">md5_string_utf8</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+json_decode
+--> 

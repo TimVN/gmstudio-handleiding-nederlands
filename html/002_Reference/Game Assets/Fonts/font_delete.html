@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>font_delete</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>font_delete</h1>
+
+<h2>Deletes a font asset.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">font_delete(ind);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the font to delete.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can delete a font asset from the game. This is a <b>permanent</b> removal, and changing rooms, or restarting the game will not bring the removed font back. For that the player would need to 
+exit the game and restart that way, so take care when using this function. In general it is only needed for freeing up memory that has been used by a font added to the game through the functions <a href="font_add.html">
+<tt>font_add</tt></a> or <a href="font_add_sprite.html"><tt>font_add_asprite</tt></a>.
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+font_delete(global.Font);
+</p>
+<p>
+The above code will delete the font indexed in the global variable "Font".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fonts</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="font_get_name.html">font_get_name</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+font_delete
+-->

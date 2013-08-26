@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>gamepad_button_check</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>gamepad_button_check</h1>
+
+<h2>Returns whether a given gamepad button is currently down.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">gamepad_button_check(device, button);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>device</td>
+	<td>Which gamepad device "slot" to check.</td></tr>
+	
+	<tr class="alt"><td>button</td>
+	<td>Which gamepad button <a href="index.html">constant</a> to check for.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return <tt>true</tt> or <tt>false</tt> depending on whether the given gamepad button is detected as being held down or not.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if gamepad_button_check(0, gp_face1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if canshoot = true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio_sound_play(snd_Shoot, 0, false);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance_create(x, y, obj_Bullet)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canshoot = false;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alarm[0] = room_speed / 2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will detect whether the bottom button of the top face (the "X" on a ps3 controller) is being held down and if so, it will shoot a "bullet" instance and set an alarm.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GamePad Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="gamepad_button_check_pressed.html">gamepad_button_check_pressed</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+gamepad_button_check
+-->

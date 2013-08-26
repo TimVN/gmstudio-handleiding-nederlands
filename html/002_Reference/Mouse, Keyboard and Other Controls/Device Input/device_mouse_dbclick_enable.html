@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>device_mouse_dbclick_enable</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>device_mouse_dbclick_enable</h1>
+  
+<h2>Sets whether a double left-click should be detected as mb_right or not.</h2>
+  
+<h3><b>Syntax :</b> </h3>
+<p class="code">device_mouse_dbclick_enable(bool);</p>
+
+<p>
+<br>
+</p>
+  
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>bool</td>
+		<td>Set double-click detection on (<tt>true</tt>) or off (<tt>false</tt>).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to set the device to detect a double tap of the mb_left (left mouse button) as an mb_right (right mouse button) tap or not. By default this is set to <tt>true</tt>, meaning that everytime 
+the user taps the device screen twice quickly and consecutively, the return value is the same as if the right mouse button had been clicked. When this is on, the first tap will be detected as mb_left, and the second 
+as mb_right, so make sure that any code you use takes this into account.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if os_type == os_windows || os_type == os_mac<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;device_mouse_dbclick_enable(false);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the device running the game is a Windows PC or a Mac and if it is eithor of them, it disables the double tap function.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Device Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="device_mouse_x.html">device_mouse_x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+device_mouse_dbclick_enable
+-->

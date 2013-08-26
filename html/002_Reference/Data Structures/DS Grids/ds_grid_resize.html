@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_grid_resize</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_grid_resize</h1>
+
+<h2>Resizes the grid to a new width and height.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_grid_resize(index, w, h);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>This index of the grid to resize.</td></tr>
+	
+	<tr><td>w</td>
+	<td>The new width of the grid.</td></tr>
+	
+	<tr><td>h</td>
+	<td>The new height of the grid.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can resize the given ds_grid to have a different width and/or height. If the grid size is larger than the current grid, the new cells will have a base value of 0, and if the size is smaller 
+then the values held in the cells that are no longer within the new size will be lost. All other cells will be left untouched.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ds_grid_resize(global.Grid, room_width / 32, room_height / 32);<br>
+ds_grid_clear(global.Grid, -1);<br>
+</p>
+<p>
+The above code will resize the ds_grid indexed in the global variable "Grid" and then clear it so that each cell holds the value -1.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Grids</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_grid_clear.html">ds_grid_clear</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_grid_resize
+-->

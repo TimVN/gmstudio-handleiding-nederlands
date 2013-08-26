@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_type_color_rgb</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_type_color_rgb</h1>
+
+<h2>Set the particle color from a red, green and blue range.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_type_color_rgb(ind, rmin, rmax, gmin, gmax, bmin, bmax p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the particle type to change.</td></tr>
+	
+	<tr><td>rmin</td>
+	<td>The minimum the final color's red component can be.</td></tr>
+	
+	<tr><td>rmax</td>
+	<td>The maximum the final color's red component can be.</td></tr>
+	
+	<tr><td>gmin</td>
+	<td>The minimum the final color's green component can be.</td></tr>
+	
+	<tr><td>gmax</td>
+	<td>The maximum the final color's green component can be.</td></tr>
+	
+	<tr><td>bmin</td>
+	<td>The minimum the final color's blue component can be.</td></tr>
+	
+	<tr><td>bmax</td>
+	<td>The maximum the final color's blue component can be.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the mix of red, green and blue colors for all particles created of the given type. You supply a minimum value and a maximum value for each of the three components 
+and the particles created will have a random color based on the given range of parameters. All values must be between 0 and 255.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+part_type_rgb(global.Blood_Part, 0, 255, 0, 0, 0, 0);
+</p>
+<p>
+The above code sets each particle emitted of the particle type indexed in the global variable "Blood_Part" to be only different shades of red.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Types</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_type_color1.html">part_type_color1</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_type_color_rgb
+-->

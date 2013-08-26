@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>os_get_language</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>os_get_language</h1>
+  
+<h2>This variable holds a different value depending on the browser or device language.</h2>
+
+<h3>Syntax :</h3> 
+<p class="code">os_get_language()</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns a string with the two letter language code for the OS that is running the game. If the information is not available, it will hold simply an empty string "", or "en" for "English" 
+language.
+<br>
+<br>
+
+The following table shows some of the main two letter language codes as defined by ISO 639:
+
+<div class="compat">
+	<table>
+		<tr><th>Language</th><th>Code</th></tr>
+
+		<tr><td>Arabic</td><td>ar</td></tr>
+		
+		<tr class="alt"><td>Chinese</td><td>zh</td></tr>
+
+		<tr><td>Danish</td><td>da</td></tr>
+		
+		<tr class="alt"><td>English</td><td>en</td></tr>
+
+		<tr><td>French</td><td>fr</td></tr>
+		
+		<tr class="alt"><td>German</td><td>de</td></tr>
+
+		<tr><td>Greek</td><td>el</td></tr>
+		
+		<tr class="alt"><td>Italian</td><td>it</td></tr>
+
+		<tr><td>Japanese</td><td>ja</td></tr>
+		
+		<tr class="alt"><td>Norwegian</td><td>no</td></tr>
+		
+		<tr><td>Polish</td><td>pl</td></tr>
+		
+		<tr class="alt"><td>Portuguese</td><td>pt</td></tr>
+		
+		<tr><td>Russian</td><td>ru</td></tr>
+		
+		<tr class="alt"><td>Spanish</td><td>es</td></tr>
+		
+		<tr><td>Swedish</td><td>sv</td></tr>
+				
+	</table>
+</div>
+
+<p>
+<br>
+<br>
+<i><b>NOTE : </b>This is not the country code that is returned, but the language code of the OS!</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+switch (os_get_language())<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case "es": ini_open("spanish.ini"); break;<br>
+&nbsp;&nbsp;&nbsp;case "fr": ini_open("french.ini"); break;<br>
+&nbsp;&nbsp;&nbsp;case "it": ini_open("italian.ini"); break;<br>
+&nbsp;&nbsp;&nbsp;default: ini_open("english.ini"); break;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the OS language and opens a different <tt>*.ini</tt> file depending on the returned value.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Operating Systems</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="os_powersave_enable.html">os_powersave_enable</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+os_get_language
+-->

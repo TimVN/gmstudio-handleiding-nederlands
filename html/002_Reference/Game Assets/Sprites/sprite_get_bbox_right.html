@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_get_bbox_right</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_get_bbox_right</h1>
+
+<h2>Returns the relative position of the right of the bounding box of the given sprite.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_get_bbox_right(ind);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the sprite to check.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns the relative position of the right of the sprite bounding box. This value is given as a relative value based on the upper left corner of the base sprite asset being (0,0). it is the 
+same value as can be found in the sprite editor for the <a href="../../../001_Advanced%20Use/More%20about%20sprites/Editing%20Collision%20Masks.html">collision mask properties</a>. The image 
+below shows how it is calculated:
+<br>
+<br>
+
+<img class="center" src="spr_bbox.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var ww, hh;<br>
+ww = sprite_get_bbox_left(sprite_index) - sprite_get_bbox_right(sprite_index);<br>
+hh = sprite_get_bbox_bottom(sprite_index) - sprite_get_bbox_top(sprite_index);<br>
+</p>
+<p>
+The above code calculates the width and height of the collision mask based on the relative bounding box side positions.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_get_bbox_top.html">sprite_get_bbox_top</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_get_bbox_right
+-->

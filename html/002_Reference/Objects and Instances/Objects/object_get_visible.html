@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>object_get_visible</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>object_get_visible</h1>
+  
+<h2>Returns whether an object is flagged as visible or not.</h2>
+  
+<h3> <b>Syntax :</b> </h3>
+<p class="code">object_get_visible(obj);</p>
+  
+<p>
+<br>
+</p>
+ 
+<div class="param"> 
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>obj</td>
+	<td>The index of the object to check.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Boolean</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will tell you whether the object you are checking has been flagged as "visible" (runs its draw event) or not (does not run its draw event). Please note that this is not an instance function! So, you can have a visble object 
+and an invisible instance of the same object and vice-versa.
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !visible &amp;&amp; object_get_visible(object_index) visible=true;
+</p>
+
+<p>
+The above code will check the instance running it to see if it is visible or not as well as check the object index of the instance to see if it is flagged as visible or not. If the instance is <i>not</i> visible yet the object 
+index is flagged as on, it will set "visible" to true for that instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Objects</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="object_is_ancestor.html">object_is_ancestor</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+object_get_visible
+-->

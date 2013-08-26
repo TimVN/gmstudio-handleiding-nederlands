@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_assign</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_assign</h1>
+
+<h2>Copy one room to another.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_assign(ind, room);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the original room to be copied from.</td></tr>
+	
+	<tr class="alt"><td>room</td>
+	<td>The index of the room to be copied to.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will copy one room to another, removing all instances, tiles etc... from the room that is being copied to and replacing them completely with the new room contents.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+global.rm = room_add();<br>
+room_assign(rm_Base, global.rm);<br>
+</p>
+<p>
+The above code will add a new room to the game and then copy the contents of the room indexed as "rm_Base" into it.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_instance_add.html">room_instance_add</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_assign
+-->

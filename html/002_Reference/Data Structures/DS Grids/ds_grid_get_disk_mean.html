@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_grid_get_disk_mean</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_grid_get_disk_mean</h1>
+
+<h2>Gets the mean value from all the values within a circular region.</h2>
+<p><br></p>
+
+<h3>Syntax :</h3>
+<p class="code">ds_grid_get_disk_mean(index, xm, ym, r);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the grid.</td></tr>
+	
+	<tr class="alt"><td>xm</td>
+	<td>The x position of the disk on the grid.</td></tr>
+	
+	<tr><td>ym</td>
+	<td>The y position of the disk on the grid.</td></tr>
+	
+	<tr class="alt"><td>r</td>
+	<td>The radius of the disk on the grid.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real or String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to find the mean value for all the cells found within the defined disk area of a grid  (all cell values are added together and then divided by the total number of cells that make up the disk), 
+as shown in the image below:
+
+<img class="center" src="ds_grid_get_disk_mean.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+val = ds_grid_get_disk_mean(grid, 5, 5, 2);
+</p>
+<p>
+The above code will set the variable "val" to the mean value contained within the given disk of the ds_grid indexed in the variable "grid".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Grids</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_grid_get_disk_min.html">ds_grid_get_disk_min</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_grid_get_disk_mean
+-->

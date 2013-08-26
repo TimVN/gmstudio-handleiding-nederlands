@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Virtual Keys</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Virtual Keys</h1>
+
+<h2>Here you can find out how device virtual keys are used.</h2>
+
+<p>
+In order for your games to work properly on mobile devices with a touch screen, you may need to be able to assign areas of the screen to respond to certain things when they are touched by the user. This is 
+done by assigning a "virtual Key" to an internally mapped standard keyboard key and then using the keyboard events that they generate to control your application. It is worth noting that these "virtual keys" 
+are mapped to the <i>screen</i> position rather than room position and so the x/y values are absolute, based on the display size. This means that you don't need to worry about the use of views or the relative 
+room coordinates, and can simply draw your key sprites and define your virtual keys in the <a href="../../../000_Using%20GameMaker/Events/Draw%20GUI%20Event.html">Draw GUI Event</a> 
+of an object.
+<br>
+<br>
+
+<i><b>NOTE : </b>These functions will not work on the Windows, Ubuntu (Linux), nor the MacOS, target platforms!</i>
+<br>
+<br>
+
+The available virtual key functions are :
+<blockquote>
+<ol>
+    <li><a href="virtual_key_add.html">virtual_key_add</a><br> 
+	<li><a href="virtual_key_show.html">virtual_key_show</a><br>
+	<li><a href="virtual_key_hide.html">virtual_key_hide</a><br> 
+	<li><a href="virtual_key_delete.html">virtual_key_delete</a><br> 
+</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Mouse, Keyboard and Other Controls</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../005_Game Graphics/index.html">Game Graphics</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+virtual keys
+touchable screen areas
+screen keys
+-->

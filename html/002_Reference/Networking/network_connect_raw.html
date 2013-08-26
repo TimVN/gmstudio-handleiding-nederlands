@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>network_connect_raw</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>network_connect_raw</h1>
+  
+<h2>Connect to a server.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">network_connect_raw(socket, url, port);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>socket</td>
+	<td>The id of the socket to use.</td></tr>
+	
+	<tr class="alt"><td>url</td>
+	<td>The URL or IP to connect to (a string).</td></tr>
+	
+	<tr><td>port</td>
+	<td>The port to connect to.</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can send a request to connect to a server. The function takes the <i>socket id</i> to connect through (see <a href="network_create_socket.html"><tt>network_create_socket</tt></a>) 
+and requires you to give the IP address to connect to (a string) as well as the port to connect through, and if the connection fails a value of less than 0 will be returned. The difference between this function and 
+<a href="network_connect.html"><tt>network_connect</tt></a> is that this function can connect to any server and does nothing to the raw data, meaning that you have to impliment the protocols yourself 
+at the server end.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+client = network_create_socket(network_socket_tcp);<br>
+network_connect_raw(client, "www.macsweeneygames.com", 6510);<br>
+</p>
+<p>
+The above code will create a new TCP socket then attempt to create a "raw" connection through that to the given URL on port 6510.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Networking</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="network_resolve.html">network_resolve</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+network_connect_raw
+--> 

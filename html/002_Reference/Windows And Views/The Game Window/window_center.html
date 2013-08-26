@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>window_center</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>window_center</h1>
+  
+<h2>Centers the region based on the viewable or browser area.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">window_center();</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns:</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can center the game window in the display when the target module is Windows, Ubuntu (Linux) or MacOS, or you can center it in the browser if the target module is HTML5. This 
+function has no effect on any other device.
+<br>
+<br>
+
+<i><b>NOTE: </b>If you have resized the game window (for example, by switching from full screen to windowed), and wish to center the new window, this function should be called in an <b>alarm[0]</b> at 
+least one step later than the window size change, otherwise it will not work correctly.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !window_get_fullscreen()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;window_center();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will center the game window within the display if it is not in full screen mode.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">The Game Window</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="window_handle.html">window_handle</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+window_center
+-->

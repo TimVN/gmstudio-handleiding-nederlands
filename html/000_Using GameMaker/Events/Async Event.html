@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The Asynchronous Event</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The Asynchronous Event</h1>
+
+<h2>The asynchronous event is one of the many events that can be triggered in an instance and may contain code or actions.</h2>
+
+<p>
+<b><img src="../../images/Event_Web.png" align="middle" align="left">Asynchronous Event</b>
+<br>
+This event is special in that it is not triggered by <i>GameMaker:Studio</i> itself, but rather by the end of some other action, like the loading of a file, or the reply from a web server. The actual event is split into 
+various <i>sub</i> events:
+
+<img class="center" src="Async_Menu.png">
+<br>
+<br>
+So, say you want to add an image file to <i>GameMaker:Studio</i>. Well, you would code this in another event (maybe the create event) of an instance and then have that instance draw a loading bar while waiting 
+from the callback that tells <i>GameMaker:Studio</i> that the file has loaded. This callback triggers the Asynchronous Event where you would then do something else, like go to another room.
+<br>
+<br>
+
+For more details on this event and how it functions please see <a href="../../001_Advanced%20Use/More%20About%20Async%20Events/index.html">More About Async Events</a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Create%20Event.html">The Create Event</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+asynchronous event
+-->

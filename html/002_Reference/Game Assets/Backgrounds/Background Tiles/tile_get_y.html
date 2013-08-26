@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_get_y</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_get_y</h1>
+
+<h2>Returns the y coordinate of a given tile.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_get_y(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the tile to check.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+
+<br>
+<br>
+This function will return the y axis position <i>within the current room</i> of the given tile.
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tile;<br>
+tile = tile_layer_find(-1000, mouse_x, mouse_y);<br>
+yy = tile_get_y(tile);<br>
+</p>
+<p>
+The above code will first get the index of a tile at the mouse position with a depth of -1000 and then use that value to store its y axis position within the variable "yy".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_get_xscale.html">tile_get_xscale</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_get_y
+-->

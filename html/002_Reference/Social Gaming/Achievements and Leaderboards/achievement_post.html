@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>achievement_post</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>achievement_post</h1>
+  
+<h2>Sends information about an achievement to the Game Center.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">achievement_post(achievement, percent)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>achievement</td>
+	<td>The name of the achievement.</td></tr>
+	
+	<tr class="alt"><td>percent</td>
+	<td>The percentage of the achievement completed.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to send your achievements to the chosen leaderboard and achievement service. You send the name of the achievement (this is the name you assigned to it when you set up the 
+account for your app) and the percentage that you have completed towards getting the achievement (0 - None, 100 - Completed).
+<br>
+<br>
+   
+<h3>Example :</h3>
+<p class="code">
+if achievement_available() achievement_post("ach_Level1", 100);
+</p>
+<p>
+The above code checks to see if the chosen leaderboard and achievement service is available and if so it posts an achievement.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Achievements and Leaderboards</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="achievement_post_score.html">achievement_post_score</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+achievement_post
+-->

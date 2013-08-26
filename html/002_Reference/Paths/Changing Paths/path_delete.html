@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_delete</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_delete</h1>
+
+<h2>Deletes a given path.</h2>
+  
+<h3><b>Syntax :</b></h3>
+<p class="code">path_delete(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to delete.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this code to remove a path from memory. If this path has been created dynamically using <a href="path_add.html"><tt>path_add</tt></a>, the variable that holds the path index will no longer 
+be valid for accessing the path as it no longer exists, and if the path was created using the <a href="../../../001_Advanced%20Use/004_Paths.html">Path Editor</a> that path can no longer be accessed in the 
+<i>whole game</i> as you are permanently deleting it.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var t_path;<br>
+t_path = path_add();<br>
+if mp_grid_path(grid, t_path, x, y, obj_Player.x, obj_Player.y, 1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;path_assign(mypath, t_path);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+path_delete(t_path);<br>
+</p>
+<p>
+The above code will create a path and store its index in a local variable. This path is then used to store an <a href="../../Movement%20and%20Collisions/Motion%20Planning/mp_grid_path.html">
+<tt>mp_grid_path</tt></a> generated path which, if it succeeds in finding its way to the target, it is then assigned to the path indexed in "mypath". Finally the "t_path" is deleted.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_duplicate.html">path_duplicate</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_delete
+-->

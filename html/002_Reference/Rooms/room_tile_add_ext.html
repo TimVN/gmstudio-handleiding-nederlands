@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_tile_add_ext</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_tile_add_ext</h1>
+
+<h2>Adds a new tile to a given room and sets its properties.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_tile_add_ext(ind, back, left, top, width, height, x, y, depth, xscale, yscale, alpha);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the room to add the tile to.</td></tr>
+	
+	<tr class="alt"><td>back</td>
+	<td>The background from which the tile is taken.</td></tr>
+	
+	<tr><td>left</td>
+	<td>The x coordinate of the left side of the tile relative to the background.</td></tr>
+	
+	<tr class="alt"><td>top</td>
+	<td>The y coordinate of the top side of the tile relative to the background.</td></tr>
+	
+	<tr><td>width</td>
+	<td>The width of the tile.</td></tr>
+	
+	<tr class="alt"><td>height</td>
+	<td>The height of the tile.</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of where to place the tile.</td></tr>
+	
+	<tr class="alt"><td>y</td>
+	<td>The y coordinate of where to place the tile.</td></tr>
+	
+	<tr><td>depth</td>
+	<td>The depth of the tile in the room.</td></tr>
+	
+	<tr class="alt"><td>xscale</td>
+	<td>The horizontal scale of the tile. 1=normal size, 0.5=half, 2=double, etc.</td></tr>
+	
+	<tr><td>yscale</td>
+	<td>The vertical scale of the tile. 1=normal size, 0.5=half, 2=double, etc.</td></tr>
+	
+	<tr class="alt"><td>alpha</td>
+	<td>The alpha (transparency) of the tile. 0=invisible, 1=opaque, 0.5=translucent etc.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can add a tile to any room from any background. You specify the position within the background to get the tile from and the position within the room as well as the depth that 
+the tile should have and the alpha and scale of the new tile. The function returns a unique id number for that tile that you can use for further tile functions.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+global.rm = room_add();<br>
+room_assign(rm_Base, global.rm);<br>
+room_tile_add_ext(global.rm, tl_grass, 0, 0, 256, 32, 0, 400, 10000, 2, 2, 0.2 );
+</p>
+<p>
+The above code will add a new room to the game and then copy the contents of the room indexed as "rm_Base" into it. It will then add a tile into the room taken from the background indexed as "tl_grass", setting 
+its alpha to a value of 0.2 and scaling it by 2 on the x and y axis.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_tile_clear.html">room_tile_clear</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_tile_add_ext
+-->

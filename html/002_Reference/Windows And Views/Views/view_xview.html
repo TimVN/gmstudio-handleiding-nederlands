@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>view_xview</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>view_xview</h1>
+
+<h2>X position of the view in the room.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">view_xview[0...7]</p>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable can be used to get or to set the x axis position for the view in the room. By changing this value you can set the view to a new position, with (0,0) being the upper left corner of the room, or you can reference this variable to ensure that 
+an instance is always drawn at a relative position to the view (see example code below). This value can also be negative and so show an area that is outside of the room, in which case the <b>window color</b> will be used (this color can be set 
+with <a href="../The%20Game%20Window/window_set_color.html"><tt>window_set_color</tt></a>).
+<br>
+<br>
+
+<img class="center" src="View_xy.png"></img>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_text(view_xview[0] + 32, view_yview[0] + 32, "Score : " + string(score));
+</p>
+<p>
+The above code will draw the score at a position relative to the x and y coordinates of view[0].
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="view_yview.html">view_yview</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+view_xview
+-->

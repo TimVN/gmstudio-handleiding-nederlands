@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_surface_tiled_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_surface_tiled_ext</h1>
+
+<h2>Draws a surface at a given position with scaling, blending and alpha, and tiles it to fill the entire room.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_surface_tiled_ext(back, x, y, xscale, yscale, color, alpha);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>back</td>
+	<td>The index of the surface to draw.</td></tr>
+
+	<tr class="alt"><td>x</td>
+	<td>The x coordinate of where to draw the surface.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of where to draw the surface.</td></tr>
+	
+	<tr class="alt"><td>xscale</td>
+	<td>The horizontal scaling of the surface./td></tr>
+	
+	<tr><td>yscale</td>
+	<td>The vertical scaling of the surface.</td></tr>
+	
+	<tr class="alt"><td>h</td>
+	<td>The height of the area the stretched surface will occupy.</td></tr>
+	
+	<tr><td>color</td>
+	<td>The color with which to blend the surface.</td></tr>
+	
+	<tr class="alt"><td>alpha</td>
+	<td>The alpha of the surface.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will take a surface and then repeatedly tile it across the whole room, starting from the coordinates that you give in the function and with each tile scaled, color blended and with the 
+alpha that you define (these properties are the same as those used in <a href="draw_surface_ext.html"><tt>draw_surface_ext</tt></a>).
+<br>
+<br>
+
+<i><b>NOTE : </b>When working with surfaces there is the possibility that they can cease to exist at any time due to them being stored in vRam. You should <b>ALWAYS</b> check that a surface 
+exists using <a href="../../Surfaces/surface_exists.html"><tt>surface_exists</tt></a> before referencing them directly. For futher information see <a href="../../Surfaces/index.html">Surfaces</a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_surface_tiled_ext(surf, x, y, 2, 2, c_red, 0.5);
+</p>
+<p>
+This will draw the surface indexed in "surf" at the instances own x and y position, double it's stored size and tiled in every direction in the room, as well as blended with the color red and partially 
+transparent.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing Surfaces</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_surface_general.html">draw_surface_general</a>
+	</div>
+</div>
+</p>
+
+<!-- KEYWORDS
+draw_surface_tiled_ext
+-->

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_create_from_surface</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_create_from_surface</h1>
+
+<h2>Creates a sprite by copying an area from a surface.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_create_from_surface(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the surface to create from.</td></tr>
+	
+	<tr class="alt"><td>x</td>
+	<td>The x position to copy from.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position to copy from.</td></tr>
+	
+	<tr class="alt"><td>w</td>
+	<td>The width of the area to be copied (from the x position).</td></tr>
+	
+	<tr><td>h</td>
+	<td>The height of the area to be copied (from the y position).</td></tr>
+	
+	<tr class="alt"><td>removeback</td>
+	<td>Indicates whether to make all pixels with the background color (left-bottom pixel) transparent.</td></tr>
+	
+	<tr><td>smooth</td>
+	<td>Indicates whether to smooth the edges.</td></tr>
+	
+	<tr class="alt"><td>xorig</td>
+	<td>Indicates the x position of the origin in the sprite.</td></tr>
+	
+	<tr><td>yorig</td>
+	<td>Indicates the y position of the origin in the sprite.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can create a sprite from a previously initialised surface. The x and y coordinates that you input are relative to the (0,0) position of the <i>surface</i> (the top left corner) and not 
+the game window, nor the view if you have one active. The width and height arguments are in pixels and define the width and height of the part of the surface to use.
+<br>
+<br>
+
+Setting the "removeback" argument to <tt>true</tt> will remove a color from the sprite, by checking the <i>bottom left</i> pixel of the sprite for the color there and then using that as the color 
+to be removed.
+<br>
+<br>
+
+If you choose the "removeback" option, you may also want <i>GameMaker:Studio</i> to smooth the edges of the sprite by setting the "smooth" argument to <tt>true</tt>. All this does is create a semi-transparent 
+border around the edges of the sprite after it has had it's background removed.
+<br>
+<br>
+
+Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is "fixed" onto the instance that uses it, and is always calculated as relative to the 0,0 top left corner of 
+one sprite sub-image. So, for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have it's origin in the center.
+<br>
+<br>
+
+By default all new sprites have their bounding boxes calculated automatically (the exact bbox will depend on the size and transparency of the sprite), however you may wish to customise this, in which case 
+you should also use the function <a href="sprite_collision_mask.html"><tt>sprite_collision_mask</tt></a>.
+<br>
+<br>
+
+<i><b>NOTE : </b>When you create a sprite in GameMaker:Studio with this method you must remember to remove it again (with <a href="sprite_delete.html"><tt>sprite_delete</tt></a>) when no longer 
+needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var surf;<br>
+surf = surface_create(32, 32);<br>
+surface_set_target(surf);<br>
+draw_clear_alpha(c_black, 0);<br>
+draw_sprite(spr_Body, 0, 0, 0);<br>
+draw_sprite(spr_Clothes, 0, 0, 0);<br>
+draw_sprite(spr_Hair, 0, 0, 0);<br>
+spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br>
+surface_reset_target();<br>
+surface_free(surf);<br>
+</p>
+<p>
+The above code creates a surface and stores it's index in the local variable "surf". It then targets that surface, clears it and draws several sprites on top of each other. Finally it creates a new sprite from 
+the composite image drawn on the surface and assigns it's index to "spr_Custom" before freeing up the memory used by the surface.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_add_from_surface.html">sprite_add_from_surface</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_create_from_surface
+-->

@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Color And Blending</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Color And Blending</h1>
+
+<h2>This section deals with the functions related to color, alpha and blending.</h2>
+
+<p>
+<i>GameMaker:Studio</i> has a comprehensive selection of functions to manipulate the color, alpha and blending of what is drawn on the screen. Using these functions you can separate colors into 
+their component parts, create new colors, manipulate the draw alpha and also play with blend modes to change how different things in your game are drawn together. Apart from these functions, there 
+are also a number of constants that can be used as base colors in these (and other) functions:
+
+<div class="compat">
+
+	<table class="compat">
+	
+		<tr><th>Constant</th><th>Color</th><th>Value</th></tr>
+
+		<tr><td>c_aqua</td><td><img src="c_aqua.png"></img></td><td>16776960</td></tr>
+		
+		<tr class="alt"><td>c_black</td><td><img src="c_black.png"></img></td><td>0</td></tr>
+
+		<tr><td>c_blue</td><td><img src="c_blue.png"></img></td><td>16711680</td></tr>
+		
+		<tr class="alt"><td>c_dkgray</td><td><img src="c_dkgray.png"></img></td><td>4210752</td></tr>
+
+		<tr><td>c_fuchsia</td><td><img src="c_fuchsia.png"></img></td><td>16711935</td></tr>
+		
+		<tr class="alt"><td>c_gray</td><td><img src="c_gray.png"></img></td><td>8421504</td></tr>
+
+		<tr><td>c_green</td><td><img src="c_green.png"></img></td><td>32768</td></tr>
+		
+		<tr class="alt"><td>c_lime</td><td><img src="c_lime.png"></img></td><td>65280</td></tr>
+
+		<tr><td>c_ltgray</td><td><img src="c_ltgray.png"></img></td><td>12632256</td></tr>
+		
+		<tr class="alt"><td>c_maroon</td><td><img src="c_maroon.png"></img></td><td>128</td></tr>
+
+		<tr><td>c_navy</td><td><img src="c_navy.png"></img></td><td>8388608</td></tr>
+		
+		<tr class="alt"><td>c_olive</td><td><img src="c_olive.png"></img></td><td>32896</td></tr>
+
+		<tr><td>c_orange</td><td><img src="c_orange.png"></img></td><td>4235519</td></tr>
+		
+		<tr class="alt"><td>c_purple</td><td><img src="c_purple.png"></img></td><td>8388736</td></tr>	
+		
+		<tr><td>c_red</td><td><img src="c_red.png"></img></td><td>255</td></tr>
+		
+		<tr class="alt"><td>c_silver</td><td><img src="c_silver.png"></img></td><td>12632256</td></tr>	
+		
+		<tr><td>c_teal</td><td><img src="c_teal.png"></img></td><td>8421376</td></tr>
+		
+		<tr class="alt"><td>c_white</td><td><img src="c_white.png"></img></td><td>16777215</td></tr>	
+		
+		<tr><td>c_yellow</td><td><img src="c_yellow.png"></img></td><td>65535</td></tr>
+		
+	</table>
+	
+</div>
+
+<h3>Getting Color and Alpha Values</h3>
+<p>
+The following functions can be used to get the component hues, compound hue, saturation and luminosity of a selected color as well as the alpha and other properties: 
+<blockquote>
+	<ol>
+		<li><a href="color_get_blue.html">color_get_blue</a><br>
+		<li><a href="color_get_green.html">color_get_green</a><br>
+		<li><a href="color_get_red.html">color_get_red</a><br>
+		<li><a href="color_get_hue.html">color_get_hue</a><br>
+		<li><a href="color_get_saturation.html">color_get_saturation</a><br>
+		<li><a href="color_get_value.html">color_get_value</a><br>
+		<li><a href="draw_getpixel.html">draw_getpixel</a><br>
+		<li><a href="draw_get_color.html">draw_get_color</a><br>
+		<li><a href="draw_get_alpha.html">draw_get_alpha</a><br>
+	</ol>
+</blockquote>
+
+<h3>Creating Colors</h3>
+<p>
+These functions can be used to create colors from raw input values for color components:
+<blockquote>
+	<ol>
+		<li><a href="make_color_hsv.html">make_color_hsv</a><br>
+		<li><a href="make_color_rgb.html">make_color_rgb</a><br>
+		<li><a href="merge_color.html">merge_color</a><br>
+	</ol>
+</blockquote>
+
+<h3>Setting Color, Alpha and Blending</h3>
+<p>
+The following functions can be used to set the various different options for drawing to the screen, including alpha, color and blending:
+<blockquote>
+	<ol>
+		<li><a href="draw_clear.html">draw_clear</a><br>
+		<li><a href="draw_clear_alpha.html">draw_clear_alpha</a><br>
+		<li><a href="draw_set_alpha.html">draw_set_alpha</a><br>
+		<li><a href="draw_set_color.html">draw_set_color</a><br>
+		<li><a href="draw_set_color_write_enable.html">draw_set_color_write_enable</a><br>
+		<li><a href="draw_set_blend_mode.html">draw_set_blend_mode</a><br>
+		<li><a href="draw_set_blend_mode_ext.html">draw_set_blend_mode_ext</a><br>
+		<li><a href="draw_set_alpha_test.html">draw_set_alpha_test</a><br>
+		<li><a href="draw_set_alpha_test_ref_value.html">draw_set_alpha_test_ref_value</a><br>
+		<li><a href="draw_get_alpha_test.html">draw_get_alpha_test</a><br>
+		<li><a href="draw_get_alpha_test_ref_value.html">draw_get_alpha_test_ref_value</a><br>
+		<li><a href="draw_enable_alphablend.html">draw_enable_alphablend</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Drawing</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../Sound/index.html">Sounds And Music</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+c_aqua
+c_black
+c_blue
+c_dkgray
+c_fuchsia
+c_gray
+c_green
+c_lime
+c_ltgray
+c_maroon
+c_navy
+c_olive
+c_orange
+c_purple
+c_red
+c_silver
+c_teal
+c_white
+c_yellow
+--> 

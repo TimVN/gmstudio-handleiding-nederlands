@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sound_global_volume</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sound_global_volume</h1>
+
+<h2>Sets the volume of all sounds.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sound_global_volume(value);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>value</td>
+	<td>The new global volume fom 0 to 1.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can change the final volume of all sounds in your game. This will change the volume for all further instances where sound is played and the volume can be set to a value between 
+0 (silent) and 1 (full volume), with a value of 1 being the default volume. Note that any individual volumes set with the function <a href="sound_volume.html"><tt>sound_volume</tt></a> will also be 
+affected by this function meaning that the final volume for a sound is the compound result of the individual volume and the global volume. The volume scale is logarithmic in nature, so a volume of 0.5 is 
+<i>not</i> half volume, as illustrated by the image below:
+<br>
+<br>
+
+<img class="center" src="sound_volume.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(vk_add)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if vol &lt; 1 vol += 0.1;<br>
+&nbsp;&nbsp;&nbsp;sound_global_volume(vol);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks for a keypress and when it detects one it raises the global volume (to a maximum of 1).
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Legacy Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sound_add.html">sound_add</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sound_global_volume
+-->

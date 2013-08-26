@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>view_current</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>view_current</h1>
+
+<h2>Returns the current view being rendered.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">view_current</p>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read only</b> variable is only valid in the <b>Draw Event</b> and returns the current view being rendered. The return value will change during the draw event when you have various views as 
+the draw event is called once for each view in succession. So when (for example) you are using view[0] and view[1] in your game room, the draw event for <i>ALL</i> instances will be run twice, once 
+for each view, and with this variable you can check to see what view is currently being drawn. In general, this is used to only render specific detials to a single view when multiple views are visible in the 
+room at the same time. See the example code below.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if view_current = 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_text(view_xview[0] + 32, view_yview[0] + 32, "Player 1");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_text(view_xview[1] + 32, view_yview[1] + 32, "Player 2");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see which view is currently being drawn and then draws a different text to each view based on the return value.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="view_visible.html">view_visible</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+view_current
+-->

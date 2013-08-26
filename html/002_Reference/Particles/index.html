@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Particles</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Particles</h1>
+
+<h2>This section deals with the use of particles to create cheap graphic effects.</h2>
+
+<p>
+For complex things in <i>GameMaker:Studio</i> you would normally have an <a href="../Objects%20and%20Instances/Objects/index.html">object</a> and create 
+<a href="../Objects%20and%20Instances/Objects/index.html">instances</a> of that object around the room. However, for graphics effects, this can be expensive as every instance comes with a "cost" in 
+processing due to the variables it contains and the codes it has in the different events. You can reduce this cost by turning to 
+<a href="../Game%20Assets/Backgrounds/Background%20Tiles/index.html">tiles</a> for drawing your graphics needs but those are generally static and cannot easily be changed or moved. However, there is 
+one other option for drawing fast yet versatile graphics effects in your games, and that is to use <i>particles</i>.
+<br>
+<br>
+
+<h3>What are particles?</h3>
+<p>
+Particle are graphic resources that have certain properties which are defined within a <i>particle system</i>. These properties cannot be manipulated directly for individual particles, but are 
+changed through the code that is used to define the individual particle and the sytem that it belongs to. They are very useful for creating beautiful and flashy effects (or subtle and discreet ones!) 
+like explosions, decals, rain, snow, star fields and debris in a game without the cpu overhead that using instances has.
+<br>
+<br>
+
+The basic setup for a particle system follows three steps, with the third step being optional depending on how you wish to create your particle effects within the room:
+<blockquote>
+	<ul>
+		<li><b>Create a particle system</b> : The particle system is like a container that we will use to hold our different particle types ready for use. We use code to define a series of visial aspects 
+		and behaviours for our particles, and then we place them in the "container" so that we can take them out and use them whenever and wherever we need later.</li><br>
+		
+		<li><b>Create particle types</b> : Particle types are the graphic effect itself. You can have many different types, each with their own range of colors, alphas, sizes and movements, but it's 
+		important to note that you <i>do not have control over individual particles</i>. You define a series of parameters and the particle will be created to have a random spread of behaviours 
+		choosen from them.</li><br>		
+		<li><b>Create emitters</b> : Emiiters are an option that can be used to burst or stream particles from within very clearly defined limits. They are optional because you can create particles 
+		from any instance using the <a href="Particle%20Systems/part_particles_create.html"><tt>part_particles_create</tt></a> and <a href="Particle%20Systems/part_particles_create_color.html">
+		<tt>part_particles_create_color</tt></a> functions but they are not always adequate for every situation.
+	</ul>
+</blockquote>
+
+<h3>Limitations</h3>
+<p>
+Although particles are an excellent tool for creating effects, they do come with certain restrictions and good practices which need to be followed unless you want your game to grind to halt and 
+eventually crash:
+<blockquote>
+	<ul>
+		<li>Particle systems, particles and emitters take up memory and as such you should be very careful how you use them as it is very easy to cause a memory leak which will slow down and eventually crash 
+		your game. One way to cope with this is to have a <i>global</i> system with everything defined at the start of the game and removed at the end, but if you want a dynamic system then each particle and 
+		emitter (and the system itself) should be destroyed the moment it is not needed.</li><br>
+		
+		<li>Particles may be fast and light on the CPU, the they still require <i>some</i> processing and so you shouldn't have 40,000 of them bursting across the screen at a time. Limit them to those that are 
+		necessary to achieve a specific effect and no more.</li><br>
+		
+		<li>If you define your own particle sprite instead of using one of the 14 included sprites, you should try to keep them as small as possible to achieve the effect you require.</li><br>
+		
+		<li>Particles do <i>not</i> interact with anything. Should you need them to have any type of interaction with the user or any other instances in your game, you should be looking at using instances instead 
+		as particles are purely graphic.</li><br>
+		
+		<li>Even though there is no technical limit to the amount of systems, emitters and particles you can create in one game, you should try and limit everything to the minimum number possible to keep memory 
+		use to a minimum.</li><br>
+		
+		<li>On mobile devices, take care with particles as <i>drawing</i> them can be slow if they cover a large area of the screen (over-draw on mobile devices is one of the main causes of slowdown).</li><br>
+		
+		<li>With HTML5 there is no additive blending, and unless you have WebGL enabled, you cannot have color blending either.</li><br>
+
+	</ul>
+</blockquote>
+
+<p>
+The following sections cover all aspects of coding your own particle systems:
+<blockquote>
+	<ol>
+		<li><a href="Simple%20Effects/index.html">Simple Effects</a><br>
+		<li><a href="Particle%20Systems/index.html">Particle Systems</a><br>
+		<li><a href="Particle%20Types/index.html">Particle Types</a><br>
+		<li><a href="Particle%20Emitters/index.html">Particle Emitters</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="Setting_Up_GM.html">  </a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+
+<!-- KEYWORDS
+particles
+--> 

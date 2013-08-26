@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Buffers</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Buffers</h1>
+
+<h2>These functions can be used to read and write directly to the device buffer memory.</h2>
+
+<p>
+A binary buffer is a region of physical memory used to temporarily hold data while it is being moved from one place to another or maniplulated in some way, for example you can use a buffer to hold packet data 
+awaiting transmission over a network or for storing a packet that has been received over a network. <i>GameMaker:Studio</i> has a number of specific functions related to creating, modifying and loading/saving 
+buffers, but before using them please note the following points:
+
+<blockquote>
+	<ul>
+		<li>When a buffer is created, it is automatically cleared and filled to 0.</li><br>
+
+		<li>The "size" argument of the buffer functions always refers to the size <i>in bytes</i> of the buffer.</li><br>
+		
+		<li>The "Alignment" argument refers to how data is stored within a buffer. If your alignment is set to say, 4, and you write a single piece of data which is 1 byte in size then do a <tt>buffer_tell</tt>, you'll 
+		get an offset of 1. However, if you write another piece of data, also 1 byte in size, then do a <tt>buffer_tell</tt>, you'll get an offset of 5 as the alignment has "padded" the data to that size. Alignment only 
+		affects <i>where</i> things are written to, so if you do a <tt>buffer_tell</tt> after you write something, it'll return the current write position which immediately follows the data you've written. Note, 
+		however, that if you then write another piece of data, internally the buffer will move the write position along to the next multiple of the alignment size before actually writing the piece of data.</li><br>
+		
+		<li>When dealing with "offset", this is the value <i>in bytes</i> to offset the data by within the given buffer. So if your buffer is 2 byte aligned and you want to skip the first 4 aligned places, you would 
+		have an offset of <tt>2 * 4 bytes</tt>.</li><br>
+	
+		<li>Some of the buffer functions also create a new buffer (like <tt>buffer_load</tt> for example). Remember that these buffers will also need to be removed from memory when not in use using the 
+		<tt>buffer_delete</tt> function.</li><br>
+		
+		<li>The memory used for creating buffers is <i>system memory</i> so even when the game doesn't have focus, any data stored in a buffer should be safe, however if the app is closed or re-started then it 
+		will be lost.
+		
+	</ul>
+</blockquote>
+
+<p>
+The following pages explain how buffers work within the context of <i>GameMaker:Studio</i> and contain a couple of code examples for those users that are unsure of how to use them:
+<blockquote>
+	<ol>
+		<li><a href="Using%20Buffers.html">Using Buffers</a><br>
+		<li><a href="Buffer%20Examples.html">Buffer Examples</a><br> 	
+	</ol>
+</blockquote>	
+
+<p>
+The following functions exist for you to use with binary buffers in your games:
+<blockquote>
+	<ol>
+		<li><a href="buffer_create.html">buffer_create</a><br> 
+		<li><a href="buffer_delete.html">buffer_delete</a><br>
+		<li><a href="buffer_read.html">buffer_read</a><br> 
+		<li><a href="buffer_write.html">buffer_write</a><br> 
+		<li><a href="buffer_fill.html">buffer_fill</a><br>
+		<li><a href="buffer_seek.html">buffer_seek</a><br>
+		<li><a href="buffer_tell.html">buffer_tell</a><br>
+		<li><a href="buffer_peek.html">buffer_peek</a><br>
+		<li><a href="buffer_poke.html">buffer_poke</a><br>
+		<li><a href="buffer_save.html">buffer_save</a><br>
+		<li><a href="buffer_save_ext.html">buffer_save_ext</a><br>
+		<li><a href="buffer_load.html">buffer_load</a><br> 
+		<li><a href="buffer_load_ext.html">buffer_load_ext</a><br> 
+		<li><a href="buffer_copy.html">buffer_copy</a><br>
+		<li><a href="buffer_get_size.html">buffer_get_size</a><br>
+		<li><a href="buffer_resize.html">buffer_resize</a><br>
+		<li><a href="buffer_sizeof.html">buffer_sizeof</a><br>		
+		<li><a href="buffer_md5.html">buffer_md5</a><br>
+		<li><a href="buffer_sha1.html">buffer_sha1</a><br>
+		<li><a href="buffer_base64_encode.html">buffer_base64_encode</a><br>		
+		<li><a href="buffer_base64_decode.html">buffer_base64_decode</a><br>		
+	</ol>
+</blockquote>	
+<p>
+
+There are also two extra functions related to buffers that can be used to save and load game states (note that they require a buffer to have been created previously):
+<blockquote>
+	<ol>
+		<li><a href="../Miscellaneous/game_load_buffer.html">game_load_buffer</a><br>
+		<li><a href="../Miscellaneous/game_save_buffer.html">game_save_buffer</a><br>
+	</ol>
+</blockquote>
+		
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../016_Misc functions/index.html">Miscellaneous Functions</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+buffers
+memory buffer
+buffer errors
+buffer_generalerror
+buffer_outofspace
+buffer_outofbounds
+buffer_invalidtype
+-->

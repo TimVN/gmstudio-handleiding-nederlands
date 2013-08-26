@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Game Assets</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Game Assets</h1>
+
+<h2>This section deals with all those functions related to the games assets.</h2>
+
+<p>
+In <i>GameMaker:Studio</i> you can define various types of game assets (or resources), like sprites, sounds, fonts and backgrounds and each asset type has it's own selection of codes for modifying them, 
+using them and moving them during your game. Many even have functions that permit you to load and save these resources into your game while it is running, but be warned though - <b>Changing 
+resources easily leads to serious errors in your games!</b> As such it is a good idea to follow the following rules when changing resources:
+<br>
+<br>
+
+<blockquote>
+<ul>
+	<li>Don't remove (delete) assets that are being used in the current room or being referrenced directly in any room.
+	<br>
+	<br></li>
+	
+	<li>If you have changed an included asset of your game (for example, you have replaced a sprite with a loaded image), when you restart the game using the <a href="../Miscellaneous/game_restart.html">
+	<tt>game_restart()</tt></a> function, the changed assets are NOT restored to their original shape. In general, when you manipulate included assets you can no longer use the action or function to 
+	restart the game.
+	<br>
+	<br></li>
+	
+	<li>Changing assets from a file can be a relatively slow process, so try not to use it mid game, but rather save it for moments in which any possible 
+	pause will not interrupt the gameplay.
+	<br>
+	<br></li>
+	
+	<li>Creating assets during game play (in particular sprites and background) easily uses large amount of memory, so be careful with this. For example, if you have a 32 frame 128x128 animated sprite 
+	and you decide to create 36 rotated copies of it you will use up 36x32x128x128x4 = 72 MB of memory! And, as these resources are <i>not</i> included in any of the pre-made texture pages that 
+	carry your original assets, they involve an extra page swap, which means many such assets can really slow things down.
+	<br>
+	<br></li>
+	
+	<li>Make sure you delete the created assets you no longer need, otherwise you can end up with a memory leak which will slow down and eventually crash your game
+	</li>
+</ul>
+</blockquote>
+
+<p>
+In general, you should try not to change any resources during game play, and it is better create and change the resources at the beginning of the game or even at the beginning of a room.</ul> 
+<br>
+<br>
+
+Information on resources can be found in the following pages:
+<blockquote>
+<ol>
+    <li><a href="Sprites/index.html">Sprites</a><br>
+    <li><a href="Backgrounds/index.html">Backgrounds</a><br>
+	<li><a href="Sounds/index.html">Sounds</a><br>
+    <li><a href="Fonts/index.html">Fonts</a><br>
+    <li><a href="../Paths/index.html">Paths</a><br>
+    <li><a href="../Timelines/index.html">Timelines</a><br>
+    <li><a href="../Rooms/index.html">Rooms</a><br>
+</ol>
+</blockquote>
+
+<p>
+There are two extra functions related to the handling game assets. These functions can be used to find the unique index value for any given asset and the type of asset that it is, which opens the door 
+to dynamically creating game assets from strings (for example):
+<blockquote>
+<ol>
+    <li><a href="asset_get_index.html">asset_get_index</a><br>
+    <li><a href="asset_get_type.html">asset_get_type</a><br>
+</ol>
+</blockquote>
+	
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="Setting_Up_GM.html">  </a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+assets
+resources
+changing assets
+changing resources
+-->

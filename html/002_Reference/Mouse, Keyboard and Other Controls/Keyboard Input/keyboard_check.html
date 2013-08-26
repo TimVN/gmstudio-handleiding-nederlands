@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>keyboard_check</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>keyboard_check</h1>
+  
+<h2>Returns whether the given key on the keyboard is currently held down.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">keyboard_check(key);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>key</td>
+	<td>The key to check the down state of.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check to see if a key is held down or not. Unlike the <a href="keyboard_check_pressed.html"><tt>keyboard_check_pressed</tt></a> or <a href="keyboard_check_released.html">
+<tt>keyboard_check_released</tt></a> functions which are only triggered once when the key is pressed or released, this function is triggered every step that that the key is held down for.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check(vk_left)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;x -= 5;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if the arrow key is being pressed and move the instance 5 pixels left every step that it returns true.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Keyboard Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="keyboard_check_pressed.html">keyboard_check_pressed</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+keyboard_check
+-->

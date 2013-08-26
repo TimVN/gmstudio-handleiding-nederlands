@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>IAP Server Setup</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>IAP Server Setup</h1>
+
+<h2>This section deals with setting up your own in app purchases server.</h2>
+
+<p>
+If you wish to make use of a proprietary web server for retrieving available products (allowing you to dynamically update the set of products available for a title without the need to update your title) and/or 
+for verifying Apple Store receipts then you should follow the following instrauctions for setting the whole system up.
+<br>
+<br>
+
+First, when setting up your own server, you should be aware that <i>GameMaker:Studio</i> will require that it honours the following API calls:
+<blockquote>
+	<ul>
+		<li>{URL}/products/purchases?product={yourpackagename}<br><br>
+		<li>{URL}/admin/verify?receipt={applestorereceipt}
+	</ul>
+</blockquote>
+
+<p>
+Once that is done you will need to add the necessary information too, so that when the API call of “<b>products/purchases?product=</b>” is queried by the <i>GameMaker:Studio</i> runner the returned 
+data is correctly formated. This means that the data must be provided in the form of JSON with the following format (using example values):
+<br>
+<br>
+<p class="code">
+[{<br>
+&nbsp;&nbsp;&nbsp;“price":"0.69",<br>
+&nbsp;&nbsp;&nbsp;"name":"Extra Levels Pack 1",<br>
+&nbsp;&nbsp;&nbsp;"product_id":3,<br>
+&nbsp;&nbsp;&nbsp;"url":"http://MacSweeneyServer.com/ExtraLevels1.zip",<br>
+&nbsp;&nbsp;&nbsp;"description":"Levels Pack 1",<br>
+&nbsp;&nbsp;&nbsp;"purchase_id":"com.MacSweeneyGames.droid.cc.pack1",<br>
+&nbsp;&nbsp;&nbsp;"path":"ExtraLevels/1"<br>
+},<br>
+{<br>
+&nbsp;&nbsp;&nbsp;"price":"1.00",<br>
+&nbsp;&nbsp;&nbsp;"name":”Extra Levels Pack 2",<br>
+&nbsp;&nbsp;&nbsp;"product_id":3,<br>
+&nbsp;&nbsp;&nbsp;"url":"http://MacSweeneyServer.com/ExtraLevels2.zip",<br>
+&nbsp;&nbsp;&nbsp;"description":"Levels Pack 2"<br>
+&nbsp;&nbsp;&nbsp;"purchase_id":"com.MacSweeneyGames.droid.cc.pack2",<br>
+&nbsp;&nbsp;&nbsp;"path":"ExtraLevels/2",<br>
+}]
+</p>
+
+<p>
+<br>
+Please note that the values for the “title”, “description” and “price” fields are only <i>placeholders</i> for iOS titles and the actual values are filled in from the settings on the Apple Store which also 
+correctly adjusts the price according to region. On Android titles no such facility exists thus the values should be provided accurately.
+<br>
+<br>
+
+One last piece of JSON that must also be included is for when the <i>GameMaker:Studio</i> runner queries the API call of “<b>admin/verify?receipt=</b>”. The returned data must be provided in the form 
+of JSON with the following format:
+<br>
+<br>
+<p class="code">
+[{<br>
+“status”:”true”<br>
+}]
+</p>
+
+<p>
+<br>
+Finally, to use in-app purchases with your proprietary developer server you will need to configure your title in the <a href="../../001_Advanced%20Use/Global%20game%20settings/In%20App%20Purchases%20Tab.html">Global Game 
+Settings</a> as in the following image:
+
+<img class="center" src="serverURL.png"></img>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="IAP%20Example.html">IAP Example</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+proprietary server
+iap server settings
+-->

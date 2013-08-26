@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>lerp</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>lerp</h1>
+  
+<h2>Returns the linear interpolation of two input values by the given amount.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">lerp(a, b, amt)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>a</td>
+	<td>The first value.</td></tr>
+	
+	<tr class="alt"><td>b</td>
+	<td>The second value.</td></tr>
+	
+	<tr><td>amt</td>
+	<td>The amount to interpolate.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can find the value that equates to the position between two other values for a given percentage. So if you do, for example:
+<p class="code">
+lerp(0, 10, 0.5)<br>
+</p>
+<p>
+you would get the return value of 5, which is 50% of the input values. You can extrapolate using this function too, by supplying a positive or negative 
+value for the interpolation amount so that doing something like:
+<p class="code">
+lerp(0, 10, 2)<br>
+</p>
+<p>
+will return a value of 20.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+xx = lerp(x, x + hspeed, room_speed);
+yy = lerp(y, y + vspeed, room_speed);
+</p>
+<p>
+The above code uses the linear interpolation funcion to predict where an instance would have moved to after one second of game time.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Real Number Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="clamp.html">clamp</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+lerp
+--> 

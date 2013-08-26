@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_yoffset</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_yoffset</h1>
+
+<h2>Returns the y component of the sprite origin.</h2>
+  
+<h3>Syntax:</h3>
+<p class="code">sprite_yoffset</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read only</b> variable returns the local yoffset (the y component of the origin as defined in the sprite editor) of the sprite that has been assigned to the instance. This yoffset is returned in 
+pixels and will be dependant on the <a href="image_yscale.html"><tt>image_yscale</tt></a>, so that (for example) if a square 32x32 sprite is defined as having the y origin at 16, when that sprite is 
+scaled by 2 this variable will return 32. If you need the un-scaled yoffset you should use <a href="../../../Game%20Assets/Sprites/sprite_get_yoffset.html"><tt>sprite_get_yoffset</tt></a>.
+<br>
+<br>
+
+<img class="center" src="yoffset_image.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if y - sprite_yoffset &lt; 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;y = sprite_yoffset;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the top edge of the sprite of the instance is outside the room and if it is it moves the instance so that the whole sprite is visible.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="image_alpha.html">image_alpha</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_yoffset
+-->

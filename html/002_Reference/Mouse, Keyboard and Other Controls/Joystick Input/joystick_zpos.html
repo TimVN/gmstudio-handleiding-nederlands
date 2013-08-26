@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>joystick_zpos</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>joystick_zpos</h1>
+  
+<h2>Returns the position of the z-axis of joystick.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">joystick_zpos(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the joystick (1 or 2).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return the position of the z-axis of the joystick/gamepad with the given id, with the value being somewhere between -1 and 1. See the image below for the relationship between the different axes 
+of rotation that are accepted. The id can be either 1 or 2 as <i>GameMaker:Studio</i> only accepts input from a maximum of two joysticks/gamepads.
+<br>
+<br>
+
+<i><b>NOTE : </b>This function is only available for Windows.</i>
+<br>
+<br>
+
+<img class="center" src="js_axis.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+zz += spd * joystick_zpos(1);
+</p>
+<p>
+The above code uses the returned value of the <tt>joystick_ypos</tt> function to set a variable within the instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Joystick Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="joystick_rpos.html">joystick_rpos</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+joystick_zpos
+-->

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>cursor_sprite</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+ <h1>cursor_sprite</h1>
+  
+<h2>Assigns a sprite to act as a cursor.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">cursor_sprite;</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Setting this variable will instruct <i>GameMaker:Studio</i> to use the designated sprite as a cursor (basically setting it to the current mouse x/y position every step). The default value is -1 which is no sprite 
+for the cursor, but you can assign any sprite index from the game assets or that has been imported from an external resource. Please note that there is no way to control the animation speed or image_index, so 
+if the sprite has sub-images, these will be cycled at the same speed as the room speed. To remove the cursor sprite, you can set this variable to -1 again.
+<br>
+<br>
+
+It is also worth noting that this variable does <i>not</i> replace the game window cursor, and that it will still be drawn as normal. To avoid this you can use the function 
+<a href="../Windows%20And%20Views/The%20Game%20Window/window_set_cursor.html"><tt>window_set_cursor</tt></a> and set it to the constant <tt>cr_none</tt> which will make the standard cursor invisible.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+cursor_sprite = spr_CustomCursor;
+</p>
+<p>
+The above code will set the sprite indexed in the variable "spr_CustomCursor" to be the cursor sprite for the game.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Miscellaneous</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="game_id.html">game_id</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+cursor_sprite
+-->

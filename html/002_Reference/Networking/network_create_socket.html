@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>network_create_socket</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>network_create_socket</h1>
+  
+<h2>Create a new client socket.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">network_create_socket(type);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>type</td>
+	<td>The type of socket connection to create (see the constants listed below).</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is used to create a new client socket for your game to communicate over the network. You must define the socket type (see the list of constants below) and the function will return a unique <i>id</i> 
+for that socket, which should be used in all further function calls for that socket, or a value of less than 0 if the connection fails.
+<br>
+<br>
+
+<i><b>NOTE: </b>You can use the IP "127.0.0.1" to connect back to the same device that is running the game.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>If you are using the <b>Free</b> version of <i>GameMaker:Studio</i> you are limited to TCP connections only and only 1 client connection will be permitted. For more details see 
+<a href="../../000_Using%20GameMaker/Versions.html">here</a>.</i>
+<br>
+<br>
+
+<div class="compat">
+	<table>
+		<tr><th>Constant</th><th>Description</th></tr>
+		<tr><td>network_socket_tcp</td><td>Create a web socket using TCP.</td></tr>
+		<tr class="alt"><td>network_socket_udp</td><td>Create a web socket using UDP.</td></tr>
+		<tr><td>network_socket_bluetooth</td><td>Create a bluetooth socket (<i>currently unavailable!</i>).</td></tr>
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+client = network_create_socket(network_socket_tcp);<br>
+network_connect( client, “192.134.0.1”, 6510 );<br>
+</p>
+<p>
+The above code will create a new TCP socket then attempt to connect through that to the given IP address on port 6510.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Networking</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="network_connect.html">network_connect</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+network_create_socket
+network_socket_tcp
+network_socket_udp
+network_socket_bluetooth
+--> 

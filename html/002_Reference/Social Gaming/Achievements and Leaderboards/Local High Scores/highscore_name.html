@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>highscore_name</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>highscore_name</h1>
+
+<h2>Returns the name string stored at the given place in the highscore table.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">highscore_name(place);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>place</td>
+	<td>The place on the table (1-10).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can retrieve the name string that has been stored in the high score list at the given position. If no name has been entered, the string "Unknown" will be returned.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var i;<br>
+i = 10;<br>
+repeat(10)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;name[i] = highscore_name(i);<br>
+&nbsp;&nbsp;&nbsp;i -= 1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will loop through the high score list and store all the names in an array.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">High Scores</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="highscore_value.html">highscore_value</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+highscore_name
+-->

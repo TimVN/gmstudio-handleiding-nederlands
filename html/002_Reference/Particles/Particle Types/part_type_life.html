@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_type_life</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_type_life</h1>
+
+<h2>Sets a particle type's lifespan in steps.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_type_life(ind, life_min, life_max);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the particle type to change.</td></tr>
+	
+	<tr><td>life_min</td>
+	<td>The minimum lifespan of the particles.</td></tr>
+	
+	<tr><td>life_max</td>
+	<td>The maximum lifespan of the particles.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This is the function that governs how long each individual particle of the indicated type remains on the screen. As with other particle functions, you provide a minimum and a maximum value 
+(in steps)and each particle lifespan will be a random number of steps from within the specified range. To have all particles with the same lifetime, set the two values to be the same.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+part_type_life(part_Flare, room_speed, room_speed * 2);
+</p>
+<p>
+The above code will set all particles created of the particle type indexed in the variable "part_Flare" to have a lifetime of between 1 and 2 seconds, based on the current room-speed.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Types</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_type_step.html">part_type_step</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_type_life
+-->

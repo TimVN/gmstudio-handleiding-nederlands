@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>show_error</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>show_error</h1>
+  
+<h2>Displays a pop-up message with a custom error string.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">show_error(str, abort);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>str</td>
+	<td>The string to show in the pop-up message.</td></tr>
+	
+	<tr class="alt"><td>abort</td>
+	<td>Whether to abort (true) or not (false).</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will show a custom string as an error message and give the option to abort the game afterwards if necessary.
+<br>
+<br>
+
+<i><b>NOTE : </b>THIS FUNCTION IS FOR DEBUG USE ONLY.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if room != rm_Dungeon<br>
+{<br>
+show_error("Error: Went to wrong area. Aborting game.", true);<br>
+}<br>
+</p>
+<p>
+The above code will check to see if the room that the player is in is "rm_Dungeon" and if not it will show an error message and force the user to abort the game.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Debugging</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="show_message.html">show_message</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+show_error
+-->

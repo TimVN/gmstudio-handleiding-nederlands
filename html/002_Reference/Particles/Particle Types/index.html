@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Particle Types</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>Particle Types</h1>
+
+<h2>This section deals with defining particles for use in a particle system. </h2>
+
+<p>
+Particles are the graphic effects that can be created by the use of particle systems in a game. The particles that you define using these functions can be used in any system that you create 
+and the normal procedure would be to define all your particles once at the start of a game and store their index values in global variables. These global variables can then be used to burst, 
+emit or create particles at any time throughout the game. You can also create, use and then destroy particles as needed if memory is an issue or if you wish many different types but only at 
+specific points in your game. Whatever you choose, particles are a very versatile resource!
+<br>
+<br>
+
+<h3>Defining Particles</h3>
+
+<p>
+Particles need to be created and have their index stored in a variable so that all further particle routines can access them correctly. The following functions are used to create, check for, clear and 
+destroy particle types:
+<blockquote>
+	<ol>
+		<li><a href="part_type_exists.html">part_type_exists<br></a>
+		<li><a href="part_type_create.html">part_type_create<br></a>
+		<li><a href="part_type_destroy.html">part_type_destroy<br></a>
+		<li><a href="part_type_clear.html">part_type_clear<br></a>
+	</ol>
+</blockquote>
+
+<p>
+Once you have created your particle type you should give it a <i>shape</i>. This can be one of the 14 built in shapes which are 64x64 pixel sprites with alpha blending, or you can use your 
+own sprites which can be animated, static or use random sub-images. The following functions define the visual base shape of each particle:
+<blockquote>
+	<ol>
+		<li><a href="part_type_shape.html">part_type_shape<br></a>
+		<li><a href="part_type_sprite.html">part_type_sprite<br></a>
+	</ol>
+</blockquote>
+
+<p>
+The following image shows the 14 built in particle types that you can choose from:
+<img  class="center" src="../../../images/Particle_Sprites.png"></img>
+
+<p>
+Once you have choosen the sprite for the particle type (either a default shape or your own) you can indicate the size and scale of it. The size can be specified as a range and all particles will be 
+created with a size choosen from within the given range. The scale is the "base" value for the x and y axis scale of the particle <i>before</i> any size variations are added and the following 
+functions are used to control these values: 
+<blockquote>
+	<ol>
+		<li><a href="part_type_size.html">part_type_size<br></a>
+		<li><a href="part_type_scale.html">part_type_scale<br></a>
+	</ol>
+</blockquote>
+
+<p>
+Particles can also have an orientation and motion. As with most particle functions, the speed, direction and orientacion are resolved as a random value that is selected from a given range and 
+can be set with the following functions:
+<blockquote>
+	<ol>
+		<li><a href="part_type_speed.html">part_type_speed<br></a>
+		<li><a href="part_type_direction.html">part_type_direction<br></a>
+		<li><a href="part_type_gravity.html">part_type_gravity<br></a>
+		<li><a href="part_type_orientation.html">part_type_orientation<br></a>
+  	</ol>
+</blockquote>
+
+<p>
+Once you have the style and movement of your particles sorted out, you can then set their color and alpha values, both of which can be set as an absolute value during the whole lifespan of the 
+particle, or as a scale of values that go from one to the other gradually. Note that there is also a special function that permits you to set the blending for particles and their surroundings, and this 
+can be either normal or additive and gives some fantastic effects- The functions governing color, alpha and blending are:
+<blockquote>
+	<ol>
+		<li><a href="part_type_color_mix.html">part_type_color_mix<br></a>
+		<li><a href="part_type_color_rgb.html">part_type_color_rgb<br></a>
+		<li><a href="part_type_color_hsv.html">part_type_color_hsv<br></a>
+		<li><a href="part_type_color1.html">part_type_color1<br></a>
+		<li><a href="part_type_color2.html">part_type_color2<br></a>
+		<li><a href="part_type_color3.html">part_type_color3<br></a>
+		<li><a href="part_type_alpha1.html">part_type_alpha1<br></a>
+		<li><a href="part_type_alpha2.html">part_type_alpha2<br></a>
+		<li><a href="part_type_alpha3.html">part_type_alpha3<br></a>
+		<li><a href="part_type_blend.html">part_type_blend<br></a>
+    	</ol>
+</blockquote>
+
+<p>
+Particles exist on-screen for a limited amount of time and this is called their their "lifetime". Particle lifetimes are measured in steps and (like previous functions) this is expressed as a range of values 
+from which the particle will be given a specific lifetime. There are also a couple of interesting functions which can be used to make particles generate <i>other</i> particles, either each step or 
+when they "die" (ie: Are removed from the screen), but be very careful with these functions as they can quickly create thousands of particles and crash the game! The functions that set lifetime and 
+step or death emitting are as follows:
+
+<blockquote>
+	<ol>
+		<li><a href="part_type_life.html">part_type_life<br></a>
+		<li><a href="part_type_step.html">part_type_step<br></a>
+		<li><a href="part_type_death.html">part_type_death<br></a>
+</blockquote>	
+<p>
+
+It is worth noting that creating particles through code can often be a laborous and time-consuming process due to the large number of parameters that can be changed and tweaked. For that 
+reason it is recommended that you search around and get a hold of some type of <b>Particle Designer</b> (or make one yourself!) to take the drudgery out of particle creation.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Particles</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="aaaa.html">aaa</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+-->

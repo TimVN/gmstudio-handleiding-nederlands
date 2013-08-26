@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sound_volume</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sound_volume</h1>
+
+<h2>Sets the volume of a given sound.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sound_volume(index, value);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sound to change the volume of.</td></tr>
+	
+	<tr><td>value</td>
+	<td>The new volume from 0 to 1.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can change the volume of the given sound. This will change the volume for all further instances where the indexed sound is played and the volume can be set to a value between 
+0 (silent) and 1 (full volume), with a value of 1 being the default volume for the sound unless it has been previously changed in the <a href="../../../../000_Using%20GameMaker/006_Sounds%20and%20music.html">
+sound resource</a>. The volume scale is logarithmic in nature, so a volume of 0.5 is <i>not</i> half volume, as illustrated by the image below:
+<br>
+<br>
+
+<img class="center" src="sound_volume.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(vk_add)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if vol &lt; 1 vol += 0.1;<br>
+&nbsp;&nbsp;&nbsp;sound_volume(global.Music, vol);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks for a keypress and when it detects one it raises the volume (to a maximum of 1) of the sound indexed in the global variable "Music".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Legacy Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sound_fade.html">sound_fade</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sound_volume
+-->

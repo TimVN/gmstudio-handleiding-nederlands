@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Obsolete Sound Functions</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Obsolete Sound Functions</h1>
+  
+<h2>
+These functions deal with sound effects and 3D sounds.
+</h2>
+<p>
+  
+<h3> <b>Function List :</b> </h3>
+<div class="param">
+<table>
+	<tr><th>Function</th><th>Description</th></tr>
+
+	<tr><td>sound_effect_set</td><td>Sets a (combination of) sound effect(s) for the indicated sound. effect can be any of the constanrs listed below.</td></tr>
+	
+	<tr class="alt"><td>sound_effect_chorus</td><td>Sets the parameters for the chorus effect for the indicated sound.</td></tr>
+
+	<tr><td>sound_effect_echo</td><td>Sets the parameters for the echo effect for the indicated sound.</td></tr>
+	
+	<tr class="alt"><td>sound_effect_flanger</td><td>Sets the parameters for the flanger effect for the indicated sound.</td></tr>
+	
+	<tr><td>sound_effect_gargle</td><td>Sets the parameters for the gargle effect for the indicated sound.</td></tr>
+	
+	<tr class="alt"><td>sound_effect_reverb</td><td>Sets the parameters for the reverb effect for the indicated sound.</td></tr>
+	
+	<tr><td>sound_effect_compressor</td><td>Sets the parameters for the compressor effect for the indicated sound.</td></tr>
+	
+	<tr class="alt"><td>sound_effect_equalizer</td><td>Sets the parameters for the equalizer effect for the indicated sound.</td></tr>
+	
+	<tr><td>sound_3d_set_sound_position</td><td>Sets the position of the indicated sound with respect to the listener to the indicated position in space.</td></tr>
+	
+	<tr class="alt"><td>sound_3d_set_sound_velocity</td><td>Sets the velocity of the indicated sound to the indicated vector in space.</td></tr>
+	
+	<tr><td>sound_3d_set_sound_distance</td><td>Sets the minimum distance at which the sound does no longer increase in loudness and the maximum distance at which the sound can no longer be heard.</td></tr>
+	
+	<tr class="alt"><td>sound_3d_set_sound_cone</td><td>Normally sound has the same amplitude at a given distance in all directions. You can set the sound cone to change this and make sound directional.</td></tr>
+	
+	<tr><td>sound_get_preload</td><td>Returns whether the sound with the given index has preload set.</td></tr>
+	
+	<tr class="alt"><td>sound_restore</td><td>Restores the indicated sound in audio memory for immediate playing.</td></tr>
+	
+	<tr><td>sound_discard</td><td>Frees the audio memory used for the indicated sound.</td></tr>
+	
+	<tr class="alt"><td>sound_background_tempo</td><td>Changes the tempo of the background music (if it is a midi file).</td></tr>
+	
+	<tr><td>sound_set_search_directory</td><td>Sets the directory in which direct music files are to be found. The dir string should not incluce the final backslash.</td></tr>
+	
+	<tr class="alt"><td>sound_pan</td><td>Changes the pan for the indicated sound (-1 = left, 0 = center, 1 = right).</td></tr>
+
+</table>
+</div>
+
+<p>
+The following constants have also been removed :
+<blockquote>
+<ul>
+	<li><b>se_none</b></li>
+	<li><b>se_chorus</b></li>
+	<li><b>se_echo</b></li>
+	<li><b>se_flanger</b></li>
+	<li><b>se_gargle</b></li>
+	<li><b>se_reverb</b></li>
+	<li><b>se_compressor</b></li>
+	<li><b>se_equalizer</b></li>
+</ul>
+</blockquote>
+
+<h3> <b>Why These Are Obsolete</b> </h3>
+<p>
+These were Windows only functions and are no longer applicable to any other device.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Obsolete Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Obsolete%20mPlay%20Functions.html">mPlay Functions</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sound_effect_set (obsolete)
+sound_effect_chorus (obsolete)
+sound_effect_echo (obsolete)
+sound_effect_flanger (obsolete)
+sound_effect_gargle (obsolete)
+sound_effect_reverb (obsolete)
+sound_effect_compressor (obsolete)
+sound_effect_equalizer (obsolete)
+se_none (obsolete)
+se_chorus (obsolete)
+se_echo (obsolete)
+se_flanger (obsolete)
+se_gargle (obsolete)
+se_reverb (obsolete)
+se_compressor (obsolete)
+se_equalizer (obsolete)
+sound_3d_set_sound_position (obsolete)
+sound_3d_set_sound_velocity (obsolete)
+sound_3d_set_sound_distance (obsolete)
+sound_3d_set_sound_cone (obsolete)
+sound_get_preload (obsolete)
+sound_restore (obsolete)
+sound_discard (obsolete)
+sound_background_tempo (obsolete)
+sound_set_search_directory (obsolete)
+sound_pan (obsolete)
+--> 

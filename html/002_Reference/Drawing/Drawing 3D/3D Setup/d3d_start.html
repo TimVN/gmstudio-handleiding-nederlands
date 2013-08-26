@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>d3d_start</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>d3d_start</h1>
+  
+<h2>Tells <i>GameMaker:Studio</i> that all further drawing is to be done in 3D mode.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_start()</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can tell <i>GamerMaker:Studio</i> that all further drawing should be done in 3D mode. This function can be called in any event, but will affect <i>all drawing</i> done after, so if your game 
+is not completely done in 3D you may need to switch it off using <a href="d3d_end.html"><tt>d3d_end</tt></a> to draw certain parts (and then use this function again to switch 3D mode back on).
+<br>
+<br>
+
+Starting 3D mode will result in the following changes :
+<blockquote>
+<ul>
+	<li>First of all depth testing (also known as Z Buffering) is switched on (using a 24-bit z-buffer). This means that for each pixel on the screen only the drawing with the smallest z-value (= depth value) is drawn. If instances
+	have the same depth then you will get what is known as Z-fighting. This occurs as the 2 instances attempt to draw at the same level, and inaccuracys in the rendering due to very close Z value cause ugly effects. To avoid 
+	this, try and make sure instances that might overlap do not have the same depth value!</li><br>
+
+	<li>Secondly, the normal orthographic projection is replaced by a perspective one. This means the following. Normally the size of instances on the screen is independent on its depth. With a perspective projection instances
+	that have a greater depth will appear smaller. When the depth is 0 it is equal to the old size (unless you change the projection). The viewpoint for the camera is placed at a distance above the room. (This distance 
+	is equal to the width of the room; that gives a reasonable default projection.) Only instances in front of the camera are drawn. So don't use instances with a depth smaller than 0 (or at least not smaller than -w where w is the 
+	width of the room or the view).</li><br>
+
+	<li>Thirdly, the vertical y-coordinate is reversed. While normally the (0,0) position is at the top-left of the view, in 3D mode the (0,0) position is at the bottom-left position, as is normal for 3-dimensional views.</li>
+</ul>
+</blockquote>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_start();
+</p>
+<p>
+This code has been placed in the create event of an instance to tell <i>GameMaker:Studio</i> that all further drawing should be done in 3D mode.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Setup</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_end.html">d3d_end</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_start
+--> 

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ini_read_real</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ini_read_real</h1>
+  
+<h2>Reads a saved real value (number) from an .ini file.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">ini_read_real(section, key, default);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>section</td>
+		<td>The section of the .ini to read from.</td></tr>
+		
+		<tr><td>key</td>
+		<td>The key within the relevant section of the .ini to read from.</td></tr>
+		
+		<tr><td>default</td>
+		<td>The value to return if a value is not found in the defined place (or the .ini file does not exist). Must be a real number.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to read a number from an ini data file. Ini files are split into <b>sections</b> and then each section is subsequently split into <b>key</b> - <b>value</b> 
+pairs. So a typical ini file would look something like this :
+<br>
+<br>
+
+<img class="center" src="IniExample.png"></img>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ini_open( 'savedata.ini' );<br>
+score = ini_read_real( 'save1', 'score', 0 );<br>
+ini_close();
+</p>
+<p>
+This will open 'savedata.ini' and set score to the value under 'save1' > 'score' in it, then close the .ini again. Should
+there be no value under 'save1' > 'score', or there no 'savedata.ini' file present, score will be set to 0.
+</p>
+  
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Ini Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ini_read_string.html">ini_read_string</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+ini_read_real
+--> 

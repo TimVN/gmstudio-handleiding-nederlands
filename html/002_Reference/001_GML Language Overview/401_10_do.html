@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The "Do" Statement</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The "Do" Statement</h1>
+
+<h2>Here you can learn about the "do" statement.</h2>
+<p>
+
+A "do" is really the "do... until" statement as you cannot have one without the other. It has this form :
+<br>
+<br>
+<p class="code">
+do &lt;statement&gt; until (&lt;expression&gt;)
+</p>
+
+<p>
+<br>
+The statement (which can also be a code block) is executed until the expression is found true, and the initial statement is always executed at least once. Be careful with your do loops, as you can easily make them loop 
+forever, in which case your game will hang and not react to any user input anymore. Below you can find an example of a typical way to use "do... until" :
+<br>
+<br>
+<p class="code">
+{<br>
+do<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;x = random(room_width);<br>
+&nbsp;&nbsp;&nbsp;y = random(room_height);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+until (place_free(x, y));
+}<br>
+</p>
+
+<p>
+<br>
+The above program tries to place the current object at a free position (this is about the same as the action to <a href="../../000_Using%20GameMaker/Actions/000_Move%20actions.html">move an object to a random position</a>).
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_11_for.html">The "For" Statement</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+do
+until
+--> 

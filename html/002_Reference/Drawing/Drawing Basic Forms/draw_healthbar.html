@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_healthbar</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_healthbar</h1>
+
+<h2>Draws a custom healthbar.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_healthbar(x1, y1, x2, y2, amount, backcol, mincol, maxcol, direction, showback, showborder);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x1</td>
+	<td>The x coordinate of the left of the healthbar</td></tr>
+	
+	<tr class="alt"><td>y1</td>
+	<td>The y coordinate of the top of the healthbar</td></tr>
+	
+	<tr><td>x2</td>
+	<td>The x coordinate of the right of the healthbar</td></tr>
+	
+	<tr class="alt"><td>y2</td>
+	<td>The y coordinate of the bottom of the healthbar</td></tr>
+	
+	<tr><td>amount</td>
+	<td>The variable which defines total health (between 0 and 100)</td></tr>
+	
+	<tr class="alt"><td>backcol</td>
+	<td>The color of the background for the bar</td></tr>
+	
+	<tr><td>mincol</td>
+	<td>The color of the bar when at no health (0)</td></tr>
+	
+	<tr class="alt"><td>maxcol</td>
+	<td>The color of the bar when at full health (100)</td></tr>
+	
+	<tr><td>direction</td>
+	<td>Where the bar is 'anchored' (0 = left, 1 = right, 2 = top, 3 = bottom)</td></tr>
+
+	<tr class="alt"><td>showback</td>
+	<td>Whether the bar's background is drawn (<tt>true</tt>) or not (<tt>false</tt>). If false, the backcol argument is disregarded.</td></tr>
+	
+	<tr><td>showborder</td>
+	<td>Whether the bar's elements have a 1px wide black border (<tt>true</tt>) or not (<tt>false</tt>).</td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can draw a colored bar to show a constant value. Although the function uses the word "healthbar" you can use this to display anything you wish as long as the amount to be displayed 
+is a percentage value between 0 and 100 (a percentage of any value can be calculated with the formula <b>(CURRENT_Value / MAXIMUM_value) * 100</b>), so, for example, you can use this to 
+display power, health, mana, time or anything else that would benefit from a bar display.
+<br>
+<br>
+
+You can set various different things that change the visual aspect of the bar and these are illustrated in the image below (note that the colors used here are <tt>c_green</tt> for the maximum 
+value and <tt>c_red</tt> for the minium value, but you can use the colors that you wish):
+
+<img class="center" src="draw_healthbar.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var pc;<br>
+pc = (hp / max_hp) * 100;<br>
+draw_healthbar(100, 100, 500, 200, pc, c_black, c_red, c_lime, 0, true, true)<br>
+</p>
+<p>
+The above code uses the percentage value that you get from the variables "hp" and "hp_max" to draw a standard red/green healthbar.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Drawing Basic Forms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_path.html">draw_path</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_healthbar
+-->

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Particle Emitters</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Particle Emitters</h1>
+
+<h2>This section deals with particle emitters.</h2>
+
+<p>
+Emitters are used by <i>GameMaker:Studio</i> to emit particles over an area of the screen which can have different forms and distributions. They can also either create a continuous stream of 
+particles or they can burst out a number of particles all at once, depending on the way the functions are used. 
+<br>
+<br>
+
+Since a particle emitter is a dynamically created resource, you must create it and store the returned index in a variable to reference the emitter in all further function calls, and it is very important that 
+you also destroy the emitter when it is no longer needed or else you will have a memory leak that will slow down and eventually crash your game. It is also worth noting that particle emitters will live 
+on forever after they are created, even if the index is no longer stored. So even if you change room or restart the game, the systems and the particles will remain, and be visible, in all further rooms 
+so you better make sure you destroy them once you no longer need them.
+<br>
+<br>
+
+The following functions are available to set the emitters and to let them create particles. Note that each of them gets the index of the particle system to which it belongs as a first argument.
+<blockquote>
+	<ol>
+  		<li><a href="part_emitter_exists.html">part_emitter_exists<br></a>
+  		<li><a href="part_emitter_create.html">part_emitter_create<br></a>
+  		<li><a href="part_emitter_clear.html">part_emitter_clear<br></a>
+  		<li><a href="part_emitter_region.html">part_emitter_region<br></a>
+  		<li><a href="part_emitter_burst.html">part_emitter_burst<br></a>
+  		<li><a href="part_emitter_stream.html">part_emitter_stream<br></a>
+  		<li><a href="part_emitter_destroy.html">part_emitter_destroy<br></a>
+  		<li><a href="part_emitter_destroy_all.html">part_emitter_destroy_all<br></a>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Particles</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="Setting_Up_GM.html">  </a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+-->

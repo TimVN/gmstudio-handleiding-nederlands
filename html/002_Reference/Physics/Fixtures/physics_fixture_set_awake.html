@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_set_awake</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_set_awake</h1>
+  
+<h2>This function tells <i>GameMaker:Studio</i> that the fixture is to be treated as awake or not.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_fixture_set_awake(fixture, state)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>the index of the fixture</td></tr>
+	
+	<tr class="alt"><td>flag</td>
+	<td>whether a fixture is a awake (true) or not (false)</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When you start a room with physics, or bind fixtures to instances, the fixtures are always considered to be "awake"... that is to say, they are processing events and interacting with the surrounding instances. 
+However this can sometimes lead to problems, especially if you have a number of instances with fixtures that are side by side when a room starts (think of a tower made of various instances with 
+fixtures) as with them being "awake" they will move and possibly change position due to the sudden start of gravity and collisions affecting them. In these cases you can use this function to flag 
+the fixture as been "asleep", in which case it will not be processing anything when it is first created in the room.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+physics_fixture_set_awake(fix_Cloud, true);
+<p>
+The code above flag the fixture as being "awake" when bound to an instance.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_set_kinematic.html">physics_fixture_set_kinematic</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_set_awake
+awake
+--> 

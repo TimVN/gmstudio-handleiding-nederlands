@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_emitter_exists</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_emitter_exists</h1>
+
+<h2>Checks to see if a given emitter exists in the given particle system.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_emitter_exists(ps, ind);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ps</td>
+	<td>The particle system to check for an emitter.</td></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the emitter to search for.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check to see if the given particle emitter indexed exists in the given system or not. Note that if the variable being checked is an uninitialised variable (that a particle emitter
+would otherwise have its index assigned to) this will throw an error.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if part_emitter_exists(sname, p_emit1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;part_emitter_burst(sname, p_emit1, part_1, 30);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check for the emitter indexed in the variable "pemit" and if it exists, it will burst 30 particles from it.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Particles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_emitter_create.html">part_emitter_create</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_emitter_exists
+-->

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>GML Overview</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>GML Overview</h1>
+
+<h2><i>GameMaker:Studio</i> has its own proprietary programming language called the <b>GameMaker Language</b> (abbreviated to <b>GML</b>).</h2>
+
+<p>
+The <i>GameMaker:Studio</i> programming language, <b>GML</b>, gives you much more flexibility and control than the standard actions that are available through the Drag'n'Drop interface. There are a number 
+of different places where you can use this language to create and control your game :
+
+<blockquote>
+<ul>
+	<li><b>Scripts</b>. A script is a (usually) short snippet of code in GML that you write to create your own functions.<br><br></li>
+	
+	<li><b>Events</b>. You can use code within object events to control the behaviour and interactions of instances of those objects. You can even mix Drag'n'Drop with code!<br><br></li>
+	
+	<li><b>Room Creation Code</b>. Each room can have a special "create event" specific for that room. Here you can add the code you need and it will be run when every time the room is entered.<br><br></li>
+
+	<li><b>Instance Creation Code</b> As well as the code you insert into the events of an object, you can also add code to individual instances when you place them in the room. This code will either run after (default) or 
+	before the create event of the object (this can be set in the <i>Global Game Settings</i>) and is specific to the instance that you add it to. So you can have four instances of the same object, yet each one can be made 
+	to have some different properties thanks to this code.<br></li>
+</ul>
+</blockquote>
+
+<p>
+In this section we will describe the basic structure of GML functions and how they are used to create your own programs and generally control your games. Please note that before programing in <i>GameMaker:Studio</i> 
+there are a few conventions that you should follow! First of all, for all your resources (sprites, objects, sounds, etc...) you must use names that start with a letter and only consist of letters, digits and the underscore '_' 
+symbol (for example "spr_Fish" is acceptable but not "spr Fish" or "6fish") otherwise you will not be able to refer to them with any GML functions. Also, make sure all resources have different names (there is a function in the 
+<a href="../../000_Using%20GameMaker/Drop%20Down%20Menus/The%20Scripts%20Menu.html">Scripts</a> section of the main IDE that can check this for you), and do <i>not</i> name resources <b>self</b>, <b>other</b>, <b>global</b>, or 
+<b>all</b> because these have special meaning in the language. 
+<p>
+Information on the GML language can be found in the following pages:
+
+<blockquote>
+	<ol>
+		<li><a href="401_01_program.html">A Program</a><br>
+		<li><a href="Variables/index.html">Variables and Variable Scope</a><br>
+		<li><a href="401_05_addressing.html">Addressing Variables in Other Instances</a><br>
+		<li><a href="401_06_arrays.html">Arrays</a><br>
+		<li><a href="401_16_functions.html">Functions</a><br>
+		<li><a href="401_03_assignments.html">Assignments</a><br>
+		<li><a href="401_04_expressions.html">Expressions</a><br>
+		<li><a href="401_07_if.html">The "If" Statement</a><br>
+		<li><a href="401_08_repeat.html">The "Repeat" Statement</a><br>
+		<li><a href="401_09_while.html">The "While" Statement</a><br>
+		<li><a href="401_10_do.html">The "Do" Statement</a><br>
+		<li><a href="401_11_for.html">The "For" Statement</a><br>
+		<li><a href="401_12_switch.html">The "Switch" Statement</a><br>
+		<li><a href="401_13_break.html">The "Break" Statement</a><br>
+		<li><a href="401_14_continue.html">The "Continue" Statement</a><br>
+		<li><a href="401_15_exit.html">The "Exit" Statement</a><br>
+		<li><a href="401_18_with.html">The "With" Construction</a><br>
+		<li><a href="401_17_scripts.html">Scripts</a><br>
+		<li><a href="401_19_comment.html">Comments in Code</a><br>
+		<li><a href="401_20_evaluation_order.html">Evaluation Order</a><br>		
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../Maths/index.html">Maths</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+GML
+GameMaker language
+code basics
+-->

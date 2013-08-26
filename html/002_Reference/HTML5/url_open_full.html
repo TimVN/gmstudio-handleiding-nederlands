@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>url_open_full</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>url_open_full</h1>
+  
+<h2>Opens a URL on a browser, with a specific target and formatting.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">url_open_full(url, target, options);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>url</td>
+		<td>The URL (website address) to link to.</td></tr>
+		
+		<tr  class="alt"><td>target</td>
+		<td>This is the target area to open the URL in (see description).</td></tr>
+		
+		<tr><td>options</td>
+		<td>Standard browser options (see description).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This will open the specified URL on the browser of the chosen target device, or, if you are using the HTML5 module, in the currently open browser. The "target" parameter that you specify is the same as the standard JavaScript 
+"name" value when you use the <tt>open()</tt> method (be aware that all but '_self' may result in the browser blocking, or asking the user if they wish to allow it) and the "options" is the same as the JavaScript "specs" 
+prameter for controlling what properties the new window/tab should display (not all browsers may support all features). 
+<br>
+<br>
+Valid targets are :<br>
+<blockquote>
+_blank	
+_self	
+_parent	
+_top	
+
+	<b>'_self'</b> : Opens the linked document in the same frame as it was clicked (this is default).<br>
+	<b>'_blank'</b> : Opens the linked document in a new window or tab.<br>
+	<b>'_parent'</b> : Opens the linked document in the parent frame.<br>
+	<b>'_top'</b> : Opens the linked document in the full body of the window.<br>
+
+</blockquote>
+<p>
+Valid options are :<br>
+<blockquote>
+
+    <b>'height=[</b>px<b>]'</b> : The height of the window, with the minimum value being 100.<br>
+    <b>'width=[</b>px<b>]'</b> : The width of the window, with the minimum value being 100.<br>
+    <b>'left=[</b>px<b>]'</b> : The left position of the window.<br>
+    <b>'top=[</b>px<b>]'</b> : The top position of the window (IE only).<br>
+    <b>'location=[</b>boolean<b>]'</b> : Whether or not to display the address field (default is 1).<br>
+    <b>'menubar=[</b>boolean<b>]'</b> : Whether or not to display the menu bar (default is 1).<br>
+    <b>'resizable=[</b>boolean<b>]'</b> : Whether or not the window is resizable (default is 1).<br>
+    <b>'scrollbars=[</b>boolean<b>]'</b> : Whether or not to display scroll bars (default is 1).<br>
+    <b>'status=[</b>boolean<b>]'</b> : Whether or not to add a status bar (default is 1).<br>
+    <b>'titlebar=[</b>boolean<b>]'</b> : Whether or not to display the title bar. This is ignored unless the calling application is an HTML Application or a trusted dialog box (default is 1);<br>
+    <b>'toolbar=[</b>boolean<b>]'</b> : Whether or not to display the browser toolbar (default is yes).<br>
+	
+</blockquote>
+<p>
+<i><b>NOTE: </b>On the Windows 8 (JS) target platform, this function <b>will</b> work, but additional parameters will be ignored and the default browser will be launched with the given url.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+url_open_full( 'http://yoyogames.com', '_self', 'resizable=0, height=200, scrollbars=0');
+</p>
+<p>
+This would open the YoYo Games homepage in a new window that can't be resized, has a height of 200 pixels and no scrollbars.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">HTML5</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="url_get_domain.html">url_get_domain</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+url_open_full
+-->

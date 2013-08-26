@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>device_mouse_check_button_pressed</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>device_mouse_check_button_pressed</h1>
+  
+<h2>Returns whether a given device button has been pressed.</h2>
+  
+<h3><b>Syntax :</b> </h3>
+<p class="code">device_mouse_check_button_pressed(device, button);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>device</td>
+		<td>The device (from 0 - 4) that is being checked.</td></tr>
+		
+		<tr class="alt"><td>button</td>
+		<td>The button of the device that is being checked.</td></tr>
+
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns <tt>true</tt> (1) or <tt>false</tt> (0) depending on whether the device that you specify has been pressed or not. Now, the <i>device</i> refers to the mouse number, which can be from 0 to 4 and 
+this event is triggered when the touch screen of a mobile device is touched, so in this way you can test for up to 5 different screen touches. This function is only triggered <i>once</i> by the actual pressing action, and the 
+standard constants of <tt>mb_left</tt> and <tt>mb_right</tt> can be used to check for either button.
+<br>
+<br>
+
+<h3>Example :</h3>
+<p class="code">
+if device_mouse_check_button_pressed(0, mb_left) press=true;
+</p>
+<p>
+The above code checks to see if the device has been pressed and sets a variable to true if it has.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Device Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="device_mouse_check_button_released.html">device_mouse_check_button_released</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+device_mouse_check_button_pressed
+-->

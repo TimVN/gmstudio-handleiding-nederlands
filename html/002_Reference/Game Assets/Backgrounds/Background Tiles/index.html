@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Background Tiles</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Background Tiles</h1>
+
+<h2>This section has all the functions related to using tiles.</h2>
+
+<p>
+Tiles are made from large background images that <i>GameMaker:Studio</i> splits into parts based on the parameters that you input. These parts are classed as individual tiles and can be used for many 
+different things. Due to the fact that they are a purely graphic resource they are very fast to draw (they have far fewer internal variables associated with them, unlike instances) and large numbers can 
+be used in a game to add details and life to a level, however you should still try and limit the number of different layers (depths) that are used at any one time and keep them to the minimum necessary.
+<br>
+<br>
+
+<h3>Tile Layers</h3>
+<p>
+Tiles are drawn by <i>depth</i>, where lower depths appear on top of higher depths. Each depth is called a <b>layer</b> and there are a number of functions that can be used to get information 
+about tile layers and to move them around:
+<blockquote>
+<ol>
+	<li><a href="tile_layer_depth.html">tile_layer_depth</a><br>
+	<li><a href="tile_layer_find.html">tile_layer_find</a><br>
+	<li><a href="tile_layer_hide.html">tile_layer_hide</a><br>
+	<li><a href="tile_layer_show.html">tile_layer_show</a><br>
+	<li><a href="tile_layer_shift.html">tile_layer_shift</a><br>
+	<li><a href="tile_layer_delete.html">tile_layer_delete</a><br>
+	<li><a href="tile_layer_delete_at.html">tile_layer_delete_at</a><br>
+</ol>
+</blockquote>
+<p>
+
+<h3>Tile Information</h3>
+<p>
+The following functions can be used to get specific information about a single tile in the game (you can use the function <a href="tile_layer_find.html"><tt>tile_layer_find</tt></a> to get the 
+index of a single tile to use in these functions): 
+<blockquote>
+<ol>
+	<li><a href="tile_get_background.html">tile_get_background</a><br>
+	<li><a href="tile_get_alpha.html">tile_get_alpha</a><br>
+	<li><a href="tile_get_visible.html">tile_get_visible</a><br>
+	<li><a href="tile_get_blend.html">tile_get_blend</a><br>
+	<li><a href="tile_get_depth.html">tile_get_depth</a><br>
+	<li><a href="tile_get_width.html">tile_get_width</a><br>
+	<li><a href="tile_get_height.html">tile_get_height</a><br>
+	<li><a href="tile_get_left.html">tile_get_left</a><br>
+	<li><a href="tile_get_top.html">tile_get_top</a><br>
+	<li><a href="tile_get_x.html">tile_get_x</a><br>
+	<li><a href="tile_get_y.html">tile_get_y</a><br>
+	<li><a href="tile_get_yscale.html">tile_get_yscale</a><br>
+	<li><a href="tile_get_xscale.html">tile_get_xscale</a><br>
+</ol>
+</blockquote>
+<p>
+
+<h3>Tile Manipulation</h3>
+<p>
+The following functions can be used to add and remove tiles at runtime, as well as to set individual tile properties:
+<blockquote>
+<ol>
+	<li><a href="tile_exists.html">tile_exists</a><br>
+	<li><a href="tile_add.html">tile_add</a><br>
+	<li><a href="tile_delete.html">tile_delete</a><br>
+	<li><a href="tile_set_background.html">tile_set_background</a><br>
+	<li><a href="tile_set_visible.html">tile_set_visible</a><br>
+	<li><a href="tile_set_alpha.html">tile_set_alpha</a><br>
+	<li><a href="tile_set_blend.html">tile_set_blend</a><br>
+	<li><a href="tile_set_depth.html">tile_set_depth</a><br>
+	<li><a href="tile_set_position.html">tile_set_position</a><br>
+	<li><a href="tile_set_region.html">tile_set_region</a><br>
+	<li><a href="tile_set_scale.html">tile_set_scale</a><br>
+</ol>
+</blockquote>
+<p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Backgrounds</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="Setting_Up_GM.html">  </a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tiles
+--> 

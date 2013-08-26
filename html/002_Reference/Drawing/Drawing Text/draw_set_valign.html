@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_set_valign</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_set_valign</h1>
+
+<h2>Aligns any subsequently drawn text vertically.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_set_valign(valign);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>valign</td>
+	<td>Vertical alignment.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is used to align text along the vertical axis and changing the vertical alignment will change the position and direction in which all further text is drawn, with the default value being 
+<b>fa_top</b>. The following constants are accepted:
+<br>
+<br>
+
+<div class="compat">
+	<table class="compat">
+		<tr><th>Constant</th><th>Alignment</th></tr>
+
+		<tr><td>fa_top</td><td><img src="fa_top.png"></img></td></tr>
+		
+		<tr class="alt"><td>fa_middle</td><td><img src="fa_middle.png"></img></tr>
+
+		<tr><td>fa_bottom</td><td><img src="fa_bottom.png"></img></td></tr>
+	</table>
+</div>
+	
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_halign(fa_center);<br>
+draw_set_valign(fa_middle);<br>
+draw_text(100, 32, "Score : " + string(score));<br>
+</p>
+<p>
+The above code will draw the score centered around the very center of the text.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing text</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_text.html">draw_text</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_set_valign
+fa_top
+fa_middle
+fa_bottom
+-->

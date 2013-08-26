@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sound_delete</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sound_delete</h1>
+
+<h2>Deletes the indicated sound to free it from game memory.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sound_delete(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sound to delete.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will delete the indexed sound from your game.
+<br>
+<br>
+
+<i><b>NOTE : </b>This is a permanent removal that lasts as long as the game is running, meaning that if the deleted sound is an included game asset, even restrating the game with 
+<a href="../../../../002_Reference/Miscellaneous/game_restart.html"><tt>game_restart</tt></a> will not restore the sound. For that the game must be exited and re-loaded again.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if sound_exists(global.Music)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;sound_delete(global.Music);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the global variable "Music" indexes a sound and if it does it then deletes that sound from the game.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Legacy Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sound_exists.html">sound_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sound_delete
+-->

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>analytics_event_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>analytics_event_ext</h1>
+  
+<h2>Send a special, extended analytics event to your analytics provider.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">analytics_event_ext(string, string_param0, value0, string_parm1, value1, ...)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>string</td>
+	<td>A string to send to the provider.</td></tr>
+	
+	<tr class="alt"><td>string_param[0 -9]</td>
+	<td>The parameter to send (a string).</td></tr>
+	
+	<tr><td>value[0 - 9]</td>
+	<td>The value of the parameter (a real number).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will send the specified text to the analytics provider that you have set up through the <a href="../../001_Advanced%20Use/Global%20game%20settings/Analytics%20Tab.html">Global Game Settings - 
+Analytics Tab</a>. This function can be used to create a custom analytic to track something outside of the scope of the provider being used, and will also accept custom parameter/value pairs, where the 
+parameter is a string and the value a real number. For Google analytics, you can only add in one extra pair while Flurry will accept up to 10, and MarkedUp does not accept parameters so only the initial string 
+will be shown.
+<br>
+<br>
+ 
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var num, time;<br>
+ini_open("Options.ini");<br>
+num = ini_read_real("Data", "Plays", 0);<br>
+num += 1;<br>
+time = current_time;<br>
+analytics_event_ext(GAME_NAME, "Plays", num, "Time", time);<br>
+ini_write_real("Data", "Plays", num);<br>
+ini_close();<br>
+</p>
+<p>
+The above code will get play information from an ini file as well as the current time and then send those details to the analytics provider.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advertising and Analytics</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="analytics_event.html">analytics_event</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+analytics_event_ext
+-->

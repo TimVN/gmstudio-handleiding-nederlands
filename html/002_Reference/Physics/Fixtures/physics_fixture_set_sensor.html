@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_set_sensor</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_set_sensor</h1>
+  
+<h2>This function tells <i>GameMaker:Studio</i> that the fixture is to be treated as a sensor only.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_fixture_set_sensor(fixture, state)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>the index of the fixture</td></tr>
+	
+	<tr class="alt"><td>state</td>
+	<td>whether a fixture is a sensor (true) or not (false)</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Some times you will want your game to detect and recogonise when two instances with fixtures collide, but not have any physical reaction to the collision. This can be done by converting the fixture into a sensor, 
+which basically means that they will generate a collision event but with no physical response so that you can use these instances as "triggers" for other events to happen in the game room. Any fixture can be 
+flagged as a sensor, and it makes no difference if the instance it is bound to is static or in movement.
+<br>
+<br>
+
+<b><i>NOTE : </b>A sensor fixture will fire off the collision event when the collision <b>first occurs only</b>, meaning you don't get a stream of collision events as the two bodies continue to overlap (which is 
+what would traditionally occur). If they stop overlapping and overlap subsequently there will be another collision event triggered.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+physics_fixture_set_sensor(fix_Cloud, 1);
+<p>
+The code above will turn the sensor state of the fixture indexed in "fix_Cloud" to true.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_set_kinematic.html">physics_fixture_set_kinematic</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_set_sensor
+sensor
+--> 

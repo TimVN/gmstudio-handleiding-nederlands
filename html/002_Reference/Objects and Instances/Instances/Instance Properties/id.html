@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>id</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>id</h1>
+
+<h2>The unique identifier for the instance.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">id</p>
+  
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns: </b>Real
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read-only</b> variable holds the unique identifying number for the instance. Every instance that you create is given a number that is used internally to identify this instance and this variable is 
+what you can use to reference it. The id is also returned (and can be stored in a variable) when an instance is created using <a href="../Instance%20Functions/instance_create.html">instance_create()</a>.
+<br>
+<br>
+
+<i><b>Note : </b>The value of this variable is <i>not</i> the same as the identifier that the instance is given in the room editor and is also different to the <a href="../Instance%20Functions/instance_id.html">
+instance_id</a> (which is normally used to get the id of an instance).</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var i;<br>
+for(i = 0; i &lt; instance_count; i += 1;)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if instance_id[i] != id instance_id[i].scr += 1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will loop through ALL the instances in the room and compare the id of each (returned by the function <a href="../Instance%20Functions/instance_id.html">instance_id</a>) against the id of the 
+instance that is running the code. If the id does not match, it then uses that id to add 1 onto the variable "scr" of all instances. 
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="solid.html">solid</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+id
+-->

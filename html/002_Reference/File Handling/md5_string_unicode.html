@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>md5_string_unicode</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>md5_string_unicode</h1>
+  
+<h2>Returns an MD5 of the unicode format input string.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">md5_string_unicode(string)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>string</td>
+	<td>The string to hash.</i></td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+In cryptography, MD5 (Message-Digest algorithm 5) is a widely used cryptographic hash function with a 128-bit hash value and has been employed in a wide variety of security applications. It is also 
+commonly used to check the integrity of files and strings. This function will take an input unicode string  (which is 16bits for each char) and return the 32-character hexadecimal MD5 hash that is unique 
+to that string. In this way you can generate a secure key which can be stored and used to check the integrity of the information being sent to (or recieved from) an external server (for example).   
+<br>
+<br>
+
+<i><b>NOTE : </b>There are two formats for the MD5 encoding, UTF-8 and unicode. Both are provided to facilitate communication with different server setups, but the most common to use is unicode.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var hash, str;<br>
+str = base64_encode(game_data);<br>
+hash = md5_string_unicode(str);<br>
+http_get("http://www.MacSweeneyGames.com/CatchTheHaggis/gamedata?hash=" + hash);
+http_get("http://www.MacSweeneyGames.com/CatchTheHaggis/gamedata?data=" + str);
+</p>
+<p>
+The above code will base64 encode a string and then generate an MD5 hash. Finally, both the hash and the encoded string are sent to a server.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File Handling</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="md5_file.html">md5_file</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+md5_string_unicode
+--> 

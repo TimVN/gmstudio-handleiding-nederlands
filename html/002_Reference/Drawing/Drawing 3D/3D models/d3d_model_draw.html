@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_model_draw</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_model_draw</h1>
+  
+<h2>Draws the model at position (x, y, z).</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_model_draw(ind, x, y, z, texid)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the model to be drawn.</td></tr>
+	
+	<tr class="alt"><td>x</td>
+	<td>The x position to draw the model.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position to draw the model.</td></tr>
+	
+	<tr class="alt"><td>z</td>
+	<td>The z position to draw the model.</td></tr>	
+
+	<tr><td>texid</td>
+	<td>The texture to use for drawing the model (use -1 to use no texture).</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function draws the model at position (x, y, z) in the room. The texid is the texture that must be used, unless you have specified a value of -1 which means no texture, and this id can be gotten from 
+the functions <a href="../../../Game%20Assets/Sprites/sprite_get_texture.html"><tt>sprite_get_texture</tt></a> and <a href="../../../Game%20Assets/Backgrounds/background_get_texture.html">
+<tt>background_get_texture</tt></a>. If you want to rotate or scale the model you can use the <a href="../3D%20Transformations/index.html">transformation routines</a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_model_draw(model[2], 0, -100, 0, sprite_get_texture(spr_Wall))<br>
+</p>
+<p>
+Draws the model with a texture at the given position.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Models</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_model_primitive_begin.html">d3d_model_primitive_begin</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_model_draw
+--> 

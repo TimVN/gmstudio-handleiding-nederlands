@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>phy_rotation</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>phy_rotation</h1>
+  
+<h2>The angle of rotation of the instance.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">phy_rotation;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable can be used to get (or to set) the angle of the instances fixture in degrees, similar to setting or getting the <a href="../../Objects%20and%20Instances/Instances/Instance%20Properties/image_angle.html">
+<tt>image_angle</tt></a>). However note that in the physics world rotations are calculated in the <i>ooposite</i> way to the normal GameMaker:Studio game world, meaning that vector functions like 
+<a href="point_direction.html"><tt>point_direction</tt></a> should have there return values modified (simply making positive to negative should resolve this). 
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if phy_speed_x &gt; 0 || phy_speed_y &gt; 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;phy_rotation += sqrt(sqr(phy_speed_x) + sqr(phy_speed_y)) /10;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the linear speed and if either vector is not 0, it then calculates the actual speed and uses that to set the rotation.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Physics Variables</a>
+	</div>
+	<div style="float:right">
+		next : <a href="phy_fixed_rotation.html">phy_fixed_rotation</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+phy_rotation
+--> 

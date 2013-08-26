@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_sprite_stretched_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_sprite_stretched_ext</h1>
+
+<h2>Draws a sprite at a given position, stretched, and allows for a custom blend and alpha. This function ignores the sprite's origin.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_sprite_stretched_ext(sprite, subimg, x, y, w, h, color, alpha);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>sprite</td>
+	<td>The index of the sprite to draw.</td></tr>
+
+	<tr><td>subimg</td>
+	<td>The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of where to draw the sprite.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of where to draw the sprite.</td></tr>
+	
+	<tr><td>w</td>
+	<td>The width of the area the stretched sprite will occupy.</td></tr>
+	
+	<tr><td>h</td>
+	<td>The height of the area the stretched sprite will occupy.</td></tr>
+	
+	<tr><td>color</td>
+	<td>The color with which to blend the sprite. c_white is to display it normally.</td></tr>
+	
+	<tr><td>alpha</td>
+	<td>The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function does exactly the same as the <a href="draw_sprite_stretched.html"><tt>draw_sprite_stretched</tt></a> function with the added ability to set the color blending and alpha 
+value for the sprite when it is drawn (similar to the function <a href="draw_sprite_ext.html"><tt>draw_sprite_ext</tt></a>).
+<br>
+<br>
+
+<i><b>NOTE : </b>Blending is not available for the HTML5 target unless WebGL is enabled, in which case you should also be using the <a href="../../Game%20Assets/Sprites/sprite_set_cache_size.html">
+<tt>sprite_set_cache_size</tt></a> function.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_sprite_stretched_ext(sprite_index, image_index, x, y, sprite_width / 2, sprite_height / 2, c_white, 0.5);
+</p>
+<p>
+This will draw the instances assigned sprite and its sub-image with the left corner at the instance x /y position. Its width is set to the same as the sprite, and the height is the sprite height divided 
+by two. It will also be blended normally but have a partially transparent alpha value.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing Sprites And Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_sprite_pos.html">draw_sprite_pos</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_sprite_stretched_ext
+-->

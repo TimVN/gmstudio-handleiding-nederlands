@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>object_set_sprite</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>object_set_sprite</h1>
+
+<h2>Sets the sprite of the given object.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">object_set_sprite( index, spr );</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the object to change.</td></tr>
+	
+	<tr class="alt"><td>spr</td>
+	<td>The sprite to assign to the object.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>N/A</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the sprite_index of a specific object. This means that all instances of this object that are created <i>after the sprite_index has been changed</i> will be created with this new
+sprite_index, while instances that are already in the room may not be affected. Please note that this is not an instance function! You can set the sprite_index of individual instances and so have ten 
+instances with ten different sprites, but if you change the sprite_index of the object, all instances that are created of that object will start with that new sprite. You can set this to -1 to make the 
+object have no sprite associated with it.
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+switch (room)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case rm_start: object_set_sprite(obj_Player, spr_uniform); break;<br>
+&nbsp;&nbsp;&nbsp;case rm_middle: object_set_sprite(obj_Player, spr_swimsuit); break;<br>
+&nbsp;&nbsp;&nbsp;case rm_end: object_set_sprite(obj_Player, spr_casual); break;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+instance_create(32, 32, obj_Player);<br>
+</p>
+<p>
+The above code will set the object "obj_Player" sprite index to different values depending on the room that the instance running the code is currently in. It then creates an instance of "obj_Player".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Objects</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="object_set_visible.html">object_set_visible</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+object_set_sprite
+-->

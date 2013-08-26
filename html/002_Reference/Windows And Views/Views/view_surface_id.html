@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>view_surface_id</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>view_surface_id</h1>
+
+<h2>Assign a surface to a view.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">view_surface_id[0...7]</p>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this variable you can get (or set) the surface of a view. When working with surfaces, it is often required that you draw the <i>whole</i> visible region of the screen to the surface, and so 
+you would assign it to a view using this function. This means that everything that is shown in the chosen view will also be drawn to the assigned surface. You can also read this variable to get the index 
+of the surface that has been assigned to the chosen view or it will return -1 if no surface has been assigned. For more information on surfaces see the section <a href="../../Surfaces/index.html">
+Reference - Surfaces</a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+surf = surface_create(room_width, room_height);<br>
+view_surface_id[0] = surf;<br>
+</p>
+<p>
+The above code creates a surface and assigns it's index to the variable "surf". The code then assigns this surface to view[0].
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="window_view_mouse_get_x.html">window_view_mouse_get_x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+view_surface_id
+-->

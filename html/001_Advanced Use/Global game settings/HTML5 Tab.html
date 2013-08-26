@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>The HTML5 Tab</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>The HTML5 Tab</h1>
+
+<h2>This section deals with the HTML5 tab of the Global Games Settings Window.</h2>
+
+<p>
+This HTML5 tab is split into two separate <i>sub-tabs</i> (accessible on the left of the window) to make changing and updating the information for your game clearer and less complicated. These tabs are 
+explained in the following sections.
+
+<h3>General</h3>
+<p>
+
+<img class="center" src="HTML5_General_Tab.png"></img>
+
+At the top of the window you can set the <i>File options</i> for your HTML5 game, which includes:
+<blockquote>
+	<ul>
+		<li>adding a custom <i>index.html</i> to use instead of the pre-defined one that GameMaker:Studio generates by default. This can be very useful if you have a website design implemented or want to 
+		include certain features in all your HTML5 builds.</li><br>
+		
+		<li>choosing a <b>Loading Bar Extension</b>. This should have been added in as an extension to the GameMaker:Studio resource tree (there is a demo of this included with the program) and will 
+		override the standard loading bar when selected.</li><br>
+		
+		<li>selecting a new name for the folder where your HTML5 game files will be stored (default is "html5game").</li>
+	</ul>
+</blockquote>
+<p>
+Once that is done you will need to give your game a <b>favicon</b> and a <b>Splash Screen</b>. The icons should be authored as an *.ico file and can be 16x16, 32x32, 48x48, or 64x64 pixels 
+in size, and 8-bit, 24-bit, or 32-bit in color depth. The splash screen should be the size of the canvas that is going to hold your game and will override any loading bars if you tick the <b>Use Splash 
+Screen</b> option (ie: you can have a loading bar, OR a splash screen, but not both). Smaller or larger images are permitted but will be scaled to fit.
+<br>
+<br>
+
+<h3>Graphics</h3>
+<p>
+
+<img class="center" src="HTML5_Graphics_Tab.png"></img>
+
+Here you can change the following details related to how your game will be displayed (note that not all browsers will display your game in the same way, so test these options on as many browsers as possible 
+to make sure that they have the desired effect).
+<blockquote>
+	<ul>
+		<li><b>Allow Switching To Fullscreen</b> - Checking this will allow the user to toggle the game from windowed to fullscreen mode using <i>&lt;CNTRL&gt; + &lt;CMD&gt; + &lt;F&gt;</i> on Mac and 
+		<i>F10</i> on Windows.</li><br>	
+
+		<li><b>Interpolate Colors Between Pixels</b> - Turns on interpolation, which basically "smooths" pixels. for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed 
+		edge graphics it is better left on.</li><br>
+		
+		<li><b>Center The Game In The Browser</b> - Checking this will automatically center the game screen within the browser running the game.</li><br>
+		
+		<li><b>WebGL</b> - 	Choose whether to switch off WebGL support, make it optional (auto-detect), or make it a requirement for your game. It should be noted that to test performance under all 
+		circumstances, you should have this as disabled, then normally set it to auto-detect for publishing. Making it a requirement may reduce considerably the compatibility that your game has with different 
+		browser types.</li>
+	</ul>
+</blockquote>
+
+<p>	
+Finally there is the option to set the size of the <b>Texture Page</b>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to a 
+whopping 8192x8192! There is also a button marked <b>View</b> which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be 
+very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary.
+<br>
+<br>
+
+<i><b>NOTE : </b>Be aware that the larger the size of the texture page, the less compatible your game will be.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Global Game Settings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="iOS%20Tab.html">The iOS Tab</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+HTML5 Global Game Settings
+-->

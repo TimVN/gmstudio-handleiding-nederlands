@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>object_get_persistent</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>object_get_persistent</h1>
+  
+<h2>Returns if the specified object is flagged as persistent or not.</h2>
+
+<h3> <b>Syntax :</b></h3>
+<p class="code">object_get_persistent(obj);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>obj</td>
+	<td>The index of the object to check.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Boolean</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will tell you whether the object you are checking has been flagged as "persistent" or not. A persistent object is one that will cause any instances of it to be carried through from room to room unless 
+they are explicitly destroyed. Please note that this is not an instance function! So, you can have a persistent object and a non-persistent instance of the same object and vice-versa.
+<br>
+
+<p>
+<br>
+</p>
+  
+<h3><b>Example :</b></h3>
+<p class="code">
+if !persistent && object_get_persistent(object_index) persistent=true;
+</p>
+
+<p>
+The above code will check the instance running it to see if it is persistent or not as well as check the object index of the instance to see if it is flagged as persistent or not. If the instance is <i>not</i> persistent yet the object 
+index is flagged as persistent, it will set "persistent" to true for that instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Objects</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="object_get_solid.html">object_get_solid</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+object_get_persistent
+-->

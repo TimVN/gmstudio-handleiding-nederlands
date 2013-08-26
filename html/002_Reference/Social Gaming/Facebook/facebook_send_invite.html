@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>facebook_send_invite</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>facebook_send_invite</h1>
+  
+<h2>Send an invite message to friends.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">facebook_send_invite(titlestring, msg, picture_url, redirect_url);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>titlestring</td>
+	<td>The title of the dialog (a string)</td></tr>
+	
+	<tr class="alt"><td>msg</td>
+	<td>The message which appears in the dialog (a string).</td></tr>
+	
+	<tr><td>picture_url</td>
+	<td>the url of the image to include in the dialog.</td></tr>
+	
+	<tr class="alt"><td>redirect_url</td>
+	<td>The “SiteURL” of your app on the Facebook Developers app settings page.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can get your game to display a facebook “apprequests” dialog, which will allow your player to select friends from a list and send them a game invite message.
+<br>
+<br>
+
+<i><b>NOTE : </b>The "SiteURL" is ignored on the iOS and Android modules and is only required on the HTML5 module if you are not hosting the application on the "SiteURL" (ie: you are testing locally).</i>
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if mouse_check_button_pressed(mb_left)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;facebook_send_invite("Catch The Haggis!", "Come and play Catch The Haggis with me...",  "http://MacSweeneygames.com/Clown.jpg", "");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will display an "apprequest" dialogue where you can select friends to invite to play the game.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Facebook</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="facebook_post_message.html">facebook_post_message</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+facebook_send_invite
+-->

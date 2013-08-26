@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>distance_to_object</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>distance_to_object</h1>
+
+<h2>Returns the distance between the calling instance and the nearest instance of a given object.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">distance_to_object( obj );</p>
+
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>obj</td>
+	<td>The object to check for.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<p><b>Returns:</b> Real.</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function calculates the distance from the edge of the bounding box of the calling instance to the nearest edge of the nearest instance of the object specified. The object can be an object index or a 
+specific instance id as well as the <i>keyword</i> <b>other</b>, and the distance is returned in pixels. Note that if either of the objects have no sprite or no mask defined, the results will be incorrect.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if distance_to_object(obj_Player) &#60; range<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;canshoot = true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check for the distance to the player object and if it is less than the value stored in the variable "range" the variable "canshoot" is set to true.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Moving Around</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="distance_to_point.html">distance_to_point</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+distance_to_object
+-->

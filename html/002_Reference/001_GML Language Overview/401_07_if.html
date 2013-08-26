@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The "If" Statement</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+
+<h1>The "If" Statement</h1>
+
+<h2>This section outlines how to use the "if" statement</h2>
+<p>
+
+A simple "if" statement takes this form :
+<br>
+<br>
+<p class="code">
+if (&lt;expression&gt;) &lt;statement&gt;
+</p>
+<p>
+<br>
+or it can have the slightly more complex "if... else..." form :
+<br>
+<br>
+<p class="code">
+if (&lt;expression&gt;) &lt;statement&gt; else &lt;statement&gt;
+</p>
+<p>
+<br>
+In this case the expression will be evaluated, and if the (rounded) value is &lt;=0 (<b>false</b>) the statement after else is executed, otherwise (<b>true</b>) the other statement is executed. 
+It is a good habit to always put curly brackets around the statements in the if statement, and take a new line in the block for each statemnent, so the end code will have this form :
+<br>
+<br>
+<p class="code">
+if (&lt;expression&gt;)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&lt;statement&gt;<br>
+&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&lt;statement&gt;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&lt;statement&gt;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+<br>
+As a small example, consider the following code which will move the instance towards the position x=200 in the room :
+<br>
+<br>
+<p class="code">
+if (x&lt;200)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;x += 4;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;x -= 4;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_08_repeat.html">The "Repeat" Statement</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+if
+--> 

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Debugging</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+
+<h1>Debugging</h1>
+
+<h2>This section outlines the debug tool and how to correct and detect errors in your game.</h2>
+
+<p>
+<i>GameMaker:Studio</i> has a built-in programming language called GML, and once you become more familiar with how <i>GameMaker</i> works, you will want to use it to its fullest extent, 
+meaning that you will need to program aspects of your game in this language.
+<br>
+<br>
+
+However, when programming code it can be very easy to make mistakes - using the wrong variables, passing the wrong arguments, or using the wrong functions - which are not always detected by 
+the syntax checker that is included with the script editor (for more information on the script editor see <a href="../001_Advanced%20Use/006_Scripts.html">Scripts</a>). This means that these mistakes 
+will only become apparent when you actually run your game, and even then it can sometimes be difficult to know exactly what is going wrong! it can also be of vital importance to know how your game 
+is performing on the choosen device, as well as see what instances are in the room, what global variables have been created and a whole host of other details.
+<br>
+<br>
+
+Now, you can check a lot of these things yourself by adding in "debug code" to your games that displays on-screen the information you require, or that exists when there is an error, but this is often a 
+lot of work and if you aren't sure where the problem is then it can be a time consuming case of trial and error to track down your bug. For that, <i>GameMaker:Studio</i> has a special run mode called 
+<b>Debug Mode</b> as well as a comprehensive error reporting system which displays messages at run time to help you track down any problems with your game.
+<br>
+<br>
+
+<h3>Error Reporting</h3>
+<p>
+When an error occurs during the execution of a script this is reported with an onscreen message, much like the one shown below :
+
+<img class="center" src="../images/ErrorReport.png">
+
+Most error messages follow the same outline, with a message stating the type of error, the instance and event in which the error was encountered, then a series of compiler details that explain the error 
+in a lot more depth and, finally, a list of all the decalared global, instance and local variables in your game at that point. At the very bottom is the <b>Abort</b> button which will abort the game, as 
+well as the <b>Copy</b> button (which copies the error into the clipboard) and the <b>Clear</b> button which clears the error messages from the window. The information provided by the error reporting 
+is very important as it detects and reports the large, syntax related bugs that are going to cause your finished game to crash, but it won't report more subtle bugs, nor does it give feedback on performance... 
+for that you need to use the <b>Debug Mode</b>.
+<br>
+<br>
+
+<h3>Debug Mode</h3>
+<p>
+If you need to check things more carefully, you can run the game in debug mode. When you do, a window will open along with your game in which you can monitor how everything is working, from the global 
+performance, right down to the values of individual variables in individual instances. The actual debug window looks like this :
+
+<img class="center" src="../images/Form_debug.png">
+
+At the top you have three drop down menus :
+<blockquote>
+<ul>
+	<li><b>Run : </b>Here you will find options to pause and restart the game, run through it step by step, stop it or restart it.</li><br>
+	
+	<li><b>Watch : </b>This menu contains options to add, change, delete, and clear expressions. You can find the instance id for an expression by placing the mouse over an instance in the current game room 
+	and the 	number that comes up in the debug mode main window beside <b>Mouse id</b> is the identifier for that instance.</li><br>
+
+	<li><b>Tools : </b> From here you can call up a list of all instances in the game to watch, you can watch all global variables, all instance variables of a specific instance and you can also view information 
+	from the compiler and any messages that you have sent with the function <a href="../002_Reference/Debugging/show_debug_message.html"><tt>show_debug_message()</tt></a>. </li>
+</ul>
+</blockquote>
+
+<p>
+Some of these functions are also available as buttons at the top of the main debug screen to make access to the commands easier :
+
+<blockquote>
+<div style="float:left">
+<img src="../images/Debug_Play.png"></div><br>
+	<b>Play : </b>This starts the game again after it has been paused.<br><br><br>
+	
+<div style="float:left">
+<img src="../images/Debug_Pause.png"></div><br>
+	<b>Pause : </b>Pauses the game.<br><br><br>
+	
+<div style="float:left">
+<img src="../images/Debug_Step.png"></div><br>
+	<b>Step : </b>This advances the game 1 step at a time when the game has been paused.<br><br><br>
+	
+<div style="float:left">
+<img src="../images/Debug_restart.png"></div><br>
+	<b>Restart : </b>restarts the game.<br><br><br>
+	
+<div style="float:left">
+<img src="../images/Debug_Stop.png"></div><br>
+	<b>Stop : </b>This stops the game and exits debug mode.<br><br><br>
+	
+<div style="float:left">
+<img src="../images/Debug_Add.png"></div><br>
+	<b>Add : </b>This adds an expression to the list for watching.<br><br><br>
+	
+<div style="float:left">
+<img src="../images/Debug_Change.png"></div><br>
+	<b>Change : </b>This can be used to change a watched expression.<br><br><br>
+	
+<div style="float:left">
+<img src="../images/Debug_Clear.png"></div><br>
+	<b>Clear : </b>This clears all expressions from the watched list.<br><br><br>
+
+</blockquote>
+
+<p>
+Now, although that's all fairly useful, it can sometimes be a bit difficult to get the instance id from the game room if you want to watch an instance or a variable from within an instance, so you may also hold down 
+<b>&#60;Cntrl&#62;</b> and then <b>Left Click</b> on any instance within the game room to call up the instance properties, where you can find all the information on that instance. Not only that but if you 
+double click on a variable within the instance properties, this will <i>automatically</i> be added to the watched expressions list. In this way you can quickly and easily get to see how your instances are behaving 
+with a view to fixing any bugs that may exist.
+<br>
+<br>
+
+<h3>Checking Performance</h3>
+<p>
+When running a game in debug mode, you can also see how your game performs and get an overview of how much memory, cpu power and gpu power your game is using.
+<br>
+<br>
+Below the buttons on the main window you can find the <b>Room Speed</b> (as specified in the room editor) and the <b>FPS</b> (frames per second). These values are often confused, but basically one is the 
+number of <i>game</i> steps that <i>GameMaker:Studio</i> is completeing in a second, while the second is the number of cpu steps that <i>GameMaker:Studio</i> is completing in a second, and this value is 
+generally <i>much</i> higher than the room speed, but will drop as your game gets more complex and uses more processing power to maintain the set room speed.
+<br>
+<br>
+
+You also have three other pieces of information available in the main debug window, with the first being the number of instances currently <i>active</i> in the room (the ones that have been deactivated through code 
+will not be counted), and then beneath that you have the <b>Num Tex Swaps</b>, which shows how many times your game is swapping textures per game tick (the time it takes game maker to run all events is a 
+game tick, and the number of game ticks per second is set by the room speed), and to the right of that you have the <b>Num Vertex Batches</b> which is how many times the game is sending off texture batches to
+the GPU per game tick.
+<br>
+<br>
+
+Finally you also have a helpful graphic cpu/gpu usage bar in the actual game window itself (along with the current fps value). This bar is split into sections, with each section being 1/60th of a second. As you 
+can see from the image below, the bar is made up of various colors with <b>white</b> being the GPU left over time, <b>red</b> being the time it takes to run the <i>step</i> event, and <b>yellow</b> 
+the amount of time it takes to draw everything to the screen. In this way, you can see how efficiently your game runs, and get a visual cue as to how it is using the available resources.
+<br>
+<br>
+
+<img class="center" src="../images/DebugBar.png">
+
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advanced Use Index</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+debugging
+watching variables
+watching instances
+show_debug_message
+frames per second
+-->

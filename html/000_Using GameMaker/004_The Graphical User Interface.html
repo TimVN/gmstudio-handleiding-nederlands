@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>The Graphical User Interface</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>The Graphical User Interface (GUI)</h1>
+
+<h2>This page outlines options available to you from the <i>GameMaker:Studio</i> GUI.</h2>
+
+<p>
+On starting <i>GameMaker:Studio</i> the following form is normally shown which presents you with a selection of options to choose from (unless you use the <b>Steam Client</b>, see below):
+<br>
+<br>
+<img class="center" src="../images/loadupscreen.png">
+<br>
+<br>
+
+If you have bought <i>GameMaker:Studio</i> through <b>Steam</b>, then on startup you will be presented with an options screen (shown below) from which you can select to <b>Play</b> games from the 
+<a href="Steam%20Workshop.html">Steam Workshop</a>, or to <b>Make</b> games with the program. If you select <b>Play</b> then <i>GameMaker:Studio</i> will close and the <a href="Steam%20player.html">
+Steam player</a> will open, however if you choose <b>Make</b> then you will be presented with the standard <i>GameMaker:Studio</i> startup screen.
+<br>
+<br>
+<img class="center" src="SteamStartup.png">
+<br>
+<br>
+
+At the top of the general startup screen you can see that there are six tabs: Welcome (always the initial startup screen), News, Create, Tutorials and Demos. Here is a brief overview of the function of each of 
+those tabs:
+<br>
+<br>
+
+<blockQuote>
+<ul>
+	<li><b>Welcome: </b> This is the startup screen you see when opening up <i>GameMaker:Studio</i>. At the bottom you have a list of previously opened files.</li><br>
+	
+	<li><b>Open: </b>Here you can browse your computer for files to open.</li><br>
+	
+	<li><b>New: </b>This will ask you to select the directory you wish to use for a new project and prompt you to enter a name for this project which is then saved and opened in the main <i>GameMaker:Studio</i> 
+	runner.</li><br>
+	
+	<li><b>Import: </b>Here you can load up the compressed *.gmz project files and also import game files created with other versions of GameMaker, including GameMaker 6 (*.gm6), GameMaker 7 and 8 
+	(*.gmk and *.gm81) as well as GameMaker 8.1 (*.gm81) and much older (*.gmd) files. It should be noted, that the older the file type, the less likely they are to run without a lot of rework due to the changes 
+	wrought in GameMaker through the years. Additionally, you can load up GameMaker backup files (*.gb1, *.gb2 etc) from this tab too.</li><br>
+	
+	<li><b>Release Notes: </b>If you click on this button you can see the release notes for each released version of <i>GameMaker:Studio</i>. These notes outline all the bug fixes and changes that have been 
+	incorporated into the program and tell you which version you are currently using.</li><br>
+	
+	<li><b>Demos: </b>This will allow you to view demo files that come with <i>GameMaker:Studio</i>. Demos are different to tutorials in that they focus on explaining just one function or concept rather than 
+	giving a general overview, and as such it is recommended that you have a working knowledge of <i>GameMaker:Studio</i> and GML before opening these.</li><br>
+
+	<li><b>Tutorials: </b>This tab shows you a selection of tutorials that come with <i>GameMaker:Studio</i>. These are designed as an introduction to using <i>GameMaker:Studio</i> and it is recommended 
+	that new users look them over before starting any new projects of their own.</li><br>
+
+	<li><b>News: </b>This will display the most recent news from YoYoGames. This news includes information about GameMaker:Studio development, new versions, competitions and anything else that 
+	has been posted on the YoYoGames website.</li><br>
+	
+	<li><b>Licenses: </b>This tab will display the <i>GameMaker:Studio</i> license, as well as all the various third party licenses of products that are used.</li>
+</ul>
+</blockquote>
+
+<p>
+To begin creating your game, you can click on either the Create tab <b>or</b> the New project button, whichever you find more convenient.
+<p>
+<br>
+Once you've loaded up your project in <i>GameMaker:Studio</i> the main GUI is shown and looks something like this:
+<br>
+<br>
+<img class="center"  src="../images/GUI_Image.png">
+<p>
+This is the main interface for <i>GameMaker:Studio</i> and it's here that you control every aspect of your current project. On the left, you can see the different resources mentioned in other sections of the 
+manual: Sprites, Sounds, Backgrounds, Paths, Scripts, Fonts, Time Lines, Objects, Global Game Settings and finally, Extensions. At the top of the window there is the menu and a handy tool-bar to access some 
+of the most used commands when creating a game. We will briefly discuss the various menu items, buttons, etc... below, but they will be covered far more in-depth in the later sections of the manual. One thing 
+you should realise at this point is that many of the same things can be achieved in various different ways when working with <i>GameMaker:Studio</i>, either by choosing a command from the menu, by clicking 
+a tool-bar button, or by right clicking on a resource. This redundancy is there so that you can get working with <i>GameMaker:Studio</i> in the easiest and most natural way, using whatever system you feel 
+most comfortable with.
+<br>
+<br>
+
+<b>Steam</b> users have three additional buttons on the toolbar:
+<blockquote>
+
+	<img src="GMS_Play.png" align="middle">This first button will open the <a href="Steam%20Player.html">Steam Player</a> where you can play any games you have subscribed to or uploaded to the 
+	<a href="Steam%20Workshop.html">Steam Workshop</a>.<br>
+	
+	<img src="GMS_Workshop.png" align="middle">This second button will open up the page of the <i>GameMaker:Studio</i> <b>Steam Workshop</b> in the <b>Steam</b> client window on your PC.<br>
+	
+	<img src="GMS_NewIDE.png" align="middle">The final button available to you will open another version of the <i>GameMaker:Studio</i> IDE so you can have two (or more) projects open at one time.
+	
+</blockquote>
+
+<h3>The Resource Tree</h3>
+<p>
+At the left of the main form you find the resource tree. Here you will see a "tree" view of all the resources in your game. It works in the same way as Windows Explorer, and 
+you are most likely familiar with how it should work. If an item has a <b>+</b> sign in front of it you can click on the sign to see the resources inside it (expand it). By 
+clicking on the <b>-</b> sign these disappear again (collapse it). You can change the name of a resource (except the top level ones that show the type of resource contained 
+within) by selecting it once with a single click, and then giving another single click on the name once again. Double clicking on a resource in quick succession will automatically 
+open its properties form where you can edit and change things related to it. Use the right mouse button to call up a context specific window that contains the same commands as 
+found in the <a href="Drop%20Down%20Menus/The%20Edit%20Menu.html"><b>Edit Menu</b></a>.
+<br>
+<br>
+You can change the order of the resources by clicking on a specific resoource and then dragging it to the appropriate place within its resource group.
+<br>
+<br>
+
+<h3>The Toolbar</h3>
+<p>
+The toolbar in <i>GameMaker:Studio</i> contains buttons to create each of the resources you see present as well as a selection of additional buttons to create a new project, open an existing project, 
+save a project, create an executable (export a final project), open the global games settings and extension packages as well as opening the help file. All these commands can also be accessed through 
+the drop down menus or by using certain "hot key" combinations.
+<br>
+<br>
+There are two buttons of note here however, as they are not present anywhere else in the <i>GameMaker:Studio</i> GUI:
+<br>
+<br>
+
+<img src="nginXStop.png" align="middle" align="left"><b>Stop Web Server</b></a>
+<br>
+<br>
+This button can be used to cancel the compilation of your games to the target module, or (on certain targets only) to stop the game while it is running after it has been compiled.
+<br>
+<br>
+
+<img src="clear_cache.png" align="middle" align="left"><b>Clear Project Asset Compile Cache</b></a>
+<br>
+<br>
+
+Pressing this button will clear the current asset compiler cache. <i>GameMaker:Studio</i> stores images, sounds, scripts etc... between use in a cache so as to save time when testing your game as it will 
+only re-compile those things that have been changed before testing. However, this cache may become corrupted over time, or you may wish to do a full test with no caching being done previously, in which 
+case you can clear the cache by pressing this button.
+<br>
+<br>
+
+<h3>The Compile Target</h3>
+<p>
+This drop down menu allows you to choose which device to target when compiling and testing your game. In this way you can quickly change between the different modules that you have installed on 
+<i>GameMaker:Studio</i> and make sure that your project works as it should on all of them. The avalailable target modules are:
+<div class="compat">
+	<table>
+		<tr><td>Windows</td><td>included in all versions</td></tr>
+		
+		<tr><td>MacOSX</td><td>included in all versions</td></tr>
+		
+		<tr><td>Steam WORKSHOP</td><td>included in all versions of <i>GameMaker:Studio</i> bought through Steam</td></tr>
+		
+		<tr><td>Windows 8 (JavaScript)</td><td>included in all version</td></tr>
+		
+		<tr><td>Windows 8 (Native)</td><td>included in all version</td></tr>
+		
+		<tr><td>HTML5</td><td>additional module for the Professional Version</td></tr>
+		
+		<tr><td>Ubuntu (Linux)</td><td>additional module for the Professional Version</td></tr>
+
+		<tr><td>iOS</td><td>additional module for the Professional Version</td></tr>
+
+		<tr><td>Android</td><td>additional module for the Professional Version</td></tr>
+		
+		<tr><td>Tizen</td><td>additional module for the Professional Version</td></tr>
+		
+		<tr><td>Windows Phone</td><td>additional module for the Professional Version</td></tr>
+	</table>
+</div>
+
+<p>
+Please note that the additional modules can only be bought for the <a href="../000_Using%20GameMaker/Versions.html">Professional Version</a> of <i>GameMaker:Studio</i>, and if you have bought 
+<i>GameMaker:Studio</i> through <b>Steam</b>, you will also have another target platform for your game which is the <i>Steam Workshop</i>. This target will permit you to publish your windows 
+games straight to Steam for others to download and play. For more information on this target please see <a href="Steam%20Workshop.html">here</a>.
+<br>
+<br>
+
+<h3>Configurations</h3>
+<p>
+Here you can find a drop down menu that permits you to select the current configuration of <i>GameMaker:Studio</i> and beside this there is a button labelled "Manage". By clicking this you can 
+open the Configurations Window wich permits you to add, remove and rename configurations. For more information on configurations see this section:
+<blockquote>
+<ol>
+	<li><a href="../001_Advanced%20Use/007_Configurations.html">Advanced Use - Configurations</a>
+</ol>
+</blockquote>
+<p>
+<i><b>NOTE : </b>This functionality is limited to the <a href="../000_Using%20GameMaker/Versions.html">Professional Version</a> of <i>GameMaker:Studio</i>.</i>
+<br>
+<br>
+
+<h3>The Workspace</h3>
+<p>
+This is the area where you will be editing your resources, setting up rooms and working with your objects, code and all other resources.
+<br>
+<br>
+
+<h3>The Main Menus</h3>
+<p>
+At the very top of the GUI you will find the drop down menus. As there are a number of them and each has its own selection of options, you can find out more about them from the pages listed below : 
+<br>
+<br>
+
+<blockquote>
+<ol>
+	<li><a href="Drop%20Down%20Menus/The%20File%20Menu.html">The File Menu</a><br>
+	<li><a href="Drop%20Down%20Menus/The%20Edit%20Menu.html">The Edit Menu</a><br>
+	<li><a href="Drop%20Down%20Menus/The%20Resources%20Menu.html">The Resources Menu</a><br>
+	<li><a href="Drop%20Down%20Menus/The%20Scripts%20Menu.html">The Scripts Menu</a><br>
+	<li><a href="Drop%20Down%20Menus/The%20Run%20Menu.html">The Run Menu</a><br>
+	<li><a href="Drop%20Down%20Menus/The%20Windows%20Menu.html">The Window Menu</a><br>
+	<li><a href="Drop%20Down%20Menus/The%20Help%20Menu.html">The Help Menu</a><br>
+</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Using GameMaker:Studio</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="005_Loading%20Sprites.html">Loading Sprites</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+import gmk
+import gm81
+gmk
+gm81
+stop web server
+clear asset cache
+stop compile
+Play! button
+Steam startup
+GUI
+interface
+resources
+resource tree
+menus
+adding resources
+creating resources
+rename
+duplicate
+running games
+debug mode
+windows
+recent files
+exe
+target
+configurations
+cache
+clear project asset compile cache
+modules
+-->

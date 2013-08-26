@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_test_overlap</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_test_overlap</h1>
+  
+<h2>Checks for an overlap of two fixtures at a given position.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_test_overlap(xpos, ypos, angle, obj);</p>
+<p>
+<br>
+</p>
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>xpos</td>
+	<td>The x position in the room to check</td></tr>
+	
+	<tr><td>ypos</td>
+	<td>The y position in the room to check</td></tr>
+	
+	<tr><td>angle</td>
+	<td>The angle to check (of the calling instance)</td></tr>
+	
+	<tr><td>obj</td>
+	<td>The object to check for</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b> Boolean.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to check and see if a physical body (ie: the fixture of an instance) overlaps, or <i>will</i> overlap, when rotated and placed at a given position in the room. the "angle" 
+argument is the angle of rotation that the calling instance has (or will have) at the position to be checked, and the "obj" argument can be either a single instance id, and object index or the <i>keywords</i> 
+<b>all</b> or <b>other</b>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if physics_test_overlap(x+20, y-35, 0, obj_Bomb)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;alarm[0] = room_speed;<br>
+&nbsp;&nbsp;&nbsp;ignited = true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check a position for a physics fixture overlap, and if there is one, it sets a variable and an alarm.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Physics Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_mass_properties.html">physics_mass_properties</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_test_overlap
+physics collision check
+--> 

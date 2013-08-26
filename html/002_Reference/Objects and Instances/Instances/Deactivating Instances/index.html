@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Deactivating Instances</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Deactivating Instances</h1>
+
+<h2>This section deals with instance deactivation.</h2>
+
+<p>
+<i>GameMaker:Studio</i> offers you the possibility to "switch off" instances so that they are no longer processed in any way. Technically they don't really exist anymore, except as a pointer 
+within the deactivation process itself, which means that a deactivated instance cannot be manipulated or changed in any way at all until it is re-activated again. So, these functions should be used 
+with great care as they can cause problems when not used properly, particularly with persistent objects, as a persistent object that has been deactivated <i>will not be moved to the next room</i> 
+unless it is re-activated first (effectively deleting it from the game).
+<br>
+<br>
+
+It is normally not necessary to deactivate instances every step of your game and this can actually cause your game to lag and runs slow. Instead it is recommended that you only run these functions 
+every few steps in an alarm (for example), or if the view has changed position, and it is especially important that you do <i>not</i> use these functions in the draw event as this can lead to serious 
+errors in your game.
+<br>
+<br>
+
+A deactivated instance effectively ceases to exist in the game, but <i>individual</i> instances can still have their variables accessed. You cannot use <tt>with(object)</tt> or <tt>with(instance)</tt> however, 
+but rather you must access the instance <i>directly</i> using it's unique <a href="../Instance%20Properties/id.html"><tt>id</tt></a> in the following form:
+
+<p class="code">
+val = inst.variable;
+</p>
+<p>
+In the above example, "inst" would be a variable that holds the <tt>id</tt> of the deactivated instance, and this is the <i>only</i> way that a deactivated instance can be referenced without it being 
+activated previously.
+<br>
+<br>
+
+<br>
+<br>
+<i><b>WARNING : </b>Deactivating instances that have physics enabled will <b>NOT</b> stop their fixtures from interacting within the physics simulation. For that you should set their 
+<a href="../../../Physics/Physics%20Variables/phy_active.html"><tt>phy_active</tt></a> variable to <tt>true</tt> or <tt>false</tt> as you activate/deactivate the instances.</i>
+<br>
+<br>
+
+<br>
+<br>
+The following functions exist for deactivating instances :
+<blockquote>
+<ol>
+	<li><a href="instance_activate_all.html">instance_activate_all</a><br>
+	<li><a href="instance_activate_object.html">instance_activate_object</a><br>
+	<li><a href="instance_activate_region.html">instance_activate_region</a><br>
+	<li><a href="instance_deactivate_all.html">instance_deactivate_all</a><br>
+	<li><a href="instance_deactivate_object.html">instance_deactivate_object</a><br>
+	<li><a href="instance_deactivate_region.html">instance_deactivate_region</a><br>
+</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Instances</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="../Instance%20Properties/index.html">Instance Properties</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+deactivating instances
+-->

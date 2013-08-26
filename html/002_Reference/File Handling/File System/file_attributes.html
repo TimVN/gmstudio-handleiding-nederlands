@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>file_attributes</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>file_attributes</h1>
+  
+<h2>Gives you the attributes of a file.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">file_attributes(fname, attr);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>fname</td>
+	<td>The name of the file to check.</td></tr>
+		
+	<tr><td>attr</td>
+	<td>The attributes to check for.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+<p>
+You can use this function to check the attributes of a given file. You can add up the following constants to see the type of files you want :
+<br>
+<br>
+
+<blockquote>
+<ul>
+	<li><b>fa_readonly</b> - read-only files
+	<li><b>fa_hidden</b> - hidden files
+	<li><b>fa_sysfile</b> - system files
+	<li><b>fa_volumeid</b> - volume-id files
+	<li><b>fa_directory</b> - directories
+	<li><b>fa_archive</b> - archived files
+</ul>
+</blockquote>
+
+<p>
+<i><b>NOTE : </b>This is a Windows only function.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !file_attributes(file, fa_hidden) file_delete(file);
+</p>
+<p>
+This would check a file to see if it is hidden or not, and if not it is deleted.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File System Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="filename_name.html">filename_name</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+file_attributes
+fa_readonly
+fa_hidden
+fa_sysfile
+fa_volumeid
+fa_directory
+fa_archive
+-->

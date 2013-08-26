@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ads_engagement_available</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ads_engagement_available</h1>
+  
+<h2>Find if an interstitial video/offerwall is available.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">ads_engagement_available()</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Some ad providers, for example <i>Supersonic</i> and <i>AdColony</i>, have interstitial advertisements that can take the form of an "offer wall" (essentially a page to promote several different advertising 
+campaigns) or a video where virtual currency is rewarded to the player, so it's important to know when one of these adverts is available to be shown. This function will return <tt>true</tt> if such an ad is 
+currently available or <tt>false</tt> if it is not.
+<br>
+<br>
+   
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !ads_engagement_active()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if ads_engagement_available() &amp;&amp; show<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ads_engagement_launch();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show = false;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;room_goto(rm_MainMenu);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if there is currently and interstitial ad active and if not, then it will check to see if one is available and that the variable "show" returns <tt>true</tt>. If both conditions are met, 
+an interstitial ad will be launched and the variable set to <tt>false</tt>, so that when the add is finished the check will take the player to the next room.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advertising and Analytics</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ads_engagement_launch.html">ads_engagement_launch</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ads_engagement_available
+-->

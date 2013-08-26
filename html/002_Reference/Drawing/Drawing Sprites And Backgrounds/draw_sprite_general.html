@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_sprite_general</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_sprite_general</h1>
+
+<h2>Draws a part of a given sprite with options for scaling, blending and rotation.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_sprite_general(sprite, subimg, left, top, width, height, x, y, xscale, yscale, rot, c1, c2, c3, c4, alpha);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>sprite</td>
+	<td>The index of the sprite to draw.</td></tr>
+
+	<tr><td>subimg</td>
+	<td>The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td></tr>
+	
+	<tr><td>left</td>
+	<td>The x position on the sprite of the top left corner of the area to draw.</td></tr>
+	
+	<tr><td>top</td>
+	<td>The y position on the sprite of the top left corner of the area to draw.</td></tr>
+	
+	<tr><td>width</td>
+	<td>The width of the area to draw.</td></tr>
+	
+	<tr><td>height</td>
+	<td>The height of the area to draw.</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of where to draw the sprite.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of where to draw the sprite.</td></tr>
+	
+	<tr><td>xscale</td>
+	<td>The horizontal scaling of the sprite. A multiplier ' 1 = normal scaling, 0.5 is half etc.</td></tr>
+	
+	<tr><td>yscale</td>
+	<td>The vertical scaling of the sprite. A multiplier ' 1 = normal scaling, 0.5 is half etc.</td></tr>
+	
+	<tr><td>rot</td>
+	<td>The rotation of the sprite. 0=normal, 90=turned 90 degrees counterclockwise etc.</td></tr>
+	
+	<tr><td>c1</td>
+	<td>The color with which to blend the top left area of the sprite.</td></tr>
+	
+	<tr><td>c2</td>
+	<td>The color with which to blend the top right area of the sprite.</td></tr>
+	
+	<tr><td>c3</td>
+	<td>The color with which to blend the bottom right area of the sprite.</td></tr>
+	
+	<tr><td>c4</td>
+	<td>The color with which to blend the bottom left area of the sprite.</td></tr>
+	
+	<tr><td>alpha</td>
+	<td>The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function combines the function <a href="draw_sprite_ext.html"><tt>draw_sprite_ext</tt></a> with the function <a href="draw_sprite_part.html"><tt>draw_sprite_part</tt></a>, adding 
+in some additional blending options so that each corner of the final sprite part can be blended with an individual color.
+<br>
+<br>
+
+<i><b>NOTE : </b>Blending is not available for the HTML5 target unless WebGL is enabled, in which case you should also be using the <a href="../../Game%20Assets/Sprites/sprite_set_cache_size.html">
+<tt>sprite_set_cache_size</tt></a> function.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_sprite_general(sprite_index, image_index, 8, 8, sprite_width-16, sprite_height-16, x, y, 2, 0.5, 180, c_white, c_white, c_black, c_black, 1);
+</p>
+<p>
+This will draw the instances assigned sprite (sprite_index) and its current frame of animation (image_index), however it will shave an 8px margin off all four sides of the sprite. It will be stretched to double 
+its usual width but half its usual height. It will be opaque, and upside down. The top area of the sprite will be blended white and hence normal, but the bottom area will be black, meaning the sprite will go 
+from normal to a silhouette downwards in a smooth gradient.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing Sprites And Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_self.html">draw_self</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_sprite_general
+-->

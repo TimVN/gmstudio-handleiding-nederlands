@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_user_owns_dlc</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_user_owns_dlc</h1>
+  
+<h2>Check to see if the user owns the specified DLC (Downloadable Content).</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_user_owns_dlc(dlc_id);
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>dlc_id</td>
+		<td>The unique identifier for the DLC to be checked (an integer).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Boolean
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+If your game has DLC created for it, you can use this function to check and see whether the user has bought it before accessing any files associated with it. The function returns <tt>true</tt> if the player owns the 
+content, and <tt>false</tt> if the user does not, but note that even if the user owns the DLC, they may not have it installed, so you should use the additional function of 
+<a href="steam_user_installed_dlc.html"><tt>steam_user_installed_dlc</tt></a> to check that it is installed as well before using it.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example:</h3>
+<p class="code">
+global.Level_Max = 100;<br>
+if steam_user_owns_dlc(10354)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if steam_user_installed_dlc(10354)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Level_max = 200;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if the user has bought, and installed, the DLC with the id 10354, and if so set a global variable to a different value.
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_user_installed_dlc.html">steam_user_installed_dlc</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_user_owns_dlc
+-->

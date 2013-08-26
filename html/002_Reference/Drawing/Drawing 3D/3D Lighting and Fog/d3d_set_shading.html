@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_set_shading</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_set_shading</h1>
+  
+<h2>Set whether to use smooth shading or not.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_set_shading(smooth)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>enable</td>
+	<td>Turn smooth shading on (default : true) or off (false).</td></tr>
+			
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When using lighting, for each vertex of a polygon the color is determined, then the color of internal pixels is based on the color of these vertexes. There are two ways this can be done: Either the whole polygon gets the 
+same color, or the color is smoothly interpolated over the polygon. By default smooth shading is used, but that behaviour can be changed using this function. 
+<br>
+<br>
+
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_set_shading(true);
+</p>
+<p>
+The above code switches off smooth shading for the 3D scene.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_light_define_direction.html">d3d_light_define_direction</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_set_shading
+--> 

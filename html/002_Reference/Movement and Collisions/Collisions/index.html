@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Collision Checking</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+</head>
+<body>
+
+<h1>Collision Checking</h1>
+
+<h2>This section deals with the various methods to check for collisions in <i>GameMaker:Studio</i>.</h2>
+<p>
+
+When planning motions or deciding on certain actions, it is often important to see whether there are collisions with other objects at certain places within the game world, and often choosing 
+the right collision for the job is the most important task of all. <i>GameMaker:Studio</i> has a number of built in functions to help you deal with collisions correctly and in accordance with the needs 
+of your project.
+<br>
+<br>
+
+<h3>Simple Collision Checking</h3>
+<p>
+The following functions deal with the various ways in which you can have an instance check for collisions with another instance :
+<br>
+<br>
+
+<blockquote>
+<ol>	
+	<li><a href="place_empty.html">place_empty</a><br>
+	<li><a href="place_free.html">place_free</a><br>
+	<li><a href="place_meeting.html">place_meeting</a><br>
+	<li><a href="position_empty.html">position_empty</a><br>
+	<li><a href="position_meeting.html">position_meeting</a><br>
+	<li><a href="position_change.html">position_change</a><br>
+	<li><a href="position_destroy.html">position_destroy</a><br>
+</ol>
+</blockquote>
+
+<h3>Complex Collision Checking</h3>
+<p>
+<p>
+The following routines can be used for this (as well as other functions detailed in the sections relating to <b>Moving Around</b> and <b>Instances</b>). These collision functions all work slightly differently 
+but they maintain three common arguments which we will explain here :
+<br>
+<br>
+
+<blockquote>
+	<ul>
+		<li><b>obj</b>. This is where we specify the object that the function has to check for a collision with. It can be an instance id, an object type, or the special GM keyword <b>all</b>. It is also worth 
+		noting that if the object type chosen is the designated <b>parent</b> of other objects, then all <i>children</i> of that object will be included in this check too.</li>
+		<br>
+		<li><b>prec</b>. This can be either <tt>true</tt> or <tt>false</tt> and relates to the precison of the collision checking. If set to <tt>true</tt>, then precise collisions are to be calculated (but only if 
+		the object being checked for has "precise" marked for its collision detection in its mask properties) which is a slightly more complex task for the cpu and so should be used with caution. If <tt>false</tt> then 
+		collisions will be calculated based on the bounding box of the object to be checked for.</li>
+		<br>
+		<li><b>notme</b>. You may need to check for collisions with an object that has the same index as the object that runs the code, so to prevent the code finding a collision with itself, you can set 
+		this to <tt>true</tt>. If you are specifically looking for the instance of the object running the code, or it's not important, it can be left as <tt>false</tt>.</li>
+	</ul>
+</blockquote>
+<p>
+All these functions return either the id of an instance found to be colliding, or the special keyword <b>noone</b> when there is no collision.
+<br>
+<br>
+
+The following functions exist that deal with complex collisions.
+<br>
+<br>
+
+<blockquote>
+<ol>
+	<li><a href="collision_circle.html">collision_circle</a><br>
+	<li><a href="collision_ellipse.html">collision_ellipse</a><br>
+	<li><a href="collision_line.html">collision_line</a><br>
+	<li><a href="collision_point.html">collision_point</a><br>
+	<li><a href="collision_rectangle.html">collision_rectangle</a><br>
+</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Movement and Collisions</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../Instances/index.html">Instances</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+-->

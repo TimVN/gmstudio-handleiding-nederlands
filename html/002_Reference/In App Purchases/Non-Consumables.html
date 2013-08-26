@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Non-Consumables</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Non-Consumables</h1>
+
+<h2>This section gives a simple example of how to setup a non-consumable purchase.</h2>
+
+<p>
+A <i>non-consumable</i> in app purchase is something that can only be bought once and no more. Typical examples of a non-consumable purchase is the user paying to remove ads, or to get extra levels for the game, 
+or even to unlock features that would be otherwise unavailable. They are an excellent way to create one product with a "trial" mode (perhaps with adverts and limited levels) that can then be upgraded to the "full" 
+game through an in app purchase.
+<br>
+<br>
+
+<h3>Activating The Non-Consumable</h3>
+<p>
+For this example, we are going to create a non-consumable for removing ads from our game as this is a fairly standard option for many of the "freemium" games that are out there. To start with we need to use 
+the function <a href="iap_activate.html"><tt>iap_activate</tt></a> (which would normally be placed in the <a href="../../000_Using%20GameMaker/Events/other%20Event.html">Game Start Event</a> of the first 
+object, in the first room of your game):
+<br>
+<br>
+<p class="code">
+var purchaseList, purchase1;<br>
+purchaseList = ds_list_create();<br>
+purchase1 = ds_map_create();<br>
+ds_map_add(purchase1, "id", "10001");<br>
+ds_map_add(purchase1, "title", "No Ads");<br>
+ds_list_add(purchaseList, purchase1);<br>
+iap_activate(purchaseList);<br>
+ds_map_destroy(purchase1);<br>
+ds_list_destroy(purchaseList);<br>
+</p>
+
+<p>
+<br>
+You can add in a price and a description into the <tt>ds_map</tt> for the purchase if you wish, but these are not necessary as the price will be set by you on the store and the description is just a convenience for 
+you to display later should you wish. You also do not need to provide the download URL, nor a local path as we are not downloading any content at all.
+<br>
+<br>
+
+We then need to add in a check to see if this purchas has <i>already</i> been made, and if it has then we can switch off ads for our game. For that we would have (in the same event as above) the following 
+code:
+<p class="code">
+if iap_is_purchased("10001")<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Ads = false;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Ads = true;<br>
+&nbsp;&nbsp;&nbsp;ads_enable(0,0,0);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+
+<p>
+<br>
+
+
+<h3>Purchasing The Non-Consumable</h3>
+<p>
+Once that has been done, we need to have an event that actually sends off a buy request. Now, there are many ways that this can be done, but it is recommended that you do this in some way outside of the main 
+game loop and have checks in place to test and see if the device is connected and the store is available. For example, you could have a menu button that when pressed creates the IAP buy object, deactivates all other 
+instances and then does it's checks and "listens" for replies from the store in the IAP Async event. In this way, it is obvious to the user that there is a purchase being processed and they can do nothing else until it is 
+either finalised or cancelled.
+<br>
+<br>
+
+So, you should have a button object or something that checks the global variable we have set when we checked the purchase previously and if it is still flagged as <tT>true</tt> (ie: not bought), then we can 
+create a new object for in app purchases and add this code into it (in the mouse pressed event, for example):
+<br>
+<br>
+<p class="code">
+if iap_store_status() == "Available"<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;//The store is available so send off the purchase order...<br>
+&nbsp;&nbsp;&nbsp;iap_acquire("10001");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;//the store is not available so do some error handling here...<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+
+<p>
+<br>
+That code will send off the purchase request and now you will have to wait for the call-back from it.
+<br>
+<br>
+
+<h3>Handling The Purchase</h3>
+<p>
+The actual purchase itself will be handled by the asynchronous <a href="../../001_Advanced%20Use/More%20About%20Async%20Events/IAP.html"> IAP Event</a>, which will be triggered when the purchase goes through 
+(or when the store changes status). An example of the necessary code for this event would be as follows:
+<br>
+<br>
+<p class="code">
+var i, q;<br>
+q = iap_event_queue();<br>
+repeat(ds_queue_size(q))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;i = ds_queue_dequeue(q);<br>
+&nbsp;&nbsp;&nbsp;if i == 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if iap_is_purchased("10001")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Ads = false;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ads_disable()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Add further code to notify the user, save to ini, reactivate the game instances etc...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;//You may want to add additional checks here for other purchases if you have them<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+
+<p>
+And your non-consumable is now bought! As you can see, the process is very similar to that which is used for Consumables, with the main difference being that once a non-consumable has been flagged as 
+purchased, you do not buy it again.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Consumables.html">Consumables</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+non-consumables
+-->

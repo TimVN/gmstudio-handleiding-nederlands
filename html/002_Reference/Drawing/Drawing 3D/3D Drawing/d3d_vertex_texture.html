@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_vertex_texture</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_vertex_texture</h1>
+  
+<h2>Defines a vertex for a textured primitive in 3D.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_vertex_texture(x, y, z, xtex, ytex)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x</td>
+	<td>The x coordinate of the vertex.</td></tr>
+	
+	<tr class="alt"><td>y</td>
+	<td>The y coordinate of the vertex.</td></tr>
+	
+	<tr><td>z</td>
+	<td>The z coordinate of the vertex.</td></tr>
+
+	<tr class="alt"><td>xtex</td>
+	<td>Starting x coordinate within the texture.</td></tr>
+	
+	<tr><td>ytex</td>
+	<td>Starting y coordinate within the texture.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function defines the position of a textured vertex for a primitive. The final look of the primitive will depend on the primitive type chosen to draw (See <a href="d3d_primitive_begin.html"><tt>
+d3d_primitive_begin</tt></a> for more information), the order with which you add the vertexes to it and the position of the start point you set for the texture. To end and draw the primitive you 
+must call <a href="d3d_primitive_end.html"><tt>d3d_primitive_end</tt></a>.
+<br>
+<br>
+
+<i><b>Note</b> : In a texture the position (0,0) is the top-left corner, but often when using projections the bottom-left corner is (0,0). In such a case you might need to flip the texture vertically.</i>
+<br>
+<br>
+
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tex;<br>
+tex = background_get_texture(back);<br>
+d3d_primitive_begin_texture(pr_trianglefan, tex);<br>
+d3d_vertex_texture(0, 480, 0, 0, 0);<br>
+d3d_vertex_texture(640, 480, 0, 1, 0);<br>
+d3d_vertex_texture(640, 480, 1000, 1, 1);<br>
+d3d_vertex_texture(0, 480, 1000, 0, 1);<br>
+d3d_primitive_end();<br>
+</p>
+<p>
+The above code will draw a 4 vertex triangle fan textured with the texture held in the "tex" variable.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_vertex_texture_color.html">d3d_vertex_texture_color</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_vertex_texture
+--> 

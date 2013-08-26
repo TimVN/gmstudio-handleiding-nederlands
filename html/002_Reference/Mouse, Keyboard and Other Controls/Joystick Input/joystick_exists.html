@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>joystick_exists</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>joystick_exists</h1>
+  
+<h2>Checks for a joystick.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">joystick_exists(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the joystick to check for (1 or 2).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return <tt>true</tt> if a joystick/gamepad with the given id is connected or <tt>false</tt> if it is not. The id can be either 1 or 2 as <i>GameMaker:Studio</i> only accepts input 
+from a maximum of two joysticks/gamepads.
+<br>
+<br>
+
+<i><b>NOTE : </b>This function is only available for Windows.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if joystick_exists(1) || joystick_exists(2)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Control = 3;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if a joystick or gamepad is connected to the device and, if so, sets a global variable.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Joystick Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="joystick_name.html">joystick_name</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+joystick_exists
+-->

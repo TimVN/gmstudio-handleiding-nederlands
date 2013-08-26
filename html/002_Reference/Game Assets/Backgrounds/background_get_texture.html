@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_get_texture</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_get_texture</h1>
+
+<h2>Returns the texture id for the given background.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">background_get_texture(back);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>back</td>
+	<td>The index of the background to use.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns a special <i>id</i> for the background texture. This value can then be used in other draw functions, particularly in general <a href="../../Drawing/Drawing%203D/index.html">3D</a> 
+and some of the <a href="../../Drawing/Drawing%20Primitives/index.html">2D primitive</a> functions.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tex;<br>
+tex = background_get_texture(back);<br>
+draw_primitive_begin_texture(pr_trianglefan, tex);<br>
+draw_vertex_texture(0, 480,  0, 0);<br>
+draw_vertex_texture(640, 480,  1, 0);<br>
+draw_vertex_texture(640, 480, 1, 1);<br>
+draw_vertex_texture(0, 480, 0, 1);<br>
+draw_primitive_end();<br>
+</p>
+<p>
+The above code will draw a 4 vertex triangle fan textured with the texture held in the "tex" variable.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_get_name.html">background_get_name</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_get_texture
+-->

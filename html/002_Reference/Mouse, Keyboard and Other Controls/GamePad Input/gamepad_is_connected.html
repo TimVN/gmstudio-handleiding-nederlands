@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>gamepad_is_connected</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>gamepad_is_connected</h1>
+
+<h2>Returns whether a given gamepad is currently connected.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">gamepad_is_connected(numb);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>device</td>
+	<td>Which gamepad "slot" to check.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return whether a gamepad is connected to the given "slot" (returns <tt>true</tt>) or not (returns <tt>false</tt>). you would normally use this function in conjunction with the 
+<a href="gamepad_get_device_count.html"><tt>gamepad_get_device_count</tt></a> function to get the correct number of available gamepads and/or gamepad "slots".
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var gp_num = gamepad_get_device_count();<br>
+for (var i = 0; i &lt; gp_num; i++;)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code loops throough the available gamepads (or gamepad slots) and then checks each one for a connected gamepad. the returned value is then used to set a global array to <tt>true</tt> or 
+<tt>false</tt> for use in future checks.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GamePad Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="gamepad_get_description.html">gamepad_get_description</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+gamepad_is_connected
+-->

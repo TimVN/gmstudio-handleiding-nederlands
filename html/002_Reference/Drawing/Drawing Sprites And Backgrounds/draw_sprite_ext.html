@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_sprite_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_sprite_ext</h1>
+
+<h2>Draws a sprite at a given position, with customisable scaling, rotation, blend and alpha.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_sprite_ext( sprite, subimg, x, y, xscale, yscale, rot, color, alpha );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>sprite</td>
+	<td>The index of the sprite to draw.</td></tr>
+
+	<tr><td>subimg</td>
+	<td>The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of where to draw the sprite.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of where to draw the sprite.</td></tr>
+	
+	<tr><td>xscale</td>
+	<td>The x position on the sprite of the top left corner of the area to draw.</td></tr>
+	
+	<tr><td>yscale</td>
+	<td>The y position on the sprite of the top left corner of the area to draw.</td></tr>
+	
+	<tr><td>rot</td>
+	<td>The rotation of the sprite. 0=right way up, 90=rotated 90 degrees counterclockwise etc.</td></tr>
+	
+	<tr><td>color</td>
+	<td>The color with which to blend the sprite. c_white is to display it normally.</td></tr>
+	
+	<tr><td>alpha</td>
+	<td>The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will draw the given sprite as in the function <a href="draw_sprite.html"><tt>draw_sprite</tt></a> but with additional options to change the scale, blending, rotation and alpha 
+of the sprite being drawn. Changing these values does <i>not</i> modify the resource in any way (only how it is drawn), and you can use any of the available 
+<a href="../../Objects%20and%20Instances/Instances/Instance%20Properties/index.html">sprite variables</a> instead of direct values for all the arguments in the function. The image below illustrates 
+how different values affect the drawing of the sprite:
+
+<img class="center" src="spr_ext.png"></img>
+
+<br>
+<br>
+<i><b>NOTE : </b>Blending is not available for the HTML5 target unless WebGL is enabled, in which case you should also be using the <a href="../../Game%20Assets/Sprites/sprite_set_cache_size.html">
+<tt>sprite_set_cache_size</tt></a> function.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+</p>
+<p>
+This will draw the instances assigned sprite with all its default values (essentially the same as using <tt>draw_self</tt>).
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing Sprites And Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_sprite_part.html">draw_sprite_part</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_sprite_ext
+-->

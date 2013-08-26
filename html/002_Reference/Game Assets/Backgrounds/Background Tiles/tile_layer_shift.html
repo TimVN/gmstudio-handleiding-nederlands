@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_layer_shift</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_layer_shift</h1>
+
+<h2>Shifts all tiles at the indicated depth layer by a given amount.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_layer_shift(depth, x, y);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>depth</td>
+	<td>The depth of tiles which is to be shifted.</td></tr>
+	
+	<tr><td>x</td>
+	<td>The amount to shift over the x-axis.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The amount to shift over the y-axis</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to move a whole tile layer. It works by shifting the layer by the specified amount over each axis, with a positve x shift moving right, a negative x shift moving left, a positive 
+y shift moving down and a negative y shift moving up. Please note that the values move the tile layer relative to it's position and are <i>not</i> absolute, so setting the (x,y) values to, for example, 
+(32,32) will move the tile layer down and right by 32 pixels, it will not position it at (32,32) in the room.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+tile_layer_shift(-1000, obj_Player.hspeed, 0);
+</p>
+<p>
+The above code will shift the tile layer at depth -1000 by the same amount as the horizontal speed of the instance of object "obj_Player".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_layer_delete.html">tile_layer_delete</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_layer_shift
+-->

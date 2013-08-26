@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>log2</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>log2</h1>
+  
+<h2>Returns the log base 2 of n, the number 2 must be powered by to equal n.</h2>
+  
+<h3><b>Syntax :</b> </h3>
+<p class="code">log2(n);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>n</td>
+	<td>The input value.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Real</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function basically asks "how many 2's do you need to multiply to get n?". A common example of use in programming would be to calculate the number of bits that are needed to represent a number. 
+To do this we calculate the <tt>log2(x)</tt> of the number, round it down and add 1 - for example <tt>log2(100)</tt> returns 6.643856, which rounded down is 6, to which we add one and it gives us 7. 
+So we need 7 bits to represent 100. It can also be used for describing exponential growth or decay, and is often called a <i>binary logarithm</i>. 
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+colorbits = floor(log2(color)) - 1;
+</p>
+<p>
+The above code stores the number of bits needed to represent the value stored in the variable "color".
+</p>
+  
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Real Number Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="log10.html">log10</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+log2
+binary logarithm
+-->

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_get_speed</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_get_speed</h1>
+  
+<h2>Returns the speed factor of a given path's given position.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">path_get_speed(ind, pos);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to check.</td></tr>
+	
+	<tr><td>pos</td>
+	<td>How far through the path to check. Between 0 (start) and 1 (end), can be decimal.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns the speed factor of any given position on a path. The position should be a value between 0 and 1 (you can use <a href="path_position.html"><tt>../path_position</tt></a>, for example, 
+if you need the current position of the instance) with 0 being the start position and 1 being the end. The value returned will be the factor by which the actual <a href="../path_speed.html"><tt>path_speed</tt></a>
+is being set. For example, on a path with only two points, 0 and 1, where the point 0 speed factor is 100 and point 1 speed factor is 0, the function <tt>path_get_speed(path, 0.5)</tt> will return 50.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+speed = path_get_speed(path0, 0.5) / 20;
+</p>
+<p>
+This will set the calling instance's speed to the speed factor of the point at exactly halfway through path0, divided by 20. So if the speed factor found is the default 100, it will set the 
+speed of the calling instance to 5.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Path Information</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_get_x.html">path_get_x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_get_speed
+-->

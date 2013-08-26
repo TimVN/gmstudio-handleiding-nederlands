@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_delete</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_delete</h1>
+
+<h2>Deletes the sprite from memory, freeing the memory used.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_delete(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sprite to be deleted.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This  function will delete a sprite from the game, freeing any memory that was reserved for it. This is a <i>permanent</i> removal, and if the asset that you delete was included as part of the game's resources, 
+not even restarting the game (unless you close the application first) will recover it. This is a very important function for those mements when you need to create and change sprites from external resources and 
+should always be used to remove those assets that are no longer needed by a game, or to clear an indexed asset from a variable before re-assigning another asset to that variable.
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var spr;<br>
+spr = sprite_create_from_screen(0, 0, 32, 32, false, false, 16, 16);<br>
+sprite_merge(spr_Player, spr);<br>
+sprite_delete(spr);<br>
+</p>
+<p>
+The above code creates a local variable and then stores the index of the sprite created from the screen. This sprite is then merged with the asset indexed in the variable "spr_Player" before being 
+removed from memory again.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_set_alpha_from_sprite.html">sprite_set_alpha_from_sprite</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_delete
+-->

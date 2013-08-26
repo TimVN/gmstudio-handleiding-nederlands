@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>file_find_first</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>file_find_first</h1>
+  
+<h2>Returns the name of the first file that satisfies the mask and the attributes.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">file_find_first(mask, attr);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>mask</td>
+	<td>The mask to use for searching.</td></tr>
+		
+	<tr><td>attr</td>
+	<td>The specific fille sttribute to look for.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return the name of the first file that satisfies the mask and the attributes. If no such file exists, then an empty string is returned. The mask can contain a path and can contain 
+wildchars, for example 'C:\temp\*.doc'. The attributes give the additional files you want to see, so the normal files are always returned when they satisfy the mask. You can add up the following 
+constants to see the type of files you want (if you do not wish to add any attributes, use 0) :
+<br>
+<br>
+
+<blockquote>
+<ul>
+	<li><b>fa_readonly</b> - read-only files
+	<li><b>fa_hidden</b> - hidden files
+	<li><b>fa_sysfile</b> - system files
+	<li><b>fa_volumeid</b> - volume-id files
+	<li><b>fa_directory</b> - directories
+	<li><b>fa_archive</b> - archived files
+</ul>
+</blockquote>
+
+<p>
+<br>
+<i><b>WARNING!</b> This function may not work as you expect due to GameMaker:Studio being sandboxed! Please see the section on <a href="../File%20System%20Limits.html">File System Limits</a> 
+for more information.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>This function works on all the C++ target platforms (Windows, Mac, iOS, Android and WinPhone), BUT the filter flags only work on Windows and WinPhone.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if directory_exists("C:\Games\")<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;file = file_find_first("C:\Games\*.doc", fa_readonly);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+This will check to see if the specified directory exists then, if it does, go there and return the first "read only" <tt>doc</tt> file found.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File System Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="file_find_next.html">file_find_next</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+file_find_first
+-->

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_emitter_create</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_emitter_create</h1>
+
+<h2>Creates a new emitter in the given particle system.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_emitter_create(ps);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ps</td>
+	<td>The particle system to create the emitter in.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function must be used to create a new emitter and assign it to a given particle system. The function will return the index value for the new emitter which must be stored in a variable and 
+used in all further functions that reference the emitter, and the emitter itself must be detroyed when no longer being used to prevent memory leaks (this can be achieved using the specific 
+emitter destroy functions or by destroying the whole particle system that the emitter belongs to).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+p_emit1 = part_emitter_create(Sname);
+</p>
+<p>
+This will create a new particle emitter and store its index in the variable "p_emit".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Particles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_emitter_clear.html">part_emitter_clear</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_emitter_create
+-->

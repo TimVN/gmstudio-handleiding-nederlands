@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>display_reset</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>display_reset</h1>
+ 
+<h2>Resets the display and changes the anti-aliasing filtering and vsync.</h2>
+
+<h3><b>Syntax :</b> </h3>
+<p class="code">display_reset(aa, vsync);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>aa</td>
+	<td>The level of anti-aliasing filtering (0, 2, 4 or 8).</td></tr>
+	
+	<tr class="alt"><td>vsync</td>
+	<td>Toggle vertical synchronisation to on (true) or off (false).</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+ 
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function Resets the display settings to the ones that were set when the game was started, but also allows you to change the current level of full screen anti-aliasing being used and whether to use 
+vertical synchronisation. The available anti-aliasing levels are 0,2,4 and 8, with the default startup value being set to 0, and the default v-sync setting is false (off). Switching v-sync on may give a smoother gaming 
+experience but it will also need more processing power and so its impact must be considered careful before use, and the same goes for the anti-aliasing where the higher the number the more processing that 
+is required.
+<br>
+<br>
+
+Since not all target devices are the same, some may not support 8x or 4x anti-aliasing for example, and so there is a <b>read only</b> variable available for getting the different levels of AA that the device 
+running the game can display:
+
+<blockquote>
+<b>display_aa</b>
+</blockquote>
+<p>
+This variable will return a value based on the setting of bits for the different levels. So for only 2xAA, this will report 2, for 2x and 4x availablility it will report 6. For 8 and 4 it will report 12. For all 3 levels (2,4 and 8) 
+it will report 14.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if display_aa &gt; 12 display_reset(8, true);
+</p>
+<p>
+The above code will set the anti-aliasing level to 8 if supported and switch v-sync to on.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows And Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="display_get_height.html">display_get_height</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+display_reset
+display_aa
+anti-aliasing
+-->

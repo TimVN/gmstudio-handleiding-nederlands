@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>gamepad_get_description</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>gamepad_get_description</h1>
+
+<h2>Returns a descriptive string for the given gamepad.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">gamepad_get_description(device);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>device</td>
+	<td>Which gamepad "slot" to get the name of.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return a string with the description of the given gamepad, for example, a PS3 controller may return a sting similar to "PLAYSTATION(R)3 Controller", or an XBox360 controller could 
+eturn "Xbox 360 Controller (XInput STANDARD GAMEPAD)". This string is hardware dependant and the returned value will depend on the gamepad plugged into the device "slot" that is being 
+checked. 
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var gp_num = gamepad_get_device_count();<br>
+for (var i = 0; i &lt; gp_num; i++;)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if gamepad_is_connected(i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), gamepad_get_description(i));<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), "No Gamepad Connected");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GamePad Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="gamepad_get_button_threshold.html">gamepad_get_button_threshold</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+gamepad_get_description
+-->

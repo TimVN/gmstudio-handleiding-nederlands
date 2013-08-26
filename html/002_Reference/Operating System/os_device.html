@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>os_device</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>os_device</h1>
+  
+<h2>This variable holds a different constant depending on the device the game is currently being run in.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">os_device</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Constant
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable holds one of various constant <i>GameMaker:Studio</i> has to tell you which device you are currently running the game on. The following constants can be returned :
+	
+<div class="compat">
+	<table>
+		<tr><th>Constant</th><th>Description</th></tr>
+
+		<tr><td>device_ios_ipad</td><td>iPad</td></tr>
+		
+		<tr class="alt"><td>device_ios_ipad_retina</td><td>Newer iPad with Retina display (2048x1536 screen)</td></tr>
+
+		<tr><td>device_ios_iphone5</td><td>New iPhone5 with larger display (640x1136 screen)</td></tr>
+		
+		<tr class="alt"><td>device_ios_iphone</td><td>Older iPhone/iPod Touch (480x320 screen) <i>or</i> Android phone</td></tr>
+		
+		<tr><td>device_ios_iphone_retina</td><td>Newer iPhone/iPod Touch with Retina display (960x640 screen)</td></tr>
+		
+		<tr class="alt"><td>device_emulator</td><td>The device is actually an emulator (Windows Phone or Android)</td></tr>
+
+		<tr><td>device_tablet</td><td>Android tablet</td></tr>
+		
+		<tr class="alt"><td>device_ios_unknown</td><td>Unknown or not iOS</td></tr>
+
+		</table>
+</div>
+    
+<h3>Example :</h3>
+<p class="code">
+if os_browser = browser_not_a_browser<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;switch (os_device)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case device_ios_ipad: global.Config = 2; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case device_ios_iphone: global.Config = 3; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case device_ios_iphone_retina: global.Config = 4; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case device_ios_unknown: global.Config = 5; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Config = 1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the game is running in a browser or not and sets a global variable to a value depending on the result of the check.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Operating Systems</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="os_type.html">os_type</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+os_device
+device_emulator
+device_ios_ipad
+device_ios_ipad_retina
+device_ios_iphone
+device_ios_iphone5
+device_ios_iphone_retina
+device_ios_unknown
+device_tablet
+-->

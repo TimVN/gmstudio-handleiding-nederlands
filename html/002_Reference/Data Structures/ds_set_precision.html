@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_set_precision</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_set_precision</h1>
+  
+<h2>Sets the precision used for comparisons.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">ds_set_precision(prec);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>prec</td>
+		<td>The precision value (default 0.0000001)</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> N/A
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When comparing values, for example when searching in a map or sorting a list, <i>GameMaker:Studio</i> must decide when two values are equal. For strings and integer values this is clear but for real 
+numbers, due to floating point round-off errors, seemingly equal numbers can easily become unequal. For example, it's possible that <b>(5 / 3) * 3</b> will <i>not</i> be equal to 5! To help avoid this, 
+a precision value is used on all real number functions, and when the <i>difference between two numbers is smaller</i> than this precision they are considered equal. The default a precision of 0.0000001 
+is used for all data structure functions unless changed by this function.
+<br>
+<br>
+
+<i><b>NOTE : </b>This precision is used in all data structures but not in other comparisons in GML!</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ds_set_precision(0.0001);
+</p>
+<p>
+The above code will change the default precision setting for all data structure functions.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Data Structures</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../DS Priority Queues/index.html">DS Priority Queues</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!--KEYWORDS
+ds_set_precision
+-->

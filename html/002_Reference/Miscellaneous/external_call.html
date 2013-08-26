@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>external_call</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+ <h1>external_call</h1>
+  
+<h2>Call a previously defined external function.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">external_call(id, args[0...15]);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>id</td>
+	<td>The name of the function that you want to call</td></tr>
+	
+	<tr class="alt"><td>args[0...15]</td>
+	<td>The different arguments that you want to pass through to the external function</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real or String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+If you have created an external function call to a dll using <a href="external_define.html"><tt>external_define</tt></a>, you can use this function to then call it. You supply the id of the previously defined 
+function as well as each of the arguments it requires (each argument must be of the correct type, either real or string) and the function returns the result of the external call.
+
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+aaa = external_call(global.mmm,x,y);
+</p>
+<p>
+The above example code calls a previously defined external function and stores the returned value in a global variable.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Miscellaneous</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="external_free.html">external_free</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+external_call
+-->

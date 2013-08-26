@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>facebook_login</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>facebook_login</h1>
+  
+<h2>Logs the user into their Facebook account.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">facebook_login(permissions)</p>
+
+<p>
+<br>
+</p>
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>permissions</td>
+	<td>The permissions you want to have from the user logging in.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function <i>GameMaker:Studio</i> will connect to Facebook and ask the user to log into their account. You may also supply additional permission requests in the form of a ds_list that this function 
+then converts into a <tt>json</tt> array to communicate them to Facebook. There are a wide variety of permissions you may request and they are documented on the Facebook developers pages found 
+<a href="https://developers.facebook.com/docs/authentication/permissions/" target="_blank"> here</a>. If you do not wish to ask for any special or extended permissions then you will still need to send 
+a ds_list, but this time it will be empty.
+<br>
+<br>
+
+This function is also considered as being <i>asynchronous</i> as while the Facebook login window is open on the screen, the game will continue to run in the background and even once the user has completed 
+the login process, none of the other Facebook functions will work until the <a href="facebook_status.html"><tt>facebook_status()</tt></a> returns "AUTHORISED" . Due to the need for an internet connection 
+and the different rates of data transfer, this means that it could be several seconds before this authorisation is received, and all the while the game will still be running.
+<br>
+<br>
+
+<i><b>NOTE : </b>Take care over what special and extended permissions you request as Facebook recommends that they are only used in very specific circumstances.</i>
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+facebook_init();<br>
+permissions = ds_list_create();<br>
+ds_list_add(permissions,"publish_stream");<br>
+facebook_login(permissions);<br>
+</p>
+<p>
+The above code will initialise Facebook and then log the current user in, asking for the extend "publish_stream" permission which will allow the game to publish directly to the users wall without asking the user if 
+this is permitted every time.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Facebook</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="facebook_status.html">facebook_status</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+facebook_login
+-->

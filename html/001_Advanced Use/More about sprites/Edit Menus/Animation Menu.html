@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The Sprite Editor Animation Menu</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The Sprite Editor Animation Menu</h1>
+
+<h2>This section explains the actions available from the animations menu.</h2>
+
+<p>
+<img class="center" src="Images_Menu.png">
+
+Under the animation menu you can create new animated sprites out of the current sub-images. There are many options and you should experiment a bit with them to create the effects you want, as most of them work well when 
+used together, rather than as individual effects. Also, don't forget that you can always save an animated sprite and later add it to the current one to create a single, larger animation. The following options exist for you to 
+edit animations :
+<br>
+<br>
+
+<ul>
+	<li><b>Set Length : </b>Here you can change the length of your animation. To achieve this, <i>GameMaker:Studio</i> duplicates the sub-images from the beginning to end, repeating them again and again until the required 
+	number of sub-images has been reached.
+	<br></li>
+	<br>
+
+	<li><b>Stretch : </b>As above, this command will also change the length of the animation, but this time sub-images are duplicated or removed to get the right number. So if you increase the number of frames the animation 
+	goes slower as more sub-images are generated between the current ones, and if you decrease the number it goes faster.
+	<br></li>
+	<br>
+
+	<li><b>Reverse : </b>This reverses all the sub-images so the animation of the sprite plays backwards.
+	<br></li>
+	<br>
+
+	<li><b>Add Reverse : </b>This option will duplicate all the sub-images, then add them on at the end of the animation in reverse, doubling the number of sub-images. You may want to remove the double first and middle frame 
+	that occur with this to maintain a smooth animation.
+	<br></li>
+	<br>
+
+	<li><b>Translation Sequence : </b>With this command you can create an animation in which the image slightly translates (moves) in each frame. You must provide the number of frames and the total amount 
+	to move horizontally and vertically, and <i>GameMaker:Studio</i> will do the rest.
+	<br></li>
+	<br>
+
+	<li><b>Rotation Sequence : </b>This creates an animation in which the image rotates. You can either choose clockwise or counterclockwise rotation, and you have to specify the number of frames and 
+	the total angle in degrees (360 is a complete turn) that should be completed in within those frames. You might need to resize the canvas <i>first</i> to make sure the total image remains visible during the rotation.
+	<br></li>
+	<br>
+
+	<li><b>Colorize : </b>Creates an animation that turns the image into a particular color, as shown below :
+	<br>
+	<br>
+	<img class="center" src="Colorize_Strip.png">
+	<br></li>
+	<br>
+
+	<li><b>Fade to color : </b>Creates an animation that fades the image to a particular color, as seen below :
+	<br>
+	<br>
+	<img class="center" src="Fade_Strip.png">
+	<br></li>
+	<br>
+
+	<li><b>Disappear : </b>Makes the image disappear by making it more transparent in each step. An example is provided below :
+	<br>
+	<br>
+	<img class="center" src="Transparency_Strip.png">
+	<br></li>
+	<br>
+
+	<li><b>Shrink : </b>Shrinks the image to nothing in the direction indicated (center, left, right, top or bottom). Below is a shrink towards the center :
+	<br>
+	<br>
+	<img class="center" src="Shrink_Strip.png">
+	<br></li>
+	<br>
+
+	<li><b>Grow : </b>Grows the image from nothing in the direction indicated (center, left, right, top or bottom). Below is a grow towards the center :
+	<br>
+	<br>
+	 <img class="center" src="Grow_Strip.png">
+	<br></li>
+	<br>
+
+	<li><b>Flatten : </b>"Flattens" the image to nothing in a given direction (left, right, up or down) ie: gives the sub-images a perspective effect that looks like it's being laid flat, as shown below :
+	<br>
+	<br>
+	<img class="center" src="Flatten_Strip.png">
+	<br></li>
+	<br>
+
+	<li><b>Raise : </b>Similar to the above command, this "raises" the sub-images from a given direction (left, right, up or down) :
+	<br>
+	<br>
+	<img class="center" src="Raise_Strip.png">
+	<br></li>
+	<br>
+
+	<li><b>Overlay : </b>This command will ask you to select a file for overlaying with the currently selected sprite. The file can be a single image (in which case it is repeated over every frame) or a strip (in which case it 
+	<i>must</i> have a file name that ends in <tt>_stripXX</tt> or <i>GameMaker:studio</i> will treat it as a single image). When the image from the file has a different size it is stretched to the maximal size of the 
+	sprite being overlaid.
+	<br>
+	<br>
+	<img class="center" src="Overlay_Strip.png">
+	<br></li>
+	<br>
+
+	<li><b>Morph : </b>Morphs the animation to an animation or image from a file. Note that morphing works best if the two animations cover the same area of the image, otherwise, halfway certain pixels disappear and 
+	others suddenly appear. This is due to it not really being a "true" morph, but rather a fade in/out of alpha (transparencies).
+	<br>
+	<br>
+	<img class="center" src="Morph_Strip.png">
+	<br></li>
+</ul>
+
+<p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../Editing%20Sprites.html">Editing Sprites</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+set length
+stretch
+reverse
+add reverse
+translation sequence
+rotation sequence
+colorize images
+fade to a color
+disappear
+shrink
+grow
+flatten
+raise
+overlay
+morph
+-->

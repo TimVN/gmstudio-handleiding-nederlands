@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>device_mouse_raw_x</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>device_mouse_raw_x</h1>
+  
+<h2>Returns the x position of the device when pressed.</h2>
+  
+<h3><b>Syntax :</b> </h3>
+<p class="code">device_mouse_raw_x(device);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>device</td>
+		<td>The device (from 0 - 4) that is being checked.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns raw x position of the device. What this means is that it returns the actual device definition of the x positon that is being touched, <i>not</i> the <i>GameMaker:Studio</i> one, and as such 
+will ignore things like view position and scaling.
+<br>
+<br>
+<i><b>Note : </b>This function is very much device dependant and you should experiment first with the desired target module and device to see what exactly is returned.</i>
+<br>
+<br>
+
+<h3>Example :</h3>
+<p class="code">
+if device_mouse_check_button(0, mb_left) && device_mouse_check_button(1, mb_left)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;x_av = mean(device_mouse_raw_x(0), device_mouse_raw_x(1));<br>
+&nbsp;&nbsp;&nbsp;y_av = mean(device_mouse_raw_y(0), device_mouse_raw_y(1));<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if device1 and device2 are being pressed, and if they are it calculates the average position of the x/y coordinates between each press point.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Device Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="device_mouse_raw_y.html">device_mouse_raw_y</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+device_mouse_raw_x
+-->

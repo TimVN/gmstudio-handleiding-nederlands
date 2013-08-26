@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_grid_get_min</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_grid_get_min</h1>
+
+<h2>Returns the min value from all the cells within a region on a grid.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_grid_get_min(index, x1, y1, x2, y2);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the grid.</td></tr>
+	
+	<tr class="alt"><td>x1</td>
+	<td>The left cell column of the region.</td></tr>
+	
+	<tr><td>y1</td>
+	<td>The top cell row of the region.</td></tr>
+	
+	<tr class="alt"><td>x2</td>
+	<td>The right cell column of the region.</td></tr>
+	
+	<tr><td>y2</td>
+	<td>The bottom cell row of the region.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real or String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to find the minimum value for all the cells found within the defined region of a grid, as shown in the image below:
+
+<img class="center" src="ds_grid_get_min.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+val = ds_grid_get_min(grid, 0, 0, 5, 5);
+</p>
+<p>
+The above code will set the variable "val" to the minimum value contained within the given region of the ds_grid indexed in the variable "grid".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Grids</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_grid_get_sum.html">ds_grid_get_sum</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_grid_get_min
+-->

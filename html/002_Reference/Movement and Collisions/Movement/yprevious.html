@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>yprevious</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>yprevious</h1>
+  
+<h2>The previous y position of the instance.</h2>
+  
+<h3> <b>Syntax :</b> </h3>
+<p class="code">yprevious</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+<br>
+It can often be useful to know where an instance <i>was</i> the previous step, when resolving collisions for example, and so you can use this function to get that value for use. It is normally stored just before the start of the 
+<b>begin step event</b> but can be set through code at any time, meaning you can give it your own custom value should that be necessary.
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if x != xprevious || y != yprevious
+{
+moved = true;
+}
+</p>
+<p>
+The above code checks to see if there is any difference between the yprevious and yprevious values and the current x and y values. If there is it sets a variable to true.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Moving Around</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="xstart.html">xstart</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+yprevious
+-->

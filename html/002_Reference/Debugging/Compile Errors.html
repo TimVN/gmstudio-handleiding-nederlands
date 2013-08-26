@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Compile Errors</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Compile Errors</h1>
+
+<h2>This section lists all the possible errors given by the asset compiler.</h2>
+
+<p>
+When creating your game it's very easy to forget to declare a variable or mis-type a string as a real etc... These errors will be caught by <i>GameMaker:Studio</i> as the game is being compiled and a 
+window will open with the error given as well as <i>where</i> the error was found as shown in the image below:
+
+<img class="center" src="Compile_Error.png"></img>
+
+You can click any of the lines of text that are shown and you will be taken directly to the object that has thrown the error, and then you can use the information contained within the message to pinpoint 
+exactly where in the object the error has occurred. However, sometimes these errors can seem a bit cryptic, so below you can find a complete list of all errors and a brief explanation of what they mean.
+
+<blockquote>
+	<ol>
+		<li><p class="code">&gt;unknown function or script</p>You have referrenced a function or script that does not exist. This can happen when you mis-type a function or remove a script that is being 
+		used in an object from the game.</li><br>
+		
+		<li><p class="code">&gt;Unable to find script</p>You have referrenced a script that can no longer be found in the resources.</li><br>
+		
+		<li><p class="code">&gt;Execute script action is not bound to a script</p>You have used the "execute script" action on a script that no longer exists.</li><br>
+		
+		<li><p class="code">&gt;Failed to parse action_execute_script() - incorrect number of arguments received</p>The execute script action has been given the wrong number of arguments for the script</li><br>
+				
+		<li><p class="code">&gt;Trying to set a read only variable</p>You have tried to assign a value (string or real) to a variable that is flagged as <b>read-only</b>. For example:<br>
+		<code>phy_com_x = 12;</code><br>
+		This would give an error as <tt>phy_com_x</tt> is read-only.</li><br>
+		
+		<li><p class="code">&gt;Constant is invalid here</p>You have placed a <b>constant</b> in your code that is not appropriate to the code.</li><br>
+			
+		<li><p class="code">&gt;Malformed repeat statement<br>
+		<p class="code">&gt;Malformed if statement<br>
+		<p class="code">&gt;Malformed while statement<br>
+		<p class="code">&gt;Malformed do statement<br>
+		<p class="code">&gt;Malformed for statement<br>
+		<p class="code">&gt;Malformed with statement<br>
+		<p class="code">&gt;Malformed switch statement<br>
+		<p class="code">&gt;Malformed break statement<br>
+		<p class="code">&gt;Malformed continue statement<br>
+		<p class="code">&gt;Malformed exit statement<br>
+		<p class="code">&gt;Malformed return statement</p>
+		The structure of your statement is incorrect. For specific details please see the relevant section here: <a href="../001_GML%20Language%20Overview/index.html">GML Overview</a></li><br>
+		
+		<li><p class="code">&gt;Keyword until expected</p>You have set up a "do... until" loop but failed to supply the "until" part. See 
+		<a href="../001_GML%20Language%20Overview/401_10_do.html">GML Overview - Do</a></li><br>
+		
+		<li><p class="code">&gt;If requires a then statement</p>You have ommitted the <tt>then</tt> part of an <tt>if</tt> statement. See:
+		<a href="../001_GML%20Language%20Overview/401_07_if.html">GML Overview : If</a></li><br>
+		
+		<li><p class="code">&gt;Statement in a switch MUST appear after case or default</p>You have added a function statement into a <tt>switch</tt> outside of the cases or default. For example:<br>
+		<code>switch(id)<br>
+		&nbsp;&nbsp;&nbsp;{<br>
+		&nbsp;&nbsp;&nbsp;if x == 12 game_end(); break;<br>
+		&nbsp;&nbsp;&nbsp;}</code>
+		</li><br>
+
+		<li><p class="code">&gt;Break used without context</p>You have added a <tt>break</tt> into your code where it is not needed or makes no sense to have one.</a></li><br>
+	
+		<li><p class="code">&gt;Continue used without context</p>You have added a <tt>continue</tt> into your code where it is not needed or makes no sense to have one.</a></li><br>
+		
+		<li><p class="code">&gt;Calling a function that needs an instance and no instance is available</p>This error will be shown should you be using an <tt>instance_*</tt> function when no 
+		instances exist at the time of running the code.</li><br>
+		
+		<li><p class="code">&gt;Calling a function that needs an \"other\" and no \"other\" is available</p>You will get this error when using <tt>other</tt> to reference an instance when that instance 
+		no longer exists, for example, in a collision event where you have already destroyed the other instance.</li><br>
+		
+		<li><p class="code">&gt;Argument naming error, {n} arguments but no reference found to {a}</p>You have supplied a series of arguments to a script, of which one or more does not represent 
+		any value.</li><br>
+				
+		<li><p class="code">&gt;Wrong type of arguments for *<br>
+		<p class="code">&gt;Wrong type of arguments for /<br>
+		<p class="code">&gt;Wrong type of arguments for div<br>
+		<p class="code">&gt;Wrong type of arguments for Mod<br>
+		<p class="code">&gt;Wrong type of arguments for +<br>
+		<p class="code">&gt;Wrong type of arguments for -<br>
+		<p class="code">&gt;Wrong type of arguments for &amp;&amp;<br>
+		<p class="code">&gt;Wrong type of arguments for ||<br>
+		<p class="code">&gt;Wrong type of arguments for &amp;<br>
+		<p class="code">&gt;Wrong type of arguments for |<br>
+		<p class="code">&gt;Wrong type of arguments for ^</p>
+		<p class="code">&gt;Wrong type of arguments for &lt;&lt;<br>
+		<p class="code">&gt;Wrong type of arguments for &gt;&gt;</p>
+		You have supplied an expression with the wrong type of arguments (either real or string). For example if you have something like this:<br>
+		<code>if  "Hello" div 4<br>
+		&nbsp;&nbsp;&nbsp;{<br>
+		&nbsp;&nbsp;&nbsp;//do something;<br>
+		&nbsp;&nbsp;&nbsp;}</code><br>
+		you will get this error as you cannot use <tt>div</tt> on a string.  For specific details please see the relevant section here: 
+		<a href="../001_GML%20Language%20Overview/401_04_expressions.html">GML Overview - Expressions</a></li><br>
+		
+		<li><p class="code">&gt;Division by 0</p>It is impossible to divide by 0 and so you get this error should a <i>GameMaker:Studio</i> code try to do this.</li><br>
+
+		<li><p class="code">&gt;Modulo by 0</p>You get this error should the <tt>modulo</tt> expression try to use 0 as its operator.</li><br>
+		
+		<li><p class="code">&gt;Cannot compare arguments</p>this error tells you that one or more expressions are trying to operate on both strings <i>and</i> reals, something that is not permitted. 
+		For example:<br>
+		<code>if "Hello" == 74<br>
+		&nbsp;&nbsp;&nbsp;{<br>
+		&nbsp;&nbsp;&nbsp;//do something;<br>
+		&nbsp;&nbsp;&nbsp;}</code><br>
+		This would give the error as you cannot compare the two values in the expression as they are different types.</li><br>
+
+		<li><p class="code">&gt;Symbol } expected<br>
+		<p class="code">&gt;Symbol { expected<br>
+		<p class="code">&gt;Symbol ) expected<br>
+		<p class="code">&gt;Symbol ( expected<br>
+		<p class="code">&gt;Symbol : expected<br>
+		<p class="code">&gt;Symbol , or ) expected<br>
+		<p class="code">&gt;Symbol , or ] expected<br>
+		<p class="code">&gt;Symbol ] expected</p>
+		Your code is missing one of the above symbols from it's syntax. This error is normally caught by the code editor and highlighted for you.</li><br>
+		
+		<li><p class="code">&gt;Assignment operator expected</p>This error will be fired when you have omitted one of the operators from an expression. For example:<br>
+		<code>if var1 var2 == var3<br>
+		&nbsp;&nbsp;&nbsp;{<br>
+		&nbsp;&nbsp;&nbsp;//do something;<br>
+		&nbsp;&nbsp;&nbsp;}</code><br>
+		the above code is missing the operator between "var1" and "var2" and so would give this error, although normally this would be caught by the code editor before being compiled.
+		</li><br>
+		
+		<li><p class="code">&gt;Unexpected symbol in expression</p>You have a symbol (like /, *, +, etc...) in the wrong place within the expression. This should normally be caught by the code editor syntax 
+		checker</li><br>
+		
+		<li><p class="code">&gt;Only 1 or 2 dimensional arrays are supported</p><i>GameMaker:Studio</i> only permits 1 or 2 dimension arrays and should you try to create any that are larger then 
+		you will get this error. For more information please see: <a href="../001_GML%20Language%20Overview/401_06_arrays.html">GML Overview - Arrays</a></li><br>
+		
+		<li><p class="code">&gt;Variable name expected</p>You have written an expression that expects a variable to be used when none has been supplied. For example:<br>
+		<code>if obj_Control. = "Hello"<br>
+		&nbsp;&nbsp;&nbsp;{<br>
+		&nbsp;&nbsp;&nbsp;//do something;<br>
+		&nbsp;&nbsp;&nbsp;}</code><br>
+		Since there is no variable after the assignment ".", you would get this error.
+		</li><br>		
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Debugging</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Runner%20Errors.html">Runner Errors</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+compile errors
+-->

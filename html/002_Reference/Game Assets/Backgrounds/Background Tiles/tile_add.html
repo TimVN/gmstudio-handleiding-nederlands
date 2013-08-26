@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_add</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_add</h1>
+
+<h2>Adds a new tile to the room, allowing customisation of its attributes, and returning its index.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_add(background, left, top, width, height, x, y, depth);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>background</td>
+	<td>The background asset from which the new tile will be extracted.</td></tr>
+	
+	<tr class="alt"><td>left</td>
+	<td>The x coordinate of the left of the new tile, relative to the background asset's top left corner.</td></tr>
+	
+	<tr><td>top</td>
+	<td>The y coordinate of the top of the new tile, relative to the background assets's top left corner.</td></tr>
+	
+	<tr class="alt"><td>width</td>
+	<td>The width of the tile.</td></tr>
+	
+	<tr><td>height</td>
+	<td>The height of the tile.</td></tr>
+	
+	<tr class="alt"><td>x</td>
+	<td>The x position in the room to place the tile.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position in the room to place the tile.</td></tr>
+	
+	<tr class="alt"><td>depth</td>
+	<td>The depth at which to place the tile.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can add a tile into the game at any position within the room. You need to give it a background image as a base asset and the position within that image to extract the tile, then 
+a position within the room and a depth to place it at. The function returns the unique index number for that tile that should be stored in a variable if you plan to change it in any way later (however, you can also get this 
+index at a later date by using the <a href="tile_layer_find.html"><tt>tile_alyer_find</tt></a> function).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+tile_add(back0, 0, 0, 32, 32, 64, 64, 99999);
+</p>
+<p>
+Takes a 32x32 pixel area from (0,0) of back0, placing it at (64,64) in the room at a depth of 99999.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_delete.html">tile_delete</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_add
+-->

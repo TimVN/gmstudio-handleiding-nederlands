@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>joystick_check_button</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>joystick_check_button</h1>
+  
+<h2>Checks to see if a joystick button has been pressed.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">joystick_check_button(id, numb);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the joystick (1 or 2).</td></tr>
+
+	<tr class="alt"><td>numb</td>
+	<td>The number of the button to check (from 1 to 32).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return <tt>true</tt> if the selected button on the joystick/gamepad with the given id is being pressed and <tt>false</tt> if it is not. The id can be either 1 or 2 as <i>GameMaker:Studio</i> 
+only accepts input from a maximum of two joysticks/gamepads.
+<br>
+<br>
+
+<i><b>NOTE : </b>This function is only available for Windows.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if joystick_check_button(1, 1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if canshoot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canshoot = !canshoot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alarm[0] = 10;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance_create(x, y, obj_Bullet);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if a joystick or gamepad button is being pressed and if it returns true it checks a variable and creates a bullet object.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Joystick Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="joystick_xpos.html">joystick_xpos</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+joystick_check_button
+-->

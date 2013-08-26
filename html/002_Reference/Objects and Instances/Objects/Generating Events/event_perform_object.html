@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>event_perform_object</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>event_perform_object</h1>
+  
+<h2>Performs a given event of the specified object.</h2>
+  
+<h3> <b>Syntax :</b> </h3>
+<p class="code">event_perform_object(obj, type, numb);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>obj</td>
+	<td>The object that should have its event triggered.</td></tr>
+	
+	<tr class="alt"><td>type</td>
+	<td>The type of event to perform. See below.</td></tr>
+	
+	<tr><td>numb</td>
+	<td>The specific event, if one is necessary (otherwise, just use 0).</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>N/A
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p> 
+This function will perform the specified event, with the designated argument, for all instances of the given object. There are many options here which allow complete simulation of all possible events, 
+but note that this literally just performs all the code in the event and the game will not modify anything to make it trigger itself manually, for example if you choose to perform a keyboard press 
+event, the event will be triggered but relevant key will not be recognised as having been pressed. Or if you perform an alarm event, the alarm counter will not be set to -1 but rather continue to count 
+down.
+<br>
+<br>
+	
+<h3>Constants</h3>
+<p>
+The table below outlines all the constants that are included in <i>GameMaker:Studio</i> for referencing event types, as well as their number value. The events themselves are marked in <b>bold text</b> 
+while their number values are marked with <i>italic text</i>: 
+
+<div class="compat">  
+<table>
+	<tr><th>Name</th><th>Description</th></tr>
+	
+	<tr><td><b>ev_create</b></td><td>Create event.</td></tr>
+	<tr class="alt"><td><b>ev_destroy</b></td><td> Destroy event</th></tr>
+	<tr><td><b>ev_step</b></td><td> Step event</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_step_normal</i></td><td> Step</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_step_begin</i></td><td> Begin Step</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_step_end</i></td><td> End Step</th></tr>
+	<tr><td><b>ev_alarm</b></td><td> Alarm event</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- 0 ... 11</i></td><td> The number relevant to which of the 12 alarms you wish to trigger the event of</th></tr>
+	<tr><td><b>ev_keyboard, ev_keypress, ev_keyrelease</b></td><td> Keyboard/Keyboard Pressed/Keyboard Released</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- any key code</i></td><td>vk_space or ord('W') for example.</th></tr>
+	<tr><td><b>ev_mouse</b></td><td> Mouse event</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_left_button</i></td><td> Left button held down on object</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_right_button</i></td><td> Right button held down on object</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_middle_button</i></td><td> Middle button (or clickable wheel) held down on object</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_no_button</i></td><td> No buttons held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_left_press</i></td><td> Left button just pressed on object</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_right_press</i></td><td> Right button just pressed on object</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_middle_press</i></td><td> Middle button (or clickable wheel) just pressed on object</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_left_release</i></td><td> Left button just released on object</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_right_release</i></td><td> Right button just released on object</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_middle_release</i></td><td> Middle button just released on object</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_mouse_enter</i></td><td> Mouse just entered object's bounding box</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_mouse_leave</i></td><td> Mouse just left object's bounding box</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_mouse_wheel_up</i></td><td> Mouse wheel scrolled upwards</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_mouse_wheel_down</i></td><td> Mouse wheel scrolled downwards</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_global_left_button</i></td><td> Left button held down anywhere</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_global_right_button</i></td><td> Right button held down anywhere</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_global_middle_button</i></td><td> Middle button (or clickable wheel) held down anywhere</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_global_left_press</i></td><td> Left button just pressed anywhere</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_global_right_press</i></td><td> Right button just pressed anywhere</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_global_middle_press</i></td><td> Middle button (or clickable wheel) just pressed anywhere</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_global_left_release</i></td><td> Left button just released anywhere</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_global_right_release</i></td><td> Right button just released anywhere</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_global_middle_release</i></td><td> Middle button just released anywhere</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_left</i></td><td> Joystick 1's left button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_right</i></td><td> Joystick 1's right button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_up</i></td><td> Joystick 1's up button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_down</i></td><td> Joystick 1's down button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_button1</i></td><td> Joystick 1's 1 button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_button2</i></td><td> Joystick 1's 2 button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_button3</i></td><td> Joystick 1's 3 button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_button4</i></td><td> Joystick 1's 4 button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_button5</i></td><td> Joystick 1's 5 button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_button6</i></td><td> Joystick 1's 6 button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_button7</i></td><td> Joystick 1's 7 button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick1_button8</i></td><td> Joystick 1's 8 button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_left</i></td><td> Joystick 2's left button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_right</i></td><td> Joystick 2's right button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_up</i></td><td> Joystick 2's up button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_down</i></td><td> Joystick 2's down button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_button1</i></td><td> Joystick 2's 1 button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_button2</i></td><td> Joystick 2's 2 button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_button3</i></td><td> Joystick 2's 3 button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_button4</i></td><td> Joystick 2's 4 button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_button5</i></td><td> Joystick 2's 5 button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_button6</i></td><td> Joystick 2's 6 button held down</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_button7</i></td><td> Joystick 2's 7 button held down</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_joystick2_button8</i></td><td> Joystick 2's 8 button held down</th></tr>
+	<tr><td><b>ev_collision</b></td><td> Collision with an object</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- The index of the object to check.</i></td><td>object1 for example.</th></tr>
+	<tr><td><b>ev_other</b></td><td> One of the actions listed under 'Other'</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_outside</i></td><td> Whether the instance is outside of the room</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_boundary</i></td><td> Whether the instance is intersecting the boundary</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_game_start</i></td><td> Only triggered at the start of the game</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_game_end</i></td><td> Only triggered at the end of the game</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_room_start</i></td><td> Only triggered at the start of a room</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_room_end</i></td><td> Only triggered at the end of a room</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_no_more_lives</i></td><td> If all lives are depleted (if lives==0)</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_no_more_health</i></td><td> If all health is depleted (if health==0)</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_animation_end</i></td><td> If the object's sprite has reached the end of its animation</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_end_of_path</i></td><td> If the object has reached the end of a path it is following</th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- ev_close_button</i></td><td> If the window's Close button has been pushed</th></tr>
+	<tr><td><i>&nbsp;&nbsp;&nbsp;---- ev_user0... ev_user15</i></td><td> Can only be triggered with this function</th></tr>
+	<tr class="alt"><td><b>ev_draw</b></td><td> Draw event</th></tr>
+	<tr><td><b>ev_trigger</b></td><td> Trigger event. <i><b>NOTE : </b>Triggers are now obsolete! See <a href="../../../017_Obsolete%20Functions/Triggers.html">Obsolete Functions : Triggers</a></i></th></tr>
+	<tr class="alt"><td><i>&nbsp;&nbsp;&nbsp;---- Use the constant you designated to the relevant trigger.</i></td><td>trigger0 for example.</th></tr>
+</table>
+</div>
+  
+<p>
+<br>
+</p>
+
+<h3><b>Example</b></h3>
+<p class="code">
+event_perform_object(obj_Player, ev_keypress, ord("W"));
+</p>
+<p>
+This would perform the event assocated with Keyboard Check Pressed > W key in all instances of the object "obj_Player".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Generating Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="event_user.html">event_user</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+event_perform_object
+ev_create
+ev_destroy
+ev_step
+ev_step_normal
+ev_step_begin
+ev_step_end
+ev_alarm
+ev_keyboard
+ev_keypress
+ev_keyrelease
+ev_mouse
+ev_left_button
+ev_right_button
+ev_middle_button
+ev_no_button
+ev_left_press
+ev_right_press
+ev_middle_press
+ev_left_release
+ev_right_release
+ev_middle_release
+ev_mouse_enter
+ev_mouse_leave
+ev_mouse_wheel_up
+ev_mouse_wheel_down
+ev_global_left_button
+ev_global_right_button
+ev_global_middle_button
+ev_global_left_press
+ev_global_right_press
+ev_global_middle_press
+ev_global_left_release
+ev_global_right_release
+ev_global_middle_release
+ev_joystick1_left
+ev_joystick1_right
+ev_joystick1_up
+ev_joystick1_down
+ev_joystick1_button1...8
+ev_joystick2_left
+ev_joystick2_right
+ev_joystick2_up
+ev_joystick2_down
+ev_joystick2_button1...8
+ev_collision
+ev_other
+ev_outside
+ev_boundary
+ev_game_start
+ev_game_end
+ev_room_start
+ev_room_end
+ev_no_more_lives
+ev_no_more_health
+ev_animation_end
+ev_end_of_path
+ev_close_button
+ev_user0... ev_user15
+ev_draw
+ev_trigger (obsolete)
+-->

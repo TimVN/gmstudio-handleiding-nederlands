@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>surface_save</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>surface_save</h1>
+
+<h2>Saves a surface to disc.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">surface_save(id, fname);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the surface to set as the drawing target.</td></tr>
+	
+	<tr class="alt"><td>fname</td>
+	<td>The name of the saved image file.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will save a surface to disc using the given filename. The surface <i>must</i> be saved as a <tt>*.png</tt> format file.
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(ord("S")<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;surface_save(surf, "test.png");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if the user presses the "S" key on the keyboard and if they do it will save the surface indexed in the variable "surf" to disc.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Surfaces</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="surface_save_part.html">surface_save_part</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+surface_save
+-->

@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>view_object</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>view_object</h1>
+
+<h2>Object whose instance must remain visible in the view.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">view_object[0...7]</p>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this variable you can get (or set) the object that has to be kept in the specified view (from 0 to 7) at all times. If there are multiple instances of this object, only <i>one</i> is followed (usually the 
+first one created, but this is not gauranteed). You can also assign a single instance id to this variable, in which case that particular instance is followed. To prevent any view following, you can set this 
+variable using the special <i>keyword</i> <b>noone</b>.
+<br>
+<br>
+
+<img class="center" src="View_hvbor.png"></img>
+<br>
+<br>
+
+<i><b>NOTE : </b>You can set the distance that an instance or object can move before the view starts following using the <a href="view_hborder.html"><tt>view_hborder</tt></a> and 
+<a href="view_vborder.html"><tt>view_vborder</tt></a> functions.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if instance_exists(obj_Player)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;view_follow[0] = obj_player;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if an instance of the object "obj_Player" exists and if it does, it sets view[0] to follow that instance.
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="view_angle.html">view_angle</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+view_object
+-->

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_queue_dequeue</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_queue_dequeue</h1>
+
+<h2>Dequeues the value from the head of the queue.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_queue_dequeue(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>id</td>
+		<td>The id of the queue to dequeue from.</td></tr>
+
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real or String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will <i>dequeue</i> the head value off of the ds_queue, removing it from the queue and returning the value to be stored in a variable.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !ds_queue_empty(move_queue)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var xx, yy;<br>
+&nbsp;&nbsp;&nbsp;xx = ds_queue_dequeue(move_queue);<br>
+&nbsp;&nbsp;&nbsp;yy = ds_queue_dequeue(move_queue);<br>
+&nbsp;&nbsp;&nbsp;move_towards_point(xx, yy, 4);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the ds_queue indexed in the variable "move_queue" to see if it is empty, and if it is not, it then dequeues the two values from the head of the queue and uese them to set 
+a direction for movement.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Queues</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_queue_head.html">ds_queue_head</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!--KEYWORDS
+ds_queue_dequeue
+-->

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_file_write_file</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_file_write_file</h1>
+  
+<h2>Writes contents of a local file to a Steam Cloud file.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_file_write_file(steam_filename, local_filename);
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>steam_filename</td>
+		<td>The Steam Cloud file to copy over.</td></tr>
+
+		<tr class="alt"><td>local_filename</td>
+		<td>The local file to use to copy from.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can copy the contents of a locally saved file to a file that is synchronised with the Steam Cloud. The local file <i>must exist</i> before using this function, and it will return a value 
+of 0 if it fails for whatever reason and a value greater than 0 if it succeeds.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example:</h3>
+<p class="code">
+steam_file_write_file("rm_koala.png", "Koala2.png");
+</p>
+<p>
+The above code will copy the contents of the file "Koala2.png" to the Steam Cloud file "rm_koala.png".
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_file_read.html">steam_file_read</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_file_write_file
+-->

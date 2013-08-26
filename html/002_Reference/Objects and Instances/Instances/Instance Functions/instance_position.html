@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>instance_position</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>instance_position</h1>
+
+<h2>Checks for a collision with the specified object at a specific location and returns its id.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">instance_position( x, y, obj );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x</td>
+	<td>The x position to check for instances.</td></tr>
+	
+	<tr class="alt"><td>y</td>
+	<td>The y position to check for instances.</td></tr>
+	
+	<tr><td>obj</td>
+	<td>The object to check for instances of.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check a position for a collision with another instance or all instances of an object. When you use this you are checking a single point in the room for an instance or an 
+object. This check will be done against the bounding box of the instance or against the mask of the instance if that instance has precise collisions checked and will return the unique instance 
+<a href="../../Instances/Instance%20Properties/id.html"><tt>id</tt></a>. If you do not need the id of the colliding instance you should consider using 
+<a href ="../../../Movement%20and%20Collisions/Collisions/position_meeting.html"><tt>position_meeting</tt></a> instead. This function also accepts the special keywords <b>all</b> and <b>other</b> 
+and will return the keyword <b>noone</b> if no collision occurs.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<p><b>Example :</b></p>
+<p class="code">
+var inst;<br>
+inst = instance_position(mouse_x, mouse_y, obj_Pause_Button);<br>
+if inst != noone<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;with (inst) image_index=1;<br>
+&nbsp;&nbsp;&nbsp;instance_create(room_width / 2, 0, obj_Menu);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check for a collision with an instance of "obj_Pause_Button" at the mouse position, and if there is one it will then use the returned id to set its image_index to a new value before 
+creating a new instance of the object "obj_Menu".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Functions</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="Setting_Up_GM.html">  </a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+instance_position
+-->

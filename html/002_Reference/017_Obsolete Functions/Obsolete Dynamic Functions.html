@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Obsolete Dynamic Functions</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Obsolete Dynamic Functions</h1>
+  
+<h2>
+These functions deal with the generation of resources at run time.
+</h2>
+<p>
+ 
+<h3> <b>Object Function List :</b> </h3>
+<div class="param">
+<table>
+	<tr><th>Function</th><th>Description</th></tr>
+
+	<tr><td>object_add</td><td>Adds a new object. It returns the index of the object. You can now use this index in the routines above to set certain properties of the object and then you can use the index 
+	to create instances of the object.</td></tr>
+	
+	<tr class="alt"><td>object_delete</td><td>Deletes the object with the given index. Make sure no instances of the object exist in any of the rooms.</td></tr>
+	
+	<tr><td>object_event_add</td><td>To give the object a behavior we must define events for the object. You can only add code actions to events. You need to specify the object, the event type, the event 
+	number (use the constants that have been specified before for the event_perform() function). Finally you provide the code string that must be executed. You can add multiple code actions to each event.</td></tr>
+	
+	<tr class="alt"><td>object_event_clear</td><td>You can use this function to clear all the actions for a particular event.</td></tr>
+	
+	<tr><td>object_set_parent</td><td>Set the <i>parent</i>for an object.</td></tr>
+
+</table>
+</div>
+
+<h3> <b>Variable Function List :</b> </h3>
+<div class="param">
+<table>
+	<tr><th>Function</th><th>Description</th></tr>
+
+	<tr><td>variable_global_exists</td><td>Returns whether a global variable with the given name (a string) exists.</td></tr>
+	
+	<tr class="alt"><td>variable_local_exists</td><td>Returns whether an instance variable with the given name (a string) exists for the current instance.</td></tr>
+	
+	<tr><td>variable_global_get</td><td>Returns the value of the global variable with the given name (a string).</td></tr>
+	
+	<tr class="alt"><td>variable_global_array_get</td><td>Returns the value of index ind of the global array variable with the given name (a string).</td></tr>
+	
+	<tr><td>variable_global_array2_get</td><td>Returns the value of index ind1,ind2 of the global 2-dimensional array variable with the given name (a string).</td></tr>
+	
+	<tr class="alt"><td>variable_local_get</td><td>Returns the value of an instance variable with the given name (a string).</td></tr>
+	
+	<tr><td>variable_local_array_get</td><td>Returns the value of index ind of an instance array variable with the given name (a string).</td></tr>
+	
+	<tr class="alt"><td>variable_local_array2_get</td><td>Returns the value of index ind1,ind2 of an instance 2-dimensional array variable with the given name (a string).</td></tr>
+	
+	<tr><td>variable_global_set</td><td>Sets the global variable with the given name (a string) to the given value</td></tr>
+	
+	<tr class="alt"><td>variable_global_array_set</td><td>Sets the index ind in the global array variable with the given name (a string) to the given value.</td></tr>
+	
+	<tr><td>variable_global_array2_set</td><td>Sets the index ind1,ind2 in the global 2-dimensional array variable with the given name (a string) to the given value.</td></tr>
+	
+	<tr class="alt"><td>variable_local_set</td><td>Sets an instance variable with the given name (a string) to the given value.</td></tr>
+	
+	<tr><td>variable_local_array_set</td><td>Sets the index ind in an instance array variable with the given name (a string) to the given value.</td></tr>
+	
+	<tr class="alt"><td>variable_local_array2_set</td><td>Sets the index ind1,ind2 in an instance 2-dimensional array variable with the given name (a string) to the given value.</td></tr>
+	
+</table>
+</div>
+
+<h3> <b>Resource Function List :</b> </h3>
+<div class="param">
+<table>
+	<tr><th>Function</th><th>Description</th></tr>
+
+	<tr><td>sprite_add_sprite</td><td>Adds the sprite stored the file fname to the set of sprite resources. The file must be a .gmspr file that is saved in the sprite property form in GameMaker.</td></tr>
+	
+	<tr class="alt"><td>background_add_background</td><td>Adds the background stored the file fname to the set of background resources. The file must be a .gmbck file that is saved in the 
+	background property form in GameMaker.</td></tr>
+		
+</table>
+</div>
+
+<h3> <b>Miscellaneous Function List :</b> </h3>
+<div class="param">
+<table>
+	<tr><th>Function</th><th>Description</th></tr>
+
+	<tr><td>room_set_code</td><td>Sets the initialization code string for the room with the indicated index.</td></tr>
+	
+	<tr class="alt"><td>script_get_text</td><td>Returns the text string of the script with the given index.</td></tr>
+	
+	<tr><td>execute_string</td><td>Execute the piece of code in the string str with the indicated arguments.</td></tr>
+
+	<tr class="alt"><td>execute_file</td><td>Execute the piece of code in the file with the indicated arguments.</td></tr>
+	
+	<tr><td>execute_program</td><td>Executes program "prog" with arguments "arg". "wait" indicates whether to wait for finishing.</td></tr>
+
+	<tr class="alt"><td>execute_shell</td><td>Executes the program (or file) in the shell.</td></tr>
+	
+	<tr><td>timeline_moment_add</td><td>Adds a code action to the time line at moment step. If the step does not exist it is created. So you can add multiple code actions for the same 
+	moment.</td></tr>
+
+</table>
+</div>
+
+<h3> <b>Why These Are Obsolete</b> </h3>
+<p>
+These functions cannot be used any more due to changes in the underlying runner that <i>GameMaker:Studio</i> uses to generate the device specific packages making it impossible to generate objects and code 
+"on the fly".
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Obsolete Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Obsolete%20Transition%20Functions.html">Transition Functions</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+object_add (obsolete)
+object_delete (obsolete)
+object_event_add (obsolete)
+object_event_clear (obsolete)
+object_set_parent (obsolete)
+
+variable_global_exists (obsolete)
+variable_local_exists (obsolete)
+variable_global_get (obsolete)
+variable_global_array_get (obsolete)
+variable_global_array2_get (obsolete)
+variable_local_get (obsolete)
+variable_local_array_get (obsolete)
+variable_local_array2_get (obsolete)
+variable_global_set (obsolete)
+variable_global_array_set (obsolete)
+variable_global_array2_set (obsolete)
+variable_local_set (obsolete)
+variable_local_array_set (obsolete)
+variable_local_array2_set (obsolete)
+
+sprite_save_sprite (obsolete)
+background_save_background (obsolete)
+execute_string (obsolete)
+execute_file (obsolete)
+execute_program (obsolete)
+execute_shell (obsolete)
+room_set_code (obsolete)
+script_get_text (obsolete)
+timeline_moment_add (obsolete)
+--> 

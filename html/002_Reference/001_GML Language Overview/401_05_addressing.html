@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Addressing Variables in Other Instances</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Addressing Variables in Other Instances</h1>
+
+<h2>Here you can find various methods for addressing variables in other Instances.</h2>
+
+<p>
+In the sections dedicated to <a href="../Variables/index.html">variables</a> you found out how to create and create and use variables within a single instance, or on a global scope, but what happens if 
+you want to one instance to access a variable in another, different one? There are many cases when you may want to do this, for example in a collision with a bullet object, you may want to find out how much 
+damage the bullet does by accessing a variable in the bullet, or you might want to stop the motion of all the balls in a puzzle , or you might want to move the main character to a particular position, or any 
+number of other situations you typically come across in any game. Thankfully the GameMaker Language comes equiped with mechanisms to achieve this.
+<br>
+<br>
+
+<h3>Using a point "."</h3>
+<p>
+One of the most common methods for accessing or changing a variable in another instance is to use it's object name as an identifier and then use a point "." to tell <i>GameMaker</i> that the variable used after 
+is to be assigned or changed in that object. In practice it would look like this :
+<br>
+<br>
+<p class="code">
+obj_ball.speed = 0;<br>
+</p>
+
+<p>
+<br>
+With the above code you are setting the speed of <i>all</i> instances of "obj_ball", so in this way you can change variables in all instances of a specific object. But what if you want to set the speed of only <i>one</i> 
+particular ball, rather than all the balls? This seems slightly more difficult, but the same principle applies, only that instead of using the object name to signify all instances of a specific object, we are going to use the 
+<b>instance id</b> to tell <i>GameMaker:Studio</i> that we only want to deal with a single instance.
+<br>
+<br>
+Now, the <b>instance id</b> is the unique identifying number that is given to each and every instance created in your game. When you put instances in a room in the room editor, this instance id is shown at the 
+bottom of the screen when you hover the mouse cursor over the instance, but even if you create an instance through code it still has it's unique id number. These numbers are always larger than or equal to 100000, 
+and such a number can also be used as the left-hand side of the point. <i><b>Note : </b>The dot will get interpreted as the decimal point in a real number normally, so to avoid this, put brackets around it!</i>
+<br>
+<br>
+The following code is an example of how this should be written :
+<br>
+<br>
+
+<p class="code">
+(100012).speed = 0;<br>
+</p>
+<p>
+<br>
+Finally, you can use some special <i>keywords</i> or even variables themselves to identify other instances in your game. A <i>keyword</i> is a special type of variable that <i>GameMaker:Studio</i> recognises 
+and interprets for you in very specific ways. The following Keywords exist :
+
+<div class="compat">
+<table>
+	<tr><th>Keyword</th><th>Description</th></tr>
+
+	<tr><td>self</td>
+	<td>The instance which is executing the current block of code.<td></tr>
+	
+	<tr class="alt"><td>other</td>
+	<td>The other instance involved in a collision event, or the other instance from a <a href="401_18_with.html"><tt>with</tt></a> function.</td></tr>
+
+	<tr><td>all</td>
+	<td>All instances currently active in the room.</td></tr>
+	
+	<tr class="alt"><td>noone</td>
+	<td>No instance at all (This may seem odd, but it is exceptionally useful as you will see in other parts of the manual).</td></tr>		
+</table>
+</div>
+
+<p>
+<br>
+As for using variables, it's simply a case of storing an <b>instance id</b> in a variable and then using that before the point in a piece of code. The following examples illustrate this...
+<br>
+<br>
+Using a keyword to set all instances :
+<br>
+<br>
+<p class="code">
+if instance_position(mouse_x, mouse_y, all) = noone<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;all.speed = 0;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+<br>
+
+Using a variable to set a single instance :
+<br>
+<br>
+<p class="code">
+var nnn;<br>
+nnn = instance_create(100, 100, obj_ball);<br>
+nnn.speed = 8;<br>
+nnn.direction = random(360);<br>
+</p>
+<p>
+<br>
+
+These are all perfectly valid ways of reading, changing and setting variables in other instances, and works because the point is actually an <i>operator</i>. It takes a value as left operand and a variable (address) 
+as right operand, and returns the address of this particular variable in the indicated object or instance. All the object names, and the special objects indicated above simply represent values and these can be dealt 
+with like any other value. Object names, the special <i>keywords</i>, and the <b>instance id</b>s can also be used in a number of other functions, as they are actually treated as constants in the programs you 
+write.
+<br>
+<br>
+
+<h3>Using "other"</h3>
+<p>
+The special <i>keyword</i> <b>other</b> has two different ways that it can be used to reference a specific instance : when used in a <tt><b>with</b></tt> function (explained <a href="401_18_with.html">here</a>) 
+or when used in a <a href="../../000_Using%20GameMaker/Events/Collision%20Event.html">collision event</a>, which is what this section is going to explain.
+<br>
+<br>
+
+A collision event can only happen between two instances. Sure, you can have multiple collisions between multiple instances, but they are all resolved by <i>GameMaker:Studio</i> on a 1-on-1 basis, with the instance 
+that has the collision event and the "other" instance that is involved. So, imagine you have a player object, enemy objects and bullet objects that the enemy can fire at you. You can assign each enemy a single bullet 
+instance but with a different damage variable randomly assigned to it when created, for example :
+<br>
+<br>
+
+<p class="code">
+var nnn;<br>
+nnn = instance_create(x, y, obj_Bullet);<br>
+nnn.damage = 5 + irandom(5);<br>
+nnn.speed = 8;<br>
+nnn.direction = point_direction(x, y, obj_Player.x, obj_Player.y);<br>
+</p>
+<p>
+<br>
+
+See how we set it's variables ising the point method outlined above? But what about the player object? How will it detect the damage that it has to take? By using <b>other</b> in the collision event, of course!
+<br>
+<br>
+<p class="code">
+hp -= other.damage;<br>
+if hp &lt;= 0 instance_destroy();<br>
+</p>
+<p>
+<br>
+the above code will deduct the amount stored in the <i>other</i> instances "damage" variable from the player "hp" variable, then checks to see if the "hp" is lower than or equal to 0. if it is then it destroys the player object. 
+Please note that <b>other</b> used in this way <i>only works in the collision event</i> and that the other instance must have the variable being checked or else an error will be thrown. however you can assign values to 
+variables, or even create new ones, using <b>other</b> in the collision event too, like this :
+<br>
+<br>
+<p class="code">
+other.mana += 10; //add ten to the other instance "mana" variable<br>
+other.hit = true; //set the other instance variable "hit" to true, ceating it if the variable doesn't already exist<br>
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_06_arrays.html">Arrays</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+self
+other
+all
+noone
+instance id
+-->

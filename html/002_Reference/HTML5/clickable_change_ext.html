@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>clickable_change_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>clickable_change_ext</h1>
+  
+<h2>Changes the sprite and the sprite properties for a clickable icon.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">clickable_change_ext(index, x, y, tpe, alpha, scale)</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the clickable icon to change.</td></tr>
+
+	<tr  class="alt"><td>x</td>
+	<td>The new x position within the <i>window</i>.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The new y position within the <i>window</i>.</td></tr>
+	
+	<tr  class="alt"><td>tpe</td>
+	<td>The texture page entry for the sprite to be used (use <a href="../Game%20Assets/Sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>).</td></tr>
+	
+	<tr><td>scale</td>
+	<td>The scale of the icon (default 1).</td></tr>
+	
+	<tr  class="alt"><td>alpha</td>
+	<td>The image alpha of the icon (default 1).</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can change the sprite and position of a clickable icon previously created with <a href="clickable_add.html"><tt>clickable_add</tt></a>. Bear in mind that the position is based on the 
+window, <i>not</i> the canvas, (0,0) positon and that the sprite must be areferenced directly from the texture page (see: <a href="../Game%20Assets/Sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>). 
+This function also permits you to change the scale of the sprite used (as a multiplier so that 1 is the default, 0.5 would be half and 2 would be double) and the alpha value from 0 (fully transparent) to 1 (fully opaque) 
+for the final icon on the screen.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+switch (room)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case rm_Menu: clickable_change_ext(global.Help_Icon, 32, 32, sprite_get_tpe(spr_MS_Help, 1), 2, 1); break;<br>
+&nbsp;&nbsp;&nbsp;case rm_Game: clickable_change_ext(global.Help_Icon, 200, 32, sprite_get_tpe(spr_MS_Help, 0), 1, 0.5); break;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will change the image index and positon of the clickable icon indexed in the variable "global.Help" depending on the current room, changing the icon scale and alpha too.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">HTML5</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="clickable_delete.html">clickable_delete</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+clickable_change_ext
+-->

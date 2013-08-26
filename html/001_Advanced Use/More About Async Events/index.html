@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>More About Async Events</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>More About Async Events</h1>
+
+<h2>This is the event that will be triggered by any call-backs received.</h2>
+
+<p>
+An asynchronous event is one that is fired off when <i>GameMaker:Studio</i> receives a "call back" from some external source, which can be from the web or from the device running your game. Basically, you tell 
+<i>GameMaker:Studio</i> to do something, like load an image, and it'll start to do this but continue doing whatever it else it has to do meanwhile its working. Then, when the request has been completed, a 
+call-back will be sent to <i>GameMaker:Studio</i> and any Asynchronous Events defined for that type of call back will be fired. Please note that the Asynchronous Events are fired for all instances that have them, 
+much like the key events, so you can do an <tt>http_get</tt> call in one instance, yet have the Asynchronous HTTP event in another.
+<br>
+<br>
+
+<i><b>NOTE : </b>You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results when 
+using any of the following events.</i>
+<br>
+<br>
+
+There are five types of <i>sub-events</i> associated with the Asynchronous event, and they are all explained in the sections below:
+<blockquote>
+	<ol>
+		<li><a href="Image%20Loaded%20and%20Sound%20Loaded%20Events.html">Image Loaded and Sound Loaded Events</a><br>
+		<li><a href="HTTP.html">HTTP Event</a><br> 
+		<li><a href="Dialogs.html">Dialogs Event</a><br>
+		<li><a href="IAP.html">IAP (In App Purchases) Event</a><br>
+		<li><a href="Cloud.html">Cloud Event</a><br>
+		<li><a href="Networking.html">Networking Event</a><br>
+		<li><a href="Steam.html">Steam Event</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Advanced Use</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="007_Configurations.html">Configurations</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+XSS
+http event
+user interactions event
+image loaded event
+sound loaded event
+IAP Event
+Cloud Event
+Steam Event
+Dialogs Event
+-->

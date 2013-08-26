@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>win8_appbar_add_element</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>win8_appbar_add_element</h1>
+
+<h2>Add an element to the slide-out App Bar at the bottom of your game.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">win8_appbar_add_element(type, icon, label, section, tooltip, callback);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>type</td>
+	<td>The type of element to add, either "button" or "separator".</td></tr>
+	
+	<tr class="alt"><td>icon</td>
+	<td>The icon name.</td></tr>
+	
+	<tr><td>label</td>
+	<td>The icon label.</td></tr>
+	
+	<tr class="alt"><td>section</td>
+	<td>The section of the App Bar to add the element too. Either "selection" or "global".</td></tr
+
+	<tr><td>tooltip</td>
+	<td>the tool-tip string to explain the button on hover</td></tr>
+	
+	<tr class="alt"><td>callback</td>
+	<td>The script to call when the element is used (-1 for no callback).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>string
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will add an element to the App Bar for your game (the App Bar is accessed by <i>right clicking</i> on your game, but will only appear if you have enabled it using 
+the function <a href="win8_appbar_enable.html"><tt>win8_appbar_enable</tt></a>). The function will return a unique identifyier as a string that you can store to use in other 
+functions later.
+<br>
+<br>
+
+You must first choose whether to a add a "button" or a "separator", and then pick an icon for it 
+if it is a button (for a separator you should use an empty string "" for this). For a complete list of all icons available for the App Bar please see 
+<a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh770557.aspx" target="_blank">here</a>.
+<br>
+<br>
+
+Next you have the <b>label</b> which is a short name that will be placed beneath the icon (this can be an empty string "" if you wish), and then you should set the <b>section</b> 
+of the App Bar that you want the element to be added to. The <b>section</b> string "global" maps to the right of the App Bar and "selection" maps to left in LTR (left-to-right) 
+layouts (the opposite is true in RTL (right-to-left) layouts).
+<br>
+<br>
+
+Finally you have to give it a <b>tooltip</b> so that when your player hovers the mouse over it they can get some information on what it does, and a <b>callback</b> script. The 
+callback script will be run whenever the button is pressed (if it is a separator, or you do not wish to do anything, you can set this to -1).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+win8_appbar_enable(true);<br>
+elementId[0] = win8_appbar_add_element("button", "repair", "Game Settings", "selection", "Change the global game settings", scr_Settings);<br>
+elementId[1] = win8_appbar_add_element("button", "pause", "Pause/Unpause", "selection", "Pause or unpause the game", scr_PauseGame);<br>
+elementId[2] = win8_appbar_add_element("button", "clear", "Quit", "global", "Quit to desktop", scr_QuitGame);<br>
+</p>
+<p>
+The above code will switch on the App Bar, then add three buttons to it. The first two are on the left and will run a script to change the game settings or pause/unpause the 
+game, while the third will run a script to end the game. All three have their unique id stored in an array in case we need to access them later.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows 8</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="win8_appbar_remove_element.html">win8_appbar_remove_element</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+win8_appbar_add_element
+-->

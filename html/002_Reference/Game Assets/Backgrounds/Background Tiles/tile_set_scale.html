@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>tile_set_scale</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>tile_set_scale</h1>
+
+<h2>Sets a tile's horizontal and vertical scaling.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">tile_set_scale(index, xscale, yscale);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>index</td>
+	<td>The index of the tile to set.</td></tr>
+	
+	<tr><td>xscale</td>
+	<td>The tile's horizontal scale.</td></tr>
+	
+	<tr><td>yscale</td>
+	<td>The tile's vertical scale.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can scale a tile which will draw the tile image stretched by the given amount (with 1 being the default horizontal and vertcial scale).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tile;<br>
+tile = tile_layer_find(-1000, mouse_x, mouse_y);<br>
+if tile_get_xscale(tile) != 1 || tile_get_yscale(tile) !=1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;tile_set_scale(tile, 1, 1);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will first get the index of a tile at the mouse position with a depth of -1000 and then use that value to check whether the tile x and y scale is anything other than 1, and if it is it sets 
+the tile scale to 1.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Background Tiles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="tile_exists.html">tile_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tile_set_scale
+-->

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>What Is A Vector?</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>What Is A Vector?</h1>
+
+<h2>This section explains what a vector is.</h2>
+
+<p>
+At some point when creating a game of any complexity you will probably have to deal with <i>vectors</i>. They are used in physics, in AI, in trigonometry and many other situations, but what is a vector? Well, to put 
+it simply, a vector is a directed quantity. Lets start by looking at a 1 dimensional vector, which is just the same as a single number, by drawing a numbered linewith an arrow starting at zero and ending at 5. This is the 
+vector <i>a</i> which is equal to 5 and if we draw another arrow starting at the 5 and ending at the 8 we have vector <i>b</i> which is equal to 3.
+<br>
+
+<img class="center" src="1d_vector_image.png"></img>
+
+<p>
+You should realise that it doesn't matter <i>where</i> a vector starts, all that matters is how long it is and what direction it goes in. So vector <i>b</i> starts at 5, is 3 units long and points to the "right", making 
+it identical to a vector starting at 0 and going to 3. Now, you can also add these vectors together, by putting the two vectors <i>a</i> and <i>b</i> end to end to get the vector <i>c</i> which is equal to 8. What 
+about negative numbers? Well, if, in the above image, a vector that points to the "right" corresponds to a positive number, you can see that a vector pointing to the "left" would correspond to a negative number, 
+making a one-dimensional vector nothing more than a signed (+/-) number. This explains the essential concept of a vector: only length and direction ("left" or "right" in this case) count, <i>not position</i>.
+<br>
+<br>
+
+So, what about 2 dimensional vectors? Well, we can think of them as consisting not just of "left" and "right, but "up" and "down" too:
+<br>
+
+<img class="center" src="2d_vector_image_1.png"></img>
+
+<p>
+Now, those are not actually vectors yet as we still have to reduce them down using their start and end coordinates. Looking at vector <i>a</i> we can see it has a start coordinate of [2,2] and an end coordinate of 
+[4,3] and so to get the vector from this we need to reduce it down by subtracting the end coordinates from the start coordinates like this : [(x2-x1), (y2-y1)] = [(4-2), (3-2)] = [2,1]. Lets do the same for vector 
+<i>b</i> now : [(-1.2 -(-3.2)) ,(2.1 - 1.1)] =  [2 ,1]. Notice something? Those two vectors are the same! This is yet another demonstration that a vector has no position, only direction and length, and we can draw 
+those vectors relative to each other around a local [0,0] axis:
+<br>
+
+<img class="center" src="2d_vector_image_2.png"></img>
+
+<p>
+This means that a 2D vector is defined by two values, an <i>x</i> and a <i>y</i> position relative to the local [0,0] axis. And what about 3D vectors? Well, they have the added dimension of "depth" to contend 
+with and would be calculated as positions <i>x</i>, <i>y</i> and <i>z</i> around a local axis something like this:
+<br>
+
+<img class="center" src="3d_vector_image.png"></img>
+
+<p>
+
+
+</p>
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Vector Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Normalised%20Vectors.html">Normalised Vectors</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+<!-- KEYWORDS
+vectors
+what is a vector
+-->

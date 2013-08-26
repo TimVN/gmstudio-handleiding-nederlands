@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>font_replace</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>font_replace</h1>
+
+<h2>Replaces an indexed font asset with a new one.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">font_replace(ind, name, size, bold, italic, first, last);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the font that shall be replaced (ie all references to this resource past this function will refer to the new font, not the original).</td></tr>
+	
+	<tr><td>name</td>
+	<td>The name of the font to be added (eg 'Arial').</td></tr>
+	
+	<tr><td>size</td>
+	<td>The size, in points, of the font.</td></tr>
+	
+	<tr><td>bold</td>
+	<td>Whether the font is bold (true) or not (false).</td></tr>
+	
+	<tr><td>italic</td>
+	<td>Whether the font is italic (true) or not (false).</td></tr>
+	
+	<tr><td>first</td>
+	<td>The first character to include (if you're unsure, go for 32)</td></tr>
+	
+	<tr><td>last</td>
+	<td>The last character to include (if you're unsure, go for 128).</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to replace an already existing font resource with one of the fonts that are installed on the system the game is running on. You need to supply a valid font index to be replaced 
+(one that has been defined in the <i>GameMaker:Studio</i> resource tree or one that has been added previously) and you can define the size of the font (in points), as well as whether the font should 
+be <b>bold</b> or <i>italic</i>, and you can also define the range of characters to include (for a full table of available characters and their UTF8 value see <a href="font_tables.html">Font tables</a>).
+<br>
+<br>
+
+This function is for <i><b>HTML5 only</b></i>, with the following table showing the fonts that are standard across these platforms and that can be used without problems. Any other font may or may not 
+exist on the computer that is running your game, so the use of this function should be limited to these standard fonts:
+<br>
+<br>
+
+<div class="compat">
+<table class="compat">
+<tr><th>Windows Font Name</th><th>Mac Font Name</th><th>Font Family</th></tr>
+
+	<tr><td>Arial</td><td>Arial / Helvetica</td><td>sans-serif</td></tr>
+	<tr><td>Arial Black</td><td>Arial Black / Gadget</td><td>sans-serif</td></tr>
+	<tr><td>Comic Sans MS</td><td>Comic Sans MS</td><td>cursive</td></tr>
+	<tr><td>Courier New</td><td>Courier New</td><td>monospace</td></tr>
+	<tr><td>Georgia</td><td>Georgia</td><td>serif</td></tr>
+	<tr><td>Impact</td><td>Impact / Charcoal</td><td>sans-serif</td></tr>
+	<tr><td>Lucida Console</td><td>Monaco</td><td>monospace</td></tr>
+	<tr><td>Lucida Sans Unicode</td><td>Lucida Grande</td><td>sans-serif</td></tr>
+	<tr><td>Palatino Linotype / Book Antiqua</td><td>Palatino</td><td>serif</td></tr>
+	<tr><td>Tahoma</td><td>Geneva</td><td>sans-serif</td></tr>
+	<tr><td>Times New Roman</td><td>Times New Roman / Times</td><td>serif</td></tr>
+	<tr><td>Trebuchet MS</td><td>Trebuchet MS</td><td>sans-serif</td></tr>
+	<tr><td>Verdana</td><td>Verdana / Geneva</td><td>sans-serif</td></tr>
+	<tr><td>Georgia</td><td>Georgia</td><td>serif</td></tr>
+	<tr><td>Symbol</td><td>Symbol</td><td>N/A</td></tr>
+	<tr><td>Webdings</td><td>Webdings</td><td>N/A</td></tr>
+	<tr><td>Wingdings</td><td>Zapf Dingbats</td><td>N/A</td></tr>
+	<tr><td>MS Sans Serif</td><td>Geneva</td><td>sans-serif</td></tr>
+	<tr><td>MS Serif</td><td>New York</td><td>sans-serif</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+font_replace(fnt_Custom, 'Arial', 24, true, true, 32, 128);<br>
+</p>
+<p>
+This will replace the font indexed in the variable "fnt_Custom" for a new font that is 24pt in size, uses "Arial" and is bold and italic. The font range includes capital and lower case letters, numbers and all common 
+punctuation.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fonts</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="font_replace_sprite.html">font_replace_sprite</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+font_replace
+-->

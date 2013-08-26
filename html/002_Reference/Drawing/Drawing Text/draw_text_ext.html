@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_text_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_text_ext</h1>
+
+<h2>draws text at a point in the room with a specific spacing and within a limited area.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_text_ext(x, y, string, sep, w);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of the drawn string.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of the drawn string.</td></tr>
+	
+	<tr><td>string</td>
+	<td>The string to draw.</td></tr>
+	
+	<tr><td>sep</td>
+	<td>The distance in pixels between lines of text.</td></tr>
+	
+	<tr><td>w</td>
+	<td>The maximum width in pixels of the string per line.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will draw text in a similar way to <a href="draw_text.html"><tt>draw_text</tt></a> only now you can set the space between each line of text (should the text occupy more than one line) 
+and limit the width of the string per line so that should any line exceed this value, <i>GameMaker:Studio</i> will automatically split the text to the next line. A value of -1 for either of these arguments 
+will result in the default spacing being used.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_text_ext(100, 50, keyboard_string, 3, 300);
+</p>
+<p>
+The above code will draw whatever text the user types into the keyboard, spliting it onto new lines every time the string length for that line exceeds 300 pixels. the code will also maintain a separation of 
+3 pixels between lines should this occur.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing text</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_text_color.html">draw_text_color</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_text_ext
+-->

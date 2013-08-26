@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Ini Files</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ini_section_exists</h1>
+  
+<h2>Returns whether or not a section in an open .ini file exists.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">ini_section_exists(section);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>section</td>
+		<td>The section in the open .ini file to check for.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+<p>
+This function checks to see if a section exists in the currently open ini. This is not a necessary check to prevent errors as, when a section does not exist, reading from a non-existent section will just 
+return a defaulted value, however it can be useful to see if an ini file has saved specific data.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ini_open("savedata.ini");<br>
+if !ini_section_exists("save1")<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.savegame = '1';<br>
+&nbsp;&nbsp;&nbsp;}<br>
+ini_close();<br>
+</p>
+<p>
+This will set variable global.savegame to '1' if 'save1' is NOT found. With a for loop, this could be used as a basic way of working out how many save games there are for a game (ie: creating a system for 
+multiple simultaneous save games for one game).
+</p>
+  
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Ini Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ini_key_delete.html">ini_key_delete</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+ini_section_exists
+--> 

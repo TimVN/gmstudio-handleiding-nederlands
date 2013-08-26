@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_set_fog</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_set_fog</h1>
+  
+<h2>Enables or disables the use of fog.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_set_fog(enable, color, start, end)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>enable</td>
+	<td>Turn fog on (true) or off (false).</td></tr>
+	
+	<tr class="alt"><td>color</td>
+	<td>The fog color.</td></tr>
+	
+	<tr><td>start</td>
+	<td>The distance where polygons start to be blended with the fog color.</td></tr>
+
+	<tr class="alt"><td>end</td>
+	<td>The distance at which fog is maximal and nothing can be seen anymore.</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Fog can be used in 3D games to make objects in the distance look blurred or even disappear, which helps in creating atmosphere and it also masks the fact that you are not drawing objects that are far away. Note that 
+The fog start indicates the radius <i>relative to the viewpoint where the fog starts</i>, and the fog end indicates at which radius (also relative) objects will be completely invisible.
+<br>
+<br>
+
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_set_fog(true, c_white, 1000, 2000);
+</p>
+<p>
+The above code sets the fog for a 3D game.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_set_lighting.html">d3d_set_lighting</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_set_fog
+--> 

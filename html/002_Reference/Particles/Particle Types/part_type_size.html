@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_type_size</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_type_size</h1>
+
+<h2>Sets the minimum and maximum start size of the particle type.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_type_size(ind, size_min, size_max, size_incr, size_wiggle);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the particle type to change.</td></tr>
+	
+	<tr><td>size_min</td>
+	<td>The minimum size the particle can start at.</td></tr>
+	
+	<tr><td>size_max</td>
+	<td>The maximum size the particle can start at.</td></tr>
+	
+	<tr><td>size_incr</td>
+	<td>How much the particle should increase or decrease per step.</td></tr>
+	
+	<tr><td>size_wiggle</td>
+	<td>How much should randomly be added or subtracted from the particles size per step.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is used to determine the size of the particle when it is created and can also be used to make the particle increase or decrease in size over it's lifetime. The minimum and maximum 
+size values default at 1 (meaning that the size is the same ratio as the base particle after the <a href="part_type_scale.html"><tt>part_type_scale</tt></a> scale has been set) and if they 
+are set to the same value, the initial size for all particles will be the same, but if set to different values, each particle will start with a random size from within the range, for example if you have a 
+minimum of 0.5 and a maximum of 2, all particles will be created with a size between half and double the base scale.
+<br>
+<br>
+
+You can also set an increment value that will make the particle sprite grow (if a positive number) or shrink (if a negative number) over the lifetime of the particle, with the given amount being 
+added to the particle size each step. This value can be a minimum of (+/-)0.01.
+<br>
+<br>
+
+Finally, you can set the "wiggle" factor. This is a value that will be added or subtracted randomly to the size each step of the particles lifetime. Obviously larger values are more pronounced 
+than smaller ones, and this value can even be a negative with the maximum range being between -20 and 20.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+part_type_shape(particle1, pt_shape_explosion);<br>
+part_type_size(particle1, 2, 2, 0.10, 0.01);<br>
+part_type_scale(particle1, 1, 1);<br>
+part_type_color2(particle1, 16777215, 12632256);<br>
+part_type_alpha3(particle1, 0, 0.20, 0);<br>
+part_type_speed(particle1, 0.20, 0.20, 0, 0);<br>
+part_type_direction(particle1, 0, 359, 0, 20);<br>
+part_type_orientation(particle1, 0, 359, 0, 0, 1);<br>
+part_type_blend(particle1, 0);<br>
+part_type_life(particle1, 40, 60);<br>
+</p>
+<p>
+The above code will set various particle values including the size which is set to double the size whren each particle is created, and then increment the size by 0.01 each step with a wiggle of 0.1 too.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Types</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_type_scale.html">part_type_scale</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_type_size
+-->

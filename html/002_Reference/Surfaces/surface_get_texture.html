@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>surface_get_texture</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>surface_get_texture</h1>
+
+<h2>Returns the texture id for the given surface.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">surface_get_texture(surf);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>surf</td>
+	<td>The index of the surface to get the width of.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns a special id for the surface texture. This value can then be used in other draw functions, particularly in general 3D and some of the 2D primitive functions. 
+<br>
+<br>
+
+<i><b>NOTE : </b>When working with surfaces there is the possibility that they can cease to exist at any time due to them being stored in vRam. You should <b>ALWAYS</b> check that a surface 
+exists using <a href="surface_exists.html"><tt>surface_exists</tt></a> before referencing them directly. For futher information see <a href="index.html">Surfaces</a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tex;<br>
+tex = surface_get_texture(surf);<br>
+draw_primitive_begin_texture(pr_trianglefan, tex);<br>
+draw_vertex_texture(0, 480, 0, 0);<br>
+draw_vertex_texture(640, 480, 1, 0);<br>
+draw_vertex_texture(640, 480, 1, 1);<br>
+draw_vertex_texture(0, 480, 0, 1);<br>
+draw_primitive_end();<br>
+<p>
+The above code will draw a 4 vertex triangle fan textured with the texture held in the "tex" variable, which is itself taken from a previously created surface. 
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Surfaces</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="surface_getpixel.html">surface_getpixel</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+surface_get_texture
+-->

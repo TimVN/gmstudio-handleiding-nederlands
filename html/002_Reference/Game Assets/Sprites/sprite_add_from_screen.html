@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_add_from_screen</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_add_from_screen</h1>
+
+<h2>Adds an area of the screen as a sub-image to a sprite.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_add_from_screen(index, x, y, w, h, removeback, smooth);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sprite to add the new image to.</td></tr>
+	
+	<tr class="alt"><td>x</td>
+	<td>The x position to copy from.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position to copy from.</td></tr>
+	
+	<tr class="alt"><td>w</td>
+	<td>The width of the area to be copied (from the x position).</td></tr>
+	
+	<tr><td>h</td>
+	<td>The height of the area to be copied (from the y position).</td></tr>
+	
+	<tr class="alt"><td>removeback</td>
+	<td>Indicates whether to make all pixels with the background color (left-bottom pixel) transparent.</td></tr>
+	
+	<tr><td>smooth</td>
+	<td>Indicates whether to smooth the edges.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function works in exactly the same way as <a href="sprite_create_from_screen.html"><tt>sprite_create_from_screen</tt></a> only instead of creating a new sprite from the area of the game window 
+that you select, it adds the defined area of the screen as a new sub-image to a previously created sprite.
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+spr_custom = sprite_create_from_screen(0, 0, 32, 32, false, false, 16, 16);<br>
+var i;<br>
+for (i = 1; i &lt; 8; i +=1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;sprite_add_from_screen(spr_Custom, i, 0, 32, 32, false, false, 16, 16);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code creates a sprite from the screen, assigning it's index to the variable "spr_Custom", and then uses a <tt>for</tt> loop to move across the screen and capture various sections which are added 
+into the sprite as sub-images.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_create_from_surface.html">sprite_create_from_surface</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_add_from_screen
+-->

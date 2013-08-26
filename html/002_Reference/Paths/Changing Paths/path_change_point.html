@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>path_change_point</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>path_change_point</h1>
+
+<h2>Changes an existing path points attributes.</h2>
+
+<h3><b>Syntax :</b></h3>
+<p class="code">path_change_point(index, n, x, y, speed);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to change the point of.</td></tr>
+	
+	<tr><td>n</td>
+	<td>The defining point to change the attributes of.</td></tr>
+	
+	<tr><td>x</td>
+	<td>The new x coordinate (relative to the path) of the point.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The new y coordinate (relative to the path) of the point.</td></tr>
+	
+	<tr><td>speed</td>
+	<td>The new speed factor of the point.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can change the position and/or the speed factor of any point previously defined for a path (the path can have been created in the path editor or through code using 
+<a href="path_add.html"><tt>path_add</tt></a>).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+for (var i = 0; i &lt; path_get_number(path0); i ++)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var px = path_get_point_x(path0, i) + 32 - random(64);<br>
+&nbsp;&nbsp;&nbsp;var py = path_get_point_y(path0, i) + 32 - random(64);<br>
+&nbsp;&nbsp;&nbsp;path_change_point(path0, i, px, py, 100);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+<p>
+The above code loops through all the points in the path indexed as "path0" and re-positions all the points to a random position within an area of 64x64 pixels.
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_insert_point.html">path_insert_point</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_change_point
+-->

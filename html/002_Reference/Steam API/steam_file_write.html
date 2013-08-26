@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_file_write</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_file_write</h1>
+  
+<h2>Write a data string to a file for storage on the Steam Cloud.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_file_write(filename, data, size);
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>filename</td>
+		<td>The name of the file to write to.</td></tr>
+
+		<tr class="alt"><td>data</td>
+		<td>The data to write (a string).</td></tr>
+
+		<tr><td>size</td>
+		<td>the size of the data to be written.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to write data to a file, which will then be synchronised with the Steam Cloud when the user exits the game. if the file does not exist, this function will create it for you, and if it 
+does already exists, it will over-write any data that is already stored within the file with the new data string. The function will return a value of 0 if it fails for whatever reason and a value greater than 0 
+if it succeeds.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example:</h3>
+<p class="code">
+var fname="SaveData.txt";<br>
+var data = string(global.Level) + "|" + string(global.Points) + "|" + string(global.HP);<br>
+var len = string_length(data);<br>
+steam_file_write_file(fname, data, len);<br>
+</p>
+<p>
+The above code will prepare a number of local variables and then use them to write to (or create) a file which will then be synchronised with the Steam Cloud.
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_file_write_file.html">steam_file_write_file</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_file_write
+-->

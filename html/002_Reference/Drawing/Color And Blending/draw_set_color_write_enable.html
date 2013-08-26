@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_set_color_write_enable</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_set_color_write_enable</h1>
+
+<h2>Enable or disable seperate channels for drawing.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_set_color_write_enable(red, green, blue, alpha);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>red</td>
+	<td>The color to set for drawing.</td></tr>
+	
+	<tr class="alt"><td>green</td>
+	<td>The color to set for drawing.</td></tr>
+	
+	<tr><td>blue</td>
+	<td>The color to set for drawing.</td></tr>
+	
+	<tr class="alt"><td>alpha</td>
+	<td>The color to set for drawing.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can switch on or off the color channels and the alpha channel for all further drawing. You can use this function to create alpha-channel only surfaces (switch off the RGB writing before 
+using the surface), or to create special effects while drawing to the screen. The default value for each of the components is <tt>true</tt>.
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_color_write_enable(false, false, true, true);<br>
+draw_self();<br>
+draw_set_color_write_enable(true, true, true, true);<br>
+</p>
+<p>
+The above code will draw only the blue and alpha channel of the current sprite for the instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Color And blending</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_set_blend_mode.html">draw_set_blend_mode</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_set_color_write_enable
+-->

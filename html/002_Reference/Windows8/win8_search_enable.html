@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>win8_search_enable</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>win8_search_enable</h1>
+
+<h2>Enable the "search charm" for your game.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">win8_search_enable(callback);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>callback</td>
+	<td>The script to run should a search result come in</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function enables the search function to register your game and include it in any results from the "search charm" of Windows 8. The callback script should take an <tt>
+argument[0]</tt> which is the returned search string that is passed to it when run, but it will only be called if you have supplied a series of search terms using the 
+function <a href="win8_search_add_suggestions.html"><tt>win8_search_add_suggestions</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+win8_search_enable(scr_SearchWords);<br>
+var list;<br>
+list = ds_list_create();<br>
+ds_list_add(list, "smelly fish");<br>
+ds_list_add(list, "Haggis");<br>
+ds_list_add(list, "MacSweeney");<br>
+ds_list_add(list, "the quick brown fox");<br>
+ds_list_add(list, "99 red ballons");<br>
+win8_search_add_suggestions(list);<br>
+ds_list_destroy(list);<br>
+</p>
+<p>
+The above code will enable the search functions for your app and tell Windows to run the callback script should it find a corresponding search term. Some keywords are then added 
+into a ds_list which is used to create the search terms that the "search charm" will find when used.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows 8</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="win8_search_add_suggestions.html">win8_search_add_suggestions</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+win8_search_enable
+-->

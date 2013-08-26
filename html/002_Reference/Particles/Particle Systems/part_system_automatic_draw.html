@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_system_automatic_draw</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_system_automatic_draw</h1>
+
+<h2>Sets whether or not the particles in the particle system should be automatically drawn or not.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_system_automatic_draw(ind, automatic);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the particle system to change.</td></tr>
+	
+	<tr><td>automatic</td>
+	<td>Whether automatic drawing is on (true) or not (false).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to switch off the drawing of a particle system so that any updates done to the system (automatic or otherwise) will not be seen. This is a purely visual option and 
+when set to <tt>false</tt> you will not be able to see the particles as they are not drawn, but they still exists and are changing position, color etc... as they would normally. When automatic 
+drawing is off, you can <i>explicitly</i> order <i>GameMaker:Studio</i> to draw the current state of the particle system using the function <a href="part_system_drawit.html"><tt>
+part_system_drawit</tt></a>, and if you set this function to <tt>true</tt> again you can switch automatic drawing back on.
+<br>
+<br>
+
+One thing to note is that if you are using the simple effects created by the functions <a href="../Simple%20Effects/effect_create_above.html"><tt>effect_create_above</tt></a> or 
+<a href="../Simple%20Effects/effect_create_below.html"><tt>effect_create_below</tt></a> then you can use the values of 0 (for below effects) or 1 (for above effects) as the particle system 
+index and so toggle the automatic draw for these too (this will also work to toggle drawing for the D'n'D particle effects).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+part_system_automatic_draw(global.Sname, false);
+</p>
+<p>
+The above code switches off automatic drawing for the particle system indexed in the global variable "Sname".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Systems</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_system_update.html">part_system_update</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_system_automatic_draw
+-->

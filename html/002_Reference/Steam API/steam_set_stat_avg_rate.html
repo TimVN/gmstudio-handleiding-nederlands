@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_set_stat_avg_rate</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_set_stat_avg_rate</h1>
+  
+<h2>Set an average statistic value.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_set_stat_avg_rate(stat_name, session_count, session_length);
+
+<p>
+<br>
+</p>
+ 
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>stat_name</td>
+		<td>The name of the statistic to set (a string).</td></tr>
+
+		<tr><td>session_count</td>
+		<td class="alt">The value to get the average of (a real number)</td></tr>
+		
+		<tr><td>session_length</td>
+		<td>The time that has been taken since the last time the stat was set (a real number).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> N/A
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function permits you to set an average statistic type with a "sliding window" effect on the average. The "session_count" value is the current value that you wish to average out, while the "session_length" is the 
+the amount of game time since the last call to the function. Please see the <b>extended Example</b> below for further details on how this can be used.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Extended Example:</h3>
+<p>
+Since the average stat function can be complex to understand, we will illustrate it's use with the following example. Consider the case where you'd like to track an average statistic, such as "Points earned per hour". 
+One approach would be to have two stats: an <i>integer</i> stat, "TotalPoints", and a <i>float</i> stat "TotalPlayTimeHours", and then divide the total points by the total time to get the "Points per Hour" value.
+<br>
+<br>
+
+However, once the player has accumulated a significant amount of playtime, the calculated average will change extremely slowly, and the more the user plays the game, the less responsive that average will be. If 
+the user has spent 100 hours playing the game, the calculated average will "lag" by about 50 hours of that, and if they increase their skill, they will not see the increase in "Points Per Hour" that they expect. To get 
+around that we can use a "sliding window" to only calculate the "Points per hour" for the last 10 hours played.
+<br>
+<br>
+
+So, to use this function, we would need to create a Steam stat (in the control panel for the game on the Workshop) called "AvgPointsPerHour" and set it's <b>Window</b> property to 10. Now in your game you 
+would have to add some global variables into an instance at the start:
+<p class="code">
+global.Points = 0;<br>
+global.Time = 0;<br>
+</p>
+<p>
+You would then have some controller object to count up the global "Time" variable in an alarm (for example) every second, while your gameplay would affect the global "Points" variable. At regular intervals while 
+playing (again, in a controller object, perhaps in an Alarm, or at intervals from polling the "Time" value) you would set the stat like this:
+<p class="code">
+steam_set_stat_avg_rate("AvgPointsPerHour", global.Points, (global.Time / 3600));<br>
+global.Points = 0;<br>
+global.Time = 0;<br>
+</p>
+<p>
+Note that we divide time by 3600 since we want the time in <i>hours</i> and not in seconds, and afterward we reset the global "Points" variable and the global "Time" variable to 0 so that the next time the 
+function is called, we get a new average for the statistic. Now, what Steam will do is take this value that you have sent and create an average value over the time that was set for our "window".
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_get_stat_int.html">steam_get_stat_int</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_set_stat_avg_rate
+-->

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>median</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>median</h1>
+  
+<h2>Returns the median (middle number) of up to 16 real value arguments.</h2>
+  
+<h3><b>Syntax :</b></h3>
+<p class="code">median(val1, val2, ... val15);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>val0 ... val15</td>
+	<td>The values to compare.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Real</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns the median of the inputvalues, that is, the middle value. When the number of arguments is even, the smaller of the two middle values is returned and the function can have up to 16 arguments 
+which must all be real values. This means that, for example, <tt>median(43, 12, 25, 19, 6)</tt> would return 19 as it is the middle value between all the rest.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+x = median( 0, x, room_width );<br>
+y = median( 0, y, room_height );
+</p>
+<p>
+This will stop the player from exiting any side of the room, by using median as a clamp. If the player, for instance, moves to the left of the room boundary, its x will be smaller than 0. 
+This will mean the middle number of the first of the medians will be 0, so the player will be jumped to (0,y).
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Real Number Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="min.html">min</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+median
+-->

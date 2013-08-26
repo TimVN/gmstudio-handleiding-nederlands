@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>phy_dynamic</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>phy_dynamic</h1>
+  
+<h2>Returns whether the instance is dynamic or not.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">phy_dynamic;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+A dynamic instance is one that is fully simulated within the physics world and this variable will return <tt>true</tt> if the instance being checked is fully simulated or <tt>false</tt> if it is not.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if other.phy_dynamic<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;with (other)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var dir;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dir = point_direction(x, y, other.x, other.y);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_apply_impulse(x, y, x + lengthdir_x(100, dir), y + lengthdir_y(100, dir));<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code creates a new instance and then defiens it as being a "bullet" in the physics world before giving it a massive impulse along the y axis.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Physics Variables</a>
+	</div>
+	<div style="float:right">
+		next : <a href="phy_kinematic.html">phy_kinematic</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+phy_dynamic
+dynamic
+--> 

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>motion_set</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>motion_set</h1>
+
+<h2>Sets the motion of the calling object to the given direction and speed.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">motion_set(dir, speed);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>dir</td>
+	<td>The new direction.</td></tr>
+	
+	<tr><td>speed</td>
+	<td>The new speed.`</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns :</b> N/A</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function sets a new direction of movement and a new speed to the instance running the code. Note that this <i>does not</i> add to the instances current speed and direction (for that you would use 
+<a href="motion_add.html"><tt>motion_add</tt></a>) but rather forces it to the new settings.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if irandom(9) = 1 motion_set(random(360), 1 + random(3)); <br>
+</p>
+<p>
+This above code will make the instance change speed and direction at random intervals.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Moving Around</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="move_towards_point.html">move_towards_point</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+motion_set
+-->

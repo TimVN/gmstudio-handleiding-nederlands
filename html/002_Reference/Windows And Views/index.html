@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Windows And Views</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Windows And Views</h1>
+
+<h2>This section deals with the functions for manipulating views and the game window.</h2>
+
+<p>
+The "window" is where <i>GameMaker:Studio</i> displays your game, and, depending on the target device, there are different things that can be done with it, like set it to fullscreen or not (for example). Views, 
+however, govern <i>what</i> you see within that window, and so have another series of functions dedictaed to them. The following two sections deal with these two aspects of displaying your game:
+
+<blockquote>
+	<ol>
+		<li><a href="The%20Game%20Window/index.html">The Game Window</a>
+		<li><a href="Views/index.html">Views</a>
+	</ol>
+</blockquote>
+
+<p>
+However, sometimes it's not enough to get information about the game window and views only, and you really need to know things about the display itself. The following function all give you details about the size and 
+orientation of the display as well as the actual mouse coordinates within it too:
+
+<blockquote>
+	<ol>
+		<li><a href="display_reset.html">display_reset</a>
+		<li><a href="display_get_height.html">display_get_height</a>
+		<li><a href="display_get_width.html">display_get_width</a>
+		<li><a href="display_get_orientation.html">display_get_orientation</a>
+		<li><a href="display_get_dpi_x.html">display_get_dpi_x</a>
+		<li><a href="display_get_dpi_y.html">display_get_dpi_y</a>
+		<li><a href="display_set_gui_size.html">display_set_gui_size</a>
+		<li><a href="display_get_gui_width.html">display_get_gui_width</a>
+		<li><a href="display_get_gui_height.html">display_get_gui_height</a>
+		<li><a href="display_mouse_get_x.html">display_mouse_get_x</a>
+		<li><a href="display_mouse_get_y.html">display_mouse_get_y</a>
+		<li><a href="display_mouse_set.html">display_mouse_set</a>
+	</ol>
+</blockquote>
+
+<p>
+There are also a couple of special functions that can be used to save the display, or part of it, to an image file:
+<blockquote>
+	<ol>
+		<li><a href="screen_save.html">screen_save</a>
+		<li><a href="screen_save_part.html">screen_save_part</a>
+	</ol>
+</blockquote>
+<p>
+
+<i><b>NOTE: </b>On Windows8 SurfaceRT devices, there is a canvas limit of 2048x2048, which means the drawing canvas cannot go above those dimensions (neither with views, nor by setting the game 
+window directly) otherwise your game graphics will be corrupted or degraded.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../The Window/index.html">The Window</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+display properties
+SurfaceRT canvas limit
+--> 

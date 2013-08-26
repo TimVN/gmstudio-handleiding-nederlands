@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>persistent</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>persistent</h1>
+
+<h2>Sets the persistence of the instance.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">persistent</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Boolean
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable can be read to find out if the instance is flagged as persistent or not, or it can used to set persistence to <tt>true</tt> (persistent) or <tt>false</tt> (not persistent) for the instance. A persistent 
+instance is one that will be "carried over" from room to room, meaning (for example) that it only has to be created once at the start of the game and it will be present in all further rooms. Care should be taken with 
+persistence as it is easy to lose track of persistent instances which can lead to problems later in the development of the game.
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !persistent<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;persistent = true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check the instance to see if persistence is flagged as <tt>false</tt> and if the instance is NOT peristent the persistence flag is set to <tt>true</tt>.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="depth.html">depth</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+persistent
+-->

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>keyboard_string</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>keyboard_string</h1>
+
+<h2>Holds a string of the last keys pressed.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">keyboard_string;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable holds a string containing the last (at most) 1024 characters typed on the keyboard. This string will only contain printable characters typed, but it <i>will</i> correctly respond to pressing the 
+backpsace key by erasing the last character. This variable is <i>not</i> read only and you can change it, for example to set it to "" (an empty string) if you handled it already, or use the <a href="../../Strings/index.html">
+String Functions</a> to manipulate it.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if string_length(keyboard_string) &gt; 15<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;keyboard_string = string_copy(keyboard_string, 1, 15);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will  limit the length of the keyboard string to 15 characters, removing those that are over that limit by copying the first fifteen characters back into the variable.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Keyboard Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="keyboard_set_map.html">keyboard_set_map</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+keyboard_string
+-->

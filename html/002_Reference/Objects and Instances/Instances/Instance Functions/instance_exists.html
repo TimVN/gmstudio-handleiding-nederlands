@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>instance_exists</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>instance_exists</h1>
+
+<h2>Returns whether an instance of the given object exists in the current room.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">instance_exists(obj);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>obj</td>
+	<td>The object or instance to check for the existence of.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used in two ways depending on what you wish to check. You can give it an object_index to check for, in which case this function will return <tt>true</tt> if any active instances of the 
+specified object exist in the current room, or you can also supply it with an instance id, in which case this function will return <tt>true</tt> if that specific instance exists and is active in the current room.
+<br>
+<br>
+
+Please note that this function does <i>not</i> take into account those instances that have been deactivated using the <a href="../Deactivating%20Instances/index.html"><tt>instance_deactivate</tt></a> functions.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<p><b>Example :</b></p>
+<p class="code">
+if !instance_exists(obj_Enemy)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;score += 200;<br>
+&nbsp;&nbsp;&nbsp;room_goto(rm_hiscores);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if any instances of the object "obj_Enemy" exist and if not it adds to the variable "score" and changes room.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="instance_find.html">instance_find</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+instance_exists
+-->

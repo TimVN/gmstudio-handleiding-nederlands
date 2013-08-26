@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_queue_enqueue</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_queue_enqueue</h1>
+
+<h2>Adds the given value into the given queue.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_queue_enqueue(id, val);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the queue to add to.</td></tr>
+	
+	<tr><td>val</td>
+	<td>The value to add to the queue.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will add a value (real or string) onto the tail of the ds_queue.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+move_queue = ds_queue_create();<br>
+ds_queue_enqueue(move_queue, x + 200);<br>
+ds_queue_enqueue(move_queue, y);<br>
+ds_queue_enqueue(move_queue, x + 200);<br>
+ds_queue_enqueue(move_queue, y + 200);<br>
+ds_queue_enqueue(move_queue, x);<br>
+ds_queue_enqueue(move_queue, y + 200);<br>
+ds_queue_enqueue(move_queue, x);<br>
+ds_queue_enqueue(move_queue, y);<br>
+</p>
+<p>
+The above code creates a new ds_queue and stores its index in the variable "move_queue". It then pushes a number of values onto the queue for future use.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Queues</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_queue_dequeue.html">ds_queue_dequeue</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_queue_enqueue
+-->

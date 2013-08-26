@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ads_setup</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ads_setup</h1>
+  
+<h2>Setup offerwall support for ads.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">ads_setup(user_uuid, ad_app_key)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>user_uuid</td>
+	<td>The user key for the rewards currency.</td></tr>
+	
+	<tr class="alt"><td>add_app_key</td>
+	<td>The app key for your game</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will pass the user id of the player to those providers, for example <i>Supersonic</i> and <i>AdColony</i>, that generate virtual currency "offerwalls" (essentially a page to promote several 
+different advertising campaigns) and videos, so that the currency can be rewarded to the correct player for viewing or clicking these ads. The service providers should supply you with the app key for each 
+specific game that you create and it is recommended that you store this as a <a href="../../001_Advanced%20Use/010_Constants.html">constant</a> within your game for ease of use later. Please refer to the 
+<a href="http://wiki.yoyogames.com/index.php/GameMaker:Studio">YoYo games Wiki</a> section on <b>In App Advertising</b> for more information related to your specific ad provider.
+<br>
+<br>
+
+<i><b>NOTE:</b> Even if you only have your app configured for video advertising, you will still need to call this function to prepare the integrated developer api, but you should use and empty string ("") for the arguments.</i>
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if os_get_config() = "FreeOfferwall"<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;ads_setup(u_id, APP_KEY);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check the current configuration used for the game build and if it is "FreeOfferwall", then it will setup the advertising functions with the user id stored in the variable "u_id" and the application 
+key stored in the custom constant "APP_KEY".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advertising and Analytics</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ads_engagement_available.html">ads_engagement_available</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ads_setup
+-->

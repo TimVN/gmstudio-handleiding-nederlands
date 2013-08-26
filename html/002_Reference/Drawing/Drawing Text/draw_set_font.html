@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_set_font</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_set_font</h1>
+
+<h2>Sets the font used to draw text.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_set_font(font);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>font</td>
+	<td>The name of the font to use.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will set the font to be used for all further text drawing. This font must have been added into the <a href="../../../001_Advanced%20Use/003_Fonts.html">font assets</a> of the game or 
+have been created using either the <a href="../../Game%20Assets/Fonts/font_add.html"><tt>font_add</tt></a> or <a href="../../Game%20Assets/Fonts/font_add_sprite.html"><tt>font_add_sprite</tt></a>. 
+You may also set this to -1 to default to drawing text using a 12point Arial font.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_color(c_blue);<br>
+draw_set_font(fnt_Game);<br>
+draw_text(200, 200, "Hello World" );<br>
+</p>
+<p>
+The above code will draw the given text using the font indexed in the variable "fnt_Game" and colored blue.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing text</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_set_halign.html">draw_set_halign</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_set_font
+-->

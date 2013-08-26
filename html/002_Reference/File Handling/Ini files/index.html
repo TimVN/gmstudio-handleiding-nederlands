@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Ini Files</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Ini files</h1>
+
+<h2>This section deals with ini_file functions.</h2>
+
+<p>
+Ini files are small, lightweight files which are compatible with most platforms. They are ideal for storing small pieces of information, like interface preferences,
+local high scores, level data etc...
+<br>
+<br>
+
+Please note that for games with localizations it is very important that accented letters can be read from external files. This means that you should create the ini file in <b>UTF8</b> format <i>first</i> and then 
+add it into <i>GameMaker:Studio</i> as an included file so that it is exported on running the game and used instead of the default ANSI format ini file that is created by the ini functions when none has been 
+previously supplied. In this way, you can read and write to it correctly with all accents and non-roman letters being maintained.
+<br>
+<br>
+
+The following functions exist for ini files:
+<blockquote>
+	<ol>
+		<li><a href="ini_open.html">ini_open</a><br>
+		<li><a href="ini_close.html">ini_close</a><br>
+		<li><a href="ini_write_real.html">ini_write_real</a><br>
+		<li><a href="ini_write_string.html">ini_write_string</a><br>
+		<li><a href="ini_read_real.html">ini_read_real</a><br>
+		<li><a href="ini_read_string.html">ini_read_string</a><br>	
+		<li><a href="ini_key_exists.html">ini_key_exists</a><br>
+		<li><a href="ini_section_exists.html">ini_section_exists</a><br>
+		<li><a href="ini_key_delete.html">ini_key_delete</a><br>
+		<li><a href="ini_section_delete.html">ini_section_delete</a><br>
+		<li><a href="ini_open_from_string.html">ini_open_from_string</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<i><b>WARNING!</b> These functions may not work as you expect due to GameMaker:Studio being sandboxed! Please see the section on <a href="../File%20System%20Limits.html">File System Limits</a> 
+for more information.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">File Handling</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../Files/index.html">Text Files</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+ini files
+--> 

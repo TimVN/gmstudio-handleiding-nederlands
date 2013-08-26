@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>debug_mode</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>debug_mode</h1>
+  
+<h2>Tells you if the game is running in debug mode or not.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">debug_mode</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read only</b> variable returns <tt>true</tt> when the game is being played in debug mode and <tt>false</tt> when being played as normal.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if debug_mode<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;ini_open("Cheats.ini");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;ini_open("Game.ini");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code opens a different ini file depending on the value of the read-only variable <tt>debug_mode</tt>.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Debugging</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="get_integer.html">get_integer</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+debug_mode
+--> 

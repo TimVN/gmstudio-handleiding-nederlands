@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>ceil</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>ceil</h1>
+  
+<h2>Returns the given number rounded up to the nearest integer.</h2>
+
+<h3><b>Syntax :</b></h3>
+<p class="code">ceil(val);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x</td>
+	<td>The number to change.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Integer</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function takes any real number and rounds it up to the nearest integer. Care should be taken with this function as one common mistake is to use it round up a random value and expect it 
+always to be greater than 1, ie :
+<br>
+<br>
+<p class="code">
+int = ceil(random(5));
+</p>
+<p>
+<br>
+Now, you would expect this code to <i>always</i> give an integer between 1 and 5, but this may not always be the case as there is a very small possibility that the random function will return 
+0, and rounding up 0 still gives you 0. this is a remote possibility but should be taken into account when using this function.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+val = ceil( 3.4 );
+</p>
+<p>
+This will set val to 4.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Real Number Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="max.html">max</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+ceil
+-->

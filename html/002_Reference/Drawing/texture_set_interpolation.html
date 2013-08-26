@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>texture_set_interpolation</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>texture_set_interpolation</h1>
+
+<h2>Indicates whether to use linear interpolation or not.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">texture_set_interpolation(linear);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>linear</td>
+	<td>Turn linear interpolation on (<tt>true</tt>) or off (<tt>false</tt>).</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to set the linear interpolation of all images drawn on the game screen with <i>GameMaker:Studio</i>. When this is set to on (<tt>true</tt>) all textures will be smoothed when drawn (this includes 
+sprites as they too are considered textures), meaning that when scaled or moved if there is not a 1:1 pixel ratio then there will be a "smudging" across various pixels which may make images appear blurry depending on the art 
+style used. If this is switch off (<tt>false</tt>) then images will be drawn based on the nearest pixel when scaled or moving which may lead to "blocky" images. The default value is false, and this can also be changed in the 
+<a href="../../001_Advanced%20Use/Global%20game%20settings/index.html">Global Game Settings</a> for individual target platforms.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if global.Smoothing<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;texture_set_interpolation(true);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;texture_set_interpolation(false);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+<p>
+The above code will turn interpolation on or off depending on the value of a global variable.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="texture_set_blending.html">texture_set_blending</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+texture_set_interpolation
+-->

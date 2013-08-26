@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Constants</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+
+<h1>Constants</h1>
+
+<h2>This section outlines how to define constants that you can then use in actions, scripts and code.</h2>
+
+<p>
+A <b>constant</b> is, as the name implies, something that can hold a constant value (real, or boolean) or a string. This is different to a variable in that it can't be changed once defined, although it is global in scope as all 
+instances in all rooms can use it, and it it will always be the same value. There are a number of built-in constants within <i>GameMaker:Studio</i>, like the <tt>vk_</tt> ones for the keyboard or the <tt>c_</tt> ones that 
+hold different colors, but you can also define your own constants to be used in your games too.
+<br>
+<br>
+
+To define constants you chose <b>Define Constants</b> from the drop down <b>Resources</b> menu at the top of the main window and the following window will open :
+
+<img class="center" src="../images/form_constants.png">
+
+The main part of this window is take up with the list of constants, and will start off empty, ready for you to create your own. To do this you would click on the button marked <b>Add</b> at the bottom left of the window, which 
+will then create a new, empty, constant with the <b>Name</b> section highlighted. you must give all your constants a name, and as with all things in <i>GameMaker:Studio</i> this name must be unique and it is recommended 
+that you distinguish it in some way from other variables, for example, by using all capitals, or by using a suffix or prefix. Note, that you cannot use any symbols except the under-bar (_) and the constant cannot start with a number.
+<br>
+<br>
+
+Once you have named your new constant you must give it a value. This value can be numeric, a function or a string. For a string it <i>must</i> be wrapped in quotes ("") and if it is a function, it cannot make reference to anything 
+in the game (the current room, instances, or scripts etc...) as the constants are initialised <i>before</i> everything else, but it can however use resources like sprites and objects.
+<br>
+<br>
+
+When you have defined a few constants you can use the buttons at the bottom of the window to change them around and add, insert or delete them. <b>Add</b> will add one at the end of the list, <b>Insert</b> will insert 
+the next constant above the current one, and delete will delete the current one. You may also press <b>Clear</b> to clear the whole list of constants, which will open a prompt to ask if you are sure you really want to do that 
+before deleting the whole list. beside these button are two labelled <b>Up</b> and <b>Down</b> which simply move the constants up and down the list, and beside those is the <b>sort</b> button which will put the constants 
+into alphabetical order, with the ones starting with "A" at the top.
+<br>
+<br>
+
+Finally, there are two buttons marked <b>Load</b> and <b>Save</b>. With these, you can load into your project constants that you have previously defined in an external editor, or that you have saved from a previous game. 
+If you have already defined constants when you load some from a file, the new ones will be appended on at the end of the list. A saved constant list is stored in a simple <tt>*.txt</tt> file and can easily be edited and added to by 
+any application that reads these files (Notepad++, for example). You can even pre-define your own text file with a set of constants to be loaded into <i>GameMaker:Studio</i> as the format is simply : <b><code>NAME = VALUE</code></b>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advanced Use Index</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="002_Including%20Files.html">Including Files</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+constants
+defining constants
+adding constants
+using constants
+-->

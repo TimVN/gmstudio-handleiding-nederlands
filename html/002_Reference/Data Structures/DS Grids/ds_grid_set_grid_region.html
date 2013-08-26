@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_grid_set_grid_region</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_grid_set_grid_region</h1>
+
+<h2>Copies the contents of the cells in a source grid to a destination grid.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_grid_set_grid_region(index, source, x1, y1, x2, y2, xpos, ypos);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>index</td>
+		<td>The index of the destination grid.</td></tr>
+		
+		<tr class="alt"><td>source</td>
+		<td>The index of the source grid.</td></tr>
+		
+		<tr><td>x1</td>
+		<td>The left position of the region of cells to copy from the source grid.</td></tr>
+		
+		<tr class="alt"><td>y1</td>
+		<td>The top position of the region of cells to copy from the source grid.</td></tr>
+		
+		<tr><td>x2</td>
+		<td>The right position of the region of cells to copy from the source grid.</td></tr>
+		
+		<tr class="alt"><td>y2</td>
+		<td>The bottom position of the region of cells to copy from the source grid.</td></tr>
+		
+		<tr><td>xpos</td>
+		<td>The x position on the destination grid to copy the source region to.</td></tr>
+		
+		<tr class="alt"><td>ypos</td>
+		<td>The y position on the destination grid to copy the source region to.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to copy the contents of a rectangular area of grid cells from one (previously defined) ds_grid to another, <i>or</i> it can be used to copy a region from within the same grid. The following images 
+illustrate both ways that this function can be used:
+
+<img class="center" src="ds_grid_set_grid_region.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ds_grid_set_grid_region(t_grid, grid, 0, 0, 5, 5, 10, 10);
+</p>
+<p>
+This would copy the region of cells from (0,0) to (5,5) of the grid indexed in the variable "t_grid" and copy them to position (10,10) in the grid indexed in the variable "grid".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Grids</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_grid_set_region.html">ds_grid_set_region</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!--KEYWORDS
+ds_grid_set_grid_region
+-->

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_system_clear</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_system_clear</h1>
+
+<h2>Clears a particle system to its default settings.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_system_clear(ind);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the particle system to clear.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can clear the indexed system to it's default state, removing all emitters and resetting the depth and position (if they had been changed). Be careful using this function as if you have any 
+instance setting or bursting or any other action using an emitter associated with this system, you will get an error unless you are using the <a href="../Particle%20Emitters/part_emitter_exists.html">
+<tt>part_emitter_exists</tt></a> function to check. There is also no need to call the <a href="../Particle%20Emitters/part_emitter_destroy.html"><tt>part_emitter_destroy</tt></a> function as this is taken 
+care of automatically too. </a>
+<br>
+<br>
+
+<i><b>NOTE : </b>this function will clear the visible particles in the room, but it does <b>not</b> clear the particle properties, nor does it remove them from memory. For that you should use the functions
+<a href="../Particle%20Types/part_type_clear.html"><tt>part_type_clear</tt></a> and <a href="../Particle%20Types/part_type_destroy.html"><tt>part_type_destroy</tt></a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+part_system_clear(global.Sname);
+</p>
+<p>
+The above code will clear the particle system indexed in the global variable "Sname" to its default state.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Particle Systems</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_system_depth.html">part_system_depth</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_system_clear
+-->

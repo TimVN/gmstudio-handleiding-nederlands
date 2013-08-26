@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>window_get_cursor</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>window_get_cursor</h1>
+
+<h2>Gets the current cursor being used in the game window.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">window_get_cursor();</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns :</b>Constant
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3> <b>Description</b></h3>
+<p>
+With this function you can get the current cursor being used in the game window, with the return value being any one of the constants listed below (to set the current cursor being used you can use the 
+function <a href="window_set_cursor.html"><tt>window_set_cursor</tt></a> which also takes these constants):
+<br>
+<br>
+
+<div class="compat">
+	<table class="compat">
+		<tr><th>Constant</th><th>Cursor</th></tr>
+
+		<tr><td>cr_none</td>
+		<td><br><br></td></tr>
+		
+		<tr class="alt"><td>cr_default</td>
+		<td><img src="cr_Default.png"></img></td></tr>
+
+		<tr><td>cr_arrow</td>
+		<td><img src="cr_Arrow.png"></img></td></tr>
+
+		<tr class="alt"><td>cr_cross</td>
+		<td><img src="cr_Cross.png"></img></td></tr>
+		
+		<tr><td>cr_beam</td>
+		<td><img src="cr_Beam.png"></img></td></tr>
+
+		<tr class="alt"><td>cr_size_nesw</td>
+		<td><img src="cr_SizeNeSw.png"></img></td></tr>
+
+		<tr><td>cr_size_ns</td>
+		<td><img src="cr_SizeNS.png"></img></td></tr>
+
+		<tr class="alt"><td>cr_size_nwse</td>
+		<td><img src="cr_SizeNwSe.png"></img></td></tr>
+
+		<tr><td>cr_size_we</td>
+		<td><img src="cr_SizeWE.png"></img></td></tr>
+
+		<tr class="alt"><td>cr_uparrow</td>
+		<td><img src="cr_Up.png"></img></td></tr>
+
+		<tr><td>cr_hourglass</td>
+		<td><img src="cr_Hourglass.png"></img></td></tr>
+
+		<tr class="alt"><td>cr_drag</td>
+		<td><img src="cr_Drag.png"></img></td></tr>
+
+		<tr><td>cr_appstart</td>
+		<td><img src="cr_AppStart.png"></img></td></tr>
+
+		<tr class="alt"><td>cr_handpoint</td>
+		<td><img src="cr_Hand.png"></img></td></tr>
+		
+		<tr><td>cr_size_all</td>
+		<td><img src="cr_SizeAll.png"></img></td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if mouse_check_button_pressed(mb_left)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if window_get_cursor() != cr_drag window_set_cursor(cr_drag);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will change the window cursor to the standard windows drag cursor if the left mouse button has been pressed and it has not already been changed previously.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">The Game Window</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="window_mouse_get_x.html">window_mouse_get_x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+window_get_cursor
+cr_default
+cr_none
+cr_arrow
+cr_cross
+cr_beam
+cr_size_nesw
+cr_size_ns
+cr_size_nwse
+cr_size_we
+cr_uparrow
+cr_hourglass
+cr_drag
+cr_appstart
+cr_handpoint
+cr_size_all
+-->

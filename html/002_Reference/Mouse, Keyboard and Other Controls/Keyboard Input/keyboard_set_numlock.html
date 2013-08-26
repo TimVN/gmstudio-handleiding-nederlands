@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>keyboard_set_numlock</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>keyboard_set_numlock</h1>
+  
+<h2>Set the status of the keypad numberlock.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">keyboard_set_numlock(value);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>value</td>
+	<td>Set this to true for "on" and false for "off"</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to switch the keypad numberlock on or off (set to <b>true</b> for on, and <b>false</b> for off).
+<br>
+<br>
+
+<i><b>NOTE : </b>This funcionality is only available in the Windows exe builds and will not function on any other device.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_get_numlock()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;keyboard_set_numlock(0);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;keyboard_set_numlock(1);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above example code will get the state of the numberlock key and if it is on (true) it will set it to off (false) and vice-versa.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Keyboard Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="io_clear.html">io_clear</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+keyboard_set_numlock
+-->

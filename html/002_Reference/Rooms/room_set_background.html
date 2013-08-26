@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_set_background</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_set_background</h1>
+
+<h2>Sets a background and its related attributes of a given room.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_set_background(ind, bind, vis, fore, back, x, y, htiled, vtiled, hspeed, vspeed, alpha);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the room to set the background of.</td></tr>
+	
+	<tr class="alt"><td>bind</td>
+	<td>The index of the background 'slot' to set (between 0 and 7).</td></tr>
+	
+	<tr><td>vis</td>
+	<td>Whether the new background is visible (true) or not (false).</td></tr>
+	
+	<tr class="alt"><td>fore</td>
+	<td>Whether the background is actually a foreground (true) or a background (false).</td></tr>
+	
+	<tr><td>back</td>
+	<td>The index of the new background.</td></tr>
+	
+	<tr class="alt"><td>x</td>
+	<td>The x position of the background (if htiled is true, the x of one of the backgrounds).</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position of the background (if vtiled is true, the y of one of the backgrounds).</td></tr>
+	
+	<tr class="alt"><td>htiled</td>
+	<td>Whether the background is tiled horizontally (true) or not (false).</td></tr>
+	
+	<tr><td>vtiled</td>
+	<td>Whether the background is tiled vertically (true) or not (false).</td></tr>
+	
+	<tr class="alt"><td>hspeed</td>
+	<td>The horizontal speed of the background in pixels per step.</td></tr>
+	
+	<tr><td>vspeed</td>
+	<td>The vertical speed of the background in pixels per step.</td></tr>
+	
+	<tr class="alt"><td>alpha</td>
+	<td>The alpha (transparency) of the background. 1=opaque, 0=invisible, 0.5=translucent etc</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set a background for a room (<i>except the current one</i>), with all the same property options that you can find in the room editor like horizontal speed and horizontal or vertical tiling.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+global.rm = room_add();<br>
+room_set_background(global.rm, 0, 1, 0, bck_Space, 32, 32, 1, 1, 4, 0, 0.8);<br>
+</p>
+<p>
+The above code will add a new room to the game and then set the background of that room to the background indexed as "bck_Space" and set the properties for that background.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_set_background_color.html">room_set_background_color</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_set_background
+-->

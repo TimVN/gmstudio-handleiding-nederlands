@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>json_encode</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>json_encode</h1>
+  
+<h2>This function encode a ds_map into a JSON format string.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">json_encode(map)</p>
+<p>
+<br>
+</p>
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>map</td>
+	<td>a ds_map with the information to encode</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>string
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+JSON (JavaScript Object Notation) is a lightweight data-interchange format which is easy for to read and write, for both people and machines. It is built on two basic structures :
+<blockquote>
+<ul>
+	<li>A collection of name/value pairs, called a <a href="../Data%20Structures/DS%20Maps/index.html"><tt>ds_map</tt></a> in <i>GameMaker:Studio</i> but also known as a "dictionary" or "object".
+	<li>An ordered list of values, called a <a href="../Data%20Structures/DS%20Lists/index.html"><tt>ds_list</tt></a> in <i>GameMaker:Studio</i> but this can also be called an "array" or "sequence".
+</ul>
+</blockquote>
+<p>
+<tt>json_encode</tt> takes a ds_map that you have previously created and encode it as a JSON string which you can then use as (for example) part of an 
+<a href="../Asynchronous%20Functions/http_post_string.html"><tt>http_post_string()</tt></a> call, or so it can be stored externally, written to a file.<br>
+<br>
+<i><b>Note : </b>The heirarchal functionality of JSON is not available yet, so you are only able to encode <b>one</b> <tt>ds_map</tt>, with no sub-lists or maps included. Later versions of 
+GameMaker:Studio will allow this.</i><br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var hiscore_map, i, str;<br>
+hiscore_map=ds_map_create();<br>
+for (i = 0; i < 10; i += 1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;ds_map_add(name[i], score[i]);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+str = json_encode(hiscore_map);<br>
+get[0] = http_post_string("http://www.angusgames.com/game?game_id=" + string(global.game_id), str)<br>
+ds_map_destroy(hiscore_map);
+</p>
+<p>
+The above code creates a ds_map and then loops through the name and score arrays, adding each key/value pair to the new map. Next, this map is encoded using <tt>json_encode</tt> and stored as a 
+string in the variable "str". This string is then sent to a web server using <tt>http_post_string</tt> and the ds_map is destroyed to prevent a memory leak as it is no-longer needed.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File Handling</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="json_decode.html">json_decode()</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+json_encode
+--> 

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>asset_get_index</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>asset_get_index</h1>
+
+<h2>Returns the unique index of the game asset with the given name.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">asset_get_index(name);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>name</td><td>The name of the game asset to get the index of (a string).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to get the unique identifying index for a game asset from its name. If the asset is not found, the function will return a value of -1, otherwise it will return the unique index id for the 
+asset being checked. This id can then be used in other functions as you would any other index value, like the <a href="../Objects%20and%20Instances/Instances/Instance%20Properties/sprite_index.html">
+<tt>sprite_index</tt></a> or the <a href="../Paths/path_index.html"><tt>path_index</tt></a>, for example. Please note that although this function can be used to reference assets from strings 
+(see example below) you should always make sure that the asset exists before using it otherwise you may get errors that will crash your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var obj = asset_get_index("obj_Enemy_" + string(global.Level));<br>
+if obj &gt; -1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;instance_create(random(room_width), random(room_height), obj);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will get an object index from a string, and if that index exists, create an instance of the object in the game.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Game Assets</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="asset_get_type.html">asset_get_type</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+asset_get_index
+-->

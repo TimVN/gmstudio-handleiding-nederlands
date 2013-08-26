@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_get_alpha_test_ref_value</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_get_alpha_test_ref_value</h1>
+
+<h2>Returns the current alpha testing reference value.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_get_alpha_test_ref_value();</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to find the current value for the alpha test reference (default is 0, but you can use <a href="draw_set_alpha_test_ref_value.html"><tt>draw_set_alpha_test_ref_value</tt></a> 
+to set this value to something other than this).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if draw_get_alpha_test()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if draw_get_alpha_test_ref_value() &lt; 254<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_set_alpha_test_ref_value(254);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+<p>
+The above codde checks to see if alpha testing is enabled, and if it is, it then checks the current alpha test reference value and sets it if it is less than 254.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_enable_alphablend.html">draw_enable_alphablend</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_get_alpha_test_ref_value
+-->

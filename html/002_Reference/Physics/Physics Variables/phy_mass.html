@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>phy_mass</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>phy_mass</h1>
+  
+<h2>Returns the mass of the instance.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">phy_mass;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read-only</b> variable returns the mass of the instance in <i>kilograms</i>. This value is calculated automatically based on the surface area of the assigned fixtures and their density values, 
+but it can be changed using the function <a href="../physics_mass_properties.html"><tt>physics_mass_properties</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if phy_mass &lt; other.phy_mass<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;instance_destroy();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code is from the collision event of the instance with another and it compares the mass of each instance and destroys that which has less mass.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Physics Variables</a>
+	</div>
+	<div style="float:right">
+		next : <a href="phy_sleeping.html">phy_sleeping</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+phy_mass
+mass
+--> 

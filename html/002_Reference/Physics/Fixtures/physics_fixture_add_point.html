@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_add_point</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_add_point</h1>
+  
+<h2>This function adds a point to create polygon shape for a fixture.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_fixture_add_point(fixture, xpos, ypos)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>the index of the fixture</td></tr>
+	
+	<tr class="alt"><td>xpos</td>
+	<td>the x position of the point <i>relative to the fixture origin</i></td></tr>
+
+	<tr><td>ypos</td>
+	<td>the y position of the point <i>relative to the fixture origin</i></td></tr>
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b> N/A
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function defines the points of a polygon which has previously been set to the fixture using <a href="physics_fixture_set_polygon_shape.html"><tt>physics_fixture_set_polygon_shape</tt></a>. These points are relative 
+to the origin of the fixture, with the 0,0 position of the x/y axis being the centre, and the subsequent coordinates being calculated as usual in <i>GameMaker:Studio</i> with down/right being +x,+y and up/left 
+being -x,-y. Here is an illustration to help you visualise this process:
+<br>
+<br>
+
+<img class="center" src="physics_fixture_add_point_image.png"></img>
+
+<p>
+As you can see, any simple <b>convex</b> polygon can be modelled in this way, but <b>concave</b> polygons are <i>not</i> supported at this moment. Finally, to close the polygon, you must bind the fixture 
+to an instance. You should note too that you must also have at least <b>three</b> points defined for your polygon before binding it to an instance or you will get an error and that adding a point to a fixture that 
+does not have a polygon shape set previously will also cause an error. Note too that the maximum number of points permitted for a fixture is <b>eight</b>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+physics_fixture_set_polygon_shape(fix_Ship);<br>
+physics_fixture_add_point(fix_Ship, 0,0);<br>
+physics_fixture_add_point(fix_Ship, -40, 100);<br>
+physics_fixture_add_point(fix_Ship, 40, 100);<br>
+<p>
+The code above will apply a polygon shape to the fixture indexed in the variable "fix_Ship" and then defines three points to create a triangular shape.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_set_density.html">physics_fixture_set_density</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_add_point
+--> 

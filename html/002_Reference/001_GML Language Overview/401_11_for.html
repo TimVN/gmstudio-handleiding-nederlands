@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The "For" Statement</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The "For" Statement</h1>
+
+<h2>This section explains the use of "for".</h2>
+<p> 
+
+A "for" statement has this form :
+<br>
+<br>
+<p class="code">
+for (&lt;statement1&gt; ; &lt;expression&gt; ;&lt;statement2&gt;) &lt;statement3&gt;</pre>
+</p>
+
+<p>
+<br>
+This works as follows - First statement1 is executed, then the expression is evaluated and, if it is true, statement 3 is executed. Then statement 2 and then the expression is evaluated again. This loop will continue 
+until the expression is found to be false.
+<br>
+<br>
+Now, this may sound complicated when written like that, but you should interpret it as :
+<ul>
+	<li>The first statement initializes the for-loop.
+	<li>The expression tests whether the loop should be ended.
+	<li>Statement2 is the "step" statement that goes to the next loop evaluation.
+</ul>
+
+<p>
+This extremely useful for doing repetitive tasks that would involve multiple lines of code in any other way, and is commonly used as a counter for evaluating arrays, or drawing things. the following code example 
+illustrates a typical use for this type of statement :
+<br>
+<br>
+<p class="code">
+{<br>
+var i;<br>
+for (i = 0; i &lt; 10; i += 1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), string(i) + ". "+ string(scr[i]));<br>
+&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</p>
+
+<p>
+<br>
+The above code initialises a for loop, starting at 0 and counting up until 9, and then uses the loop value of "i" to draw the values stored in an array down the screen. Note how the "for" loop variable "i" is used to 
+not only loop through the array, but to draw a number as well as tell <i>GameMaker:Studio</i> where to draw the values to in the room. This flexability is one of the main reasons why "for" loops are so important 
+in programming.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_12_switch.html">The "Switch" Statement</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+for
+--> 

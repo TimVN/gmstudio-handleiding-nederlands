@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>buffer_write</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>buffer_write</h1>
+  
+<h2>Writes data to a buffer.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">buffer_write(buffer, type, value)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>buffer</td>
+	<td>The index of the buffer to write to.</td></tr>
+	
+	<tr class="alt"><td>type</td>
+	<td>The type of data that is to be written to the buffer (see the list of constants below).</td></tr>
+	
+	<tr><td>value</td>
+	<td>The data to write.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to write data to a previously created buffer. The data you write must be in agreement with the "type" arguement of this function, meaning that you can't try to write a string as an 
+unsigned 16bit integer, for example. The following constants can be used to define the data type:
+<br>
+<br>
+
+<div class="compat">
+	<table>
+		<tr><th>Constant</th><th>Description</th></tr>
+		<tr><td>buffer_u8</td><td>An unsigned, 8bit integer. This is a positive value from 0 to 255.</td></tr>
+		
+		<tr class="alt"><td>buffer_s8</td><td>A signed, 8bit integer. This can be a positive or negative value from -128 to 127 (0 is classed as positive).</td></tr>
+		
+		<tr><td>buffer_u16</td><td>An unsigned, 16bit integer. This is a positive value from 0 - 65,535.</td></tr>
+		
+		<tr class="alt"><td>buffer_s16</td><td>A signed, 16bit integer. This can be a positive or negative value from  -32,768 to 32,767 (0 is classed as positive).</td></tr>
+		
+		<tr><td>buffer_u32</td><td>An unsigned, 32bit integer. This is a positive value from 0 to 4,294,967,295.</td></tr>
+		
+		<tr class="alt"><td>buffer_s32</td><td>A signed, 32bit integer. This can be a positive or negative value from  -2,147,483,648 to 2,147,483,647 (0 is classed as positive).</td></tr>
+		
+		<tr><td>buffer_f16</td><td>A 16bit float. This can be a positive or negative value within the same range as a 16 bit signed integer. <i>(Not currently supported!)</i></td></tr>
+		
+		<tr class="alt"><td>buffer_f32</td><td>A 32bit float. This can be a positive or negative value within the same range as a 32 bit signed integer.</td></tr>
+		
+		<tr><td>buffer_f64</td><td>A 64bit float. This can be a positive or negative value from  -(2<sup>63</sup>) to 2<sup>63</sup> - 1.</td></tr>
+		
+		<tr class="alt"><td>buffer_bool</td><td>A boolean value. Can only be either 1 or 0 (<tt>true</tt> or <tt>false</tt>)</td></tr>
+		
+		<tr><td>buffer_string</td><td>A string of any size.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+buffer_seek(buff, buffer_seek_start, 0);<br>
+buffer_write(buff, buffer_s16, 0);<br>
+buffer_write(buff, buffer_s16, x);<br>
+buffer_write(buff, buffer_s16, y);<br>
+</p>
+<p>
+The above code finds the start of the buffer with the id stored in the variable "buff" them writes a series of signed 16bit integer values to it.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Buffers</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="buffer_fill.html">buffer_fill</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+buffer_write
+buffer_u8
+buffer_s8
+buffer_u16
+buffer_s16
+buffer_u32
+buffer_s32
+buffer_f16
+buffer_f32
+buffer_f64
+buffer_bool
+buffer_string
+--> 

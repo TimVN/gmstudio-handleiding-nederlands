@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_sprite_stretched</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_sprite_stretched</h1>
+
+<h2>Draws a sprite at a given position, stretched.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_sprite_stretched(sprite, subimg, x, y, w, h);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>sprite</td>
+	<td>The index of the sprite to draw.</td></tr>
+
+	<tr><td>subimg</td>
+	<td>The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td></tr>
+	
+	<tr><td>x</td>
+	<td>The x coordinate of where to draw the sprite.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of where to draw the sprite.</td></tr>
+	
+	<tr><td>w</td>
+	<td>The width of the area the stretched sprite will occupy.</td></tr>
+	
+	<tr><td>h</td>
+	<td>The height of the area the stretched sprite will occupy.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function simply takes a sprite resource and stretches it over the given width and height so that it occupies the area. As with <a href="draw_sprite.html"><tt>draw_sprite</tt></a> you can 
+specify a sprite and a sub-image for drawing, then the x / y position in the room for the sprite to be drawn at and finally a width and a height (which must be pixel values). The image below illustrates 
+how this function works:
+
+<img class="center" src="spr_stretch.png"></img>
+
+<br>
+<br>
+
+<i><b>NOTE : </b>When drawing with this function, the sprite <a href="../../Objects%20and%20Instances/Instances/Instance%20Properties/sprite_xoffset.html">x offset</a> and 
+<a href="../../Objects%20and%20Instances/Instances/Instance%20Properties/sprite_yoffset.html">y offset</a> are ignored and the sprite will be drawn with the top left corner at the specified x / y 
+position in the room.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_sprite_stretched(sprite_index, image_index, x, y, sprite_width / 2, sprite_height / 2);
+</p>
+<p>
+This will draw the instances assigned sprite and its sub-image with the left corner at the instance x /y position. Its width is set to the same as the sprite, and the height is the sprite height divided 
+by two.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing Sprites And Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_sprite_stretched_ext.html">draw_sprite_stretched_ext</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_sprite_stretched
+-->

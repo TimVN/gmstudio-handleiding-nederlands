@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_replace</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_replace</h1>
+
+<h2>Replace a background resource with an external one.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">background_replace(ind, fname);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>ind</td>
+		<td>The index of the background to permanently replace.</td></tr>
+		
+		<tr class="alt"><td>fname</td>
+		<td>The filename of the image to make the new background.</td></tr>
+		
+		<tr><td>removeback</td>
+		<td>Indicates whether to make all pixels with the same color (left-bottom pixel) transparent.</td></tr>
+		
+		<tr class="alt"><td>smooth</td>
+		<td>Indicates whether to smooth the edges.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function works in almost the exact same manner as <a href="background_add.html"><tt>background_add</tt></a>, only instead of returning the index of the background you are importing, 
+it overwrites a previously created background index. You can specify the background to overwrite as one of the pre-made background assets that you have for your game (those that you create in the 
+resource tree) or you can use a background index that has been created and stored in a variable using other functions like <a href="background_add.html"><tt>background_add</tt></a> or 
+<a href="background_create_from_surface.html"><tt>background_create_from_surface</tt></a>. It should be noted that once you replace an included asset, <i>there is no way to recover this 
+asset</i> and it will remain changed until the end of the game. 
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>Depending on the target platform that is chosen you are limited as to where you can save and load files from. See <a href="../../File%20Handling/index.html">Reference - Files</a> for more information.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>You should be aware that if you are using this function in your HTML5 target game to load resources from an external server, then, due to XSS protection in browsers, attempts to load resources 
+from across domains can be blocked and may appear to return blank results.</i>
+<br>
+<br>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+background_replace(bck_Sky, "Sky_5.png");
+</p>
+<p>
+The above code will replace the image asset indexed in "spr_Sky" with another one loaded from an external source.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_duplicate.html">background_duplicate</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_replace
+-->

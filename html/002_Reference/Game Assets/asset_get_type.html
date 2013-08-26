@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>asset_get_type</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>asset_get_type</h1>
+
+<h2>Returns the type of game asset referenced from its name.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">asset_get_type(name);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>name</td><td>The name of the game asset to get the type of (a string).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Constant
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can get the type of asset being referenced from it's name (a string). The following constants are returned: 
+<br>
+
+<div class="compat">
+	<table>
+	
+		<tr><th>Constant</th><th>Description</th></tr>
+		
+		<tr><td>asset_object</td><td>The given name refers to an <a href="../Objects%20and%20Instances/Objects/index.html">object</a>.</td></tr>
+		
+		<tr class="alt"><td>asset_sprite</td><td>The given name refers to a <a href="Sprites/index.html">sprite</a>.</td></tr>
+		
+		<tr><td>asset_sound</td><td>The given name refers to a <a href="Sounds/index.html">sound</a>.</td></tr>
+		
+		<tr class="alt"><td>asset_room</td><td>The given name refers to a <a href="../Rooms/index.html">room</a>.</td></tr>
+		
+		<tr><td>asset_background</td><td>The given name refers to a <a href="Backgrounds/index.html">background</a>.</td></tr>
+		
+		<tr class="alt"><td>asset_path</td><td>The given name refers to a <a href="../Paths/index.html">path</a>.</td></tr>
+		
+		<tr><td>asset_script</td><td>The given name refers to a <a href="../001_GML%20Language%20Overview/401_17_scripts.html">script</a>.</td></tr>
+		
+		<tr class="alt"><td>asset_font</td><td>The given name refers to a <a href="Fonts/index.html">font</a>.</td></tr>
+		
+		<tr><td>asset_timeline</td><td>The given name refers to a <a href="../Timelines/index.html">time line</a>.</td></tr>
+		
+		<tr class="alt"><td>asset_unknown</td><td>The given name refers to an asset that either does not exist, or is not one of the above listed.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if asset_get_type("pth_Path_" + string(global.Game)) == asset_unknown<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;show_debug_message("Path doesn't exist!!!");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;path_index = asset_get_index("pth_Path_" + string(global.Game));<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks a dynamically created asset name to see if the asset is of the correct type. If it is not, then a debug message will be shown, otherwise the asset name is used to assign the 
+asset to the instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Game Assets</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="asset_get_index.html">asset_get_index</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+asset_get_type
+asset_unknown
+asset_object
+asset_sprite
+asset_sound
+asset_room
+asset_background
+asset_path
+asset_script
+asset_font
+asset_timeline
+-->

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>collision_line</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>collision_line</h1>
+  
+<h2>Checks whether any instances of a given object collide with a given line, and if there is it returns the id of one of those instances.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">collision_line( x1, y1, x2, y2, obj, prec, notme );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x1</td>
+	<td>The x coordinate of the start of the line.</td></tr>
+	
+	<tr class="alt"><td>y1</td>
+	<td>The y coordinate of the start of the line.</td></tr>
+	
+	<tr><td>x2</td>
+	<td>The x coordinate of the end of the line.</td></tr>
+	
+	<tr class="alt"><td>y2</td>
+	<td>The y coordinate of the end of the line.</td></tr>
+	
+	<tr><td>obj</td>
+	<td>The object to check for instance collisions.</td></tr>
+	
+	<tr class="alt"><td>prec</td>
+	<td>Whether the check is based on pixel-perfect collisions (true = slow) or its bounding box in general (false = fast).</td></tr>
+	
+	<tr><td>notme</td>
+	<td>Whether the calling instance, if relevant, should be excluded (true) or not (false).</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Instance id or <b>noone</b>
+</p>
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Collision line checks along a line from point x1,y1 to point x2,y2 for a collision with <b>any</b> instance of the object specified by the argument "obj". this check can be either precise or not, but for precise 
+collisions to be enabled, the object or instance that you are checking for <i>must</i> also have precise collisions enabled for their sprite. If not, the default check is based on bounding boxes. The following image 
+illustrates how this works:
+<br>
+<br>
+
+<img class="center" src="collision_line_illustration.png"></img>
+
+<p>
+Remember, for precise collisions to be considered <i>both</i> the object sprite and the collision function must have precise marked as on. It should also be noted that the return value of the function can be the 
+id of <i>any one</i> of the instances considered to be in collision along the line, so if three instance overlap the defined line, any one of their ids could be the return value of the function.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+with (obj_Enemy)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if collision_line(100, 400, 100, 600, id, false, false) instance_destroy();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+This code gets all instances of "obj_Enemy" to check along a line from 100x, 400y to 100x, 600y for a collision with themselves, and if there is one then they are destroyed.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Collision Checking</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="collision_point.html">collision_point</a>
+	</div>
+</div>
+</p>
+
+<!-- KEYWORDS
+collision_line
+-->

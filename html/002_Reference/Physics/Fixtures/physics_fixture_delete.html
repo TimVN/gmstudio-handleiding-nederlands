@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_delete</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_delete</h1>
+  
+<h2>This function deletes a fixture from memory.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_fixture_delete(fixture)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>the fixture that is to be deleted from memory</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Since once a fixture has been bound to an instance that instance maintains the fixtures properties, we can remove the fixture from memory with this function, particularly if we no longer plan to use it again. 
+Please note that failure to remove fixtures after they are no longer needed may cause a memory leak which will slow down and eventually crash your game, so you should take care to clean up properly after 
+defining and binding fixtures.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var fix, inst;<br>
+fix = physics_fixture_create();<br>
+physics_fixture_set_circle_shape(fix, 16);<br>
+physics_fixture_set_density(fix, 1.0);<br>
+inst = instance_create(x, y, genericBodyObject);<br>
+physics_fixture_bind(fix, inst);<br>
+physics_fixture_delete(fix);<br>
+</p>
+<p>
+The code above will create a fixture and assign its index to the variable "fix". It then defines the shape and density of the fixture before binding it to the instance that was created with the index stored in the variable "inst". 
+Finally, the fixture is deleted to prevent memory leaks as it is no longer needed.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_set_box_shape.html">physics_fixture_set_box_shape</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_delete
+delete fixtures
+--> 

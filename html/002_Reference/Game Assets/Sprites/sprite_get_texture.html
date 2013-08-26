@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_get_texture</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_get_texture</h1>
+
+<h2>Returns the texture id for the given sprite and sub-image.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_get_texture(spr, subimg);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>spr</td>
+	<td>The index of the sprite to use.</td></tr>
+
+	<tr><td>subimg</td>
+	<td>The sub-image of the sproite to use.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns a special <i>id</i> for the sprite texture. This value can then be used in other draw functions, particularly in general <a href="../../Drawing/Drawing%203D/index.html">3D</a> 
+and some of the <a href="../../Drawing/Drawing%20Primitives/index.html">2D primitive</a> functions.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tex;<br>
+tex = sprite_get_texture(spr_Wall, 0);<br>
+draw_primitive_begin_texture(pr_trianglefan, tex);<br>
+draw_vertex_texture(0, 480,  0, 0);<br>
+draw_vertex_texture(640, 480,  1, 0);<br>
+draw_vertex_texture(640, 480, 1, 1);<br>
+draw_vertex_texture(0, 480, 0, 1);<br>
+draw_primitive_end();<br>
+</p>
+<p>
+The above code will draw a 4 vertex triangle fan textured with the texture held in the "tex" variable.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_get_tpe.html">sprite_get_tpe</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_get_texture
+-->
+

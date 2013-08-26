@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>visible</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>visible</h1>
+
+<h2>Sets the visibility of the instance.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">visible</p>
+  
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Boolean</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+An instance can be flagged as visible or not by setting this variable to <tt>true</tt> (visible) or <tt>false</tt> (invisible). This works by telling <i>GameMaker:Studio</i> to 
+skip the draw event for this instance, so care must be taken when using this as it means that no code placed in the draw event will be run while the instance is not visible.
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if other.visible = true<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;x = xprevious;<br>
+&nbsp;&nbsp;&nbsp;y = yprevious;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check the visible flag of the "other" instance in a collision and if it is set to <tt>true</tt> move that instance back to its previous position.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="persistent.html">persistent</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+solid
+-->

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>timeline_exists</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>timeline_exists</h1>
+
+<h2>Checks if a given time line exists.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">timeline_exists(ind);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the time line to check for.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check and see whether a time line exists (returns <tt>true</tt>) or not (returns <tt>false</tt>). This is particularly useful when creating Timelines dynamically using 
+the <a href="timeline_add.html"><tt>timeline_add</tt></a> function, but you should note that if you search for an uninitialised variable (that would otherwise be assigned to a time line's index) an
+error will be thrown.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if timeline_exists(global.tl) timeline_delete(global.tl);
+</p>
+<p>
+The above code checks to see if a time line exists and is indexed in the global variable "tl" and if so it then deletes that time line.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Timelines</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="timeline_get_name.html">timeline_get_name</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+timeline_exists
+-->

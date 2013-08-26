@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Real Number Functions</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Real Number Functions</h1>
+
+<h2>The following functions exist that deal with real numbers.</h2>
+
+<p>
+Real numbers in <i>GameMaker:Studio</i> are considered <i>floating point numbers</i>, that is to say that they have a decimal point in them with no fixed number of digits either before or after 
+the point. 2, for example, is a binary integer but 2.0 is a floating point real. This distinction between integers and floats is very important when dealing with cross platform development as the precision of 
+calculations made on a Windows pc is <i>not</i> the same as the precision of those same calculations when made on a mobile device. This means that you should pay particular attention when making 
+comparisons, for example :
+<br>
+<br>
+
+<p class="code">
+if image_index == 1 {do something...}
+</p>
+
+<p>
+<br>
+Now that <i>may</i> appear to work, but due to the way that floating point maths works, it may mean that image_index actually equals 1.00000000001, in which case the comparison will never result in 
+a true result and the code running. These types of errors can be quite hard to debug and so it is always good to be aware of them and to plan ahead and use other means of checking values or to use the 
+appropriate flooring or rounding functions (listed below) to convert the number to check into an integer. For example the above code could be written as :
+<br>
+<br>
+
+<p class="code">
+if floor(image_index) == 1 {do something...}
+</p>
+
+<p>
+<br>
+We can also use a special function available in <i>GameMaker:Studio</i> to set the <b>epsilon</b> value for floating point maths. When a real number is rounded to the nearest floating point number, 
+the epsilon (also know as "machine epsilon") forms an upper bound on the relative error, and you can set the epsilon value using this special function:
+
+<blockquote>
+	<ol>
+		<li><a href="math_set_epsilon.html">math_set_epsilon</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+We can split the functions that <i>GameMaker:Studio</i> has for dealing with real numbers into various categories :<br>
+<br>
+<h3>Random Functions</h3>
+<p>
+
+These functions all deal with using random numbers and values :
+<blockquote>
+	<ol>
+		<li><a href="choose.html">choose</a><br>
+		<li><a href="random.html">random</a><br>
+		<li><a href="random_range.html">random_range</a><br>
+		<li><a href="irandom.html">irandom</a><br>
+		<li><a href="irandom_range.html">irandom_range</a><br>
+		<li><a href="random_set_seed.html">random_set_seed</a><br>
+		<li><a href="random_get_seed.html">random_get_seed</a><br>
+		<li><a href="randomize.html">randomize</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<i><b>NOTE : </b>When using the random functions, GameMaker:Studio maintains the same random seed every time you start the game. This makes debugging much easier as you are 
+guaranteed that the random functions will always return the same value, however should you not wish this to happen, you must first set a new random seed at the very start of the game, 
+either using <a href="randomize.html"><tt>randomize</tt></a> or <a href="random_set_seed.html"><tt>random_set_seed</tt></a>.</i>
+
+<p>
+<h3>trigenometric Functions</h3>
+<p>
+
+These are all trigenometric functions :
+<blockquote>
+	<ol>
+		<li><a href="arccos.html">arccos</a><br>
+		<li><a href="arcsin.html">arcsin</a><br>
+		<li><a href="arctan.html">arctan</a><br>
+		<li><a href="arctan2.html">arctan2</a><br>
+		<li><a href="sin.html">sin</a><br>
+		<li><a href="tan.html">tan</a><br>
+		<li><a href="cos.html">cos</a><br>
+		<li><a href="degtorad.html">degtorad</a><br>
+		<li><a href="radtodeg.html">radtodeg</a><br>
+		<li><a href="lengthdir_x.html">lengthdir_x</a><br>
+		<li><a href="lengthdir_y.html">lengthdir_y</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<h3>Rounding Functions</h3>
+<p>
+
+These are all functions that round or select values :
+<blockquote>
+	<ol>
+		<li><a href="round.html">round</a><br>
+		<li><a href="floor.html">floor</a><br>
+		<li><a href="frac.html">frac</a><br>
+		<li><a href="abs.html">abs</a><br>
+		<li><a href="sign.html">sign</a><br>
+		<li><a href="ceil.html">ceil</a><br>
+		<li><a href="max.html">max</a><br>
+		<li><a href="mean.html">mean</a><br>
+		<li><a href="median.html">median</a><br>
+		<li><a href="min.html">min</a><br>
+		<li><a href="lerp.html">lerp</a><br>
+		<li><a href="clamp.html">clamp</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<h3>Miscellaneous Functions</h3>
+<p>
+
+These are various different mathematic functions :
+<blockquote>
+	<ol>
+		<li><a href="is_real.html">is_real</a><br>
+		<li><a href="is_string.html">is_string</a><br>
+		<li><a href="exp.html">exp</a><br>
+		<li><a href="ln.html">ln</a><br>
+		<li><a href="power.html">power</a><br>
+		<li><a href="sqr.html">sqr</a><br>
+		<li><a href="sqrt.html">sqrt</a><br>
+		<li><a href="log2.html">log2</a><br>
+		<li><a href="log10.html">log10</a><br>
+		<li><a href="logn.html">logn</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Maths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="../Vector%20Functions/index.html">Vector Functions</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+epsilon
+real numbers
+rounding
+random
+trigenometry
+floating point maths
+-->

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>move_contact_all</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>move_contact_all</h1>
+
+<h2>Moves the instance in a given direction until it comes into contact with an object.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">move_contact_all(dir, maxdist);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>dir</td>
+	<td>The direction to move in.</td></tr>
+	
+	<tr><td>maxdist</td>
+	<td>The maximum distance the object can travel (-1 or 0 a default value of 1000 pixels).</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns :</b> N/A</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will move the instance running the code a set number of pixels in the specified direction until it meets <i>any</i> other instance with a valid mask. You can use -1 or 0 for the maxdist being 
+a default 1000px, ie: <i>GameMaker:Studio</i> will move the instance continually up 1000 pixels until it is out of collision.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !place_meeting(x, y + 1, all)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;move_contact_all(270, -1);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check beneath the instance for a collision, and if there is none, then it will move it down until there is or until 1000pixels have been covered.</p>
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Moving Around</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="move_contact_solid.html">move_contact_solid</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+move_contact_all
+-->

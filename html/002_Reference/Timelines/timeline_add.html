@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>timeline_add</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>timeline_add</h1>
+
+<h2>Adds a new time line.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">timeline_add();</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can add a new (empty) time line into your game. the function returns the index of this new time line which should be stored in a variable for use in all further function calls that 
+involve this new time line. You should also be sure to use the function <a href="timeline_delete.html"><tt>timeline_delete</tt></a> whenever you no longer wish to use the time line (like at the 
+end of the room) so as to prevent any possible memory leaks that could slow down or crash your game.
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+global.tl = timeline_add();
+</p>
+<p>
+The above code creates a new time line and stores its index in the variable "global.tl".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Timelines</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="timeline_delete.html">timeline_delete</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+timeline_add
+-->

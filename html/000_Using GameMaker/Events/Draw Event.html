@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>The Draw Event</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>The Draw Event</h1>
+
+<h2>The draw event is one of the many events that can be triggered in an instance and may contain code or actions.</h2>
+
+<p>
+<b><img src="../../Images/Event_Draw.png" align="middle" align="left">Draw Event</b>
+<br>
+This event is the one that governs what you see on the screen when you run your game, and is split into three seperate "sub-events" - the Draw Event, the <a href="Draw%20GUI%20Event.html">Draw GUI Event</a> and 
+the the <a href="Resize%20Event.html">Resize Event</a>:
+
+<img class="center" src="Draw_Menu.png">
+<br>
+<br>
+
+The main draw event is the one covered here and runs before the Draw GUI event, meaning that everything that is drawn in this event is drawn beneath that of the Draw Gui event, regardless of depth (anything 
+drawn in the Draw GUI event will <i>always</i> be drawn over anything drawn in the normal draw event, regardless of depth).
+<br>
+<br>
+
+All instances have a draw event which will run as long as the instance has the visible flag set to true (invisible objects do <b>not</b> trigger a draw event), and note that even if you have defined nothing for this 
+event in the object properties (ie: no code nor actions), if the object has a sprite assigned it has a draw event! You see, <i>GameMaker:Studio</i> has two ways to draw things:
+<br>
+<br>
+
+<blockquote>
+	<ul>
+		<li><b>the default draw</b>, which is when you define the sprite in the object properties and place no actions or code in the draw event, in which case <i>GameMaker:Studio</i> will draw that sprite, 
+		but note that any transforms you perform in other events to change the image scale, index, blending etc... will be reflected too as long as the draw event is empty.
+		<br>
+		<br>
+		
+		<li><b>the custom draw</b>, which is when you place code or actions in the draw event. This is telling <i>GameMaker:Studio</i> "I want to control what you draw for this object" and it completely over-rides 
+		the default draw. This means that you can have an object with a sprite assigned, then set the draw event to draw text and the sprite <i>will not be drawn</i> as you have not told <i>GameMaker:Studio</i> 
+		to draw it.
+	</ul>
+</blockquote>
+
+<p>
+The draw event is a very intensive event too, in that it's one of the events that takes up most time and resources... to that end it is <i>never</i> a good idea to do anything in the draw event other than drawing, 
+so save your large code or complex actions for the step event or alarms or whatever, but leave the draw event clear for the drawing as that's what it does best.
+<br>
+<br>
+
+<i>Note : </i> What you draw has nothing to do with the collision engine you choose (traditional or physics) as that is defined by the object properties and the sprite or mask that the object has been given.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Draw%20GUI%20Event.html">The Draw GUI Event</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw event
+default draw
+custom draw
+-->

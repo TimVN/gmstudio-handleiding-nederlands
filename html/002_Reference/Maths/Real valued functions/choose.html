@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>choose</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>choose</h1>
+  
+<h2>Randomly chooses one of up to 16 arguments.</h2>
+
+<h3><b>Syntax :</b></h3>
+
+<p class="code">choose(val0, val1, val2... val15);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>val0... val15</td>
+	<td>An input value that can be string, integer, variable or constant.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>One of the given arguments.</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Sometimes you want to specify something other than numbers for a random selection, or the numbers you want are not in any real order or within any set range. In these cases you would use choose() 
+to generate a random result. For example, say you want to create an object with a random sprite at the start, then you could use this function to set the sprite index to one of up to 16 sprites.
+<br>
+<br>
+
+<i><b>NOTE : This function will return the same value every time the game is run afresh due to the fact that GameMaker:Studio generates the same initial random seed every time to make 
+debugging code a far easier task. To avoid this behaviour use <a href="randomize.html"><tt>randomize</tt></a> or <a href="random_set_seed.html"><tt>random_set_seed</tt></a> at 
+the start of your game.</b></i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+sprite_index = choose(spr_Cactus, spr_Flower, spr_Tree, spr_Shrub);<br>
+hp = choose(5, 8, 15, 32, 40);
+name = choose("John", "Steven", "Graham", "Jack", "Emily", "Tina", "Jill", "Helen");
+</p>
+<p>
+The above code uses choose to set a number of properties for the instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Real Number Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="random.html">random</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+choose
+-->

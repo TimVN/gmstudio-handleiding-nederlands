@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Sound</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Sound</h1>
+
+<h2><i>GameMaker:Studio</i> has two separate sound engines that you can use in your games - The <b>Legacy Sound</b> and the <b>GM:S Audio</b>. This section explains the differences between the two as 
+well as providing all the necessary functions to work with them.</h2>
+
+<p>
+<i>GameMaker:Studio</i> has a re-vamped audio engine that is based on the <tt>*.ogg</tt> sound format. You must still load your sounds into the IDE as either <tt>*.wav</tt> or <tt>*.mp3</tt> but the 
+runner will convert these when your finished game is compiled. In this way <i>GameMaker:Studio</i> keeps the final file size of your game to a minimum while ensuring maximum quality. The added benefit of the 
+new GM:S Audio engine is that you now have access to full 3D sound with the ability to place a "listener" for all sound as well as different sound "emitters" to create some stunning special audio effects!
+<br>
+<br>
+
+Please note that you cannot have both the new audio engine <i>and</i> the legacy engine active at the same time. For old games created with other versions of <i>GameMaker</i> or for those games started 
+before the new audio engine was added, the Legacy Audio will be used as default, while for all new games <i>GameMaker:Studio</i> will default to the new audio engine. This behaviour can be changed from the 
+<a href="../../../001_Advanced%20Use/Global%20game%20settings/General%20Tab.html">Global Game Settings - General Tab</a>.
+<br>
+<br>
+
+The legacy functions are still valid and available due to the fact that certain browsers for HTML5 games do not support the newer sound system. This means that you may wish to check in-game which sound system 
+is actually being used and change the functions being used as appropriate. To that end there is a special function available:
+<blockquote>
+	<ol>
+		<li><a href="audio_system.html">audio_system</a><br>
+	</ol>
+</blockquote>
+
+<h3>Basic Audio Functions</h3>
+<p>
+The following functions are for dealing with audio in the most straightforward and simple way possible, avoiding the use of emitters and permitting the user to generate sounds and play music easily as these 
+sounds are always generated at the <i>listener position</i> (see below for more details on the <i>listener</i>) and so are generally not affected by any changes to the <i>listener</i>:
+<blockquote>
+	<ol>
+		<li><a href="audio_exists.html">audio_exists</a><br>
+		<li><a href="audio_get_type.html">audio_get_type</a><br>
+		<li><a href="audio_play_music.html">audio_play_music</a><br>
+		<li><a href="audio_pause_music.html">audio_pause_music</a><br>
+		<li><a href="audio_stop_music.html">audio_stop_music</a><br>
+		<li><a href="audio_play_sound.html">audio_play_sound</a><br>
+		<li><a href="audio_play_sound_at.html">audio_play_sound_at</a><br>
+		<li><a href="audio_pause_sound.html">audio_pause_sound</a><br>
+		<li><a href="audio_pause_all.html">audio_pause_all</a><br>
+		<li><a href="audio_resume_sound.html">audio_resume_sound</a><br>
+		<li><a href="audio_resume_music.html">audio_resume_music</a><br>
+		<li><a href="audio_resume_all.html">audio_resume_all</a><br>
+		<li><a href="audio_stop_sound.html">audio_stop_sound</a><br>
+		<li><a href="audio_stop_all.html">audio_stop_all</a><br>
+		<li><a href="audio_is_playing.html">audio_is_playing</a><br>
+		<li><a href="audio_music_is_playing.html">audio_music_is_playing</a><br>
+	</ol>
+</blockquote>
+
+<h3>Advanced Audio Functions</h3>
+<p>
+The following functions are designed to give more control over how the audio engine works, and how the sounds played through it will be "heard" by the listener. As such it is recommended that you have a good 
+working knowledge of how the rest of the <i>GameMaker:Studio</i> audio engine works before using any of the following functions:
+<blockquote>
+	<ol>
+		<li><a href="audio_sound_length.html">audio_sound_length</a><br>
+		<li><a href="audio_sound_pitch.html">audio_sound_pitch</a><br>
+		<li><a href="audio_falloff_set_model.html">audio_falloff_set_model</a><br>
+		<li><a href="audio_music_gain.html">audio_music_gain</a><br>
+		<li><a href="audio_sound_gain.html">audio_sound_gain</a><br>
+		<li><a href="audio_master_gain.html">audio_master_gain</a><br>
+		<li><a href="audio_channel_num.html">audio_channel_num</a><br>
+	</ol>
+</blockquote>
+
+<h3>Emitters</h3>
+<p>
+Audio emitters are provided to increase the flexibilty of the <i>GameMaker:Studio</i> audio engine, and they permit you to add real time effects to your audio assets, like pitch and doppler variations, as 
+well as the ability to position your sounds within the 3D audio space and give them realistic motion effects. All these functions are affected by the position of the <i>listener</i> within the audio environment 
+and so will require that you use the provided functions for changing the listener position, velocity and orientation too.
+<br>
+<br>
+
+<i><b>NOTE : </b>These functions can only be used with sounds that are flagged as "Normal Sound" on import into <i>GameMaker:Studio</i> and will not work with those flagged as "Background Music".</i>
+<br>
+<br>
+
+The following functions exist to deal with audio emitters:
+<blockquote>
+	<ol>
+		<li><a href="audio_emitter_create.html">audio_emitter_create</a><br>
+		<li><a href="audio_emitter_exists.html">audio_emitter_exists</a><br>
+		<li><a href="audio_emitter_position.html">audio_emitter_position</a><br>
+		<li><a href="audio_emitter_velocity.html">audio_emitter_velocity</a><br>
+		<li><a href="audio_emitter_falloff.html">audio_emitter_falloff</a><br>
+		<li><a href="audio_emitter_gain.html">audio_emitter_gain</a><br>
+		<li><a href="audio_emitter_pitch.html">audio_emitter_pitch</a><br>
+		<li><a href="audio_emitter_free.html">audio_emitter_free</a><br>
+		<li><a href="audio_play_sound_on.html">audio_play_sound_on</a><br>
+	</ol>
+</blockquote>
+
+<h3>The Listener</h3>
+<p>
+When dealing with complex audio situations it can be useful to define where in the audio environment the listener should be situated. When working with the simple audio functions, it is not normally necessary 
+for the listener to be changed in any way, however when using emitters to generate realistic audio within the 3D audio space, it is important that the listener be changed and moved correctly, or else the sound 
+will be in the wrong <i>position</i> for the person playing your game.
+<br>
+<br>
+
+<i>GameMaker:Studio</i> provides the following <i>listener</i> functions:
+<blockquote>
+	<ol>
+		<li><a href="audio_listener_position.html">audio_listener_position</a><br>
+		<li><a href="audio_listener_velocity.html">audio_listener_velocity</a><br>
+		<li><a href="audio_listener_orientation.html">audio_listener_orientation</a><br>
+	</ol>
+</blockquote>
+
+<h3>Legacy Sound</h3>
+<p>
+The following section also contains information on the Legacy Sound System, provided for compatability with previous versions of <i>GameMaker</i>:
+<blockquote>
+	<ol>
+		<li><a href="Legacy%20Sound/index.html">Legacy Sound</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="Setting_Up_GM.html">  </a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio
+listener
+audio emitter
+sound
+3D audio
+-->

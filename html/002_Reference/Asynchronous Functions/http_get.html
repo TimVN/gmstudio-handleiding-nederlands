@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>http_get</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>http_get</h1>
+  
+<h2>This function retrieves information from the supplied URL.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">http_get(url);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>url</td>
+	<td>The web address of the server that you wish to get information from</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function, you connect to the specified URL in order to retrieve information. As this is an asynchronous function, <i>GameMaker:Studio</i> will not block while waiting for a reply, but will keep on running unless it gets callback 
+information. This information will be in the form of a string and will trigger an <b>Async Event</b> in any instance that has one defined in their object properties. You should also note that HTTP request parameters (the bits sometimes 
+"tacked on" to the end of a URL when you submit a form on a web page) are perfectly acceptable when using this function, for example :<br>
+
+<p class="code">
+http_get("http://www.YoYoGames.com/logon?username="+name);<br>
+</p>
+<p>
+will pass the string held in the variable "name" to the server as well a retrieve the data from that URL. So, essentially, any time a simple, short piece of data needs to be passed from the client to the server, this would be reasonable 
+choice as the function to use.
+<br>
+<br>
+
+This event will generate a "call back" which is picked up by any <a href="../../001_Advanced%20Use/More%20About%20Async%20Events/HTTP.html"> HTTP Events</a>, in which case it will generate a 
+<a href="../Data%20Structures/DS%20Maps/index.html"><tt>ds_map</tt></a> (more commonly known as a "dictionary") that is exclusive to this event and is stored in the special variable <b>async_load</b>. 
+This ds_map has the following structure :
+<blockquote>
+	<ol>
+		<li><b>URL : </b>The complete URL you requested.</li><br>
+		<li><b>result : </b>The data received (string only).</li><br>
+		<li><b>http_status : </b>The raw http status code (if available). This returns the standard web status code for most browsers, eg: 304 for "Not Modified" or 204 for "No Content", etc...</li><br>
+		<li><b>id : </b>The ID which was returned from the command. If you fire off a series of <tt>http_</tt> requests then you need to know which one you are getting the reply to, and so you would use this value to 
+		compare to the value you stored when you originally sent the request to find the right one.</li><br>
+		<li><b>status : </b> Returns a value of less than 0 for an error.</li><br>
+	</ol>
+</blockquote>
+
+<p>
+<i><b>NOTE : </b>You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked 
+and may appear to return blank results. Please see the section on <a href="index.html">Cross Domain Issues</a> for further details.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Extended Example :</h3>
+<p>
+The <tt>http_get</tt> function can be called from any event, and since it is asynchronous the callback can be almost instantaneous or could take several seconds. Calling the function is simple and would look 
+something like this:
+<p class="code">
+get[0] = http_get("http://www.MacSweeneyGames.com/logon?username=" + name);
+<p>
+The above code will pass the string held in the variable "name" to the given server as well as retrieve the data from that URL, triggering an Async Event which will contain the async_load ds_map (the async_load 
+map index will be stored in the array "get[0]" so you can check for the correct callback). The Async Event triggered would be the <b>HTTP</b> sub-event, and in that event you would have the following:
+<p class="code">
+if ds_map_find_value(async_load, "id") == get[0]<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if ds_map_find_value(async_load, "status") >= 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r_str = ds_map_find_value(async_load, "result");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r_str = "null";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will first check the id of the ds_map that has been created, then check the status of the callback. If the value is greater than or equal to 0 (signalling success) the result from the callback will 
+then be stored in a variable for future use, otherwise the variable will be set to a default value (in this case "null").
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Asynchronous Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="http_post_string.html">http_post_string</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+http_get
+--> 

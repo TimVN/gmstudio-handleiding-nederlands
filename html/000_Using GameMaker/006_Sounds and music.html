@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Sounds And Music</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Sounds And Music</h1>
+
+<h2>This section explains how to add a sound resource to your game.</h2>
+
+<p>
+To add a sound resource to your game, use the <a href="Drop%20Down%20Menus/The%20Resources%20Menu.html">Resource</a> menu or right-click on the resource tree and select <b>Create Sound</b>, or you  can use 
+the corresponding button on the toolbar. Any of those will bring up the following window :
+
+<img class="center"  src="../images/form_sound.png">
+
+To load a sound, press the button labeled <b>Load Sound</b>. A file selector dialogue pops up in which you can select the sound file, which can <i>only</i> be either a wave file or an mp3 file. Wave files 
+(<tt>*.wav</tt>) are used for the short sound effects as even though they are generally larger files they will play instantaneously due to the fact that they do not need any type of decoding for playing. You can also 
+have multiple wave files playing at once, which is why you should use these for all the sound effects in your game. Mp3 (<tt>*.mp3</tt>) files should be used for background music as </i>GameMaker:Studio</i> 
+only permits you to play <b>one</b> music track at a time. These files are much smaller than a wave file would be but have a cpu overhead as they have to be decoded before being played, hence the limit of only 
+one mp3 file being played at time (however, you can have multiple music tracks in your game, and you would just switch between them when necessary).
+<br>
+<br>
+
+The <b>Kind</b> of file is used by <i>GameMaker:Studio</i> internally to organise how each file is stored and played, with normal sounds automatically being associated with <tt>*.wav</tt> files, and 
+background music being assigned to <tt>*.mp3</tt> files. This means that if you assign the wrong <i>kind</i> of sound asset, you may not hear anything in game, so make sure that you only load 
+<tt>*.wav</tt> files for <b>Normal Sounds</b> and <tt>*.mp3</tt> for <b>Background Music</b>.
+<br>
+<br>
+
+<i><b>NOTE: </b>Previous versions of <i>GameMaker</i> accepted midi file format but that is not the case with <i>GameMaker:Studio</i>. You cannot use midi any longer and any imported files from 
+legacy versions which use these may cause the program to crash. These files should be removed or changed before testing!</i>
+<br>
+<br>
+
+Once you have loaded your file you can preview the sound by using the play button which will loop it continuously. This is very handy as it means you can make changes to the volume using the slider at the bottom 
+of the window and hear what the effect it will have on the sound. There is a stop button too, so you can stop the preview at any time. 
+<br>
+<br>
+
+<i><b>NOTE: </b>If you are using the <b>Free</b> version of <i>GameMaker:Studio</i> you are limited to a maximum of 10 sounds per game. For more details see 
+<a href="../000_Using%20GameMaker/Versions.html">here</a>.</i>
+<br>
+<br>
+<br>
+<br>
+
+<h3>Conversion</h3>
+<p>
+For HTML5 and some devices, it is necessary that all sound files be converted to <b>*.ogg</b> (Ogg Vorbis) format files and <b>*.mp3</b> files. <i>GameMaker:Studio</i> will do this automatically for you 
+but you do have some control over the quality of those sounds when converted. Generally the default settings of 160kbit/s for mp3 and level 21 (roughly 22050khz at 40kbit/s) are perfectly adequate and give 
+approximately the same size of file, but it may be that you wish sound effects (for example) to have a lower quality and music to have a higher quality, in which case these settings can be changed.
+<br>
+<br>
+
+<i><b>NOTE: </b>The higher the quality, the larger the file, and this should be taken into account when deciding what bitrate to choose.</i>
+<br>
+<br>
+
+<h3>External Editor</h3>
+<p>
+<i>GameMaker:Studio</i> does not have a built-in sound editor. But, in the <a href="../001_Advanced%20Use/Preferences/Editor%20Preferences.html">Editor Preferences</a>, you can indicate external 
+editors that you want to use for editing sounds. If you selected these you can press the button labeled <b>Edit Sound</b> to open the chosen editor and change the current sound. The <i>GameMaker:Studio</i> 
+window will be hidden while you edit the sound and returns when you close the sound editor (you must save the sound in the editor first otherwise it will not be saved in <i>GameMaker:Studio</i>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Using GameMaker:Studio</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="007_Backgrounds.html">Backgrounds</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+adding sounds
+creating sounds
+sounds
+music
+midi files
+wave files
+saving sounds
+mp3 files
+wav
+mp3
+midi
+Normal Sound
+Background Music
+Conversion
+mp3 bit rate
+ogg quality
+Edit Sound
+volume
+-->

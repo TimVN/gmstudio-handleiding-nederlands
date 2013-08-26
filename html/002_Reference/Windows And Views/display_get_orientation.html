@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>display_get_orientation</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>display_get_orientation</h1>
+  
+<h2>This variable holds a different constant depending on the orientation of the device.</h2>
+ 
+<h3>Syntax :</h3> 
+<p class="code">display_get_orientation()</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Constant
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return one of two constant <i>GameMaker:Studio</i> has to tell you whether the device running the game is being held in landscape or portrait mode:
+
+<div class="param">
+<table>
+	<tr><th>Constant</th><th>Description</th></tr>
+	
+	<tr><td>display_landscape</td><td>The device is being held horizontally ie: The longest edge is from left to right, and the menu button is on the right.</td></tr>
+	
+	<tr class="alt"><td>display_landscape_flipped</td><td>As above, only now the menu button is on the left.</td></tr>
+
+	<tr><td>display_portrait</td><td>The device is being held vertically ie: The longest edge is from top to bottom, and the menu button is at the bottom.</td></tr>
+	
+	<tr class="alt"><td>display_portrait_flipped</td><td>As above, only now the menu button is at the top.</td></tr>
+	
+</table>
+ </div>
+<p>
+Please note that this function may not correctly detect the orientation of the device when used in the HTML5 target module. However this is easily mimicked by the use 
+of the following script:
+<p class="code">
+return (browser_width &lt; browser_height);<br>
+</p>
+<p>
+It will return <tt>true</tt> for portrait and <tt>false</tt> for landscape.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if display_get_orientation() = display_landscape<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Config = 0;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Config = 1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the orientation of the device and sets a global variable depending on the value returned.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows And Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="display_get_dpi_x.html">display_get_dpi_x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+display_get_orientation
+display_landscape
+display_landscape_flipped
+display_portrait
+display_portrait_flipped
+-->

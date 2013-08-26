@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_background_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_background_ext</h1>
+
+<h2>Draws a background at a given position, with customisable scaling, rotation, blend and alpha.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_background_ext(back, x, y, xscale, yscale, rot, color, alpha);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>back</td>
+	<td>The index of the background to draw.</td></tr>
+
+	<tr class="alt"><td>x</td>
+	<td>The x coordinate of where to draw the background.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of where to draw the background.</td></tr>
+	
+	<tr class="alt"><td>xscale</td>
+	<td>The horizontal scaling of the background.</td></tr>
+	
+	<tr><td>yscale</td>
+	<td>The vertical scaling of the background.</td></tr>
+	
+	<tr class="alt"><td>rot</td>
+	<td>The rotation of the background.</td></tr>
+	
+	<tr><td>color</td>
+	<td>The color with which to blend the background (use -1 or c_white to display it normally).</td></tr>
+	
+	<tr class="alt"><td>alpha</td>
+	<td>The alpha of the background (from 0 to 1 where 0 is transparent and 1 opaque).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will draw the given background as in the function <a href="draw_background.html"><tt>draw_background</tt></a> but with additional options to change the scale, blending, rotation and alpha 
+of the background being drawn. Changing these values does <i>not</i> modify the resource in any way (only how it is drawn), and you can use any of the available 
+<a href="../../Game%20Assets/Backgrounds/index.html">background variables</a> instead of direct values for all the arguments in the function.
+<br>
+<br>
+
+<i><b>NOTE : </b>Blending is not available for the HTML5 target unless WebGL is enabled.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_background_ext(bck_Sky, 0, 0, background_xscale[0], background_yscale[0], 0, c_red, 0.5);
+</p>
+<p>
+The above code will draw a background at the (0,0) position in the room, with the same scale as the background indexed in <b>background[0]</b>, blended red and semi transparent.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing Sprites And Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_background_part.html">draw_background_part</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_background_ext
+-->

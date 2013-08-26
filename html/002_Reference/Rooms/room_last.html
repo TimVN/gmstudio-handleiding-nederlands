@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_last</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_last</h1>
+
+<h2>The index of the last room in the game.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_last;</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns:</b> Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read only</b> variable returns the index of the very last room in the game (this is defined by the order in which the rooms appear in the resource tree and <i>not</i> by the order in which they were 
+created.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(ord("Q"))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;room_goto(room_last);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code chec ks to see if a key has been pressed and if so it goes to the last room in the game.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_next.html">room_next</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_last
+-->

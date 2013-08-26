@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>instance_count</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>instance_count</h1>
+
+<h2>Returns the total number of instances curretnly active in the room.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">instance_count</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this <b>read only</b> variable you can get a count of all active instances that are in the room. This will include the instance running the code, but does <i>not</i> include those instances that have been 
+deactivated using the <a href="../Deactivating%20Instances/index.html"><tt>instance_deactivate</tt></a> functions.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<p><b>Example :</b></p>
+<p class="code">
+while (instance_count &lt; 100)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;instance_create(random(room_width), random(room_height), obj_Star);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will create multiple instances of the object "obj_Star" until the total instance count reaches 100.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="instance_create.html">instance_create</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+instance_count
+-->

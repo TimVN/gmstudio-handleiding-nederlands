@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_grid_add</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_grid_add</h1>
+
+<h2>Adds a value to a cell in a grid.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_grid_add(index, x, y, val);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the grid.</td></tr>
+	
+	<tr class="alt"><td>x</td>
+	<td>The x position of the cell in the grid.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position of the cell in the grid.</td></tr>
+	
+	<tr class="alt"><td>val</td>
+	<td>The value to add to the cell.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to add a given value (real or string) to the value of the given cell within the grid. The value to be added must be the same type as that held within the grid cell, 
+ie: you cannot add a string to a real or vice-versa, and for strings this corresponds to concatenation.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ds_grid_add(grid, 5, 5, 6);
+</p>
+<p>
+This would add 6 to the given cell within the ds_grid referenced by the variable "grid".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Grids</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_grid_add_region.html">ds_grid_add_region</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_grid_add
+-->

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_is_playing</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_is_playing</h1>
+
+<h2>Checks to see if the inicated sound is playing.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_is_playing(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sound to check.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will check the given sound to see if it is currently playing. The sound can either be a single instance of a sound (the index for individual sounds being played can be stored in a variable when using the 
+<a href="audio_play_sound.html"><tt>audio_play_sound</tt></a> or <a href="audio_play_sound_at.html"><tt>audio_play_sound_at</tt></a> functions) or a sound asset, in which case <i>all</i> 
+instances of the given sound will be checked and if any of them are playing the function will return <tt>true</tt> otherwise it will return <tt>false</tt>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !audio_is_playing(snd_Waterfall)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;audio_play_sound_at(snd_Waterfall, x, y, 0, 300, true, 1);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the sound indexed in the variable "snd_Waterfall" is currently playing and if it returns <tt>false</tt> then the sound will be looped at it's room position, with a fall-off distance 
+of 300 and a low priority.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_music_is_playing.html">audio_music_is_playing</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+audio_is_playing
+-->

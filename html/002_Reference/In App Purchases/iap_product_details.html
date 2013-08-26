@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>iap_product_details</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>iap_product_details</h1>
+  
+<h2>Add product details to a ds_map.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">iap_product_details(purchase_id, ds_map);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>purchase_id</td>
+	<td>This can either be the Apple Store/Google Play id string, an URL id,  or an index into the available purchases ds_list.</td></tr>
+
+	<tr class="alt"><td>ds_map</td>
+	<td>The ds_map that will store the product information.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can generate a <a href="../Data%20Structures/DS%20Maps/index.html"><tt>ds_map</tt></a> containing a number of key/value pairs that describe the purchase. The following data is returned 
+within the map:
+<blockquote>
+	<ul>
+		<li>"<b>Status</b>" - The current status of the product, can be:
+			<blockquote>
+				<ol>
+					<li>"Purchased"
+					<li>"Available"
+					<li>"Unavailable"
+				</ol>
+			</blockquote>	
+		<li>"<b>id</b>" - The product id for the purchase.<br><br>
+		<li>"<b>title</b>" - The name of the purchase.<br><br>
+		<li>"<b>description</b>" - The description of the purchase.<br><br>
+		<li>"<b>price</b>" - The price of the purchase.<br><br>
+		<li>"<b>content_url</b>" - The URL from which the content was downloaded from.<br><br>
+		<li>"<b>type</b>" - <b><i>Windows Phone Only!</i></b> The type of purchase which can be either "Consumable" or "Durable". "Durable" is the default value (non-consumable).<br>
+	</ul>
+</blockquote>	
+
+<p>
+<i><b>NOTE: </b>The <tt>ds_map</tt> used is <b>not</b> created by the function, meaning that you must create it previously and remove it again from memory when not in use using the appropriate 
+function.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var p_map;<br>
+p_map = ds_map_create();<br>
+iap_product_details(p_id, p_map);<br>
+if ds_map_find_value(p_map, "status") == "Purchased"<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_text(x, y, "Title: " + string(ds_map_find_value(p_map, "title")));<br>       
+&nbsp;&nbsp;&nbsp;draw_text(x, y + 32, "Description: " + string(ds_map_find_value(p_map, "description")));<br>
+&nbsp;&nbsp;&nbsp;draw_text(x, y + 64, "Price: " + string(ds_map_find_value(p_map, "price")));<br>
+&nbsp;&nbsp;&nbsp;draw_text(x, y + 96, "Product ID: " + string(ds_map_find_value(p_map, "id")));<br>
+&nbsp;&nbsp;&nbsp;}<br>
+ds_map_destroy(p_map);<br>
+</p>
+<p>
+The above code will creates a ds_map and then stores the purchase details for a previously stored purchase id. If the "status" key hold the "Purchased" value, it will then draw the purchase details.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="iap_product_files.html">iap_product_files</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+iap_product_details
+-->

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_merge</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_merge</h1>
+
+<h2>Merges the images from one sprite into another.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_merge(ind1, ind2);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind1</td>
+	<td>The index of the sprite to merge.</td></tr>
+	
+	<tr class="alt"><td>ind2</td>
+	<td>The index of the sprite that ind1 is to be merged with.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will merge the sprite indexed in argument1 ("ind2") with that which is indexed in argument0 ("ind1"). This change is permanent, and from the moment you use this function until the game 
+is closed or the sprite deleted, the sprite that is being merged into will be changed, however the sprite that it is being merged with will remain the same, as illustrated below:
+
+<img class="center" src="spr_Merge.png"></img>
+
+<i><b>NOTE : </b>Neither the image asset that is being merged into, nor the image asset that is for merging, can be one of the original game resources. You must use <a href="sprite_duplicate.html">
+<tt>sprite_duplicate</tt></a> first to create two new resources (if you are merging included game assets) and then merge those.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tspr;<br>
+tspr[0] = spr_add(working_directory + "\Sprite Assets\explode1.png", 16, true, true, 0, 0);<br>
+tspr[1] = sprite_duplicate(spr_Explosion);<br>
+sprite_merge(tspr[0], tspr[1]);<br>
+sprite_index = t_spr[0];<br>
+sprite_delete(tspr[1]);<br>
+</p>
+<p>
+The above code loads a sprite into a local variable then merges it with another sprite that has been duplicated. Finally the merged sprite is assigned to the instance <tt>sprite_index</tt> while the loaded sprite 
+is removed to free the memory it uses. Note that at some point after this operation, like in the Destroy or Room End events, you will also need to use <a href="sprite_delete.html"><tt>sprite_delete</tt></a> 
+to remove the merged sprite from memory too.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_create_from_screen.html">sprite_create_from_screen</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_merge
+-->

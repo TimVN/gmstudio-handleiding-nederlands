@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>buffer_fill</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>buffer_fill</h1>
+  
+<h2>Writes data to a buffer.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">buffer_fill(buffer, offset, type, value, size);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>buffer</td>
+	<td>The index of the buffer to fill.</td></tr>
+	
+	<tr class="alt"><td>offset</td>
+	<td>The data offset value (in bytes).</td></tr>
+	
+	<tr><td>type</td>
+	<td>The type of data that is to be written to the buffer (see the list of constants <a href="buffer_read.html">here</a>).</td></tr>
+	
+	<tr class="alt"><td>value</td>
+	<td>The data to write.</td></tr>
+
+	<tr><td>size</td>
+	<td>The size of the buffer (in bytes) that you wish to fill.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to fill a previously created buffer with a given data type and value. The data you fill the buffer with must be in agreement with the "type" arguement of this function, meaning that you 
+can't try to fill with a string and use the unsigned 16bit integer type, for example. The type constants are the same as those used by the <a href="buffer_read.html"><tt>buffer_read</tt></a> and 
+<a href="buffer_write.html"><tt>buffer_write</tt></a> functions. The "size" is the size of the buffer (in bytes) that you wish to fill, while the offset is the offset value (also in bytes) from the start of the 
+buffer to start the fill from.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+map_buffer = buffer_create(16384, buffer_fixed, 0);<br>
+buffer_fill(map_buffer, 0, buffer_u16, 0, 16384);
+</p>
+<p>
+The above code finds the start of the buffer with the id stored in the variable "buff" them writes a series of signed 16bit integer values to it.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Buffers</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="buffer_seek.html">buffer_seek</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+buffer_fill
+--> 

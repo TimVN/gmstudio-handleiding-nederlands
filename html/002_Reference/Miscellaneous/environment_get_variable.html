@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>environment_get_variable</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>environment_get_variable</h1>
+  
+<h2>Returns the value of the given environment variable.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">environment_get_variable(name);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>name</td>
+	<td>The name (a string) of the environment variable to check.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns the value (a string) of the environment variable with the given name (also a string).
+<br>
+<br>
+
+<i><b>NOTE : </b>This is a Windows only function.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+e_str = environment_get_variable("%APPDATA%");
+</p>
+<p>
+The above code will return the full path for the environment variable "%appdata%", which in Windows XP is normally "C:\Documents and Settings\{username}\Application Data" and in Windows Vista/7 
+"C:\Users\{username}\AppData\Roaming".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Miscellaneous</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="external_define.html">external_define</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+environment_get_variable
+--> 

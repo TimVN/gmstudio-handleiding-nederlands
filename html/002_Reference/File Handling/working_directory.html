@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>working_directory</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>working_directory</h1>
+  
+<h2>The directory where either the included files are stored or you have local storage.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">working_directory</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+<tt>Working_directory</tt> can actually return two different values depending on what you are using it for. If you are writing a file to disk, <tt>working_directory</tt> points to the area of local 
+storage that is reserved for your game on the target device (in windows this is "%LOCALAPPDATA%/gamedir/" where the "gamedir" is the directory with the name of your game). However, when reading from 
+disk, <tt>working_directory</tt> can be <i>either</i> the local storage <i>or</i> the area where the included files are stored.
+<br>
+<br>
+
+For example, if you have a default *.txt file included with your game and read it into memory using <tt>working_directory</tt>, then that file will be taken from the 
+area where the included files are stored. If you then choose to write that information to a text file using <tt>working_directory</tt>, this will write the file to the target platforms local storage, 
+where it will be read from the next time unless you instruct <i>GameMaker:Studio</i> to delete the file, in which case <tt>working_directory</tt> will once more point to the area where the 
+included files are stored.
+<br>
+<br>
+
+<br>
+<i><b>WARNING!</b> This function may not work as you expect due to GameMaker:Studio being sandboxed! Please see the section on <a href="File%20System%20Limits.html">File System Limits</a> 
+for more information.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ini_open(working_directory + "\temp_ini.ini");
+</p>
+<p>
+This will open an ini file from the working directory of the game (creating it if it does not already exist). This could be the local storage, or the area where the included files are depending 
+on whether the file being looked for exists in either place.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File Handling</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="program_directory.html">program_directory</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+working_directory
+--> 

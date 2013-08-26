@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_stack_destroy</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_stack_destroy</h1>
+
+<h2>Destroys a given stack and removes it from memory.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_stack_destroy(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the data structure to remove.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will remove the given stack data-structure from memory,  freeing up the resources it was using and removing all values that it contained. This function should always be used when you 
+are finished using the ds_stack to prevent memory leaks that can slow down and crash your game. 
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if lives = 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;ds_stack_destroy(AI_stack);<br>
+&nbsp;&nbsp;&nbsp;room_goto(rm_Menu);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check the value of the built in global variable "lives" and if it is 0, it destroys the ds_stack indexed in the variable "AI_stack" and then changes rooms.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Stacks</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_stack_clear.html">ds_stack_clear</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_stack_destroy
+-->

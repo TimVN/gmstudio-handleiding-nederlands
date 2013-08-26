@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>image_number</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>image_number</h1>
+<h2>Returns the number of sub-images in an instance sprite.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">image_number</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read only</b> variable can be used to get the number of sub-images in a sprite that has been assigned to an instance (if you need the number os sub-images for a sprite other than the one 
+assigned to the instance you should use <a href="../../../Game%20Assets/Sprites/sprite_get_number.html"><tt>sprite_get_number</tt></a>). Please note that when there is (for example) 1 sub-image 
+this variable will return "1" but the image_index of that sub-image is 0.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if image_speed &gt; 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if image_index &gt; image_number - 1 instance_destroy();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the sprite is animating, and if it is it then checks to see if the current image_index is greater than the number of sub-images and if it is it destroys the instance.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="image_speed.html">image_speed</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+image_number
+-->

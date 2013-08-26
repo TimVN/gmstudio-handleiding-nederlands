@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>mp_grid_add_instances</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>mp_grid_add_instances</h1>
+  
+<h2>Marks all cells that an instance of the indicated object overlaps as being forbidden.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">mp_grid_add_instances(id, obj, prec);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param"> 
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>id</td>
+	<td>Index of the mp_grid that is to be used</td></tr>
+	
+	<tr class="alt"><td>h</td>
+	<td>Object index, or instance id, of the instances to be added into the mp_grid</td></tr>
+	
+	<tr><td>v</td>
+	<td>Whether the check is based on pixel-perfect collisions (true = slow) or its bounding box in general (false = fast).</td></tr>
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> N/A</p>  
+<p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function uses the instance collision mask (decided by the sprite properties or the mask index of the vcalling instance) to mark cells as forbidden or not, where forbidden cells cannot be crossed by any of the 
+pathfinding functions. You can specify in the function whether to consider precise collisions or not and the forbidden cells marked will change depending on this setting. This image illustrates this behaviour :
+<br>
+<br>
+
+<img class="center" src="mp_grid_add_instance_image.png"></img>
+
+<p>
+The two instances above have been added into the mp_grid using the mp_grid_add_instances function with precise being set as true. As you can see the, green instance has only marked the grid squares it 
+"touches" as forbidden, due to the fact that its sprite mask is also set to precise. However the second instance has marked other cells too which don't <i>appear</i> to be touching. This is because the sprite
+mask is <b>not</b> set to precise, meaning that even if you are using the precsie setting in the function, only the bounding box of the sprite will be considered. This is also what would happen if you set the 
+precise argument of the function to false - even instances with a precise sprite mask will be added into the grid based on their bounding boxes.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+mp_grid_add_instances(grid, obj_Wall, 1);<br>
+</p>
+<p>
+The above code will add all instances of "obj_Wall" into the mp_grid indexed in the variable "grid" using the precise collision mask rather than the bounding box.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Motion Planning</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="mp_grid_add_rectangle.html">mp_grid_add_rectangle</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+mp_grid_add_instances
+-->

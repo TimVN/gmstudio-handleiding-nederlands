@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_ellipse</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_ellipse</h1>
+
+<h2>Draws an ellipse.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_ellipse(x1, y1, x2, y2, outline);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x1</td>
+	<td>The x coordinate of the left of the ellipse.</td></tr>
+	
+	<tr class="alt"><td>y1</td>
+	<td>The y coordinate of the top of the ellipse.</td></tr>
+	
+	<tr><td>x2</td>
+	<td>The x coordinate of the right of the ellipse.</td></tr>
+	
+	<tr class="alt"><td>y2</td>
+	<td>The y coordinate of the bottom of the ellipse.</td></tr>
+	
+	<tr><td>outline</td>
+	<td>Whether the ellipse is drawn filled (false) or as a one pixel wide outline (true).</td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can draw either an outline of an ellipse or a filled elipse by defining a rectangular area that will then have the ellipse created to fit. You can define how precise the 
+drawing is with the function <a href="draw_set_circle_precision.html"><tt>draw_set_circle_precision</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_color(c_white);<br>
+draw_ellipse(100, 100, 300, 200, false);<br>
+</p>
+<p>
+This will draw a filled ellipse within the defined rectangular area.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Drawing Basic Forms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_ellipse_color.html">draw_ellipse_color</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_ellipse
+-->

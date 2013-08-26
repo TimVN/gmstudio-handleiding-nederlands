@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>bbox_bottom</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>bbox_bottom</h1>
+  
+<h2>Returns the position of bottom of the bounding box.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">bbox_bottom</p>
+  
+<p>
+<br>
+</p>
+
+<p><b>Returns : </b>Real</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read only</b> variable returns the y position (within the room) of the bottom of the bounding box for the instance, where the bounding box is defined by the maximum width and height of the 
+mask for the instance (as set by the sprite or by the mask index). Even when a sprite has a precise collision mask, the bounding box exists and is used for certain things, and so you can use 
+this variable to find it. Please note that when the instance has no sprite assigned the <tt>bbox_</tt> variables will always return 1.
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if bbox_bottom &gt; room_height<br>
+{<br>
+y = room_height - sprite_yoffset;<br>
+}<br>
+</p>
+<p>
+The above code checks to see if the bounding box of the instance is outside the room and if it is it sets the instance to a new position.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="bbox_left.html">bbox_left</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+bbox_bottom
+-->

@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_add</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_add</h1>
+
+<h2>Adds an image from a file to the set of sprite assets.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>fname</td>
+	<td>The name (string) of the file to added.</td></tr>
+	
+	<tr class="alt"><td>imgnum</td>
+	<td>Use to indicate the number of sub-images (1 for a single image). For gif images, this argument is not used and can be set to 0.</td></tr>
+	
+	<tr><td>removeback</td>
+	<td>Indicates whether to make all pixels with the background color (left-bottom pixel) transparent.</td></tr>
+	
+	<tr class="alt"><td>smooth</td>
+	<td>Indicates whether to smooth the edges if transparent.</td></tr>
+	
+	<tr><td>xorig</td>
+	<td>Indicate the x position of the origin in the sprite.</td></tr>
+	
+	<tr class="alt"><td>yorig</td>
+	<td>Indicate the y position of the origin in the sprite.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can add an image as a sprite, loading it from an external source where the image file to be loaded should <b>always</b> be in <tt>*.png</tt> format. The function 
+returns the new sprite index which must then be used in all further codes that relate to the sprite. If you use this function with HTML5 or are getting an image from an URL, this function will also generate an 
+asynchronous event. See <a href="../../../001_Advanced%20Use/More%20About%20Async%20Events/index.html">Advanced Use - More About Async Events</a> for more information.
+<br>
+<br>
+
+All images that are to be turned into animated sprites should have a "strip" format (see the image below) and it will be split into the number of sub-images specified following the rule <b>sprite width = 
+strip width / sub images</b>.
+
+<img class="center" src="spr_Strip.png"></img>
+
+As you can see in the above image, the sprite has been placed on a dark purple background, and this can be removed by setting the "removeback" argument to <tt>true</tt>. This works by checking the 
+<i>bottom left</i> pixel of the sprite for the color there and then uses that as the color to be removed. For example, in the above image, if we had the bottom left pixel color as green, all the green parts 
+of the sprite would have been removed and the rest of the purple background ignored.
+<br>
+<br>
+
+If you choose the "removeback" option, you may also want <i>GameMaker:Studio</i> to smooth the edges of the sprite by setting the "smooth" argument to <tt>true</tt>. All this does is create a semi-transparent 
+border around the edges of the sprite after it has had it's background removed.
+<br>
+<br>
+
+Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is "fixed" onto the instance that uses it, and is always calculated as relative to the 0,0 top left corner of 
+one sprite sub-image. So, for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have it's origin in the center.
+<br>
+<br>
+
+By default all new sprites have their bounding boxes calculated automatically (the exact bbox will depend on the size and transparency of the sprite), however you may wish to customise this, in which case 
+you should also use the function <a href="sprite_collision_mask.html"><tt>sprite_collision_mask</tt></a>.
+<br>
+<br>
+
+<i><b>NOTE : </b>When you load a sprite into GameMaker:Studio you must remember to remove it again (with <a href="sprite_delete.html"><tt>sprite_delete</tt></a>) when no longer needed, otherwise 
+there is risk of a memory leak which will slow down and eventually crash your game.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+spr = sprite_add("player_5.png", 16, true, true, 0, 0);
+</p>
+<p>
+The above code loads a sprite into the game and stores it's index in the variable "spr".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_replace.html">sprite_replace</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_add
+-->

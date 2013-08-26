@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_light_define_point</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_light_define_point</h1>
+  
+<h2>Defines a point light.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_light_define_point(ind, x, y, z, range, col)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index number of the light.</td></tr>
+	
+	<tr class="alt"><td>x</td>
+	<td>The x position of the light.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position of the light.</td></tr>
+
+	<tr class="alt"><td>z</td>
+	<td>The z position of the light.</td></tr>
+	
+	<tr><td>range</td>
+	<td>The light range.</td></tr>
+	
+	<tr class="alt"><td>col</td>
+	<td>The color of the light.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+To use lighting you obviously need to define lights. In <i>GameMaker:Studio</i> two different lights exist: directional lights (like the sun), and positional lights. This function is for a positional light, where you can define the x, 
+y and z position of the light, the light range and the color of the light (which will also affect the perceived intensity of the light as certain colors appear "darker" than others). You must also give the light an index number which 
+what will be used in other functions to reference it.
+<br>
+<br>
+
+<i><b>Note : </b>There are only 8 hardware lights available, so you should use these functions to define and manage "active" lights, not all lights in the scene.</i>
+<br>
+<br>
+
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_set_lighting(true);<br>
+d3d_light_define_point(1, 200, 123, 50, c_white);<br>
+d3d_light_enable(1, true);<br>
+</p>
+<p>
+The above code will enable lighting for the whole scene, then define a white light at a specific point in the room space, and finally turn that light on.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_light_enable.html">d3d_light_enable</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_light_define_point
+--> 

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Steam Event</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>Steam Event</h1>
+
+<h2>This is the sub event that will be triggered by any Steam API call-backs received.</h2>
+
+<p>
+This event can only be triggered by the <a href="../../002_Reference/Steam%20API/index.html">Steam API</a> functions and will return a 
+<a href="../../002_Reference/Data%20Structures/DS%20Maps/index.html"><tt>ds_map</tt></a> stored in the variable <tt>async_load</tt>, containing different key/value pairs depending on the call-back 
+from the function that has triggered the event. 
+<br>
+<br>
+
+The following keys will be available in the ds_map depending on the functions used to generate the call-back:
+<blockquote>
+	<ol>
+		<li><b>"_id ": </b>The async event id. This value is the "id" of the function that created the async call-back event (ie: the value returned by the function used).</li><br>
+		
+		<li><b>"status": </b>The status of the call-back, where -1 equals a failure or that no results were returned, and 0 equals a succes.</li><br>
+		
+		<li><b>"lbname": </b>The name of the Leaderboard that is being returned.</li><br>
+		
+		<li><b>"numEntries": </b>The number of "rows" of leaderboard data that is being returned.</li><br>
+		
+		<li><b>"entries": </b> A JSON object string that contains another ds_map, which will either contain the key "default" (signifying that no results are contained within) or the key "entries", which you can 
+		then get the value of. this returned value for "entries" will be a <a href="../../002_Reference/Data%20Structures/DS%20Lists/index.html"><tt>ds_list</tt></a> containing each of the ranks from the 
+		leaderboard, where each entry in the list will itself referrence another <tt>ds_map</tt> which will contain the keys "name", "score" and "rank".</li>
+		
+	</ol>
+</blockquote>
+<p>
+
+<i><b>NOTE : </b>The variable <tt>async_load</tt> is only valid in the asynchronous events, as the <tt>ds_map</tt> that is points to is created at the start of the event, then deleted again at the end, 
+with this variable being reset to a value of -1. However, all further data-structures created from the event <b>must be cleaned up using the appropriate functions</b>.</i>
+<br>
+<br>
+
+<h3>Example of Use</h3>
+<p>
+In this example we will request the top ten ranking for the given leaderboard and parse it's results in the <b>Steam Async Event</b>. to start with we need to request the scores with the following code:
+<p class="code">
+score_get = steam_download_scores("Game Scores", 1, 10);<br>
+</p>
+<p>
+This will send off a request to the Steam Server for the scores from the leaderboard "Game Scores", storing the <b>async id</b> of the request in the variable "score_get". this will then be handled in the <b>Steam 
+Async Event</b> in the following way:
+<p class="code">
+var async_id = ds_map_find_value(async_load, "id");<br>
+if async_id == score_get<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var entries = ds_map_find_value(async_load, "entries");<br>
+&nbsp;&nbsp;&nbsp;var map = json_decode(entries);<br>
+&nbsp;&nbsp;&nbsp;if ds_map_exists(map, "default")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_map_destroy(map);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var list = ds_map_find_value(map, "entries");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var len = ds_list_size(list);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var entry;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; len; i++;)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry = ds_list_find_value(list, i );<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_name[i] = ds_map_find_value(entry, "name");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_score[i] = ds_map_find_value(entry, "score");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_rank[i] = ds_map_find_value(entry, "rank");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_map_destroy(entry);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_list_destroy(list)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;ds_map_destroy(map)<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+
+What we do here is first check the "id" key of the special <tt>async_load</tt> map. If this value is the same as the value of the original call-back function (stored in the "score_get" variable) we then continue 
+to process the data. The first thing we do is parse the <tt>async_load</tt> ds_map for the key "entries" which will contain a JSON object containing the leaderboard data. This JSON object is then decoded 
+(see <a href="../../002_Reference/File%20Handling/json_decode.html"><tt>json_decode</tt></a>) as another ds_map, and this new map id is stored in the variable "map".
+<br>
+<br>
+
+This map is checked for the key "default" and if that is found then the map is destroyed and the event is exited. If no "default" key is found, the code will then parse the map to extract the necessary information 
+about the leaderboard, by first extracting a ds_list from the "entries" key of the ds_map, and then looping through each entry of the list to get <i>another</i> ds_map with the name, score and rank of each entry. 
+These values are then stored in arrays and the map destroyed.
+<br>
+<br>
+
+Once the loop has finished, the entries list is destroyed as is the map that it was taken from. There is no need to destroy the <tt>async_load</tt> ds_map as this is handled for you by <i>GameMaker:Studio</i>.
+<p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">More About Async Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Cloud.html">Cloud Events</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+IAP Event
+-->

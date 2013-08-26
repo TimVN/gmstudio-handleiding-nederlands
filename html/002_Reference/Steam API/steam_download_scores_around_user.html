@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_download_scores_around_user</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_download_scores_around_user</h1>
+  
+<h2>Download a range of scores from a leaderboard, centered around the user position.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_download_scores_around_user(lb_name, range_start, range_end);
+
+<p>
+<br>
+</p>
+ 
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>lb_name</td>
+		<td>The name of the leaderboard that you are downloading the scores from (a string).</td></tr>
+		
+		<tr class="alt"><td>range_start</td>
+		<td>The start position within the leaderboard.</td></tr>
+
+		<tr><td>range_end</td>
+		<td>The end position within the leaderboard.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is used to retrieve leaderboard entries relative the current users entry. The <tt>range_start</tt> parameter is the number of entries to retrieve <i>before</i> the current users entry, and the 
+<tt>range_end</tt> parameter is the number of entries after the current user's entry, and the current user's entry is <i>always</i> included in the results. For example, if the current user is number 5 on 
+a given leaderboard, then setting the start range to -2 and the end range to 2 will return 5 entries: 3 through 7. If there are not enough entries in the leaderboard before or after the user's entry, Steam will 
+adjust the range to try to return the number of entries requested. For example, if the user is #1 on the leaderboard, start is set to -2, and end is set to 2, Steam will return the first 5 entries in the leaderboard.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example:</h3>
+<p class="code">
+score_get = steam_download_scores_around_user("Game Scores", -4, 5);<br>
+</p>
+<p>
+This will send off a request to the Steam Server for a range of 10 scores from the leaderboard "Game Scores", centered on the player and will store the <b>async id</b> of the request in the variable "score_get". 
+This will then be handled in the <b>Steam Async Event</b>, as shown in the Extended Example for <a href="steam_download_scores.html"><tt>steam_download_scores</tt></a>.
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_download_friends_scores.html">steam_download_friends_scores</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_download_scores_around_user
+-->

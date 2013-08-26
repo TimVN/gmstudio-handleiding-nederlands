@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_emitter_free</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_emitter_free</h1>
+
+<h2>Removes the given emitter from memory.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_emitter_free(emitter);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>emitter</td>
+	<td>The index of the emitter to free.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can remove the given emitter from memory. This should always be done whenever the emitter is not going to be used further in the room or the game, ie: in the 
+<a href="../../../000_Using%20GameMaker/Events/Destroy%20Event.html">Destroy Event</a> of the instance or in the <a href="../../../000_Using%20GameMaker/Events/Other%20Event.html">Room End Event</a>, 
+otherwise you may end up with a memory leak that will slow down and eventually crash your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if lives = 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;audio_emitter_free(s_emit);<br>
+&nbsp;&nbsp;&nbsp;room_goto(rm_Menu);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the value of the global variable "lives" and if it returns 0, it will destroy the emitter indexed in the variable "s_emit" and then go to the room indexed in the variable "rm_Menu".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_play_sound_on.html">audio_play_sound_on</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_emitter_free
+-->

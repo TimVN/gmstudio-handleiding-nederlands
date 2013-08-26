@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>win8_livetile_notification_end</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>win8_livetile_notification_end</h1>
+
+<h2>End the definition of a Live Tile notification.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">win8_livetile_notification_end();</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function must be called after defining a Live Tile notification to "push" it onto the Windows UI Live Tile for your game. The notification will be shown on the Live Tile for your game unless you have previously 
+enabled queuing (using, <a href="win8_livetile_queue_enable.html"><tt>win8_livetile_queue_enable</tt></a>), in which case it will be added onto the notification queue and will be shown after all previous 
+notifications have been shown. This function requires you to have previously selected a Live tile template using <a href="win8_livetile_notification_begin.html"><tt>win8_livetile_notification_begin</tt></a>, 
+and set up the necessary text, images and tags using the appropriate Windows 8 functions.
+<br>
+<br>
+
+<i><b>NOTE: </i>This function is also used to push notifications to Secondary tiles when used along with <a href="win8_livetile_notification_secondary_begin.html">
+<tt>win8_livetile_notification_secondary_begin</tt></a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var expiryTime;<br>
+expiryTime = date_current_datetime();<br>
+expiryTime = date_inc_minute(expiryTime, 5);<br>
+win8_livetile_notification_begin("TileSquarePeekImageAndText01");<br>
+win8_livetile_notification_expiry(expiryTime);<br>
+win8_livetile_notification_tag("tag0");<br>
+win8_livetile_notification_text_add("Current Score = " + score);<br>
+win8_livetile_notification_image_add("ms-appx:///" + working_directory + "ScoreTile.png");<br>
+win8_livetile_notification_end();<br>
+</p>
+<p>
+The above code will push a new Live Tile notification through to Windows 8, with some text and an image, and the tile will be shown for 5 minutes.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows 8</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="win8_livetile_tile_notification.html">win8_livetile_tile_notification</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+win8_livetile_notification_end
+-->

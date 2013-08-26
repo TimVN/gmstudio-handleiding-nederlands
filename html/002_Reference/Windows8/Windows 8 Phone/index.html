@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Windows 8 Phone</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Windows 8 Phone</h1>
+
+<h2>These functions are provided specifically for the Windows 8 Phone platform.</h2>
+
+<p>
+While the Windows 8 Phone OS looks very similar to the standard Windows 8 desktop version, the live tiles and other functions are a bit more limited. At the moment <i>GameMaker:Studio</i> permits you to use 
+special functions to modify the Live Tiles associated with your game. These functions are split into three groups (for the three different types of tiles that are available). Apart from the functions specific to the tile type, 
+there are also two that are available for all types:
+<blockquote>
+	<ol>
+		<li><a href="winphone_tile_title.html">winphone_tile_title</a><br>
+		<li><a href="winphone_tile_count.html">winphone_tile_count</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<i><b>NOTE : </b>The tile type for your game (and it's initial values) can be set from the <a href="../../../001_Advanced%20Use/Global%20game%20settings/Win8%20Phone%20Tab.html">Global Game 
+Settings</a>.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>As with other mobile target platforms, the <i>Back Button</i> on Windows Phone devices can be accesed using the 
+<a href="../../Mouse,%20Keyboard%20and%20Other%20Controls/Keyboard%20Input/index.html"><tt>vk_backspace</tt></a> keyboard check.</i>
+<br>
+<br>
+
+<h3>Flip Tile</h3>
+<p>
+<img class="center" src="Phone8_Tiles.png"></img>
+
+A <b>Flip Tile</b> is one that has a back and a front image and the tile switches (or "flips") between them over time.
+<br>
+<br>
+
+The following functions are available to help you control their visual aspects:
+<blockquote>
+	<ol>
+		<li><a href="winphone_tile_front_image.html">winphone_tile_front_image</a><br>
+		<li><a href="winphone_tile_front_image_small.html">winphone_tile_front_image_small</a><br>
+		<li><a href="winphone_tile_front_image_wide.html">winphone_tile_front_image_wide</a><br>
+		<li><a href="winphone_tile_back_title.html">winphone_tile_back_title</a><br>
+		<li><a href="winphone_tile_back_content.html">winphone_tile_back_content</a><br>
+		<li><a href="winphone_tile_back_content_wide.html">winphone_tile_back_content_wide</a><br>		
+		<li><a href="winphone_tile_back_image.html">winphone_tile_back_image</a><br>
+		<li><a href="winphone_tile_back_image_wide.html">winphone_tile_back_image_wide</a><br>
+	</ol>
+</blockquote>
+
+
+<h3>Iconic Tile</h3>
+<p>
+<img class="center" src="Phone8_Iconic_Tile.png"></img>
+
+The <b>Iconic Tile</b> is one that uses an "iconic" image in all formats. This image will occupy the whole tile for a small and medium tile, but will be reduced to a small icon over the chosen background 
+color for the wide tile (normally with some text associated with the tile two).
+<br>
+<br>
+
+The following functions can be used to set these properties:
+<blockquote>
+	<ol>
+		<li><a href="winphone_tile_background_color.html">winphone_tile_background_color</a><br>
+		<li><a href="winphone_tile_icon_image.html">winphone_tile_icon_image</a><br>
+		<li><a href="winphone_tile_small_icon_image.html">winphone_tile_small_icon_image</a><br>
+		<li><a href="winphone_tile_wide_content.html">winphone_tile_wide_content</a><br>
+	</ol>
+</blockquote>
+
+
+<h3>Cyclic Tile</h3>
+<p>
+<img class="center" src="Phone8_Cyclic_Tile.png"></img>
+
+The <b>Cyclic Tile</b> is one that uses a number of wide-tile format images and cycles between them. If the Live Tile is <i>not</i> a wide tile, then only a small image will be shown.
+<br>
+<br>
+
+The following functions can be used to set these properties:
+<blockquote>
+	<ol>
+		<li><a href="winphone_tile_cycle_images.html">winphone_tile_cycle_images</a><br>
+		<li><a href="winphone_tile_small_background_image.html">winphone_tile_small_background_image</a><br>
+	</ol>
+</blockquote>
+
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Windows 8</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../016_Misc functions/index.html">Miscellaneous Functions</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+Windows 8 Phone
+
+winphone_tile_background_color( color ) - changes the background color of iconic tiles
+winphone_tile_icon_image( included_filename ) - changes the large icon image of iconic tiles
+winphone_tile_small_icon_image( included_filename ) - changes the small icon image of iconic tiles
+winphone_tile_wide_content( content, index ) - changes the wide content text of iconic tiles ( content is a string, and index is a value from 1 to 3 (inclusive) indicating which line to change )
+
+winphone_tile_cycle_images( included_filename_1, included_filename_2, ... ) - changes the image list of cycle tiles (up to 9 filenames can be specified)
+winphone_tile_small_background_image( included_filename ) - changes the small background image of cycle tiles
+
+-->

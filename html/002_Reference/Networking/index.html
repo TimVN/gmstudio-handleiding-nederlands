@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Networking</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Networking</h1>
+
+<h2>These functions are provided to give you basic client/server networking in your games.</h2>
+
+<p>
+The <i>GameMaker:Studio</i> networking functions are based on <i>sockets</i>, which is an industry standard on all platforms. With sockets, you have the ability to create both clients and servers using 
+simple GML which allows you to create even a single player game using the client/server model (something which will allow multiplayer to be added easily later).
+<br>
+<br>
+
+Basically, a socket is an object which can send, receive, connect and listen to <i>ports</i> on the network. These functions deal with just TCP/IP connections, which is what the internet is based on (IPv4 to 
+be more precise). In essence this lets you connect one socket using an IP address (let’s say 192.168.1.10) to another socket on another IP address (say 192.168.1.11). Once connected, these two sockets can 
+send data back and forth using the <tt>network_send_*</tt> functions (like <a href="network_send_packet.html"><tt>network_send_packet</tt></a>) and the dedicated asynchronous event that is 
+triggered by them. This async event will generate a <a href="../../002_Reference/Data_Structures/DS_Maps/index.html"></tt>ds_map</tt></a> containing the data recieved as well as other details, and you 
+can find the complete details in the section on the <a href="../../001_Advanced%20Use/More%20About%20Async%20Events/Networking.html">Network Async Event</a>.
+<br>
+<br>
+
+Instead of programs having to read and deal with every bit of network traffic coming into a machine, IP addresses also deal with ports, which are numbered from 0 to 65535. This allows each program to get 
+only the packets of data that it’s interested in, and not everything that has been sent by every program. This also saves considerable CPU time, as it seriously cuts down on data processing, so with 
+<i>GameMaker:Studio</i> you can also “listen” to ports. So, a server will create a socket, and then bind it to a specific port to listen to. It will then get notified of connections, disconnections and data transfers 
+from that socket.
+<br>
+<br>
+
+The data "packets" themselves are made up of binary data taken from a buffer. This buffer can be created and manipulated using the <i>GameMaker:Studio</i> <a href="../Buffers/index.html">
+Buffer functions</a>.
+<br>
+<br>
+<br>
+<br>
+
+<i><b>NOTE: </b>These functions are not currently available for the HTML5 target module.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>If you are using the <b>Free</b> version of <i>GameMaker:Studio</i> you are limited to a 1 client/server connection only. For more details 
+see <a href="../../000_Using%20GameMaker/Versions.html">here</a>.</i>
+<br>
+<br>
+
+The following functions exist for you to use for networking:
+<blockquote>
+	<ol>
+		<li><a href="network_create_server.html">network_create_server</a><br> 
+		<li><a href="network_create_socket.html">network_create_socket</a><br>
+		<li><a href="network_connect.html">network_connect</a><br> 
+		<li><a href="network_connect_raw.html">network_connect_raw</a><br> 
+		<li><a href="network_resolve.html">network_resolve</a><br>
+		<li><a href="network_set_timeout.html">network_set_timeout</a><br>
+		<li><a href="network_send_broadcast.html">network_send_broadcast</a><br>
+		<li><a href="network_send_packet.html">network_send_packet</a><br>
+		<li><a href="network_send_raw.html">network_send_raw</a><br>
+		<li><a href="network_send_udp.html">network_send_udp</a><br>
+		<li><a href="network_destroy.html">network_destroy</a><br>
+	</ol>
+</blockquote>	
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../016_Misc functions/index.html">Miscellaneous Functions</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+network functions
+-->

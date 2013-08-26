@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>win8_livetile_badge_clear</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>win8_livetile_badge_clear</h1>
+
+<h2></h2>
+
+<h3>Syntax :</h3>
+<p class="code">win8_livetile_badge_clear();</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function clears the current badge from the Live Tile of your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(ord("P"))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if global.Pause<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Pause = false;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;win8_livetile_badge_clear();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Pause = true;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;win8_livetile_badge_notification("paused");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check for the key "P" being pressed and if it is detected, it will toggle the global variable "Paused" to <tt>true</tt> or <tt>false</tt> and push a badge 
+onto the Live Tile (or remove it again) based on the value of this variable.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows 8</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="win8_livetile_queue_enable.html">win8_livetile_queue_enable</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+win8_livetile_badge_clear
+-->

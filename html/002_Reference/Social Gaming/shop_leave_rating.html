@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>shop_leave_rating</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>shop_leave_rating</h1>
+  
+<h2>With this you can ask the user to add a rating.</h2>
+<p>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">shop_leave_rating(text, yes_string, no_string, url)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>text</td>
+	<td>Text that appears on the dialgue.</td></tr>
+	
+	<tr class="alt"><td>yes_string</td>
+	<td>Text that appears on the "yes" button.</td></tr>
+	
+	<tr><td>no_string</td>
+	<td>Text that appears on the "no" button.</td></tr>
+	
+	<tr class="alt"><td>url</td>
+	<td>The full URL where the comment has to be sent.</td></tr>
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function opens up an OS dependant dialogue where you can ask the user to post a rating or comment to a particular page. You can define the text that is to appear in the dialogue, as well as the 
+text you wish to appear on the two buttons and the URL where the comment has to be posted.
+<br>
+<br>
+
+<i><b>NOTE : </b>This function is available for all platforms.</i>
+<br>
+<br>
+   
+<h3>Example :</h3>
+<p class="code">
+if timer &lt;= 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;shop_leave_rating("Thanks for playing the game! Why not leave a comment?", "Okay!", "Not Today!", "http:/angusgames/comments");<br>
+&nbsp;&nbsp;&nbsp;timer = 10000000;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;timer -= 1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will ask the user to leave a comment if the variable "timer" has counted down to 0.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Social Gaming</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+shop_leave_rating
+-->

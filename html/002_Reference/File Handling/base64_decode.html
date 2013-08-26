@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>base64_decode</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>base64_decode</h1>
+  
+<h2>Decode a base64 format string.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">base64_decode(string)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>string</td>
+	<td>The string to decode.</i></td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will convert a string encoded previously using base64 format, into standard text. Base64 is a commonly used encoding scheme that is often used for any media that needs to be stored 
+or transferred over the internet as text, and renders the output unreadable to the human eye.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var str, file;<br>
+str = base64_encode(game_data);<br>
+file = file_text_open_read("save.txt");<br>
+str = file_text_read_string(file);
+level_data = base64_decode(str);<br>
+file_text_close(file);<br>
+</p>
+<p>
+The above code will open a text file and read a string from it into the local variable "str". This string is then decoded and the result stored in the instance variable "level_data".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File Handling</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="json_encode.html">json_encode</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+base64_decode
+--> 

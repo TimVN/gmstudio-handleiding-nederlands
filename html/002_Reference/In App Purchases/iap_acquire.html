@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>iap_acquire</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>iap_acquire</h1>
+  
+<h2>This requests acquisition of the given product.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">iap_acquire(purchase_id);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>purchase_id</td>
+	<td>This can either be the Apple Store/Google Play id string, an URL id,  or an index into the available purchases ds_list.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>N/A</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is the one that you use to aquire a purchase through the app store for the device running your game. You can specify the Apple Store/Google Play id string, or you can pass through the actual 
+identifier name(eg: ".extralevels"), or the position from within the available purchase list of the product to be bought. If you use the list approach, the number you input will correspond to the position of the 
+product within the ds_list as defined by the function <a href="iap_activate.html"><tt>iap_activate</tt></a>, and <i>GameMaker:Studio</i> will automatically get the product id for you and fullfill the 
+purchase order.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if mouse_check_button_pressed(mb_left)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;iap_acquire(".extralevels")<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will send a purchase request when the mouse button is pressed.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="iap_consume.html">iap_consume</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+iap_acquire
+-->

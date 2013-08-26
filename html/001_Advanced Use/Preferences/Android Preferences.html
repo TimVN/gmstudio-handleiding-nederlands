@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Android Preferences</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Android Preferences</h1>
+
+<h2>The section details the Android device preferences tab.</h2>
+
+<p>
+<img class="center" src="Android_Prefs.png">
+
+For <i>GameMaker:Studio</i> to work with Android device, a number of things need to be set up. First, you <b>must</b> have installed the <b>Android SDK</b>, with support for Android 2.1 (API 7), Android 2.2 (API 8), 
+Android 3.0 (API 11), as well as the most recent version of Android, and you must also have installed the <b>Java SE Development Kit (JDK)</b>. Once you have them installed and updated you should set up your 
+<a href="Server%20Preferences.html">Web Server Preferences</a> before continuing with the configuration of this tab. 
+
+<blockquote>
+<ul>
+	<li><b>Android SDK Location</b> : The location where you have installed the Android SDK. This should been filled in automatically, but if not then you can use the button on the right to open a file browser and 
+	select the appropriate file.</li><br>
+	
+	<li><b>Java JDK Location</b> : The Location where you have installed the JDK. This should been filled in automatically, but if not then you can use the button on the right to open a file browser and select the 
+	appropriate file.</li><br>
+
+	<li><b>Private Keystore File</b> : This should been filled in automatically. If not then you can use the button on the right to open a file browser and select the appropriate file (see below for more details).</li><br>
+</ul>
+</blockquote>
+
+<h3>Create Private KeyStore</h3>
+<p>
+The KeyStore is a file that will be used to "sign" all your Android apps so please fill in all the details correctly :
+
+<blockquote>
+<ul>
+	<li><b>Name</b> : This is the name of the KeyStore file. <i><b>Note : </b>This is not your name or the company name, but the name of the file to be generated!</i></li><br>
+	
+	<li><b>Password</b> :  Your security password for the KeyStore file which <i>must be at least six characters long</i>.</li><br>
+
+	<li><b>Alias</b> : This is another name that can be used for the KeyStore file and should be different to the name entered above.</li><br>
+	
+	<li><b>Password</b> : The password for the alias file. Should be the same as the <b>Name</b> password.</li><br>
+
+	<li><b>Common Name</b> : This would normally be your name.</li><br>
+
+	<li><b>Organisational Unit</b> : The department within the company that you are a part of.</li><br>
+
+	<li><b>Organisation</b> : The name of your company.</li><br>
+
+	<li><b>Location</b> :  The name of the town or city where you are based.</li><br>
+
+	<li><b>Country</b> :  The standard two letter code for the country where you are based.</li><br>
+
+</ul>
+</blockquote>
+
+<p>
+Once this information is filled in and you are happy with it, press the button marked <b>Generate</b> for <i>GameMaker:Studio</i> to create the necessary KeyStore file. This may take a moment but once it 
+is finished, you will see that the section marked Private KeyStore File will have been updated to reflect the new name that you have given it. Once this is done it normally will not need to be changed again.
+<br>
+<br>
+
+There is a further option here marked <b>Key Hash</b>. Pressing the button marked "Show key Hash" will generate two special security hash keys directly linked to your Keystore file that some web sites require for 
+correct functionality (for example, Facebook, or Google Play for the Sha1 hash). Should you need this, simply press the button, then copy and paste the hash keys that are generated.
+<br>
+<br>
+
+You should click the button marked <b>Check Android SDK</b>, as this will validate all the information and inform you of any errors (in which case you should revise all the information to make sure it is correct). 
+When everything checks out you should receive the message "SDK + JDK + KeyStore OK".
+<br>
+<br>
+
+There are a few final options at the bottom of the tab:
+<blockquote>
+<ul>
+	<li><b>Always do full install of APK</b> : Flagging this will make <i>GameMaker:Studio</i> remove any previous runners of your game from your device, as well as all associated files (for example, 
+	<tt>*.ini</tt> files) from your test device before installing a new version of the game.</li><br>
+	
+	<li><b>Install on "Create Application"</b> : When this option is flagged, compiling a complete <tt>*.apk</tt> will install it automatically on any devices that are connected.</li><br>
+	
+	<li><b>Use Mac for ADB connection</b> : Should you wish to connect your Android device to a Mac, you can click this option to have <i>GameMaker:Studio</i> connect to your Mac and test your games 
+	that way. Note that you must have set up the <a href="Mac%20Preferences.html">Mac Preferences</a> correctly, have the Android SDK installed on the Mac and given the correct ADB directory (see below).</li><br>
+
+	<li><b>ADB Directory on Mac</b> : When you have the above option, <b>Use Mac for ADB connection</b>, enabled you can set the directory for ADB here.</li>	
+</ul>
+</blockquote>
+
+<p>
+<br>
+</p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Preferences</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Windows8%20Preferences.html">Windows8 Preferences</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+Android SDK
+JDK
+Java SE Development Kit
+keystore
+hash key (Android)
+-->

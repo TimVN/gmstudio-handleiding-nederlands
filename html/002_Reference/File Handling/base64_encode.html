@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>base64_encode</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>base64_encode</h1>
+  
+<h2>Encode a string using base64 format.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">base64_encode(string)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>string</td>
+	<td>The string to encode.</i></td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will convert a string into a base64 format encoded string. This is a commonly used encoding scheme that is often used for any media that needs to be stored or transferred over the 
+internet as text, and renders the output unreadable to the human eye.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var str, file;<br>
+str = base64_encode(game_data);<br>
+file = file_text_open_write("save.txt");<br>
+file_text_write_string(file, str);<br>
+file_text_close(file);<br>
+</p>
+<p>
+The above code will covert the string stored in "game_data" into a base64 encoded string which is then stored in an external text file.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File Handling</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="base64_decode.html">base64_decode</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+base64_encode
+--> 

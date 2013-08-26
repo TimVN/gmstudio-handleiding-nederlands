@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sha1_file</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sha1_file</h1>
+  
+<h2>Returns a sha1 hash for the given file.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sha1_file(filename)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>filename</td>
+	<td>The file to generate the sha1 hash for.</i></td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+In cryptography, SHA-1 is a cryptographic hash function designed by the United States <i>National Security Agency</i> and is employed in several widely used applications popular <b>Git</b> where it is 
+used to check for file changes, and the protocols TLS and SSL, PGP, SSH, S/MIME, and IPsec. This function will take an input file and return a 160 bit message digest in ASCii format unique to that file to be 
+used for integrity verification at any later date.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+hash = sha1_file(working_directory + "\game_data.ini")
+</p>
+<p>
+The above code will generate a sha1 hash for the specified file and store the returned value in the variable "hash".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File Handling</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="base64_encode.html">base64_encode</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sha1_file
+--> 

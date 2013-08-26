@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>3D Transformations</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>3D Transformations</h1>
+
+<h2>This section deals with the 3D transformation functions.</h2>
+
+<p>
+Transformation allow you to change the place where things are drawn in the world. For example, the function to draw blocks can only draw axis-parallel blocks, but by first setting a rotation transformation you 
+can create rotated blocks. Also sprites are always drawn parallel to the xy-plane, but by setting a transformation you can change this. There are two types of functions: functions that set the transformation and f
+unctions that add transformations, and they are listed below :
+<br>
+<br>
+
+<blockquote>
+<ol>
+	<li><a href="d3d_transform_set_identity.html">d3d_transform_set_identity</a></li>
+	<li><a href="d3d_transform_set_translation.html">d3d_transform_set_translation</a></li>
+	<li><a href="d3d_transform_set_scaling.html">d3d_transform_set_scaling</a></li>
+	<li><a href="d3d_transform_set_rotation_x.html">d3d_transform_set_rotation_x</a></li>
+	<li><a href="d3d_transform_set_rotation_y.html">d3d_transform_set_rotation_y</a></li>
+	<li><a href="d3d_transform_set_rotation_z.html">d3d_transform_set_rotation_z</a></li>
+	<li><a href="d3d_transform_set_rotation_axis.html">d3d_transform_set_rotation_axis</a></li>
+	<li><a href="d3d_transform_add_translation.html">d3d_transform_add_translation</a></li>
+	<li><a href="d3d_transform_add_scaling.html">d3d_transform_add_scaling</a></li>
+	<li><a href="d3d_transform_add_rotation_x.html">d3d_transform_add_rotation_x</a></li>
+	<li><a href="d3d_transform_add_rotation_y.html">d3d_transform_add_rotation_y</a></li>
+	<li><a href="d3d_transform_add_rotation_z.html">d3d_transform_add_rotation_z</a></li>
+	<li><a href="d3d_transform_add_rotation_axis.html">d3d_transform_add_rotation_axis</a></li>
+</ol>
+</blockquote>
+
+<p>
+Sometimes you temporarily want to save the current transformation, for example to add an additional transformation and then restore the old one (this often happens when drawing hierarchical models). To this end 
+you can push the current transformation on a stack and later pop it from the stack to make it the current transformation again. The following functions exist for this: 
+<br>
+<br>
+
+<blockquote>
+<ol>
+	<li><a href="d3d_transform_stack_clear.html">d3d_transform_stack_clear</a></li>
+	<li><a href="d3d_transform_stack_empty.html">d3d_transform_stack_empty</a></li>
+	<li><a href="d3d_transform_stack_push.html">d3d_transform_stack_push</a></li>
+	<li><a href="d3d_transform_stack_pop.html">d3d_transform_stack_pop</a></li>
+	<li><a href="d3d_transform_stack_top.html">d3d_transform_stack_top</a></li>
+	<li><a href="d3d_transform_stack_discard.html">d3d_transform_stack_discard</a></li>
+</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Working With 3D</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="../3D%20Lighting%20and%20Fog/index.html">3D Lighting and Fog</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+--> 
+
+

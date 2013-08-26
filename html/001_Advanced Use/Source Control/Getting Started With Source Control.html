@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>Getting Started With Source Control</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>Getting Started With Source Control</h1>
+
+<h2>This is the basic setup guide to get you started using Source Control with <i>GameMaker:Studio</i> and any one of the SVN Client packages available.</h2>
+
+<p>
+Before even opening <i>GameMaker:Studio</i> and working with Source Control, you will need to setup your PC (and that of your co-workers if you are in a team). <i>GameMaker:Studio</i> comes bundled 
+with a version of SVN that has been tried and tested with the software for compatability, and if you do not have any other SVN versions on your machine this will be the default version that you use. However, 
+if you already have SVN installed, you can choose which to use from the <a href="../Preferences/Source%20Control%20Preferences.html">Source Control Preferences Tab</a> (the default is that which 
+is installed with <i>GameMaker:Studio</i>).
+<br>
+<br>
+
+Please note, that for optimum performance and to minimise problems <i>all</i> machines involved should be using the same version of the software, so if one machine is on (for example) v1.0.72, then 
+they <i>all</i> should be using the v1.0.72 of that software. This is one of the reasons that we recommend you use the version bundled with <i>GameMaker:Studio</i> as it will ensure that your whole 
+team is using the same version at all times.
+<br>
+<br>
+
+Once you have installed your SVN tools (or <i>GameMaker:Studio</i>), you will need to make your <b>Repository</b>. This is where all your files, backups and edits will be stored and is normally hosted 
+on a separate server, either on-line or in-house. To create the initial repository, and generally use your SVN, you can do it in one of two ways:
+<blockquote>
+	<ul>
+		<li>either use command line functions to directly communicate with SVN or</li>
+		<li>download and install some form of windows interface like <a href="http://tortoisesvn.net//"> TortoiseSVN</a><br></li>
+	</ul>
+</blockquote>
+
+<p>
+We recommend some form of windows based UI for dealing with all the SVN functions as it greatly simplifies everything and some of the functions that it offers (like conflict resolution and log files) are not 
+yet fully implimented within the <i>GameMaker:Studio</i> IDE, but the final choice is up to you and depends on what you feel most comfortable with!
+<br>
+<br>
+
+<h3>Using The Command Line</h3>
+<p>
+If you are happy using the command line functions then you can create the repository easily by opening the windows command prompt, browsing to the network location where you wish to create the repository 
+(or just make sure to use the full path to the location) and typing:
+<br>
+<br>
+
+<p class="code">
+svnadmin create NAME
+</p>
+
+<p>
+<br>
+where "NAME" is the name you wish to give your central repository (something like "Source" or "Repository"). Please note, that if the repository is to be created in a sub-folder then that sub-folder <i>must</i> 
+already exist, although the repository itself will be created by SVN. The code should look something like this:
+<br>
+<br>
+<br>
+
+<img class="center" src="create_repository_cmd.png"></img>
+
+<p>
+Then press <i>Enter</i> and your repository will be created.  Note that the above example is showing a path to a <i>local</i> repository (on the same computer) but you can change the path to a web address 
+for an online repository (recommended).
+<br>
+<br>
+
+<h3>Using A Windows SVN Client</h3>
+<p>
+<h4>Local Repositories</h4>
+<p>
+Once you have installed your windows client for SVN, you should browse to the network location where you wish to create the repository and there create a new folder. Give this folder the name you want to use for your 
+central repository (something like "Source" or "Repository") and then right click on this folder. You should then go down the pop-up window to your SVN client and find where it says "Create repository here." It should be 
+something like this depending on what SVN client you have installed on your system:
+<br>
+<br>
+
+<img class="center" src="create_repository_windows.png"></img>
+
+<p>
+The above image was made using Tortoise SVN, so the exact method of going about this may vary depending on your client application, however all windows SVN Clients have basically the same toolset used for creating 
+your repository.
+<br>
+<br>
+
+<h4>Online Repository</h4>
+<p>
+If you have a network for your group then you may want to create a repository on your server, or you may wish to create an online repository using one of the many free repository services that are available out there. 
+if you are using an internal server or local network, then the simply follow the above instructions for a local repository but instead of creating the folders on your own PC, you will create them on your server. However, 
+if you are using an online repository then you will need to follow these steps:
+<br>
+<br>
+
+<blockquote>
+	<ol>
+		<li>Sign in (or register) with your chosen site
+		<li>Create a new project
+		<li>Make sure that when filling in the details of your project that you have selected Subversion (SVN) as your version control system
+	<ol>
+</blockquote>
+<p>
+Your online repository has now been created.
+<br>
+<br>
+
+<i><b>NOTE:</b> Each online repository is slightly different so read the documentation related to the one that you choose! This is only a rough guide to get you started.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Source Control Index</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Setting%20Up%20GM%20For%20Source%20Control.html">Setting Up <i>GameMaker:Studio</i></a>
+	</div>
+</div>
+</p>
+
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+tortoise
+svn client
+repository
+using source control
+Getting Started With Source Control
+-->

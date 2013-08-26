@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>current_weekday</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>current_weekday</h1>
+
+<h2>Returns the current weekday.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">current_weekday;</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read only</b> variable will return the weekday as a value, where Monday is 1 and Sunday is 7.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var day;<br>
+switch(current_weekday)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case 1: day = "Monday"; break;<br>
+&nbsp;&nbsp;&nbsp;case 2: day = "Tueasday"; break;<br>
+&nbsp;&nbsp;&nbsp;case 3: day = "Wednesday"; break;<br>
+&nbsp;&nbsp;&nbsp;case 4: day = "Thursday"; break;<br>
+&nbsp;&nbsp;&nbsp;case 5: day = "Friday"; break;<br>
+&nbsp;&nbsp;&nbsp;case 6: day = "Saturday"; break;<br>
+&nbsp;&nbsp;&nbsp;case 7: day = "Sunday"; break;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+draw_text(32, 32, "Today is " + day +".");<br>
+</p>
+<p>
+The above code uses the <tt>current_weekday</tt> value to set a variable with the correct day in text, then draws that for the user to see.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Date And Time</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="current_month.html">current_month</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+current_weekday
+-->

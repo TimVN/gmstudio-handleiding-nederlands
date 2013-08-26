@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>mp_grid_clear_rectangle</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>mp_grid_clear_rectangle</h1>
+  
+<h2>Marks all cells that overlap the indicated rectangle as being free.</h2>
+
+  
+<h3>Syntax :</h3>
+<p class="code">mp_grid_clear_rectangle(id, x1, y1, x2, y2);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>id</td>
+	<td>Index of the mp_grid that is to be used</td></tr>
+	
+	<tr class="alt"><td>x1</td>
+	<td>The x coordinate of the left side of the rectangle to check. </td></tr>
+	
+	<tr><td>y1</td>
+	<td>The y coordinate of the top side of the rectangle to check. </td></tr>
+	
+	<tr class="alt"><td>x2</td>
+	<td>The x coordinate of the right side of the rectangle to check. </td></tr>
+	
+	<tr><td>y2</td>
+	<td>The x coordinate of the bottom side of the rectangle to check. </td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can define an area <i>in room coordinates</i> which will then clear the corresponding cells in the specified mp_grid. Even if a cell partially falls within the defined rectangular region 
+it will be cleared.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+mp_grid_clear_rectangle(grid, 0, 0, 100, 200);<br>
+</p>
+<p>
+The above code will mark as free all cells of the mp_grid indexed in the variable "grid" that fall within the area 0,0 to 100,200.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Motion Planning</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="mp_grid_draw.html">mp_grid_draw</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+mp_grid_clear_rectangle
+-->

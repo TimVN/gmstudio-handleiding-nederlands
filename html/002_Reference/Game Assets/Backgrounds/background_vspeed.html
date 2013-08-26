@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_vspeed</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_vspeed</h1>
+
+<h2>Variable that determines the vertical scrolling speed for a background.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">background_vspeed[0...7];</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+By setting this variable array to a different value, you can set the speed at which <i>GameMaker:Studio</i> automatically scrolls a background for you along the vertical plane. A positive 
+value will scroll from top to bottom, while a negative value will be bottom to top and 0 stops all scrolling. if you have also enabled vertical tiling, either through the room editor or by uising the 
+<a href="background_vtiled.html"><tt>background_vtiled</tt></a> variable, then scrolling the background will make it loop infinitely.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if background_vtiled[0] = true<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;background_vspeed[0] = 2;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks background0 to see if it is tiled vertically, and if it is it then sets the vertical scroill speed to 2.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_htiled.html">background_htiled</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_vspeed
+-->

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_draw_ellipsoid</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_draw_ellipsoid</h1>
+  
+<h2>Draws a simple 3D ellipsoid.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_draw_ellipsoid(x1, y1, z1, x2, y2, z2, tex, hrepeat, vrepeat, closed, steps)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x1</td>
+	<td>The initial x coordinate of the ellipsoid.</td></tr>
+	
+	<tr class="alt"><td>y1</td>
+	<td>The initial y coordinate of the ellipsoid.</td></tr>
+	
+	<tr><td>z1</td>
+	<td>The initial z coordinate of the ellipsoid.</td></tr>
+	
+	<tr class="alt"><td>x2</td>
+	<td>The opposite x coordinate of the ellipsoid.</td></tr>
+
+	<tr><td>y2</td>
+	<td>The opposite y coordinate of the ellipsoid.</td></tr>
+	
+	<tr class="alt"><td>z2</td>
+	<td>The opposite z coordinate of the ellipsoid.</td></tr>
+
+	<tr><td>tex</td>
+	<td>The id of the texture to use (-1 for no texture)</td></tr>
+	
+	<tr class="alt"><td>hrepeat</td>
+	<td>Amount of horizontal repetitions for the texture.</td></tr>
+
+	<tr><td>vrepeat</td>
+	<td>Amount of vertical repetitions for the texture.</td></tr>
+
+	<tr class="alt"><td>steps</td>
+	<td>How many steps are used to make the ellipsoid "round" (typically 24)</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function draws a simple ellipsoid in 3D space. You set the first bounding corner coordinates (x1,y1,z1) and then the bounding coordinates for the <i>opposite</i> corner, with the final ellipsoid being drawn inside this defined 
+rectangular area. You then specify a texture for the ellipsoid and the amount of times that you wish this texture to be repeated vertically and horizontally (1 for no repeat). If you do not wish to use a texture you can set this to 
+-1 and the hrepeat and vrepeat values will be ignored. Finally you have to set whether you want to close the base of the cone or not (set to <tt>true</tt> for closed, and <tt>false</tt> for open) as well as how many 
+"steps" should be used to make the ellipsoid look "round", with a value of 24 being the average. 
+<br>
+<br>
+
+<i><b>Note</b> :If the texture has to repeat over the ellipsoid, the source texture must be a power of 2 in size (eg: 8x8, 128x128, 256x256 etc...), otherwise you can use any size texture.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tex;<br>
+tex = background_get_texture(bck_Wall);<br>
+d3d_draw_ellipsoid(20, 20, 20, 80, 40, 200, tex, 1, 1,  24);<br>
+d3d_draw_ellipsoid(200, 300, -10, 240, 340, 100, tex, 1, 1,  24);<br>
+</p>
+<p>
+The above code stores a texture in the variable "tex" and then uses it to texture two ellipsoids that have been drawn at different positions.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_draw_wall.html">d3d_draw_wall</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_draw_ellipsoid
+--> 

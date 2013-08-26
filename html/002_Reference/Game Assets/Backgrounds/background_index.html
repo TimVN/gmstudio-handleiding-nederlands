@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_index</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_index</h1>
+
+<h2>The unique index of the image asset assigned to the background.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">background_index[0...7];</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+As with most resources, backgrounds can be assigned and changed by setting their index to a different game asset. This array is what you must use to change any one of the 8 possible backgrounds 
+(numbered form 0 - 7 within the array) that a room may have, or to get the index of any of those backgrounds. When setting it you should use the index of the included image asset from the background 
+resources, or, if you have loaded a background into the game using <a href="background_add.html"><tt>background_add()</tt></a>, the variable where you have stored the loaded background index. 
+The value array for any one of the backgrounds can be set to -1 to remove the background.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+background_index[0] = choose(bck_Day, back_Evening, bck_Night);
+</p>
+<p>
+The above code will set the background(0) index of the current room to be one of three possible background images from included the assets.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_visible.html">background_visible</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_index
+-->

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_set_closed</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_set_closed</h1>
+
+<h2>Flags the given path as being closed or open.</h2>
+
+<h3><b>Syntax :</b></h3>
+<p class="code">path_set_closed(index, closed);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to change.</td></tr>
+	
+	<tr><td>closed</td>
+	<td>Whether the path is closed (true) or not (false).</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to flag a given path as being open (false) or closed (true). A closed path has its start point connected to its end point, forming a loop, and an open path has
+a definitive, unconnected start and finish. This function changes the actual path resource, and so will permanently affect how the path is used by all instances in the game from the moment the function is 
+used until the end of the game.
+<br>
+<br>
+
+<img class="center" src="setclosed.png"></img>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+path_set_closed(path0, true);
+</p>
+<p>
+This will set the path indexed in the resource "path0" to be a closed path.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_set_kind.html">path_set_kind</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_set_closed
+-->

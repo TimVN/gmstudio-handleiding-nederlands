@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>keyboard_check_direct</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>keyboard_check_direct</h1>
+  
+<h2>Returns whether the key with the particular keycode is pressed by checking the hardware directly.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">keyboard_check_direct(key);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>key</td>
+	<td>The key to check the down state of.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return <tt>true</tt> if the key with the particular keycode is pressed, or <tt>false</tt> if it is not, by checking the hardware directly. It allows for a few more checks, in particular you can use 
+keycodes <b>vk_lshift</b>, <b>vk_lcontrol</b>, <b>vk_lalt</b>, <b>vk_rshift</b>, <b>vk_rcontrol</b> and <b>vk_ralt</b> to check whether the left or right shift, control or alt key is pressed.
+<br>
+<br>
+
+<i><b>NOTE : </b>This function is only available for the standard Windows target and the result is independent of which application has focus.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_direct(vk_ralt) || keyboard_check_direct(vk_lalt) <br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;crouch = true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if either the left or right alt keys have been pressed, and if they have it sets the variable "crouch" to true.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Keyboard Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="keyboard_clear.html">keyboard_clear</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+keyboard_check_direct
+-->

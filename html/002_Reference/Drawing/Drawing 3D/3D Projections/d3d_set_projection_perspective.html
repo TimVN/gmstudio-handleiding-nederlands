@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_set_projection_perspective</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_set_projection_perspective</h1>
+  
+<h2>This function can be used to set an orthographic projection.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_set_projection_perspective(x, y, w, h, angle)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x</td>
+	<td>The x coordinate in the room to look from.</td></tr>
+	
+	<tr class="alt"><td>y</td>
+	<td>The y coordinate in the room to look from.</td></tr>
+	
+	<tr><td>w</td>
+	<td>The width of the projection.</td></tr>
+	
+	<tr class="alt"><td>h</td>
+	<td>The height of the projection.</td></tr>
+
+	<tr><td>angle</td>
+	<td>The rotation angle of the projection.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this type of projection to create a "top down" view of your room, where all the elements are given perspective and depth (ie: the higher the depth, the smaller and further away they appear from the player). 
+See the image below to get an idea of the difference between orthographic and perspective views.
+<br>
+<br>
+
+<img class="center" src="Ortho_Persp_Image.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_set_projection_perspective(0, 0, room_width, room_height, 0);
+</p>
+<p>
+The above code sets up a basic 3D perspective projection.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Projections</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_set_projection.html">d3d_set_projection</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_set_projection_perspective
+--> 

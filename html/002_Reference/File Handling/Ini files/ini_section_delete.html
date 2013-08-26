@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ini_section_delete</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ini_section_delete</h1>
+  
+<h2>Deletes the indicated section of the currently open .ini file, should the section exist.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">ini_section_delete(section);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>section</td>
+		<td>The section to delete.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can delete a whole section of an ini file, which will also remove all key-value pairs that are associated with it.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ini_open( 'savedata.ini' );<br>
+ini_write_real( 'save1', 'Score', score );<br>
+ini_section_delete( 'save1' );<br>
+ini_close();
+</p>
+<p>
+This example will open 'savedata.ini' and write a value to 'save1' > 'Score'. It will then delete the 'save1' section and close the .ini file.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Ini Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ini_set.html">ini_set</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+ini_section_delete
+--> 

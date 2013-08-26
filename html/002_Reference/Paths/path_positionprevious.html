@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_positionprevious</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_positionprevious</h1>
+
+<h2>The calling instance's position on the path in the previous step.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">path_positionprevious;</p>
+
+<p>
+<br>
+</p>
+ 
+<p>
+<b>Returns:</b> Real
+
+</p>
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable can be used to get or to set the position of an instance along its current path in the previous step, and is a normalised value between 0 and 1 ie: 0 is the start position of the path and 1 would be the end 
+position. It is similar to the <a href="../Movement%20and%20Collisions/Movement/xprevious.html"><tt>xprevious</tt></a> and <a href="../Movement%20and%20Collisions/Movement/yprevious.html"><tt>yprevious</tt></a> 
+functions in how it works, only it is specific for paths. It can be useful for things like temporarily stopping a path follower if something is in the way (see the example code below).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var xx, yy;<br>
+xx = x + lengthdir_x(16, direction);<br>
+yy = y + lengthdir_y(16, direction);<br>
+if collision_circle(xx, yy, 16, obj_Player, false,true) path_position = path_positionprevious;<br>
+</p>
+<p>
+The above code checks an area in front of the instance for a collision with the object "obj_Player" and if there is one, it sets the instance back to the previous position it occupied on the current path.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_speed.html">path_speed</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_positionprevious
+-->

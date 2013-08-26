@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_y</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_y</h1>
+
+<h2>Returns or sets the y position of any background within a room.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">background_y[0...7]</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable array returns the y position within the room of any one of the 8 backgrounds (numbered form 0 - 7 within the array) of the current room. You can use this variable to position backgrounds at specific 
+places within a room, even when the background being used is also tiled vertically or horizontally (in which case the whole "sheet" of tiled backgrounds will be moved).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+background_x[0] = view_xview[0];<br>
+background_y[0] = view_yview[0]-50;<br>
+background_x[1] = view_xview[0]/2;<br>
+background_y[1] = view_yview[0]/2+335;<br>
+background_x[2] = view_xview[0]/8;<br>
+background_y[2] = view_yview[0]/8+500;<br>
+</p>
+<p>
+The above code changes the x and y values of three backgrounds in a room based on the position of the view (this effect is called <i>parrallax scrolling</i>).
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_color.html">background_color</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_y
+-->

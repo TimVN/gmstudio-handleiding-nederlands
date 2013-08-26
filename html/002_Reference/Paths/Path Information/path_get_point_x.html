@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_get_point_x</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+ <h1>path_get_point_x</h1>
+  
+<h2>Returns the x coordinate of a given path's given defining point.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">path_get_point_x(index, n);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to check.</td></tr>
+	
+	<tr><td>n</td>
+	<td>The point identity to check.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return the x position (in room coordinates) of the point that you input for the path that you index. If the point is outside of the range of the path (ie: a path has 8 points and you 
+ask for the x position of point 10) then a value of 0 will be returned.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if path_position = 1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var i;<br>
+&nbsp;&nbsp;&nbsp;i = floor(random(path_get_number(mypath)));<br>
+&nbsp;&nbsp;&nbsp;x = path_get_point_x(mypath, i);<br>
+&nbsp;&nbsp;&nbsp;y = path_get_point_y(mypath, i);<br>
+&nbsp;&nbsp;&nbsp;path_position = (1 / path_get_number(mypath)) * i;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if an instance is at the end of a path. If it is it will then choose a random point on the path and move the instance to that point.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Path Information</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_get_point_y.html">path_get_point_y</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_get_point_x
+-->

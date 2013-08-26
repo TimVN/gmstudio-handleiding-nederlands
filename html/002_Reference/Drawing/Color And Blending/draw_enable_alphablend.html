@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_enable_alphablend</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_enable_alphablend</h1>
+  
+<h2>Toggles alpha blending on or off.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">draw_enable_alphablend(val)</p>
+<p>
+<br>
+</p>
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>val</td>
+	<td>This can be either true (switched on) or false (switched off)</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to toggle alphablending on an off. Basically, if you have this set to false, all images being drawn will be drawn 100% opaque, meaning that any transparent, or semi transparent, areas of a 
+sprite or background will be visible. It is encouraged that you have alpha blending off whenever possible (especially when developing for mobile devices) as this <i>greatly</i> increases the draw speed.
+<br>
+<br>
+
+<img class="center" src="Alphablend_Image.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_enable_alphablend(false);<br>
+draw_background(0,0,back1);<br>
+draw_enable_alphablend(true);<br>
+</p>
+<p>
+The above code switches off alpha blending to draw a background resource and then switches it back on again to continue drawing.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Color And blending</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_clear.html">draw_clear</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_enable_alphablend
+--> 

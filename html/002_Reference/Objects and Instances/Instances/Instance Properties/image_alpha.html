@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>image_alpha</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>image_alpha</h1>
+
+<h2>The alpha transparency value of the image.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">image_alpha</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable is used to get or to set the alpha value for the sprite. Alpha is always calculated as a value between 0 and 1 where 0 is completely transparent and 1 is completely opaque. Please note that 
+for changes in this variable to be visible, the instance should have either <i>no</i> draw event (and so <i>GameMaker:Studio</i> will default draw the sprite) or be drawn using one of the extended 
+drawing functions like <a href="../../../Drawing/Drawing%20Sprites%20And%20Backgrounds/draw_self.html"><tt>draw_self()</tt></a> or <a href="../../../Drawing/Drawing%20Sprites%20And%20Backgrounds/draw_sprite_ext.html">
+<tt>draw_sprite_ext()</tt></a>.
+<br>
+<br>
+
+<i><b>NOTE: </b>On the HTML5 and Windows8 (javeScript) platforms, this variable is not clamped. Therefore if you have a value greater than one, it will "wrap" back to 0 again. Likewise if you go below 
+0, the alpha will "wrap" back to 1. You can use the function <a href="../../../Maths/Real%20valued%20functions/clamp.html"><tt>clamp</tt></a> for this.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if image_alpha &gt; 0 image_alpha -= 0.01;
+</p>
+<p>
+The above code will slowly reduce the image_alpha until it reaches 0.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="image_angle.html">image_angle</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+<!-- KEYWORDS
+image_alpha
+-->

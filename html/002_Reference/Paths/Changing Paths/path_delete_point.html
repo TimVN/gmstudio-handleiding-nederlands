@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_delete_point</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_delete_point</h1>
+  
+<h2>Deletes a point from an existing path.</h2>
+  
+<h3><b>Syntax :</b></h3>
+<p class="code">path_delete_point(ind, n);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the path to delete a point from.</td></tr>
+	
+	<tr><td>n</td>
+	<td>The defining point to delete.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can remove a point from the specified path. Path points are numbered from 0 so the first point is always the 0th point and the last path point will be 
+<a href="../Path%20Information/path_get_number.html"><tt>path_get_number()</tt></a> - 1.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+path_delete_point(mypath, path_number(mypath) - 1);
+</p>
+<p>
+This would delete the last point on the path indexed in the variable "maypath".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_clear_points.html">path_clear_points</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_delete_point
+-->

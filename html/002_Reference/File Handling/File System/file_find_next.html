@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>file_find_next</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>file_find_next</h1>
+  
+<h2>Returns the name of the next file that satisfies the mask and the attributes.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">file_find_next();</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns: </b>String
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns the name of the next file that satisfies the previously given mask and the attributes (defined by <a href="file_find_first.html"><tt>file_find_first</tt></a>). If no such file exists, 
+the empty string is returned.
+<br>
+<br>
+
+<br>
+<i><b>WARNING!</b> This function may not work as you expect due to GameMaker:Studio being sandboxed! Please see the section on <a href="../File%20System%20Limits.html">File System Limits</a> 
+for more information.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>This function works on all the C++ target platforms (Windows, Mac, iOS, Android and WinPhone), BUT the filter flags only work on Windows and WinPhone.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+file = file_find_next();
+</p>
+<p>
+This will return the next file that matches the previously given attributes.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">File System Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="file_find_close.html">file_find_close</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+file_find_next
+-->

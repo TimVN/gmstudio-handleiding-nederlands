@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>os_type</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>os_type</h1>
+  
+<h2>This variable holds a different constant depending on the operating system the game is currently being run with.</h2>
+ 
+<h3>Syntax :</h3> 
+<p class="code">os_type;</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Constant
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable holds one of various constant <i>GameMaker:Studio</i> has to tell you which operating system the game is being run on. The following constants can be returned :
+
+<div class="compat">
+	<table>
+		<tr><th>Constant</th><th>Description</th></tr>
+		
+		<tr><td>os_windows</td><td>Windows OS</td></tr>
+		
+		<tr class="alt"><td>os_win8native</td><td>Windows 8</td></tr>
+		
+		<tr><td>os_win32</td><td>Windows 32bit OS</td></tr>
+		
+		<tr class="alt"><td>os_winphone</td><td>Windows 8 Phone</td></tr>
+					
+		<tr><td>os_linux</td><td>Linux</td></tr>
+		
+		<tr class="alt"><td>os_macosx</td><td>Mac OS X</td></tr>
+		
+		<tr><td>os_ios</td><td>iOS (iPhone, iPad, iPod Touch)</td></tr>
+		
+		<tr class="alt"><td>os_android</td><td>Android</td></tr>
+						
+		<tr><td>os_unknown</td><td>unknown OS</td></tr>
+		
+	</table>
+ </div>
+ 
+<h3>Example :</h3>
+<p class="code">
+switch (os_type)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case os_windows: global.Config = 0; break;<br>
+&nbsp;&nbsp;&nbsp;case os_android: global.Config = 1; break;<br>
+&nbsp;&nbsp;&nbsp;case os_linux: global.Config = 2; break;<br>
+&nbsp;&nbsp;&nbsp;case os_macosx: global.Config = 3; break;<br>
+&nbsp;&nbsp;&nbsp;case os_ios: global.Config = 4; break;<br>
+&nbsp;&nbsp;&nbsp;case os_winphone: global.Config = 5; break;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the game is running in a browser or not and sets a global variable to a value depending on the result of the check.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Operating Systems</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="os_version.html">os_version</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+operating systems
+os_type
+os_android
+os_ios
+os_linux
+os_macosx
+os_psp (deprecated)
+os_symbian (deprecated)
+os_unknown
+os_win32
+os_windows
+os_winphone
+os_win8native
+-->

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>buffer_load</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>buffer_load</h1>
+  
+<h2>Load a previously saved buffer.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">buffer_load(filename);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>filename</td>
+	<td>The name of the file to load from.</td></tr>
+			
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will load the buffer data that was previously saved using the <a href="buffer.save.html"><tt>buffer_save</tt></a> functions into a new buffer. This new buffer is created by the function as a 
+"grow" buffer (see <a href="buffer_create.html">here</a>) with a byte alignment of 1, and the new buffer id is returned. This id should be stored in a variable and used in all further function calls to this buffer.
+<br>
+<br>
+
+<i><b>NOTE: </b> It's important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer 
+that you have created you should free it up again using <a href="buffer_delete.html"><tt>buffer_delete</tt></a>.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+player_buffer = buffer_load("Player_Save.sav");
+</p>
+<p>
+The above code will load a previously saved buffer into memory, creating a new buffer. The index of this new buffer is stored in the variable "player_buffer".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Buffers</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="buffer_load_ext.html">buffer_load_ext</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+buffer_load
+--> 

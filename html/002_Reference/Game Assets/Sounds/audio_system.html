@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_system</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_system</h1>
+
+<h2>Checks whether the legacy sound or normal audio is in use.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_system();</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Constant
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns whether the current sound system is the legacy or the normal one. The return value can be one of the following two constants:
+
+<div class="compat">
+	<table class="compat">
+		<tr><th>Constant</th><th>Description</th></tr>
+		<tr><td>audio_old_system</td><td>the legacy sound system is in use</td></tr>
+		<tr class="alt"><td>audio_new_system</td><td>the normal sound system is in use</td></tr>
+	</table>
+</div>
+
+<p>
+<br>
+This function is important only if you are using the HTML5 target module, as some browsers are not compatible with the new audio system, and so <i>GameMaker:Studio</i> will automatically switch 
+back to the legacy audio.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if audio_system() == audio_old_system<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.SS = false;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.SS = true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the sound system being used is the legacy or the new one, and sets a global variable accordingly.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_exists.html">audio_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_system
+-->

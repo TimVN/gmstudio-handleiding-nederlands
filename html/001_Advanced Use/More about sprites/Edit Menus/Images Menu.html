@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The Sprite Editor Images Menu</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The Sprite Editor Images Menu</h1>
+
+<h2>This section explains the functions associated with the <i>GameMaker:Studio</i> sprite editor "Image" drop down menu.</h2>
+
+<p>
+<img class="center" src="Images_Menu.png">
+
+The "Images" drop down menu offers a number of handy options to change the colors, transparencies and other details of the sub-images of your sprite. If you use these commands from the actual sub-image editor then the options 
+chosen will only be applied to the currently selected sub-image, however if you use these commands from the sprite editor they can be applied to all sub-images by ticking the appropriate check-box.
+<br>
+<br>
+
+<ul>
+	<li><b>Cycle Left and Cycle Right : </b>Cycles all images one place to the left or to the right, so that the order of the sprite animation is changed.<br></li>
+	<br>
+		
+	<li><b>Greyscale : </b>Converts the image (or images) into greyscale.
+	<img class="center" src="Greyscale_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Colorize : </b>Here you can change the color (hue) of the image(s). There is a slider which you can use as well as an input box to directly input a new value. The normal effect is to colorize the image(s) with the 
+	selected hue, but when you mark the "shift hue" check-box, the original colors are shifted over the amount indicated giving some rather interesting effects.
+	<img class="center" src="colorize_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Colorize Partial : </b>Here you can change the color (hue) of part of the image(s). You use the top slider (or the input box) to select the new color you wish, then change the second slider (or input box) to select the 
+	color you wish to change (or click the left image on the color). The tolerance slider changes the dynamic range to be changed, from a very narrow selection to a very broad selection, meaning that you can single out specific colors 
+	or whole ranges to change. 
+	<img class="center" src="colorizePartial_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Intensity : </b> Here you can change the intensity (luminosity) and saturation (amount of color) in the selected image(s).
+	<img class="center" src="Intensity_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Invert : </b>Inverts the colors in the image(s).
+	<img class="center" src="Invert_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Make Opaque : </b>Remove all transparency information from the image(s), making them opaque.
+	<img class="center" src="MakeOpaque_Image.png">
+	<br></li>
+	<br>
+	
+	<li><b>Erase a Color : </b> You can select a color to erase with this either by clicking on the color box or by clicking somewhere in the left image. You then specify the tolerance with a slider to set the "range" of 
+	pixels to be included in the action. All pixels with a color close the the selected color and within the tolerance level will be made transparent.
+	<img class="center" src="EraseColor_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Smooth Edges : </b> This will smooth the edges around the opaque part of the image(s) to make them look nicer. Should you require a stronger effect, this can be achieved using Blur (see below)  but only 
+	selecting to blur the transparency.
+	<img class="center" src="Smooth_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Opacity : </b>Here you can change the opacity (transparency) for the whole image (or images). You can either set it relative to the current opacity, meaning that it will be added/subtracted from the existing 
+	transparency values, or absolute so that the existing transparencies are over-written by the new value. Note that fully transparent pixels always stay fully transparent.
+	<img class="center" src="Transparency_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Set Alpha from File : </b>This is a very interesting function that takes the luminosity values from a file and applies them to the alpha channel (transparency) of the image. These values are calculated based on 
+	how light or dark each pixel is, with white being fully opaque, black being fully transparent and everything else somewhere in the middle. The ideal images to use are those that have no color information and are purely 
+	greyscale, and it should be the same size as the target sub-image(s) of the sprite (however, if it is larger or smaller it will be scaled to fit). The image below illustrates how it works :
+	<br>
+	<br>
+	<img class="center" src="Alpha_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Fade : </b> Here you specify a color and an amount and the pixels in the image(s) are now faded towards this color with the given amount.
+	<img class="center" src="Fade_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Blur : </b>This option can be used to blur the image(s). There are options to choose the quantity of blur to be used as well as to select whether you wish to blur just the color information, the transparencies or 
+	both. Only blurring the transparency values can be a nice way to smooth the boundary of the image(s).
+	<img class="center" src="Blur_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Sharpen : </b>This option can be used to sharpen certain details within an image (or images). This is sort of the reverse of blurring as sharpening enhances the edges of the image, with you choosing how subtle or strong 
+	you wish the effect to be and whether to sharpen the transparent edges only, the colored edges only or both. The special sharpening puts additional emphasis on details and can leading to an interesting effect.
+	<img class="center" src="Sharpen_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Outline : </b>You can use this command to create an outline around the image(s). You are asked for the color and a thickness of the outline, as well as whether to position it inside the image or not. You can also indicate 
+	that you wish to remove the image(s) as well, leaving only the outline itself. Finally, there is an option to smooth the outline, which lightly blurs the edges to give it a more rounded feel.
+	<img class="center" src="Outline_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Shadow : </b>This command will create a "drop" shadow below the image(s). The available options permit you to select the color of the shadow and the position, as well as the alpha (transparency) and whether you 
+	wish the edges of the shadow to be hard or soft (blurred or not).
+	<img class="center" src="Shadow_Image.png">
+	<br></li>  
+	<br>
+
+	<li><b>Glow : </b>Create a colored glow around the image, where you can indicate the color of the glow, the opacity and the thickness. You can also indicate to place the glow inside the image.
+	<b><i>Only available in the Standard Edition.</i></b>
+	<img class="center" src="Glow_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Buttonize : </b>Turn the image(s) into a button. You specify the color of the button and the opacity of the effect. You must also indicate the thickness of the button boundary and whether it should be smooth or not, with a 
+	smooth button having a much more rounded look to it.
+	<img class="center" src="Button_Image.png">
+	<br></li>
+	<br>
+
+	<li><b>Gradient Fill : </b> Adds a gradient fill to the image(s). You can specify the two colors to create the gradient between, the overall opacity and the type of gradient to use. Default the image is replace by the gradient although 
+	the transparency is maintained, but by un-checking the "Replace" box the gradient is blended onto the image. By checking the "Change Transparency" box the alpha value of the original image is changed as well.
+	<img class="center" src="Gradient_Image.png">
+	<br></li>
+</ul>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../Editing%20Sprites.html">Editing Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Animation%20Menu.html">The Sprite Editor Animation Menu</i></a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+images menu
+cycle left
+cycle right
+colorize image
+colorize partial
+intensity
+invert
+make opaque
+erase a color
+smooth edges
+opacity
+set alpha from file
+fade
+blur
+sharpen
+outline
+shadow
+glow
+buttonize
+gradient fill
+-->

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_emitter_destroy</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_emitter_destroy</h1>
+
+<h2>Destroys a given emitter in the given particle system.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_emitter_destroy( ps, ind );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ps</td>
+	<td>The particle system to destroy the emitter from.</td></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the emitter to destroy.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will remove the sepecified emitter from the given system and clear it from memory (this will also stop any particles from being produced by the given emitter, but it does <i>NOT</i> 
+remove them from the room). This function should always be called when the given emitter is no longer needed for the system to prevent memory leaks and errors.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if part_emitter_exists(global.Sname, p_emit)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;part_emitter_destroy(global.Sname, p_emit1);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see if the particle emitter indexed in the variable "p_emit" exists in the give particle system and if it does it is destroyed.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Particles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_emitter_destroy_all.html">part_emitter_destroy_all</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_emitter_destroy
+-->

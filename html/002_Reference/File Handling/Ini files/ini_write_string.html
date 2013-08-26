@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ini_write_string</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ini_write_string</h1>
+  
+<h2>Writes a string to an .ini file</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ini_write_string(section, key, value);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>section</td>
+		<td>The section of the .ini to write to.</td></tr>
+		
+		<tr><td>key</td>
+		<td>The key within the relevant section of the .ini to write to.</td></tr>
+		
+		<tr><td>value</td>
+		<td>The string to write to the relevant destination.</td></tr>
+		
+	</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to write a string (text) to an ini data file. Ini files are split into <b>sections</b> and then each section is subsequently split into <b>key</b> - <b>value</b> 
+pairs. So a typical ini file would look something like this :
+<br>
+<br>
+
+<img class="center" src="IniExample.png"></img>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+ini_open("savedata.ini");<br>
+ini_write_string("Save", "Player", global.Name);<br>
+ini_close();<br>
+</p>
+<p>
+The above code opens an ini file for reading and writing, then writes the string stored in the global variable "Name" to the section "Save" with the key "Player" before closing the file again.
+</p>
+  
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Ini Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ini_read_real.html">ini_read_real</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+ini_write_string
+--> 

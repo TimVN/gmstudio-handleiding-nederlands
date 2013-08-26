@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_fixture_set_edge_shape</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_fixture_set_edge_shape</h1>
+  
+<h2>This function sets the shape of the fixture to that of a circle with the specified radius.</h2>
+<p>
+  
+<h3>Syntax :</h3>
+<p class="code">physics_fixture_set_edge_shape(fixture, x1, y1, x2, y2)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fixture</td>
+	<td>the index of the fixture</td></tr>
+	
+	<tr class="alt"><td>x1</td>
+	<td>start x position for the edge</td></tr>
+	
+	<tr><td>y1</td>
+	<td>start y position for the edge</td></tr>
+	
+	<tr class="alt"><td>x2</td>
+	<td>end x position for the edge</td></tr>
+	
+	<tr><td>y2</td>
+	<td>end x position for the edge</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b> N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function defines an "edge" fixture shape. An edge shape is simply a line that will generate a collision when other fixtures over lap it, and can be very useful for generating (for example) terrain, or for creating 
+borders around a room.
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var xx = 0;<br>
+var y1 = room_height - 100;<br>
+var y2 = room_height - 50 - irandom(100);<br>
+for (var i = 0; i &lt; 10; i++;)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var fix = physics_fixture_create();<br>
+&nbsp;&nbsp;&nbsp;physics_fixture_set_edge_shape(fix, xx, y1, xx + 50, y2);<br>
+&nbsp;&nbsp;&nbsp;physics_fixture_bind(fix);<br>
+&nbsp;&nbsp;&nbsp;physics_fixture_delete(fix);<br>
+&nbsp;&nbsp;&nbsp;xx += 50;<br>
+&nbsp;&nbsp;&nbsp;y1 = y2;<br>
+&nbsp;&nbsp;&nbsp;y2 =  room_height - 50 - irandom(100);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will create a line of "edge" fixtures with a variety of heights over the length of the room.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Fixtures</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_fixture_set_polygon_shape.html">physics_fixture_set_polygon_shape</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_fixture_set_edge_shape
+--> 

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>win8_livetile_badge_notification</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>win8_livetile_badge_notification</h1>
+
+<h2>create a badge on the game's live tile.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">win8_livetile_badge_notification(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>id</td>
+		<td>This is the badge id and can either be a number or an icon from the badge catalogue.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will "push" a badge onto the Live Tile of your game. The badge is a small square are on the bottom right of your games Live Tile and can show either a number from 
+0 to 99 (any value over 99 will be shown as "+99"), or a badge icon. Icons are decided based on the <b>icon string</b> that you pass through the function, which can be any of the 
+following:
+<br>
+<br>
+
+<br>
+<br>
+<i><b>NOTE : </b>The background color for these icons will depend on what you have defined in the "Logos" part of the <b>General</b> section of the 
+<a href="../../001_Advanced%20Use/Global%20game%20settings/Win8%20Tab.html">Windows 8</a> tab in the Global Game Settings.</i>
+<br>
+<br>
+
+<div class="compat">
+	<table>
+		<tr><th>Icon String</th><th>Badge Catalogue Image</th></tr>
+		
+		<tr><td>none</td><td><br>No Badge Shown<br><br></td></tr>
+		
+		<tr class="alt"><td>activity</td><td><br><img class="center" src="W8_Activity_Icon.png"></img><br></td></tr>
+		
+		<tr><td>alert</td><td><br><img class="center" src="W8_Alert_Icon.png"></img><br></td></tr>
+		
+		<tr class="alt"><td>available</td><td><br><img class="center" src="W8_Available_Icon.png"></img><br></td></tr>
+		
+		<tr><td>away</td><td><br><img class="center" src="W8_Away_Icon.png"></img><br></td></tr>
+		
+		<tr class="alt"><td>busy</td><td><br><img class="center" src="W8_Busy_Icon.png"></img><br></td></tr>
+		
+		<tr><td>unavailable</td><td><br><img class="center" src="W8_Unavailable_Icon.png"></img><br></td></tr>
+		
+		<tr class="alt"><td>newMessage</td><td><br><img class="center" src="W8_NewMessage_Icon.png"></img><br></td></tr>
+
+		<tr><td>paused</td><td><br><img class="center" src="W8_Paused_Icon.png"></img><br></td></tr>
+		
+		<tr class="alt"><td>playing</td><td><br><img class="center" src="W8_Playing_Icon.png"></img><br></td></tr>
+		
+		<tr><td>error</td><td><br><img class="center" src="W8_Error_Icon.png"></img><br><br></td></tr>
+		
+		<tr class="alt"><td>attention</td><td><br><img class="center" src="W8_Attention_Icon.png"></img><br></td></tr>
+	</table>
+</div>
+<p>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(ord("P"))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if global.Pause<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Pause = false;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;win8_livetile_badge_clear();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Pause = true;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;win8_livetile_badge_notification("paused");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check for the key "P" being pressed and if it is detected, it will toggle the global variable "Paused" to <tt>true</tt> or <tt>false</tt> and push a badge 
+onto the Live Tile (or remove it again) based on the value of this variable.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows 8</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="win8_livetile_badge_clear.html">win8_livetile_badge_clear</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+win8_livetile_badge_notification
+badge icon string
+-->

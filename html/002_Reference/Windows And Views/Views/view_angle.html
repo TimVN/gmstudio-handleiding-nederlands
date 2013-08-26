@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>view_angle</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>view_angle</h1>
+
+<h2>Rotation angle used for the view in the room.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">view_angle[0...7]</p>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this variable, you can get (or set) the angle at which the view is to be drawn. The default angle is 0º but it can be set to any angle between -359º and 359º. This will <i>not</i> affect how the game 
+is played as it is only for setting the angle at which the view is <i>drawn</i>. Often it is used to create a rotating minimap, or to "shake" the view for example.
+<br>
+<br>
+
+<i><b>NOTE: </b>This variable will not work on the HTML5 target module, nor the Windows 8 (JavaScript) module.</i>
+<br>
+<br>
+
+<img class="center" src="View_Angle.png"></img>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if shake<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;view_angle[0] = -10 + random(20);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;view_angle[0] = 0;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+the above code will check the variable "shake" and if it returns <tt>true</tt>, it will then change the view[0] angle to a random value between -10 and 10 every step until the variable returns <tt>false</tt>, 
+at which time it will return the view[0] angle to 0º.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="view_xview.html">view_xview</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+view_angle
+-->

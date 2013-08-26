@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_send_screenshot</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_send_screenshot</h1>
+  
+<h2>Upload a screenshot to the users Steam Community profile.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_send_screenshot(filename, width, height);
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>filename</td>
+		<td>The name of the image file to upload (a string).</td></tr>
+		
+		<tr class="alt"><td>width</td>
+		<td>The width of the image (an integer).</td></tr>
+		
+		<tr><td>height</td>
+		<td>The height of the image (an integer).</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Real
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can upload a screenshot to the Steam Community profile page of the currently logged in user. The filename you supply is the name of the local file that was created when you 
+took the screenshot using the <i>GameMaker:Studio</i> functions <a href="../Windows%20And%20Views/screen_save.html"><tt>screen_save</tt></a> or 
+<a href="../Windows%20And%20Views/screen_save_part.html"><tt>screen_save_part</tt></a>. The width and height define the image size, and the function will return a value of 0 if it fails for whatever 
+reason and a value greater than 0 if it succeeds.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example:</h3>
+<p class="code">
+if steam_is_screenshot_requested()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var file = "Catch_The_Haggis_" + string(global.scrn_num) + ".png");<br>
+&nbsp;&nbsp;&nbsp;screen_save(file)<br>
+&nbsp;&nbsp;&nbsp;steam_send_screenshot(file, window_get_width(), window_get_height());<br>
+&nbsp;&nbsp;&nbsp;global.scrn_num += 1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will poll the Steam API for a screenshot request and if it has been, a unique name for the image file will be generated, a screenshot will be taken, and the file will be sent to the Steam Community 
+page for the user.
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_user_owns_dlc.html">steam_user_owns_dlc</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_send_screenshot
+-->

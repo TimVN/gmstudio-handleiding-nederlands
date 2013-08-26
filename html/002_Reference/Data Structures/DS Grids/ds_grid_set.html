@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_grid_set</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_grid_set</h1>
+
+<h2>Sets a cell in a grid to a given value.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_grid_set(index, x, y, value);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>This index of the grid.</td></tr>
+	
+	<tr class="alt"><td>x</td>
+	<td>The x position of the cell to set.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y position of the cell to set.</td></tr>
+	
+	<tr class="alt"><td>value</td>
+	<td>The value with which to set the cell.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to set a given cell within the given ds_grid to any value, which can be a real number or a string. The image below illustrates this:
+
+<img class="center" src="ds_grid_set.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+grid = ds_grid_create(5, 5);<br>
+var i, j;<br>
+i = 0;<br>
+j = 0;<br>
+repeat (ds_grid_width(grid))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;repeat (ds_grid_height(grid))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_grid_set(grid, i, j, irandom(9)); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j += 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;j = 0;<br>
+&nbsp;&nbsp;&nbsp;i += 1;<br>
+}<br>
+</p>
+<p>
+The above code creates a grid and stores its index in the variable "grid". It then populates this grid with random integers from 0 to 9.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Grids</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_grid_set_disk.html">ds_grid_set_disk</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_grid_set
+-->

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>point_direction</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>point_direction</h1>
+  
+<h2>Returns the direction, in degrees, of a vector comprised.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">point_direction(x1, y1, x2, y2)</p>
+  
+<p>
+<br>
+</p>
+ 
+<div class="param"> 
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>x1</td>
+	<td>The x coordinate of the first component of the vector</td></tr>
+	
+	<tr  class="alt"><td>y1</td>
+	<td>The y coordinate of the first component of the vector</td></tr>
+	
+	<tr><td>x2</td>
+	<td>The x coordinate of the second component of the vector</td></tr>
+	
+	<tr  class="alt"><td>y2</td>
+	<td>The y coordinate of the second component of the vector</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns the direction of a vector formed by the specified components [x1,y1] and [x2,y2] in relation to the fixed x/y coordinates of the room. For example, in the image below if we want to 
+get the direction from the player ship position to the enemy position so that we can fire a missile at the enemy then we would use this function (the exact code is in the example below the image) :
+<br>
+<br>
+
+<img class="center" src="point_direction.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var ex, ey;<br>
+ex = instance_nearest(x, y, enemy).x;<br>
+ey = instance_nearest(x, y, enemy).y;<br>
+with (instance_create(x, y, obj_Missile))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;direction = point_direction(x, y, ex, ey);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will get the x and y coordinates of the nearest enemy and then pass them to a bullet object to use in the point_direction function to set its direction of travel correctly.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Vector Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="point_distance.html">point_distance</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+point_direction
+-->

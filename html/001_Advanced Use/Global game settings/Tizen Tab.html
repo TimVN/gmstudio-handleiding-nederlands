@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>The Tizen Tab</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>The Tizen Tab</h1>
+
+<h2>This section deals with the Tizen tab of the Global Games Settings Window.</h2>
+
+<p>
+The Tizen tab is split into two separate <i>sub-tabs</i> (accessible on the left of the window) to make changing and updating the information for your game clearer and less complicated. These tabs are 
+explained in the following sections.
+
+<h3>General</h3>
+<p>
+
+<img class="center" src="Tizen_General_Tab.png"></img>
+
+The <b>General</b> tab is where you control the game information sna splash screens, and the first thing to fill out for your Tizen game is the <b>Product Info</b> which has the following fields:
+<blockquote>
+	<ul>
+		<li><b>Display Name</b>:  The name of your game as it is to be displayed on the Tizen device and stores.
+		<li><b>Version</b>:  The version that you are building.
+		<li><b>App Id</b>: The app id in url format.
+	</ul>
+</blockquote>
+<p>
+Once that is done you will need to give your game an <b>icon</b> and a <b>Splash Screen</b>. The icon should be authored as a 108x108px *.png file, but unlike other app icons, this should be <i>circular</i> 
+with a transparent border. The splash screen should be 800x480px and *.png too, and it will be scaled to fit higher resolution devices. Note that for the splash screen to show you must also tick the 
+<b>Use Splash Screen</b> option. You are can then choose to lock the game to a specific orientation by checking either landscape, portrait, or both in the <b>Orientation</b> section of the tab.
+<br>
+<br>
+
+The section of this tab labelled <b>Network Access URLs</b> is where you must specify the URL of any page that your device will access. Once you add a domain to the URL list, you can also tick the checkbox 
+to the left to indicate that all sub-domains of this URL should also be permitted. If you do not specify any URL, the game will not be able to use any of the http functions.
+<br>
+<br>
+
+<h3>Graphics</h3>
+<p>
+
+<img class="center" src="Tizen_Graphics_Tab.png"></img>
+
+The graphics tab permits to change some of the behaviours related to how your games graphics are compiled and displayed, with the following options available:
+<blockquote>
+	<ul>	
+		<li><b>Texture Page</b> - Set the size of the texture pages to be created for your game. The default (and most compatible) size is 1024x1024, but you can choose from anywhere between 
+		256x256 up to a whopping 8192x8192! There is also a button marked View which will generate the texture pages for this platform and then open a window so that you can see how they look. 
+		This can be very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary. 
+		<br>
+		<br>
+	</ul>
+</blockquote>
+
+<p>
+<i><b>NOTE : </b>Be aware that the larger the size of the texture page, the less compatible your game will be.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Global Game Settings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Linux%20Tab.html">The Linux Tab</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+Tizen
+Tizen Global Game Settings
+-->

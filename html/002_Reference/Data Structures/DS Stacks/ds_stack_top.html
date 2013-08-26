@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_stack_top</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_stack_top</h1>
+
+<h2>Reads the value from the top of the stack.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_stack_top(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the data structure to read from.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real or String
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will <i>only</i> read the first value of the stack (that which is "on top"). It will not <i>pop</i> the value, meaning that it can still be read in the future by this function or the 
+<a><a href="ds_stack_pop.html"><tt>ds_stack_pop</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+num = ds_stack_top(control_stack);
+</p>
+<p>
+The above code will read the value from the stack indexed in the variable "control_stack" and store the return value in the variable "num".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Stacks</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_stack_pop.html">ds_stack_pop</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_stack_top
+-->

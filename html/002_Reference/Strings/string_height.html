@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>string_height</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>string_height</h1>
+  
+<h2>Returns the height in pixels of a string.</h2>
+  
+<h3>Syntax:</h3>
+<p class="code">string_height(string);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>string</td>
+	<td>The string to measure the height of.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Real</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return the height (in pixels) of the input string. It is very handy for calculating distances between text elements based on the tallest of the letters that make up the string 
+as it would be drawn with <a href="../Drawing/Drawing%20Text/draw_text.html"><tt>draw_text</tt></a> using the currently defined font.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+var hh;<br>
+hh = string_height("ABCDEFGHIJKLMNOPQRSTUVWXYZ");<br>
+draw_text(32, 32, string(score));<br>
+draw_text(32, 32 + hh, string(lives);<br>
+</p>
+<p>
+The above code will get the height of the given string and then draw two lines of text, using the returned string height as a separator.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Strings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="string_height_ext.html">string_height_ext</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+string_height
+-->

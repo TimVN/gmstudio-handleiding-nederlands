@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The Collision Event</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The Collision Event</h1>
+
+<h2>The collision event is one of the many events that can be triggered in an instance and may contain code or actions.</h2>
+
+<p>
+<b><img src="../../images/Event_Collision.png" align="middle" align="left">The Collision Event</b>
+<br>
+
+Obviously when making a game, it is very important that you know when two (or more) instances of an object have collided, and for that we have the collision event. This is an event that you place in an object and then 
+specify against which other object you should be checking for collisions.
+<br>
+<br>
+
+Now, when you <i>don't</i> have physics turned on, these collisions will be calculated based on the mask of the two objects (the mask is defined within the sprite properties, or can be assigned independently in the 
+object properties) and whether they over-lap or not. Note, that if one or the other instances in the collision does not have a mask assigned (or the sprite mask is set to nothing), even if it is drawing something no collisions 
+will be detected. Also, if the object being collided with is solid, <i>before</i> the collision event code is run the instance is placed back at its previous position before the collision was registered, but only if there is a 
+collision event defined. 
+<br>
+<br>
+
+If you have physics <i>on</i>, the collision will be based on the type of collision shape that you have defined for the object in its physics properties, as will its reaction to the collision.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Keyboard%20Event.html">The Keyboard Events</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+collision event
+-->

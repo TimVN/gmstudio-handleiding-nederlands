@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>y</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>y</h1>
+  
+<h2>The y position of the instance.</h2>
+  
+<h3> <b>Syntax :</b> </h3>
+<p class="code">y</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+The y value of an instance is the vertical position in the current room, measured in pixels. This value can be either 0, positive or minus, where 0 is the top of the room and moving down increases y, moving up 
+decreases y (a negative value for y means that the instance has gone outside the top of the room). You can even give y a real value like 12.345, but as you cannot get .345 of a pixel, the instance may not appear to 
+have moved, although these values will be maintaned and used internally by <i>GameMaker:Studio</i> and are perfectly valid.
+<br>
+<br>
+By setting the y (and x) values you can make the object jump around the room to the position of your choice, or you can add and subtract to them by smaller amounts to give the illusion of movement without 
+actually using the built in <a href="speed.html"><tt>speed</tt></a> and <a href="direction.html"><tt>direction</tt></a> functions. This should be taken into account when making your games as often one 
+type of movement lends itself to a particular style of gameplay more than another.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check(vk_down) y += 5;<br>
+if keyboard_check(vk_up) y -= 5;<br>
+</p>
+<p>
+The above code will use the arrow keys to add or subtract to the y position and so create the illusion of movement.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Moving Around</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="xprevious.html">xprevious</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+y
+-->

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_primitive_begin</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_primitive_begin</h1>
+  
+<h2>Begins the process of defining a primitive in 3D.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_primitive_begin(kind)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>kind</td>
+	<td>The kind of primitive you are going to draw.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function must be called before you can define any primitives. There are 6 types of primitives you can define with the following constants :
+<blockquote>
+<ul>
+	<li><b>pr_pointlist</b></li>
+	<li><b>pr_linelist</b></li>
+	<li><b>pr_linestrip</b></li>
+	<li><b>pr_trianglelist</b></li>
+	<li><b>pr_trianglestrip</b></li>
+	<li><b>pr_trianglefan</b></li>
+</ul>
+</blockquote>
+
+<p>
+The following image illustrates basically how these should look and also the order in which you should define the vertexes :
+
+<img class="center" src="../../../../images/primitive_types.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_primitive_begin(pr_trianglelist);<br>
+d3d_vertex(100, 100, 0);<br>
+d3d_vertex(100, 200, 0);<br>
+d3d_vertex(150, 150, 200);<br>
+d3d_vertex(100, 200, 0);<br>
+d3d_vertex(200, 200, 0);<br>
+d3d_vertex(150, 150, 200);<br>
+d3d_vertex(200, 200, 0);<br>
+d3d_vertex(100, 100, 0);<br>
+d3d_vertex(150, 150, 200);<br>
+d3d_vertex(100, 100, 0);<br>
+d3d_vertex(100, 200, 0);<br>
+d3d_vertex(200, 200, 0);<br>
+d3d_primitive_end();<br>
+</p>
+<p>
+The above code will draw a tetrahedron standing on the z=0 plane with its top at z = 200.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_vertex.html">d3d_vertex</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_primitive_begin
+pr_pointlist
+pr_linelist
+pr_linestrip
+pr_trianglelist
+pr_trianglestrip
+pr_trianglefan
+--> 

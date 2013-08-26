@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>external_define</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>external_define</h1>
+  
+<h2>Defines an external function.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">external_define(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...) ;</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>dll</td>
+	<td>The name of the dll file (string)</td></tr>
+	
+	<tr class="alt"><td>name</td>
+	<td>The name of the function (sting)</td></tr>
+
+	<tr><td>calltype</td>
+	<td>The calling convention used</td></tr>
+	
+	<tr class="alt"><td>restype</td>
+	<td>The type of the result to expect</td></tr>
+	
+	<tr><td>argnumb</td>
+	<td>The number of arguments (0 - 15)</td></tr>
+	
+	<tr class="alt"><td>argtype[0 ... 15]</td>
+	<td>The different types of arguments being used</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to define an external function call to a specific dll (<i>dynamic link library</i>). You supply the name (and path) of the dll, then the name of the function that you wish to define. Next 
+you need to define the calling convention to be used (see the constants list below) as well as the type of result to be expected (also a constant, as listed below). Finally you must give the number arguments that 
+the function can take (from o to 15) and for each of the arguments you must specify it's type too. Please note that for functions with 4 or more arguments, all of them <i>must</i> be of type <tt>ty_real</tt>.
+<br>
+<br>
+
+<div class="compat">
+	<table>
+		<tr><th>Constant</th><th>Description</th></tr>
+		<tr><td>dll_cdecl</td><td>This is the default C, C++ call</td></tr>
+		<tr class="alt"><td>dll_stdcall</td><td>This is the standard WinAPI call</td></tr>
+		<tr><td>ty_real</td><td>A real number argument</td></tr>
+		<tr class="alt"><td>ty_string</td><td>a null-terminated string argument</td></tr>
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+global.mmm = external_define('MyDLL.DLL', 'MyMin', dll_cdecl, ty_real, 2, ty_real, ty_real);</p>
+<p>
+The above example code will define an external function call with two arguments and store the id in a global variable.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Miscellaneous</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="external_call.html">external_call</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+external_define
+-->

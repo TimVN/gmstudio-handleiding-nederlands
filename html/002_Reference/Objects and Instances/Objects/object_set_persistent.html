@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>object_set_persistent</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>object_set_persistent</h1>
+
+<h2>Sets the persistence of the given object.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">object_set_persistent(index, pers);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the object to change.</td></tr>
+	
+	<tr class="alt"><td>pers</td>
+	<td>Whether the object should be flagged as persistent (<tt>true</tt>) or not (<tt>false</tt>).</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>N/A</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the persistence of a specific object. A persistent object is "carried over" from room to room and maintains it's properties at all times (for more information on persistence see 
+<a href="../../../000_Using%20GameMaker/008_Defining%20objects.html">Defining Objects</a>). Setting the persistence of the object means that all instances of this object that are created <i>after the 
+persistence has been changed</i> will be created persistent, while instances that are already in the room may not be affected. Please note that this is not an instance function! You can set the 
+persistence of individual instances but if you change the persistence of an object, all instances that are created of that object will start with persitence.
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if room == rm_final object_set_persistent(obj_Player, 0);
+instance_create(32, 32, obj_Player);
+</p>
+<p>
+The above code checks to see in which room the instance is currently in and if it is in the specified "rm_final" then it sets the persistance of the object "obj_Player" to false and then creates the instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Objects</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="object_set_solid.html">object_set_solid</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+object_set_persistent
+-->

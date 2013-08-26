@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>In App Purchases</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>In App Purchases</h1>
+
+<h2>This section deals with setting up in app purchases for your game.</h2>
+
+<p>
+in App Purchases are an important part of modern, cross platform games, permitting you to have "freemium" content where your game is free, but certain content is only available through a purchase from within 
+the game itself. For example, your puzzle game is free, but the extra levels are going to cost the user 0.99$. This app model is very common and can be set up with a minimum amount of work from within 
+<i>GameMaker:Studio</i>, and this section of the manual has details of all the available functions that enable you to do just that, as well as some advice for setting up your own proprietry server and information 
+on how different platforms track and deal with purchases.
+<br>
+<br>
+
+<i><b>NOTE: </b>This functionality is limited to the <a href="../../000_Using%20GameMaker/Versions.html">Professional Version</a> of <i>GameMaker:Studio</i>, and only those versions that have the iOS, 
+Android or Windows 8 target modules.</i>
+<br>
+<br>
+
+<h3>Getting Started</h3>
+<p>
+Setting up in app purchases within your game is relatively simple with <i>GameMaker:Studio</i>, but it still requires some amount of knowledge of the target platform setup as well as careful planning before 
+starting to create your game, so it is not recommended that you use this functionality if you are just starting with <i>GameMaker:Studio</i> or if you are not sure how the different stores for Android, iOS or 
+Windows 8 are set up.
+<br>
+<br>
+
+Before doing anything else you will have to make sure that in app purchases are enabled in the <b>Global Game Settings</b> before they will be functional in your game. The same section also permits you to 
+link to your own proprietry server for controlling available purchases among other things (more information can be found on the page <a href="../../001_Advanced%20Use/Global%20game%20settings/In%20App%20Purchases%20Tab.html">
+Global Game Settings - In App Purchases Tab</a>).
+<br>
+<br>
+
+<p>
+To help those of you that have never worked with any type if IAP services and to explain the different ways that IAP can be tested on different devices, please see the following pages:
+<blockquote>
+	<ol>
+		<li><a href="IAP%20Example.html">IAP Example</a><br> 
+		<li><a href="IAP%20Testing.html">IAP Testing</a><br> 
+	</ol>
+</blockquote>
+
+<p>
+<i><b>NOTE : </b>GameMaker:Studio currently allows for no more than 16 in-app purchases per title!</i>
+<br>
+<br>
+
+<i><b>WARNING : </b>You will not be able to make purchases when debugging titles using the GameMaker IDE. Instead you will need to create final executables to ensure the title can correctly communicate 
+with either the Apple Store, Google Play or Microsoft App Store servers.</i>
+<br>
+<br>
+
+<h3>GameMaker:Studio Functions</h3>
+<p>
+Below are listed the functions that are integrated in <i>GameMaker:Studio</i> to enable in app purchases on iOS and Android target devices (this is the ability to buy extra credits, items, levels and other 
+things from within the game itself). The available purchase functions are:
+<blockquote>
+	<ol>
+		<li><a href="iap_activate.html">iap_activate</a><br> 
+		<li><a href="iap_status.html">iap_status</a><br> 
+		<li><a href="iap_store_status.html">iap_store_status</a><br> 
+		<li><a href="iap_acquire.html">iap_acquire</a><br> 
+		<li><a href="iap_consume.html">iap_consume</a><br>
+		<li><a href="iap_event_queue.html">iap_event_queue</a><br>
+		<li><a href="iap_is_downloaded.html">iap_is_downloaded</a><br> 		
+		<li><a href="iap_is_purchased.html">iap_is_purchased</a><br>
+		<li><a href="iap_product_status.html">iap_product_status</a><br>
+		<li><a href="iap_product_details.html">iap_product_details</a><br>
+		<li><a href="iap_product_files.html">iap_product_files</a><br>
+		<li><a href="iap_files_purchased.html">iap_files_purchased</a><br>
+		<li><a href="iap_restore_all.html">iap_restore_all</a><br>
+	</ol>
+</blockquote>
+
+<p>For those of you with a proprietry server which stores your download pakages for in app purchases, you can find basic information on how to set it up to work with the <i>GameMaker:Studio</i> functions 
+here:
+<blockquote>
+	<ol>
+		<li><a href="IAP%20Server%20Setup.html">IAP Server Setup</a><br> 
+	</ol>
+</blockquote>
+
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../016_Misc functions/index.html">Miscellaneous Functions</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+In App Purchases
+IAP
+-->

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>position_empty</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>position_empty</h1>
+
+<h2>Returns whether a given position is empty or not.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">position_empty(x, y);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>x</td>
+	<td>The x position to check.</td></tr>
+	
+	<tr class="alt"><td>y</td>
+	<td>The y position to check.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will check to see if a given position enters into collision with <i>any instance</i> with a valid collision mask at the given position.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var xx, yy;<br>
+xx = random(room_width);<br>
+yy = random(room_height);<br>
+if position_empty(xx, yy)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;instance_create(xx, yy, obj_Bomb);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+This will check a random position somewhere in the room for a collision and if there is none it will create an instance of obj_Bomb.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Collision Checking</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="position_meeting.html">position_meeting</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+position_empty
+-->

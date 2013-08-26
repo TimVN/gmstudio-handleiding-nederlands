@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_append</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_append</h1>
+  
+<h2>Joins two paths together.</h2>
+  
+<h3><b>Syntax :</b></h3>
+  <p class="code">path_append(index, path);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The new index of the path.</td></tr>
+	
+	<tr><td>path</td>
+	<td>The index of the path that will be appended to 'index'.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this code you can append one path onto another one, effecively joining them together, and for this to work, both paths must previously exist (either made in the path editor or created using 
+<a href="path_add.html"><tt>path_add</tt></a>).
+<br>
+<br>
+
+<b><i>NOTE :</b> This will not remove the path being appended from the resources. It is still there, only it now has no points in it and if you no longer wish to use it you should remove it with 
+the function <a href="path_delete.html"><tt>path_delete</tt></a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+path_append(mypath, mppath);
+path_delete(mppath);
+</p>
+<p>
+The above code appends the path data indexed in the variable "mppath" to the path indexed in the variable "mypath" and then deletes the "mppath" from memory.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Changing Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_assign.html">path_assign</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_append
+-->

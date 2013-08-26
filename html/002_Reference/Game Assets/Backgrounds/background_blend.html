@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_blend</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_blend</h1>
+
+<h2>Returns or sets the color blend value of any background within a room.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">background_blend[0...7]</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable array returns the color blend value of any one of the 8 backgrounds (numbered form 0 - 7 within the array) of the current room. The default value is -1 (which is also equal to the 
+<i>GameMaker:Studio</i> constant <tt>c_white</tt>), but this can be set to any color value with varying effects being achieved depending on the background image itself, as shown in the 
+image below. For best results, it is recommended that you only blend a color with a grey-scale, or black and white, image.
+
+<img class="center" src="back_blend.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+switch (background_blend[0])<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case c_white: background_blend[0] = c_yellow; break;<br>
+&nbsp;&nbsp;&nbsp;case c_yellow: background_blend[0] = c_green; break;<br>
+&nbsp;&nbsp;&nbsp;case c_green: background_blend[0] = c_aqua; break;<br>
+&nbsp;&nbsp;&nbsp;case c_aqua: background_blend[0] = c_orange; break;<br>
+&nbsp;&nbsp;&nbsp;case c_orange: background_blend[0] = c_white; break;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will change the blend color of background0 depending on the current blend color that is being used.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_x.html">background_x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_blend
+-->

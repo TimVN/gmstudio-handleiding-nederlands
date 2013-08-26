@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ads_interstitial_display</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ads_interstitial_display</h1>
+  
+<h2>Display an interstitial ad if one is available.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">ads_interstitial_display()</p>
+
+<p>
+<br>
+</p>
+ 
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will show an interstitial ad if one is available (limited currently to <b>Ad mob</b> only). If one is available, it will be shown until the user closes it, with the game <i>still running in the 
+background</i>, so be aware of this and only use the function at points where it won't interrupt the gameplay of your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if ads_interstitial_available()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;ads_interstitial_display();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the ad provider can serve an interstitial ad and if it can, it then calls the function to display it.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advertising and Analytics</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ads_setup.html">ads_setup</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ads_interstitial_display
+-->

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_pause_sound</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_pause_sound</h1>
+
+<h2>Pauses the indicated sound.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_pause_sound(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sound to pause.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can pause any sound that is currently playing. The sound can either be a single instance of a sound (the index for individual sounds being played can be stored in a variable when using the 
+<a href="audio_play_sound.html"><tt>audio_play_sound</tt></a> or <a href="audio_play_sound_at.html"><tt>audio_play_sound_at</tt></a> functions) or a sound asset, in which case <i>all</i> 
+instances of the given sound will be paused.
+<br>
+<br>
+
+<i><b>NOTE : </b>This function will only pause those sounds that have been flagged as "Normal Sound" when loaded into <i>GameMaker:Studio</i>. If the sound is flagged as "Background Music" this function 
+will not work.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(ord("P"))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Pause = !global.Pause;<br>
+&nbsp;&nbsp;&nbsp;if global.Pause<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio_pause_sound(snd_Waterfall);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio_resume_sound(snd_Waterfall);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks for a press of the keyboard key "P" and if it detects one it sets the global variable "Pause" to <tt>true</tt> or </tt>false</tt> and then either pauses the sound indexed in the 
+variable "snd_Waterfall" or it resumes the sound from its paused state. 
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_pause_all.html">audio_pause_all</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_pause_sound
+-->

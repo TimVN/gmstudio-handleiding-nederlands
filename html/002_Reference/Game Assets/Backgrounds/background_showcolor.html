@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_showcolor</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_showcolor</h1>
+
+<h2>This variable determines if the current room's background color should be drawn.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">background_showcolor</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When in a room, it can have no background image selected for any of it's <a href="background_index.html"><tt>background_index</tt></a>, in which case you should set a background color with  
+the <a href="background_color.html"><tt>background_color</tt></a> variable and make sure that it is visible by setting this variable is set to <tt>true</tt>. Having a room with no background 
+image <i>and</i> no background color will result in graphical artefacts being drawn on the screen and is not recommended.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if background_index[0] == -1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;background_color = c_black;<br>
+&nbsp;&nbsp;&nbsp;background_showcolor = true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if background0 has an image assigned to it and if not it sets the background color to black and flags it to be shown.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_foreground.html">background_foreground</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_showcolor
+-->

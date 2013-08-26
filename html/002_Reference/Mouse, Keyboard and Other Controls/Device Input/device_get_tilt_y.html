@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>device_get_tilt_y</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>device_get_tilt_y</h1>
+  
+<h2>This function returns the amount of tilt on the x axis of your device.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">device_get_tilt_y()</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns a value between -1 and 1 depending upon the the angle of "tilt" of the device. The actual correlation between degrees of tilt and the value returned depends on the device and OS that 
+it uses, but generally a value of 1 or -1 is the same as +/-90°. The image below shows how each if the available functions relates to the device :
+
+<img class="center" src="Tilt_Image.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if display_get_orientation() = display_landscape<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;x += sign(device_get_tilt_y());<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;x += sign(device_get_tilt_x());<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the orientation of the display and then uses the corresponding tilt value to move the player along the x axis.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Device Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="device_get_tilt_z.html">device_get_tiltyz</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+device_get_tilt_y
+--> 

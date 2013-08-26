@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Device Input</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Device Input</h1>
+
+<h2>This section deals with multi touch input for devices.</h2>
+
+<p>
+When your game is being targeted at those platforms that permit multi-touch, you should be using these functions. They work the same way a PC would work if it had multiple 
+mice attached and the constants that are being checked for are the same as those used for the standard mouse functions:
+<br>
+<br>
+
+<div class="compat">
+	<table>
+		<tr><th>Constant</th><th>Description</th></tr>
+		<tr><td>mb_left</td><td>The left mouse button</td></tr>
+		<tr class="alt"><td>mb_middle</td><td>The middle mouse button (this may not be valid for all target platforms)</td></tr>
+		<tr><td>mb_right</td><td>The right mouse button</td></tr>
+		<tr class="alt"><td>mb_none</td><td>No mouse button</td></tr>
+		<tr><td>mb_any</td><td>Any of the mouse buttons</td></tr>
+	</table>
+</div>
+
+<p>
+<br>
+<br>
+<i><b>NOTE : </b>On touch screen devices, a double tap is returned as the equivalent of a <b>right mouse button</b> event. So, if you need to detect multiple taps in quick succession, for example, 
+you will need to check for <b>both</b> the mb_left and mb_right. This functionality can be toggled on or off using <a href="device_mouse_dbclick_enable.html"><tt>device_mouse_dbclick_enable</tt></a>.</i>
+<br>
+<br>
+
+<p>
+Below you can find a list of all the device specific control functions:		
+<blockquote>
+	<ol>
+		<li><a href="device_mouse_check_button.html">device_mouse_check_button</a><br>
+		<li><a href="device_mouse_check_button_pressed.html">device_mouse_check_button_pressed</a><br>
+		<li><a href="device_mouse_check_button_released.html">device_mouse_check_button_released</a><br>
+		<li><a href="device_mouse_dbclick_enable.html">device_mouse_dbclick_enable</a><br>  
+		<li><a href="device_mouse_x.html">device_mouse_x</a><br>  
+		<li><a href="device_mouse_y.html">device_mouse_y</a><br>  
+		<li><a href="device_mouse_raw_x.html">device_mouse_raw_x</a><br>  
+		<li><a href="device_mouse_raw_y.html">device_mouse_raw_y</a><br>
+		<li><a href="device_is_keypad_open.html">device_is_keypad_open</a><br>
+		<li><a href="device_get_tilt_x.html">device_get_tilt_x</a><br>
+		<li><a href="device_get_tilt_y.html">device_get_tilt_y</a><br>
+		<li><a href="device_get_tilt_z.html">device_get_tilt_z</a><br>
+	</ol>
+</blockquote>
+
+<p>
+Please note that on mobile devices (Android, iOS and Windows Phone), you can use the back button at any time, as it is mapped to the keyboard <i>backspace</i> which is the <i>GameMaker:Studio</i> 
+<a href="../Keyboard%20Input/index.html">keyboard constant</a> <b>vk_backspace</b>, so you can do checks for that key and perform actions on those devices as if the back button had been used.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Mouse, Keyboard and Other Controls</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../Joystick Input/index.html">Joystick Input</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+mobile controls
+touch screen controls
+velocimeter controls
+device control
+double tap
+back button
+-->

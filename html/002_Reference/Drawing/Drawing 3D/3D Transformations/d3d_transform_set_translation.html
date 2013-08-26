@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_transform_set_translation</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_transform_set_translation</h1>
+  
+<h2>Sets the transformation to a translation over the indicated vector.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_transform_set_translation(xt, yt, zt)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>xt</td>
+	<td>The x component of the transform vector.</td></tr>
+	
+	<tr class="alt"><td>yt</td>
+	<td>The y component of the transform vector.</td></tr>
+	
+	<tr><td>zt</td>
+	<td>The z component of the transform vector.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+A translation transform will take the vertices used for drawing and simply set them to be drawn at whatever coordinates you want to them. The effect you get will effectively look like you took the object and simply moved it. 
+The fundamental difference between this transform and <a href="d3d_transform_add_translation.html"><tt>d3d_transform_set_translation</tt></a> is that this will clear all transforms that have been previously done.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_transform_set_identity();<br>
+d3d_transform_set_translation(0, 200, 400);<br>
+d3d_draw_block(-50, -50, -50, 50, 50, 50, 100, 100, 100);<br>
+d3d_transform_set_identity();<br>
+</p>
+<p>
+The above code tells <I>GameMaker:Studio</i> to first go to (0,0,0) then translate to (0,200,400) in the game world, and then draw a block.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_transform_set_scaling.html">d3d_transform_set_scaling</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_transform_set_translation
+--> 

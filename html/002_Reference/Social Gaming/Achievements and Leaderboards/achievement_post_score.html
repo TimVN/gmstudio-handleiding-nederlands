@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>achievement_post_score</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>achievement_post_score</h1>
+  
+<h2>Sends a score the Game Center leaderboard for your game.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">achievement_post_score(name, score)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>name</td>
+	<td>The name of the score table (or "Leaderboard").</td></tr>
+	
+	<tr class="alt"><td>score</td>
+	<td>The score to be sent.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to send your score to the chosen leaderboard and achievement service. You send the name of the score table (the "leaderboard" name that you assigned to your game when you set 
+up the account) and the actual score value).
+<br>
+<br>
+   
+<h3>Example :</h3>
+<p class="code">
+if achievement_available() achievement_post_score("Leaderboard", 1000);
+</p>
+<p>
+The above code checks to see if the chosen leaderboard and achievement service is available and if so it posts a score to the score table called "Leaderboard".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Achievements and Leaderboards</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="achievement_show_achievements.html">achievement_show_achievements</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+achievement_post_score
+-->

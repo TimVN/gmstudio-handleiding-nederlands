@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_get_tpe</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_get_tpe</h1>
+
+<h2>Returns a value for the texture page entry of the sprite.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_get_tpe(sprite, index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>sprite</td>
+	<td>The index of the sprite to find the texture page entry of.</td></tr>
+	
+	<tr class="alt"><td>index</td>
+	<td>The image index of the sprite.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+
+</p>
+<h3>Description</h3>
+<p>
+This function will return a special value that relates to the position of the given sprite and sub-image on the texture page used by your game. In this way you can pass the value to extensions for use outside 
+of the compiled game, effectively bypassing the <i>GameMaker:Studio</i> drawing functions and permitting the sprite to be used in DOM content which can then be drawn anywhere within the window that 
+contains the game canvas. This function is of particular interest to those that wish to create buttons and other interactive media outside of the <i>GameMaker:Studio</i> canvas element on their host page using 
+the function <a href="../../HTML5/clickable_add.html"><tt>clickable_add</tt></a>.
+<br>
+<br>
+
+<i><b>NOTE : </b>this function is for HTML5 only.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+home_but = button_add(32, 32, sprite_get_tpe(spr_MS_Home, 0), "http://macsweeney_games.com", "_blank", "width=700, height=500, menubar=0, toobar=0, scrollbars=0");</p>
+<p>
+The above code creates a DOM button at the positon (32, 32) of the page that the game canvas is running on. The button uses the sprite referenced from the texture page as "spr_MS_Ho,me" and 
+when clicked the button will open a new window for the specified URL and with the defined properties for that window.</p>
+<p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_get_name.html">sprite_get_name</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_get_tpe
+-->

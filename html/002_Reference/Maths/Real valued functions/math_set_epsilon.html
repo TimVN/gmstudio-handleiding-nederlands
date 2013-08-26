@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>math_set_epsilon</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>math_set_epsilon</h1>
+  
+<h2>Set the "machine epsilon" for floating point calculations.</h2>
+
+<h3><b>Syntax :</b></h3>
+<p class="code">math_set_epsilon(epsilon);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>epsilon</td>
+	<td>The new epsilon value (from 0 to 1).</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Real</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Epsilon is a value used to determine whether two numbers subject to rounding error are close enough to be considered "equal". It is useful when dealing with floating point maths as it can reduce the "rounding errors" 
+that make certain operations return values that appear incorrect or contrary to what we expect. For example, we may have added a value to the image index of a sprite and expect the result to be a single integer, but 
+due to the nature of floating point maths, the actual final value ends up being something like 5.0000002, so when we have the following check:
+<p class="code">
+if image_index == 5 {do something}
+<p>
+The code does not behave as expected and returns <tt>false</tt>. However, if we set the epsilon value to 0.000001, the image_index value will be rounded to the nearest real number that is +/- 0.000001 of 
+the original value, making the above comparison return true.
+<br>
+<br>
+
+The epsilon value will be used for all the following integer operators:
+<blockquote>
+	<ul>
+		<li>&lt; : Less than
+		<li>&gt; : Greater than
+		<li>== : Equal to
+		<li>&lt;= : Less than or equal to
+		<li>&gt;= : Greater than or equal to
+		<li>!= : Not equal to
+	</ul>
+</blockquote>
+<p>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+math_set_epsilon(0.0001);
+</p>
+<p>
+This will set the epsilon value for all further floating point operations.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Maths</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="arctan2.html">arctan2</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+math_set_epsilon
+-->

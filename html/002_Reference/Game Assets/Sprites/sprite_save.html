@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_save</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_save</h1>
+  
+<h2>Save a sprite to disc.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_save(ind, subimg, fname);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the sprite to save.</td></tr>
+	
+	<tr class="alt"><td>subimg</td>
+	<td>The sub-image of the sprite to save.</td></tr>
+
+	<tr><td>fname</td>
+	<td>The filename for the saved sprite.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to save any sub-image of any sprite to disc, giving it the specified filename. This image <i>must</i> be a <tt>*.png</tt> file.
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>Depending on the target platform that is chosen you are limited as to where you can save and load files from. See <a href="../../File%20Handling/index.html">Reference - Files</a> for more information.</i>
+<br>
+<br>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var surf, spr_custom;<br>
+surf = surface_create(32, 32);<br>
+surface_set_target(surf);<br>
+draw_clear_alpha(c_black, 0);<br>
+draw_sprite(spr_Body, 0, 0, 0);<br>
+draw_sprite(spr_Clothes, 0, 0, 0);<br>
+draw_sprite(spr_Hair, 0, 0, 0);<br>
+spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br>
+surface_reset_target();<br>
+surface_free(surf);<br>
+sprite_save(spr_custom, 0, "Player_Custom_Sprite.png");<br>
+sprite_delete(spr_Custom);<br>
+</p>
+<p>
+The above code creates a surface and stores it's index in the local variable "surf". It then targets that surface, clears it and draws several sprites on top of each other. It creates a new sprite from 
+the composite image drawn on the surface and assigns it's index to the local variable "spr_Custom" before freeing up the memory used by the surface. Finally, the resulting sprite is saved to a file 
+and then removed from memory too.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_save_strip.html">sprite_save_strip</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+sprite_save
+-->

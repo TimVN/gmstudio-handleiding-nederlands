@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Windows 8</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Windows 8</h1>
+
+<h2>These functions are provided specifically for the Windows 8 platform.</h2>
+
+<p>
+The Windows 8 module has some functions that are specifically designed to be used by the games that target it. These functions make the most of the Windows 8 tile system as well as permitting you to 
+access and share files from within your game. The following functions have been split into the relevant sections to make finding the right one for your needs easier. Please note that these functions are for the 
+Windows 8 desktop and Surface platforms, <i>not</i> Windows 8 Phone. For Windows 8 Phone please see the following section:
+<blockquote>
+	<ol>
+		<li><a href="Windows%208%20Phone/index.html">Windows 8 Phone</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<i><b>NOTE : </b>Although the Windows 8 target is similar to the HTML5 one, it won't allow multiple instances of the same app to run at a time, and if the file is running it can't overwrite it. This means that you 
+will have to close the app before saving/testing a new version.</i>
+<br>
+<br>
+
+<h3>Live Tiles</h3>
+<p>
+With the Windows 8 OS your game (or app) will be associated with it's own <b>Live Tile</b>. A live tile is a dynamic link to your game which updates in real time, meaning that you can "push" images 
+and text onto them for the user to see at specific times form your game. The following functions are the recommended method for creating Live Tile notifications:
+<blockquote>
+	<ol>
+		<li><a href="win8_livetile_notification_begin.html">win8_livetile_notification_begin</a><br>
+		<li><a href="win8_livetile_notification_secondary_begin.html">win8_livetile_notification_secondary_begin</a><br>
+		<li><a href="win8_livetile_notification_expiry.html">win8_livetile_notification_expiry</a><br>
+		<li><a href="win8_livetile_notification_tag.html">win8_livetile_notification_tag</a><br>
+		<li><a href="win8_livetile_notification_text_add.html">win8_livetile_notification_text_add</a><br>
+		<li><a href="win8_livetile_notification_image_add.html">win8_livetile_notification_image_add</a><br>
+		<li><a href="win8_livetile_notification_end.html">win8_livetile_notification_end</a><br>
+	</ol>
+</blockquote>
+
+<p>
+However, there also exists the following <i>legacy</i> function (which should only be used if absolutely necessary): 
+<blockquote>
+	<ol>
+		<li><a href="win8_livetile_tile_notification.html">win8_livetile_tile_notification</a><br>
+	</ol>
+</blockquote>
+
+<p>
+Apart from pushing notifications to the main tile there are also a number of further things that can be done, like adding a badge or clearing the tile, using the following functions:
+<blockquote>
+	<ol>		
+		<li><a href="win8_livetile_tile_clear.html">win8_livetile_tile_clear</a><br>
+		<li><a href="win8_livetile_badge_notification.html">win8_livetile_badge_notification</a><br>
+		<li><a href="win8_livetile_badge_clear.html">win8_livetile_badge_clear</a><br>
+		<li><a href="win8_livetile_queue_enable.html">win8_livetile_queue_enable</a><br>
+	</ol>
+</blockquote>
+
+<p>
+You also have access to the <i>Secondary</i> Live Tile. This is a second type of Live Tile that can be pinned to the main start page and used to access a specific section of your game, for example a saved game. 
+It can be quite tricky to set up and get working as you need to supply certain <i>command line parameters</i> which will be parsed later by your game when it is called on from the secondary tile (using the 
+<a href="../Miscellaneous/parameter_string.html"><tt>parameter_string</tt></a> function). The following is a list of all the secondary tile functions:
+<br>
+<br>
+
+<i><b>NOTE: </b>a Secondary Tile will include all of the mandatory properties used to create the standard wide tile</i>.
+<br>
+<br>
+
+<blockquote>
+	<ol>
+		<li><a href="win8_secondarytile_pin.html">win8_secondarytile_pin</a><br>
+		<li><a href="win8_secondarytile_badge_notification.html">win8_secondarytile_badge_notification</a><br>
+		<li><a href="win8_secondarytile_delete.html">win8_secondarytile_delete</a><br>
+	</ol>
+</blockquote>
+
+<p>
+You can find a list of the available <b>Template Strings</b> available for some of the Live Tile functions here:
+<blockquote>
+	<ol>	
+		<li><a href="Windows%208%20Live%20Tile%20Templates.html">Windows 8 Live Tile Templates</a>
+	</ol>
+</blockquote>
+		
+<h3>Appbar commands</h3>
+<p>
+The App Bar is a special bar of buttons that can be made to pop up by <i>right clicking</i> on your game. These buttons can be defined through the following functions and 
+linked to scripts within <i>GameMaker:Studio</i> to create pause menus, options etc... :
+<blockquote>
+	<ol>
+		<li><a href="win8_appbar_enable.html">win8_appbar_enable</a><br>
+		<li><a href="win8_appbar_add_element.html">win8_appbar_add_element</a><br>
+		<li><a href="win8_appbar_remove_element.html">win8_appbar_remove_element</a><br>
+	</ol>
+</blockquote>
+ 
+
+<h3>Settings Charm</h3>
+<p>
+When in your game, if you move the mouse to the top right (or bottom right) of the screen, a side-bar slides out that shows different "charms" (icons). These functions give you 
+the ability to add custom options to the "Settings" charm, either through internal scripts, or external HTML files: 
+<blockquote>
+	<ol>
+		<li><a href="win8_settingscharm_add_entry.html">win8_settingscharm_add_entry</a><br>
+		<li><a href="win8_settingscharm_add_html_entry.html">win8_settingscharm_add_html_entry</a><br>
+		<li><a href="win8_settingscharm_remove_entry.html">win8_settingscharm_remove_entry</a><br>
+	</ol>
+</blockquote>
+ 
+
+<h3>Share</h3>
+<p>
+These functions are effectively an advanced "Cut and Paste" option for Windows 8 and permit you to send information as either text, an image, a file or even as a URL: 
+<blockquote>
+	<ol>
+		<li><a href="win8_share_image.html">win8_share_image</a><br>
+		<li><a href="win8_share_screenshot.html">win8_share_screenshot</a><br>
+		<li><a href="win8_share_file.html">win8_share_file</a><br>
+		<li><a href="win8_share_url.html">win8_share_url</a><br>
+		<li><a href="win8_share_text.html">win8_share_text</a><br>
+	</ol>
+</blockquote>
+ 
+
+<h3>Search</h3>
+<p>
+Windows 8 can permit your game to search through the system as you would any other window. These functions control this:
+<blockquote>
+	<ol>
+		<li><a href="win8_search_enable.html">win8_search_enable</a><br>
+		<li><a href="win8_search_add_suggestions.html">win8_search_add_suggestions</a><br>
+		<li><a href="win8_search_disable.html">win8_search_disable</a><br>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Reference</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="../016_Misc functions/index.html">Miscellaneous Functions</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+Windows 8 functions
+live tiles
+secondary tiles
+badges
+notifications
+sharing
+app-bar
+search
+settings charm
+Windows 8 Live Tiles
+Windows 8 Sharing
+Windows 8 App Bar
+Windows 8 Search
+Windows 8 Settings Charm
+-->

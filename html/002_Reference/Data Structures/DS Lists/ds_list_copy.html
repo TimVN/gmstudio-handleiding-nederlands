@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>ds_list_copy</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>ds_list_copy</h1>
+
+<h2>Copies one list into another.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">ds_list_copy( id, source );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>id</td>
+	<td>The id of the list being copied <i>to</i>.</td></tr>
+	
+	<tr><td>source</td>
+	<td>The id of the list to be copied <i>from</i>.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can copy the contents of one list into another. Both lists must have been created previously and if the list being copied <i>to</i> already has information within it, this list will be cleared first. 
+The end result is two independant lists which contain the same information.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !ds_list_empty(main_list)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;old_list = ds_list_create();<br>
+&nbsp;&nbsp;&nbsp;ds_list_copy(old_list, main_list);<br>
+&nbsp;&nbsp;&nbsp;ds_list_clear(main_list);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check a ds_list to see if it is empty. If it is not empty it is copied into another ds_list (which has been created previously) and then the original list is cleared. 
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">DS Lists</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="ds_list_read.html">ds_list_read</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+ds_list_copy
+-->

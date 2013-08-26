@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>d3d_model_vertex_normal</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>d3d_model_vertex_normal</h1>
+  
+<h2>Defines a vertex for a primitive in 3D along with its corresponding normal.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_model_vertex_normal(ind, x, y, z, nx, ny, nz)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the model to add the primitive to.</td></tr>
+
+	<tr class="alt"><td>x</td>
+	<td>The x coordinate of the vertex.</td></tr>
+	
+	<tr><td>y</td>
+	<td>The y coordinate of the vertex.</td></tr>
+	
+	<tr class="alt"><td>z</td>
+	<td>The z coordinate of the vertex.</td></tr>
+
+	<tr><td>xn</td>
+	<td>The x component of the normal vector.</td></tr>
+	
+	<tr class="alt"><td>yn</td>
+	<td>The y component of the normal vector.</td></tr>
+	
+	<tr><td>zn</td>
+	<td>The z component of the normal vector.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function defines the position of a primitive vertex for a model, and assigns a normal to that vertex for the purposes of lighting. The final look of the model will depend on the primitive type chosen to draw, the order with 
+which you add the vertexes to it, and the normal that you define for it as well as the lighting. See <a href="d3d_model_primitive_begin.html"><tt>d3d_model_primitive_begin</tt></a> for more information on primitives. To end and 
+draw the primitive you must call <a href="d3d_model_primitive_end.html"><tt>d3d_model_primitive_end</tt></a>.
+<br>
+<br>
+
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+m = d3d_model_create();<br>
+d3d_model_primitive_begin(m, pr_trianglelist);<br>
+d3d_model_vertex_normal(m, -128, 0, -48, 0, 0.5, -0.5);<br>
+d3d_model_vertex_normal(m, -128, 96, 48, 0, 0.5, -0.5);<br>
+d3d_model_vertex_normal(m, 128, 0, -48, 0, 0.5, -0.5);<br>
+d3d_model_vertex_normal(m, 128, 0, -48, 0, 0.5, -0.5);<br>
+d3d_model_vertex_normal(m, -128, 96, 48, 0, 0.5, -0.5);<br>
+d3d_model_vertex_normal(m, 128, 96, 48, 0, 0.5, -0.5);<br>
+d3d_model_primitive_end();<br>
+</p>
+<p>
+The above code will add a sloped rectangle with the correct normal vectors for lighting to the selected model.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_model_vertex_normal_color.html">d3d_model_vertex_normal_color</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_model_vertex_normal
+--> 

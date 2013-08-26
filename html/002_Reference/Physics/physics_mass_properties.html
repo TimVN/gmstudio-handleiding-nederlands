@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>physics_mass_properties</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>physics_mass_properties</h1>
+  
+<h2>With this you can apply specific mass properties to a fixture.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">physics_mass_properties(mass, local_center_x, local_center_y, inertia)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>mass</td>
+	<td>The new mass that you want the fixture to have.</td></tr>
+	
+	<tr class="alt"><td>local_center_x</td>
+	<td>The local x coordinate of the new center of mass.</td></tr>
+
+	<tr><td>local_center_y</td>
+	<td>The local y coordinate of the new center of mass.</td></tr>
+	
+	<tr class="alt"><td>inertia</td>
+	<td>Set the inertia for the fixture.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to set custom mass and inertia values for a fixture. Normally the mass, center of mass, and inertia for an instance is calculated using a combination the surface area of 
+the fixture and the density. However in very special occaisions you may need to offset the center of mass or change the inertia and that is when you would use this function. Bare in mind that the 
+mass is calculated in real world weight (ie:kilograms) and you should always try and keep values realistic for what you are modelling. So if your physics object is meant to represent a person, their 
+mass would be approximately 70 kilos.
+<br>
+<br>
+
+The center of mass is calculated automatically for you based on the shape of the fixture you have defined. To get a general idea of where this could be, if you have a sprite that is the same shape as the 
+fixture you wish to create, then select the "center origin" option you will see approximately where the center of mass will be too. However, this may not be correct or you may be looking for a specific 
+effect from your physics object, in which case this function can also be used to change the x and y coordinates for the center of mass. These are <b>local</b> values, so 0,0 is the point at which 
+the fixture is bound to the instance (the origin of the instance). So a cnter of mass of -4,0 would shift the center of mass to the left of the origin.
+<br>
+<br>
+
+As for the inertia, this basically defines how resistant the instance is to changes in it's direction and velocity, so a higher inertia makes it more resistant and a 
+low inertia makes it less resistant (inertia and mass cannot be negative values!).
+<br>
+<br>
+
+<i><b>NOTE : </b>This function shuld only be used when necessary as the physics simulation is designed for the mass and inertia to be optimal based on the density and size of the fixture. Changing 
+these values can have unforseen effects.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+physics_mass_properties(phy_mass, -10, -10, phy_inertia);
+</p>
+<p>
+The above code will shift the center of mass of the physical body to the left.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Physics Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="physics_test_overlap.html">physics_test_overlap</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+physics_mass_properties
+mass properties
+--> 

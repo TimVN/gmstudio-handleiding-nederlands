@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Evaluation Order</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Evaluation Order</h1>
+
+<h2>This section deals with the evaluation order of functions and expressions.</h2>
+
+<p>
+When programming your game using <i>GML</i> you should be aware that function call arguments are not guaranteed an evaluation order. What this means is that the order in which you place functions 
+in your code will change from platform to platform, so you should code them in an explicit manner. This is due to optimisation differences between the different taget platforms, for example on the Windows 
+target functions may be evaluated from right to left, but on the HTML5 target, they may be evaluated from left to right. So to avoid any issues you are best not to call multiple functions in the arguments 
+of a function call as you may well be building in a reliance on the order of evaluation.
+<br>
+<br>
+
+To see an example of what this means, consider the following code which is calling several functions and using them as arguments to a script:
+<br>
+<br>
+<p class="code">
+buffer_seek(buff, buffer_seek_start, 0);<br>
+scr_buffer_get_info(buffer_read(buff, buffer_s8), buffer_read(buff, buffer_s16),buffer_read(buff, buffer_s16));<br>
+</p>
+
+<p>
+<br>
+Now, the problem here is that on some platforms, the <i>last</i> <tt>buffer_read</tt> will be called <i>first</i>, and so all the arguments of the script will be wrong as the data is being read from the buffer 
+in "reverse" order as you would percieve it. This has the knock-on effect here of affecting all further values for the <tt>buffer_read</tt> function so all the arguments being passed to this script will be wrong!
+<br>
+<br>
+
+To get around this you should <i>explicitly</i> call the functions in the required order and store the returned values in variables, like this:
+<br>
+<br>
+<p class="code">
+var val[0] = buffer_read(buff, buffer_s8);<br>
+var val[1] = buffer_read(buff, buffer_s16);<br>
+var val[2] = buffer_read(buff, buffer_s16);<br>
+scr_buffer_get_info(val[0], val[1], val[2]);<br>
+</p>
+
+<p>
+<br>
+While it may seem a more verbose method, it keeps everything clear and avoids any possible problems with evaluation order.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_01_program.html">A Program</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+evaluation order
+--> 

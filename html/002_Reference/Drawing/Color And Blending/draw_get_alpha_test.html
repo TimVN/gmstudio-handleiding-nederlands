@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_get_alpha_test</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_get_alpha_test</h1>
+
+<h2>Returns the current state of alpha testing (enabled or not).</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_get_alpha_test();</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check to see whether alpha testing is enabled (returns <tt>true</tt>) or not (returns <tt>false</tt>). For more information on alpha testing, see the function 
+<a href="draw_set_alpha_test.html"><tt>draw_set_alpha_test</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !draw_get_alpha_test()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_set_alpha_test(true);<br>
+&nbsp;&nbsp;&nbsp;draw_set_alpha_test_ref_value(128);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+<p>
+The above code will check to see if alpha testing is enabled and if not it will switch on alpha testing and set the test threshold to 128 (only pixels with an alpha over 0.5 will be drawn).
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_get_alpha_test_ref_value.html">draw_get_alpha_test_ref_value</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_get_alpha_test
+-->

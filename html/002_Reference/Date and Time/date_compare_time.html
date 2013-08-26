@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>date_compare_time</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>date_compare_time</h1>
+
+<h2>Returns which of two times is the latest.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">date_compare_time(datetime1, datetime2);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>datetime1</td>
+	<td>The first datetime.</td></tr>
+	
+	<tr><td>datetime2</td>
+	<td>The datetime to compare the first one to.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns:</b> Real
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check two dates and times to see which one has the time component earlier or later than the other. The function returns -1 if datetime1 is earlier, 1 if datetime1 is later and 
+0 if they are the same, and it ignores the date, so literally just which of the times is further through its given day.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d = date_compare_time(date_create_datetime( 2011, 9, 15, 11, 4, 0 ), date_current_datetime());
+</p>
+<p>
+This would set "d" to the corresponding value depending on which of the times was the earliest. Basically, if the current time is later than 11:04 am, it would return 1. If earlier, -1. If the time is 11:04, it would return 0.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Date And Time</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="date_create_datetime.html">date_create_datetime</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+date_compare_time
+-->

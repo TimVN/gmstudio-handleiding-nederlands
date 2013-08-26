@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>string_pos</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>string_pos</h1>
+
+<h2>Returns the position of a given sub-string in a string.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">string_pos(substr, str);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>substr</td>
+	<td>The substring to look for in the string.</td></tr>
+	
+	<tr class="alt"><td>str</td>
+	<td>The string.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return the character position of an instance of a substring within a string, or 0 if it's not found at all. One use for this is for filtering words that may be considered offensive, or for finding the 
+correct place to insert some text into another string.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+if string_pos(",", text) != 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;string_insert(name, text, string_pos(",", text));<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code searches the string "text" for a comma, and if it finds one it inserts the substring "name" at that position.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Strings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="string_repeat.html">string_repeat</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+string_pos
+-->

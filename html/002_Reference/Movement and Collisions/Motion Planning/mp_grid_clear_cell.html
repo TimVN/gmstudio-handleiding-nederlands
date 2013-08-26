@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>mp_grid_clear_cell</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>mp_grid_clear_cell</h1>
+  
+<h2>Clears the indicated cell of an mp_grid.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">mp_grid_clear_cell(id, h, v);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>id</td>
+	<td>Index of the mp_grid that is to be used</td></tr>
+		
+	<tr class="alt"><td>h</td>
+	<td>Horizontal position of the cell to clear</td></tr>
+		
+	<tr><td>v</td>
+	<td>vertical position of the cell to clear</td></tr>
+		
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean.
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to clear a specific "cell" of an mp_grid. Cells are <i>not</i> calculated as room coordinates, but rather as grid coordinates, where (0,0) is the top let corner of the grid. this means that to clear a cell 
+at a specific position in the room, we must change the x and y coordinates into cell coordinate dividing them by the resolution of the mp_grid. The code example below shows how this works.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+with (obj_Box)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;mp_grid_clear_cell(grid, floor(x / 32), floor(y /32)); <br>
+&nbsp;&nbsp;&nbsp;instance_destroy();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will make all "obj_Box" destroy themselves and have them mark the cells they occupied in the mp_grid indexed in the variable "grid" as free. In this example, we find the appropriate cell by taking 
+the x/y coordinate of the object and dividing them by the resolution of the grid (using <tt>floor</tt> to keep the values as integers);
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Motion Planning</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="mp_grid_clear_rectangle.html">mp_grid_clear_rectangle</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+mp_grid_clear_cell
+-->

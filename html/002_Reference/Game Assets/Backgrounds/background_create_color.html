@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>background_create_color</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>background_create_color</h1>
+
+<h2>Creates a new background of a given size and color.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">background_create_color(w, h, col);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>w</td>
+	<td>The width of the background.</td></tr>
+	
+	<tr class="alt"><td>h</td>
+	<td>The height of the background.</td></tr>
+	
+	<tr><td>col</td>
+	<td>The color to clear the background to.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function creates a new background of the given width and height cleared to the given color. The function returns the index of the newly created background and this should be stored in a variable 
+and used in all further calls that require this background. If there is an error, the function returns -1.
+<br>
+<br>
+
+<i><b>NOTE : </b>When you create a background dynamically with GameMaker:Studio you must remember to remove it again (with <a href="background_delete.html"><tt>background_delete</tt></a>) 
+when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+t_back = background_create_color(room_width, room_height, c_black);
+</p>
+<p>
+The above code will create a new background the same size as the current room and colors it black. The index of this new background is stored in the variable "t_back".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Backgrounds</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="background_create_gradient.html">background_create_gradient</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+background_create_color
+-->

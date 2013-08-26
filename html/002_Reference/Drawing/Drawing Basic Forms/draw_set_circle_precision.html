@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_set_circle_precision</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_set_circle_precision</h1>
+
+<h2>Sets the precision for drawing a circle or ellipse.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_set_circle_precision(precision);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>precision</td>
+	<td>The precision of all circles drawn after this function is called.</td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+To optimise performance when drawing circles, <i>GameMaker:Studio</i> basically draws a polygon shape with enough sides to make it <i>appear</i> circular. However, depending on how big or 
+small you need your circles to be, you may find that changing this value can help increase the performance of your game, or make the circles look better. The precision value that you can input into 
+this function is the number of sides the circle polygon has, and this number can be anything between 4 and 64, <i>but must be a number divisible by 4</i>, with a default value of 24.
+
+<img class="center" src="draw_set_circle_precision.png"></img>
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_circle_precision(12);
+</p>
+<p>
+The above code will draw all circles using a 12 sided polygon. 
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Drawing Basic Forms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_button.html">draw_button</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_set_circle_precision
+-->

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Including Files</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+</head>
+<body>
+
+
+<h1>Including Files</h1>
+
+<h2>This section deals with including external files in your game.</h2>
+
+<p>
+<i>GameMaker:Studio</i> is not just limited to the resources that you create within the program as it has a special section on the resource tree of the main window for <b>Included Files</b>. Here you can 
+load different file types (and even create sub-directories for them) into <i>GameMaker:Studio</i> and they will then be included in the final game as part of the final package for the target platform. So, for example, 
+in a windows game they will be bundled within the <tt>*.exe</tt> and exported when run, or in HTML5 they will be included in the <tt>html5_game</tt> folder and stored on the server.
+<br>
+<br>
+
+<i><b>NOTE : </b>If you are using the <b>Free</b> version of <i>GameMaker:Studio</i> you are limited to a maximum of 5 included files per game. For more details see 
+<a href="../000_Using%20GameMaker/Versions.html">here</a>.</i>
+<br>
+<br>
+<br>
+<br>
+
+To add a file to your resources you must right-click on the <b>Included Files</b> section of the resource tree and select <b>Create Included File</b> or, if you want to create a sub-directory to store other files, 
+<b>Create Group</b>. if you selected to create an included file you will get the following window :
+
+<img class="center" src="../images/form_datafile.png">
+
+Here you should click on the <b>Load</b> button and select the file you wish to include in your final game, and then, once you have done this, you can rename it if you choose by changing the <b>File Name</b>. 
+Beneath the "Load" button there are also a series of options for the target platform that this included file should be copied to. If you wish it to be <i>only</i> exported when you run the game in a browser, then 
+you would only tick the "HTML5" box, and if you want it to be exported only to Android and iOS targets you would tick those, and so on. If you choose not to tick <i>any</i> targets then that file will not be 
+exported at all. This option is especially useful for those that wish to make use of the <a href="007_Configurations.html">Configurations Manager</a> to store certain configurations and export specific files 
+depending on them.
+<br>
+<br>
+
+Once you click on "OK" the file will be imported into <i>GameMaker:Studio</i> and from now it will be stored with your current project in its own folder called <b>data-files</b> found in the project <tt>*.gmx</tt> 
+directory. If you have chosen to change the name of the file when you added it to the resource tree, then the file will now be stored with that new name. Please note that from now on you should edit the files stored in 
+this folder and <i>not</i> the original files (unless you plan on including them again, but generally there is no need).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Advanced Use Index</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Extensions/index.html">Extension Packages</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+including files
+data files
+adding files
+-->

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>d3d_set_depth</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>d3d_set_depth</h1>
+  
+<h2>Sets the depth used for drawing.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_set_depth(depth)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>depth</td>
+	<td>The new depth used for drawing</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Once 3D mode has been switched on you can use <i>GameMaker:Studio</i> as you are used to it, with the exception of certain things (see <a href="../../Drawing%203D/index.html">Working With 3D</a>), 
+only now objects will appear in different sizes based on their depth setting. However, if you draw a number of things in a single piece of code you might want to change the depth value between the primitives 
+you draw, and this can be achieved using this function. 
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var tex;<br>
+tex = background_get_texture(back);<br>
+d3d_primitive_begin_texture(pr_trianglefan, tex);<br>
+d3d_vertex_texture(0, 48, 0, 0, 0);<br>
+d3d_vertex_texture(64, 48,0,1,0);<br>
+d3d_vertex_texture(64, 48, 1000, 1, 1);<br>
+d3d_vertex_texture(0, 48, 1000, 0, 1);<br>
+d3d_primitive_end();<br>
+d3d_set_depth(500);<br>
+d3d_primitive_begin_texture(pr_trianglefan, tex);<br>
+d3d_vertex_texture(80, 220, 0, 0, 0);<br>
+d3d_vertex_texture(140, 220,0,1,0);<br>
+d3d_vertex_texture(140, 220, 1000, 1, 1);<br>
+d3d_vertex_texture(80, 220, 1000, 0, 1);<br>
+d3d_primitive_end();<br>
+<p>
+The above code will draw two textured primitives with a change of draw depth between them.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Setup</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_set_culling.html">d3d_set_culling</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_set_depth
+--> 

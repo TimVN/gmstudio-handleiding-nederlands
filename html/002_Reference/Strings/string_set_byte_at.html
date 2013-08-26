@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>string_set_byte_at</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>string_set_byte_at</h1>
+
+<h2>Returns the number of bytes in a string.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">string_set_byte_at(str, pos, byte);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>str</td>
+	<td>The string to change the byte of.</td></tr>
+
+	<tr class="alt"><td>pos</td>
+	<td>The position within the string (starting at 1) to change the byte of.</td></tr>
+	
+	<tr><td>byte</td>
+	<td>The new byte value.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns :</b>string
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function sets a byte directly in a string (based on the UTF8 format) and returns a copy of the string with the changes.
+<br>
+<br>
+
+<i><b>NOTE: </b>This function is incredibly slow so consider carefully whether it is necessary and where you use it.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+str = string_set_byte_at("hello", 2, 97);
+</p>
+<p>
+The above code would change the byte value of the second letter in the string, and so set the variable "str" to hold "hallo".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Strings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="string_char_at.html">string_char_at</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+string_set_byte_at
+-->

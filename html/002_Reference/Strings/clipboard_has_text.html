@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>clipboard_has_text</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>clipboard_has_text</h1>
+
+<h2>Returns whether there is any text in the clipboard.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">clipboard_has_text();</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return <tt>true</tt> if the clipboard contains text or <tt>false</tt> if it does not.
+<br>
+<br>
+
+<i><b>NOTE : </b>This function is only valid for the <b>Windows</b> target.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+if clipboard_has_text()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;str = clipboard_get_text();<br>
+&nbsp;&nbsp;&nbsp;clipboard_set_text("");<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the clipboard for text and if it contains any, it is read as a string into the variable "str". Finally the clipboard is cleared by setting it to an empty string.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Strings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="clipboard_get_text.html">clipboard_get_text</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+clipboard_has_text
+-->

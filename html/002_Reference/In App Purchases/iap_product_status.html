@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>iap_product_status</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>iap_product_status</h1>
+  
+<h2>Indicates whether or not a product has been purchased.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">iap_product_status(product_id);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>product_id</td>
+	<td>The Apple Store/Google Play product id for the purchase in reverse URL format, eg: "com.MacSweeney Games.CTC.LevelPack".</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>String
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is similar to the <a href="iap_status.html"><tt>iap_status</tt></a> function, but instead of a <tt>ds_map</tt> with detailed information, this function returns a string with the current status 
+of the purchase specified by the purchase id. The following text can be returned by this function:
+<blockquote>
+	<ul>
+		<li>"Purchased"
+		<li>"Available"
+		<li>"Unavailable"
+	</ul>
+</blockquote>	
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if iap_product_status(p_id) == "Purchased"<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var list, i;<br>
+&nbsp;&nbsp;&nbsp;list = ds_list_create();<br>
+&nbsp;&nbsp;&nbsp;iap_product_files(p_id, list);<br>
+&nbsp;&nbsp;&nbsp;for (i = 0; i &lt; ds_list_size(list); i += 1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(x, y + (i * 32), ds_list_find_value(list, i));<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;ds_list_destroy(list);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the previously stored product id to see if it has been purchased, and if it has it then creates and displays a list of product files that have been downloaded.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="iap_product_details.html">iap_product_details</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+iap_product_status
+-->

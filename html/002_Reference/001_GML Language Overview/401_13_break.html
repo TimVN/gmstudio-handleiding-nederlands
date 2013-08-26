@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>The "Break" Statement</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>The "Break" Statement</h1>
+
+<h2>this section explains the various uses for the "break" statement.</h2>
+
+<p>
+The "break" is used to end prematurely a <a href="401_11_for.html">for</a>, <a href="401_08_repeat.html">repeat</a>, <a href="401_09_while.html">while</a>, <a href="401_10_do.html">do... until</a> loop of some kind, 
+or to tell a <a href="401_12_switch.html">switch</a> statement to end at that point. Below you can see a few examples of how this can be used, and its form is simply :
+<br>
+<br>
+<p class="code">
+break;
+</p>
+<p>
+<br>
+<br>
+
+<p>
+"break" in a for loop :
+<br>
+<br>
+<p class="code">
+{<br>
+var i;<br>
+for (i = 0; i &lt; 10; i += 1)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if array[i] = 234 break;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+num = i;<br>
+}<br>
+</p>
+
+<p>
+<br>
+"break" in a repeat loop :
+<br>
+<br>
+<p class="code">
+{<br>
+var i, temp;<br>
+i = 0;<br>
+temp = 0;<br>
+repeat (10)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;temp += array[i];<br>
+&nbsp;&nbsp;&nbsp;if temp &gt; max_total break else i += 1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</p>
+<p>
+
+<br>
+"break" in a while loop :
+<br>
+<br>
+<p class="code">
+{<br>
+var i;<br>
+i = 0;<br>
+while (!place_free(x, y))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;x = random(room_width);<br>
+&nbsp;&nbsp;&nbsp;y = random(room_height);<br>
+&nbsp;&nbsp;&nbsp;if i &gt; 50 break else i+=1;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</p>
+<p>
+
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_14_continue.html">The "Continue" Statement</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+break
+--> 

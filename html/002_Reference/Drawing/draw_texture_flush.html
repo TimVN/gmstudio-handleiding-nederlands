@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_texture_flush</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_texture_flush</h1>
+
+<h2>Clears all textures from vRam.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_texture_flush();</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can remove all textures from video memory, and they will then be reloaded on first use. This is the only effective way to manage video memory when you have multiple texture pages for a game, 
+and you should flush the vRam between levels on your game and organise the graphics using the texture group feature to ensure that the minimum number of textures are used.
+<br>
+<br>
+
+<i><b>NOTE : </b>There is a performance hit as the texture is uploaded to vRam on most devices, so the best idea is to do a dummy render of the required graphics at the start of a level to avoid any stalls. You 
+would only need to render a single graphic from each texture page to ensure that that texture is loaded, and you should be aware that texture groups can have more than one texture page which means that each 
+load will cause a stall.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if go<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_texture_flush();<br>
+&nbsp;&nbsp;&nbsp;room_goto(rm_Level_1);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+<p>
+The above code checks a variable and if it returns <tt>true</tt>, it flushes the video memory of texture data and goes to another room.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_enable_drawevent.html">draw_enable_drawevent</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_texture_flush
+-->

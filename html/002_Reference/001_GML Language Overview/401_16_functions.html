@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Functions</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Functions</h1>
+
+<h2>This section explains what a function is in <i>GameMaker:Studio</i></h2>
+<p>
+The general definition of a function is something like this : <i>A function has an input and an output, and the output is related somehow to the input.</i> In <i>GameMaker:Studio</i> you use 
+functions as part of the <a href="401_01_program.html">program</a> to make things happen in your game and there are a great number of GML (GameMaker Language) functions available to 
+you, all of which are explained in the <a href="../index.html">Reference</a> section of the manual.
+<br>
+<br>
+
+In GML a function has the form of a function name, followed by the input arguments between brackets and separated by commas (if the function has no input arguments then just brackets are used). 
+Here is an outline of the structure of a function : 
+<br>
+<br>
+<p class="code">
+&lt;function&gt;(&lt;arg0&gt;, &lt;arg1&gt; ,... &lt;arg15&gt;);
+</p>
+<p>
+<br>
+Generally there are two types of functions - First of all, there is the huge collection of built-in functions which are used to control all aspects of your game, and, secondly, any <a href="../../001_Advanced%20Use/006_Scripts.html"> 
+scripts</a> you define in your game can also be used as a function (but not always).
+<br>
+<br>
+Some functions return values and can be used in expressions, while others simply execute commands and you should note that it is impossible to use a function as the lefthand side of an assignment. For example, 
+you cannot write :
+<br>
+<br>
+<p class="code">
+instance_nearest(x, y, obj).speed = 0;<br>
+</p>
+<p>
+<br>
+as the return value for the expression is a real number and so must be enclosed in brackets to be used in this way (see <a href="401_05_addressing.html">Addressing Variables In Other Instances</a> for 
+more information), so the bove code should actually be written as :
+<br>
+<br>
+<p class="code">
+(instance_nearest(x,y,obj)).speed = 0;<br>
+</p>
+<p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_03_assignments.html">Assignments</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+--> 

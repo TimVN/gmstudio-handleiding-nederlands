@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>iap_product_files</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>iap_product_files</h1>
+  
+<h2>Add product files to a ds_list.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">iap_product_files(purchase_id, ds_list);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>purchase_id</td>
+	<td>This can either be the Apple Store/Google Play id string, an URL id,  or an index into the available purchases ds_list.</td></tr>
+
+	<tr class="alt"><td>ds_list</td>
+	<td>The ds_list that will store the product information.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can generate a <a href="../Data%20Structures/DS%20Lists/index.html"><tt>ds_list</tt></a> containing all the files associated with the given product id.
+<br>
+<br>
+
+<i><b>NOTE: </b>The <tt>ds_list</tt> used is <b>not</b> created by the function, meaning that you must create it previously and remove it again from memory when not in use using the appropriate 
+function.</i>
+<br>
+<br>
+
+ <p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if iap_product_status(p_id) == "Purchased"<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;var list, i;<br>
+&nbsp;&nbsp;&nbsp;list = ds_list_create();<br>
+&nbsp;&nbsp;&nbsp;iap_product_files(p_id, list);<br>
+&nbsp;&nbsp;&nbsp;for (i = 0; i &lt; ds_list_size(list); i += 1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(x, y + (i * 32), ds_list_find_value(list, i));<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;ds_list_destroy(list);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the previously stored product id to see if it has been purchased, and if it has it then creates and displays a list of product files that have been downloaded.
+</p>
+<p>
+
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">In App Purchases</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="iap_files_purchased.html">iap_files_purchased</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+iap_product_files
+-->

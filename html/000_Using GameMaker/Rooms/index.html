@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Creating Rooms</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Creating Rooms</h1>
+
+<h2>Rooms are where everything in your game happens, and this section outlines how you create them and add instances to them.</h2>
+
+
+<p>
+All games that you make in <i>GameMaker:Studio</i> need at least one room to run (but can have many, many more) , and a room is just a space where you place instances of the objects that make up your game. When you 
+first create a room in your resource tree you will be presented with a new window with which to edit its properties, something like this :
+<br>
+<br>
+
+<img class="center" src="../../images/form_room.png">
+<br>
+<br>
+
+As you can see, most of the room editor is taken up with the a visual representation of the room itself, where you place the objects, tiles and backgrounds for your game, but around the edges there are a number of buttons, 
+tabs and information bars that help you to create your game.
+<br>
+<br>
+
+<i><b>NOTE : </b>If you are using the <b>Free</b> version of <i>GameMaker:Studio</i> you are limited to a maximum of 5 rooms per game. For more details see 
+<a href="../../000_Using%20GameMaker/Versions.html">here</a>.</i>
+<br>
+<br>
+<br>
+<br>
+
+<h3>The Toolbar</h3>
+<p>
+At the top of the form there is the tool bar, which has a number of buttons that refer to different actions in the room editor.
+
+<img class="center" src="../../images/Room_Editor_Toolbar.png">
+
+<blockquote>
+<ul>
+	<li><b>Confirm</b> : Clicking this button will close the room editor and save any changes you have made. Beware, as this will <i>not</i> warn you that the room has changed, as clicking the close button would do, but will 
+	just save directly any changes you have made. However, depending on the <i>GameMaker:Studio</i> preferences, you may be asked if you want to remove any instances that have been placed outside the room or not.<br>
+	<br>
+	<li><b>Undo</b> : This is a simple, one level, undo button. By one level, we mean that only the last action performed will be undone.<br>
+	<br>
+	<li><b>Instance Actions</b> : These buttons allow you to change certain properties of the instances (and tiles if you are in the "Tile" tab) in the room, specifically : clearing all instances from the room, shifting all instances a set 
+	amount along the x and/or y axis of the room, locking instances (so they cannot be moved or edited) and unlocking instances.<br>
+	<br>
+	<li><b>Grid Snap</b> : These values can be changed to make instances snap to a different grid resolution. A value of 0 will switch snapping off.<br>
+	<br>
+	<li><b>Grid Type</b> : Switch the grid between standard 2D and isometric 2D formats. <br>
+	<br>
+	<li><b>Visualisation Options</b> : By clicking this you will open a drop-down menu where you can switch on or off the visualisation of many room elements, like instances, tiles, views etc...<br>
+	<br>
+	<li><b>Zoom Controls</b> : The main view of the room editor can be zoomed in and out to show more or less detail either using these controls or by scrolling the mouse wheel (if you have one).
+</ul>
+</blockquote>
+
+<h3>The MiniMap</h3>
+<p>
+As you can imagine, this is a miniature representation of the whole room. you can click and drag the current area around on the minimap and the main view will scroll and pan to match, or you can just click on the minimap to have 
+the main view jump to that position.
+<br>
+<br>
+
+<h3>The Info Bar</h3>
+<p>
+While placing tiles and instances within a room, you often need extra information about them at a glance. For that you have the Info Bar which shows the current mouse position within the room, the id and object_index of the instance 
+that the mouse is currently over, and further context sensitive information like whether the instance has code or not in its room create event.
+<br>
+<br>
+
+<h3>The Tabs</h3>
+<p>
+At the left you will see six tabs that open seperate sub-pages in the area on the left, but in this section we will only deal with the three most important ones : The settings tab, the backgrounds tab and the objects tabs. Further 
+information on these tabs can be found in the sections below :
+
+<blockquote>
+<ol>
+	<li><a href="Settings%20Tab.html">Settings</a><br>
+	<li><a href="Backgrounds%20Tab.html">Backgrounds</a><br>
+	<li><a href="Objects%20Tab.html">Objects</a>
+</ol>
+</blockquote>
+
+<p>
+For information on the other tabs as well as the advanced functions available to you in the room editor please see the section - <a href="../../001_Advanced%20Use/More%20about%20rooms/index.html">Advanced Use : More About Rooms</a>.
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Using GameMaker:Studio</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="../Game%20Information.html">Game Information</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room editor
+minimap
+room tabs
+-->

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_master_gain</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_master_gain</h1>
+
+<h2>Set the global sound and music volume.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_master_gain(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>gain</td>
+	<td>Value for the global volume (0 to 1).</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the absolute value for the global volume of all sounds and music. It is based on a linear scale from 0 (silent) to 1 (full volume) and will affect the relative volume of all sounds 
+and music played from within your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check(vk_up)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if vol &lt; 1 vol += 0.05;<br>
+&nbsp;&nbsp;&nbsp;audio_master_gain(vol);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+if keyboard_check(vk_down)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if vol &gt; 0 vol -= 0.05;<br>
+&nbsp;&nbsp;&nbsp;audio_master_gain(vol);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks for key-presses of the up and down arrow keys, which then increase or decrease the variable "vol". This variable is then used to set the global gain of all sound and music in the game.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_channel_num.html">audio_channel_num</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_master_gain
+-->

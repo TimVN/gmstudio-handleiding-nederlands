@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>win8_settingscharm_add_html_entry</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>win8_settingscharm_add_html_entry</h1>
+
+<h2>Adds an option to the "Settings" charm based on an external HTML file.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">win8_settingscharm_add_html_entry(id, name, htmlpath);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>id</td>
+	<td>The id (a string) of the new options. <b>This must be the same as the "data-win-options" from the HTML file!</b></td></tr>
+	
+	<tr class="alt"><td>name</td>
+	<td>The name of the option to add to the charm.</td></tr>
+	
+	<tr><td>htmlpath</td>
+	<td>Full path to the HTML file to use</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is similar to the <a href="win8_settingscharm_add_entry.html"><tt>win8_settingscharm_add_entry</tt></a> only this time you can define your own slide-out menu and 
+options from an external HTML file.
+<br>
+<br>
+
+The "id" argument is given as a string and </b>must</b> be exactly the same as the <b>data-win-options</b> specified in the HTML file you are using (there is a an example HTML file 
+<a href="settings.txt" target="_blank">here</a>). You can then give your new options a name and finally you need to add in the path to get to the HTML file.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+win8_settingscharm_add_html_entry("defaults", "News", working_directory + "News.html");
+</p>
+<p>
+The above code will create a new option within the settings "charm" called "News" which when presses, will open the exported HTML file.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows 8</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="win8_settingscharm_remove_entry.html">win8_settingscharm_remove_entry</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+win8_settingscharm_add_html_entry
+data-win-options
+-->

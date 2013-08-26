@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>win8_livetile_notification_begin</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>win8_livetile_notification_begin</h1>
+
+<h2>Set the Windows 8 Live Tile template to be used by other Windows 8 functions.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">win8_livetile_notification_begin(template);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>template</td>
+		<td>The template that the live tile notification should use (a string, see <a href="Windows%208%20Live%20Tile%20Templates.html">Live Tile Templates</a>)</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+To create a Live Tile notification you must use several <i>GameMaker:Studio</i>functions, starting with this one. This function takes a "template" and prepares <i>GameMaker:Studio</i> to fill it with the 
+necessary information (using the rest of the Live Tile functions), before pushing it to Windows 8 using the <a href="win8_livetile_notification_end.html"><tt>win8_livetile_notification_end()</tt></a> function. 
+<br>
+<br>
+
+You can find a list of templates <a href="Windows%208%20Live%20Tile%20Templates.html">here</a> and a complete overview for each one can be found from the Microsoft help pages 
+<a href="http://msdn.microsoft.com/en-gb/library/windows/apps/windows.ui.notifications.tiletemplatetype">here</a>.
+<br>
+<br>
+
+Live Tile notifications can be queued so that they show one after another, but to do that you must define each of them individually using the Windows 8 functions  calling the "begin" and "end" functions each 
+time (you can't call "begin" and then define 4 different notifications then "end" to push them to Windows 8).
+<br>
+<br>
+
+<i><b>NOTE : </b>You can only queue up to 5 Live Tile notifications, and you must have activated queuing with the function <a href="win8_livetile_queue_enable.html">
+<tt>win8_livetile_queue_enable</tt></a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var expiryTime;<br>
+expiryTime = date_current_datetime();<br>
+expiryTime = date_inc_minute(expiryTime, 5);<br>
+win8_livetile_notification_begin("TileSquarePeekImageAndText01");<br>
+win8_livetile_notification_expiry(expiryTime);<br>
+win8_livetile_notification_tag("tag0");<br>
+win8_livetile_notification_text_add("Current Score = " + score);<br>
+win8_livetile_notification_image_add("ms-appx:///" + working_directory + "ScoreTile.png");<br>
+win8_livetile_notification_end();<br>
+</p>
+<p>
+The above code will push a new Live Tile notification through to Windows 8, with some text and an image, and the tile will be shown for 5 minutes.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows 8</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="win8_livetile_notification_secondary_begin.html">win8_livetile_notification_secondary_begin</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+win8_livetile_notification_begin
+-->

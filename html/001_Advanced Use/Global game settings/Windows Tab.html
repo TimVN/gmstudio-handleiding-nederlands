@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>The Windows Tab</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>The Windows Tab</h1>
+
+<h2>This section deals with the Windows tab of the Global Games Settings Window.</h2>
+
+<p>
+This Windows tab is split into three separate <i>sub-tabs</i> (accessible on the left of the window) to make changing and updating the information for your game clearer and less complicated. These tabs are 
+explained in the following sections.
+
+<h3>General</h3>
+<p>
+
+<img class="center" src="Windows_General_Tab.png"></img>
+
+The <b>General</b> tab for Windows games is where you should supply the necessary information for Windows to display when your game has been installed and is running. This information goes in the 
+<i>Version Information</i> section, and should be filled out completely.
+<br>
+<br>
+
+The other two sections of this tab are related to the way your final game is shown once started, with the <i>Splash Screen</i> being the graphic that is shown while your game is loading, and the <i>Options</i> 
+controlling whether you should display the standard Windows cursor or not and the icon that your game should show. You may also choose where the game bundle is to be installed to, either the "%localapopdata%" 
+or "%appdata%" folders.
+<br>
+<br>
+
+<h3>Graphics</h3>
+<p>
+
+<img class="center" src="Windows_Graphics_Tab.png"></img>
+
+The graphics options are those that you should configure to determine how your game will use the graphics card of your target Windows PC. The following options are included for you to modify:
+<br>
+<br>
+
+<blockquote>
+<ul>
+	<li><b>Start In Fullscreen Mode</b> - If this is checked, the game will start in fullscreen mode.</li><br>
+	
+	<li><b>Interpolate Colors Between Pixels</b> - Turns on interpolation, which basically "smooths" pixels. for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed 
+	edge graphics it is better left on.</li><br>
+	
+	<li><b>Force Software Vertex Processing</b> - This forces GameMaker:Studio to use the CPU for all graphics and is only recommended if there are compatibility issues with older machines.</li><br>
+
+	<li><b>Use Synchronization To Avoid Tearing</b> - This toggles v-sync on or off. Note, that if you have a game with a roomspeed of 120 and the player has a monitor with a refresh rate of 60, 
+	turning 
+	this option on will lock your game speed to 60 too.</li><br>
+	
+	<li><b>Allow The Player To Resize The Game Window</b> - Checking this permits the user to change the size of the game window.</li><br>
+	
+	<li><b>Scaling</b> - Here you can choose to maintain aspect ratio (so a 4:3 room will be "letterboxed" on a 16:9) or to scale fully (stretching the image to fit the full screen).</li><br>
+
+</ul>
+</blockquote>
+
+<p>
+Finally there is the option to set the size of the <b>Texture Page</b>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to a 
+whopping 8192x8192! There is also a button marked <b>View</b> which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be 
+very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary.
+<br>
+<br>
+
+<i><b>NOTE : </b>Be aware that the larger the size of the texture page, the less compatible your game will be.</i>
+<br>
+<br>
+
+<h3> Installer</h3>
+<p>
+
+<img class="center" src="Windows_Installer_Tab.png"></img>
+
+Windows games are created with an installer (previous versions of GameMaker just made an *.exe) and here you can define the various settings and graphics that GameMaker:Studio will use when 
+creating it. First of all we have the graphical options which will define the look of the installer itself :
+
+<blockquote>
+<ul>
+	<li><b>Finished</b> - The graphic that appears on the "Finished" page of the installer. <i>Must be in *.bmp format and measure 164x314px.</i></li><br>
+	
+	<li><b>Header</b> - The graphic that appears while the installer is running. <i>Must be in *.bmp format and measure 150x57px.</i></li><br>
+		
+</ul>
+</blockquote>
+
+<p>
+You can also point to a specific <b>License Agreement</b> (an example is supplied with GamMaker:Studio) and a custom NSI script (details <a href="http://nsis.sourceforge.net/Main_Page">
+here</a>) should you need one.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Global Game Settings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Mac%20OS%20Tab.html">The Mac Os Tab</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+-->

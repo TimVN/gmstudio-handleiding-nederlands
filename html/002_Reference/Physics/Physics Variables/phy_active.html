@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>phy_active</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>phy_active</h1>
+  
+<h2>Enables (or disables) an instance in the physics world.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">phy_active;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable controls whether or not the instance is currently "active". Setting it to <tt>false</tt> will prevent the instance from participating in the physics world, and setting it to <tt>true</tt> will have it 
+participating again. Please note that this is not the same as <a href="../../Objects%20and%20Instances/Instances/Deactivating%20Instances/index.html">deactivating the instance</a>, as the instance is still visible on 
+the screen and can still be changed through code, rather this function just prevents it from participating in the physics simulation.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(ord"P")<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Pause = !global.Pause<br>
+&nbsp;&nbsp;&nbsp;with (obj_Parent)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phy_active = !global.Pause;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code willd etect a keypress of the letter "P" and then toggle the global variable "Pause" from <tt>true</tt> to <tt>false</tt> and back again. This variable is then used to set whether physics is 
+active or not in the children instances of the object indexed in the variable "obj_Parent".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Physics Variables</a>
+	</div>
+	<div style="float:right">
+		next : <a href="phy_angular_velocity.html">phy_angular_velocity</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+phy_active
+--> 

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>The Resize Event</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>The Resize Event</h1>
+
+<h2>The Resize event is one of the many events that can be triggered in an instance and may contain code or actions.</h2>
+
+<p>
+<b><img src="../../Images/Event_Draw.png" align="middle" align="left">Resize Event</b>
+<br>
+This is a sub-event of the <a href="Draw%20Event.html">Draw Event</a> and is spcifically designed for reacting to the change in the Windows 8 canvas size when the game window is "snapped".
+<br>
+<br>
+
+On the Windows 8 target pplatform it is important that you catch any resizing of the game canvas from the "snapping" of the game window (when the user drags the window to the side of the display, for example). 
+This event will do just that and is triggered everytime the canvas is changed, permitting you to add custom code here that will resize the view or reposition HUD elements as necessary. This function is 
+provided as a convenient way to avoid having step event code that checks for these things all the time.
+<br>
+<br>
+
+<i><b>NOTE : </b>You cannot draw in this event! It is triggered by resizing the canvas and is only for catching this change... any drawing that should be done still must be in one of the other two draw events</i>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Async%20Event.html">The Asynchronous Event</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+resize event
+-->

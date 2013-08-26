@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>event_number</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>event_number</h1>
+
+<h2>Returns the number of event currently being executed.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">event_number;</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This <b>read-only</b> variable returns the number of the event currently being called, where the number is actually referring to the "sub event" of the event, ie: for the step event the event number could be 
+any one of the constants <b>ev_step_normal</b>, <b>ev_step_begin</b>, or <b>ev_step_end</b>. For a full list of constants that are available for the specific sub-events see <a href="event_perform.html">
+<tt>event_perform</tt></a>, and if you should need to know the main event itself, you should be checking the <a href="event_type.html"><tt>event_type</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+switch (event_number)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case ev_step_normal: show_debug_message("Step event!"); break;<br>
+&nbsp;&nbsp;&nbsp;case ev_game_start: show_debug_message("Game Start""); break;<br>
+&nbsp;&nbsp;&nbsp;case ev_room_start: show_debug_message("Room Start!"); break;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code could be called form a script and used to show debug messages informing you which event is being currently triggered.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Generating Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="event_object.html">event_object</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+event_number
+-->

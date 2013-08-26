@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>object_get_solid</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>object_get_solid</h1>
+  
+<h2>Returns whether an object has solid flagged as true or not.</h2>
+
+<h3><b>Syntax : </b></h3>
+<p class="code">object_get_solid(obj);</p>
+  
+<p>
+<br>
+</p>
+
+<div class="param">
+
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>obj</td>
+	<td>The index of the object to check.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Boolean</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will tell you whether the object you are checking has been flagged as "solid" or not. A solid object generates a special collision event when using the traditional collision system (ie: the physics 
+world is off). Please note that this is not an instance function! So, you can have a solid object and a normal instance of the same object and vice-versa.
+<br>
+
+<p>
+<br>
+</p>
+  
+<h3><b>Example :</b></h3>
+<p class="code">
+if !solid &amp;&amp; object_get_solid(object_index) solid=true;
+</p>
+
+<p>
+The above code will check the instance running it to see if it is solid or not as well as check the object index of the instance to see if it is flagged as solid or not. If the instance is <i>not</i> solid yet the object 
+index is flagged as solid, it will set "solid" to true for that instance.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Objects</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="object_get_sprite.html">obj_get_sprite</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+object_get_solid
+-->

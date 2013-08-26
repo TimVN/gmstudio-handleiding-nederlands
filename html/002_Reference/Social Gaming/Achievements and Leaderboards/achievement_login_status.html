@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>achievement_login_status</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>achievement_login_status</h1>
+  
+<h2>Check to see if the user is already logged in.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">achievement_login_status();</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function is currently only useful for <b>Google Play</b> on the Android platform. It will check to see if the user is already logged into Google services, in which case it will return <tt>true</tt>, 
+or not, returning <tt>false</tt>. If it returns <tt>true</tt> there is no need to call the <a href="achievement_login.html"><tt>achievement_login</tt></a> function.
+<br>
+<br>
+   
+<h3>Example :</h3>
+<p class="code">
+if !achievement_login_status()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;achievement_login();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will log you into the chosen leaderboard and achievement service.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Achievements and Leaderboards</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="achievement_login.html">achievement_login</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+achievement_login_status
+-->

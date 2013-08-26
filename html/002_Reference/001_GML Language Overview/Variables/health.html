@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>health</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>health</h1>
+
+<h2>Global variable for holding the player health.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">health;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable is <b>global</b> in scope and is used to hold a numeric value which is usually used for the player health. Bare in mind this is not necessarily always the case - just because it's called "health" doesn't 
+mean it has to be used for the health... it can hold any real or integer value you wish for your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if place_meeting(x, y, obj_Enemy)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;health -= 10;<br>
+&nbsp;&nbsp;&nbsp;if health &lt;= 0 instance_destroy();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the current instance to see if there is a collision with the instance of the object indexed in "obj_Enemy", and if there is, it removes 10 points from the global health variable and 
+then checks this value to see if it is less than or equal to 0. If it is the instance destroys itself.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="Global%20Variables.html">Global Variables</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="lives.html">lives</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+health
+-->

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>d3d_set_zwriteenable</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>d3d_set_zwriteenable</h1>
+  
+<h2>Enables or disables the z-buffer.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">d3d_set_zwriteenable(enable)</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>enable</td>
+	<td>Switches on (true) or off (false) the z-buffer.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to toggle on (<tt>true</tt>) and off (<tt>false</tt>) depth ordering using the z-buffer in 3D mode. The default value is that z-buffering is enabled.
+<br>
+<br>
+
+When drawing in 3D, you normally want things to be drawn with <i>depth</i> along the z axis, so that an object "close" to the player is drawn over an object that is "further" away. When an object is rendered, 
+the depth of a generated pixel (its z coordinate) is stored in the z-buffer, then, if another object of the scene must be rendered in the same pixel, the two depths are compared the one closer to the observer is 
+then saved to the z-buffer, replacing the old one. However, this is not always what you wish to happen and there are moments when you may want something to be drawn over everything else, no matter what it's 
+z value is. In those cases you can use this function to switch off writing to the z-buffer and so force whatever is being drawn to be drawn over everything else.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+d3d_set_zwriteenable(false);<br>
+<p>
+The above code will switch off the z-buffer for all further drawing.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">3D Setup</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="d3d_start.html">d3d_start</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+d3d_set_zwriteenable
+--> 

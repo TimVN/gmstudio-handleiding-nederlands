@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>win8_livetile_notification_tag</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>win8_livetile_notification_tag</h1>
+
+<h2>Set the "tag" for the Live Tile.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">win8_livetile_notification_tag(tag);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>tag</td>
+		<td>The name "tag" of the notification.</td></tr>
+			
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+The <b>tag</b> is a string that you assign to the Live tile notification as a means to identify it later. Should you need to replace a Live Tile, or update it with another template or image, you would formulate 
+another notification push (starting with the function <a href="win8_livetile_notification_begin.html"><tt>win8_livetile_notification_begin</tt></a>) and use the same tag as in this function as that which you 
+wish to change/replace.
+<br>
+<br>
+
+You must have activated queuing with the function <a href="win8_livetile_queue_enable.html"><tt>win8_livetile_queue_enable</tt></a> for this to function to be of any use as without queuing enabled, no 
+matter what tag you use, any Live Tile notifications will over-write the current Live tile rather than add a new one to the queue or modify an already queued one.
+<br>
+<br>
+
+<i><b>NOTE: </i>This function can also apply to Secondary tiles when used along with <a href="win8_livetile_notification_secondary_begin.html"><tt>win8_livetile_notification_secondary_begin</tt></a>.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var expiryTime;<br>
+expiryTime = date_current_datetime();<br>
+expiryTime = date_inc_minute(expiryTime, 5);<br>
+win8_livetile_notification_begin("TileSquarePeekImageAndText01");<br>
+win8_livetile_notification_expiry(expiryTime);<br>
+win8_livetile_notification_tag("tag0");<br>
+win8_livetile_notification_text_add("Current Score = " + score);<br>
+win8_livetile_notification_image_add("ms-appx:///" + working_directory + "ScoreTile.png");<br>
+win8_livetile_notification_end();<br>
+</p>
+<p>
+The above code will push a new Live Tile notification through to Windows 8, with some text and an image, and the tile will be shown for 5 minutes.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows 8</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="win8_livetile_notification_text_add.html">win8_livetile_notification_text_add</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+win8_livetile_notification_tag
+-->

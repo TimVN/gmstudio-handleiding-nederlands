@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_exists</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_exists</h1>
+
+<h2>Returns whether a room with the given index exists or not.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_exists(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the room to check.</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check and see whether the room you specify exists or not. This function takes the room <i>index</i> (a real number) and <b>not</b> the room name (a string). This function is most 
+useful when you are creating rooms dynamically using the function <a href="room_add.html"><tt>room_add</tt></a>, but you can also use the <b>read only</b> variables <a href="room_first.html">
+<tt>room_first</tt></a> and <a href="room_last.html"><tt>room_last</tt></a> or the functions <a href="room_next.html"><tt>room_next</tt></a> and <a href="room_previous.html">
+<tt>room_previous</tt></a> to get a specific room index, or provide a variable that has stored the index of any other room in your game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if room_exists(global.rm[0])<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;room_goto(global.rm[0]);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the room indexed in the array "global.rm[]" exists and if it does it then goes to that room.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_first.html">room_first</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_exists
+-->

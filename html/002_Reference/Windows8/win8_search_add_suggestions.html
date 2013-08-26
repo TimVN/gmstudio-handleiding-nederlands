@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>win8_search_add_suggestions</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>win8_search_add_suggestions</h1>
+
+<h2>Set the search terms from a list of keywords.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">win8_search_add_suggestions(list);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>list</td>
+	<td>a ds_list that holds all the search terms</td></tr>
+	
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function uses a <a href="../Data%20Structures/Ds%20lists/index.html"><tt>ds_list</tt></a> to set a series of keyword search terms that the "search charm" will find if used.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+win8_search_enable(scr_SearchWords);<br>
+var list;<br>
+list = ds_list_create();<br>
+ds_list_add(list, "smelly fish");<br>
+ds_list_add(list, "Haggis");<br>
+ds_list_add(list, "MacSweeney");<br>
+ds_list_add(list, "the quick brown fox");<br>
+ds_list_add(list, "99 red ballons");<br>
+win8_search_add_suggestions(list);<br>
+ds_list_destroy(list);<br>
+</p>
+<p>
+The above code will enable the search functions for your app and tell Windows to run the callback script should it find a corresponding search term. Some keywords are then added 
+into a ds_list which is used to create the search terms that the "search charm" will find when used.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Windows 8</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="win8_search_disable.html">win8_search_disable</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+win8_search_add_suggestions
+-->

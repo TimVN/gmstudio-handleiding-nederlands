@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>file_text_eof</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>file_text_eof</h1>
+
+<h2></h2>
+
+<h3>Syntax :</h3>
+<p class="code">file_text_eof(fileid);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>fileid</td>
+	<td>The id of the file to check.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function returns <tt>true</tt> when the end of a given opened text file has been reached or <tt>false</tt> if not.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+file = file_text_open_write(working_directory + "\Game_Data.txt");<br>
+while (!file_text_eof(file))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;file_text_readln(file);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+file_text_write_string(file, level_data);<br>
+file_text_close(file);<br>
+</p>
+<p>
+The above code opens a file for writing then loops through the lines of text already written to the file until it reaches the end. At this point it writes a string and then closes the file again.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Text Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="file_text_close.html">file_text_close</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+file_text_eof
+-->

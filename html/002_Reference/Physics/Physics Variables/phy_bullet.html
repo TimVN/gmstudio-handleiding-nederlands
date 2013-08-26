@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>phy_bullet</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>phy_bullet</h1>
+  
+<h2>Tells the physics engine that this object is a bullet.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">phy_bullet;</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable defines whether or not the instance is extremely fast moving (for example a bullet). The default value is <tt>false</tt> but if set to <tt>true</tt> this tells <i>GameMaker:Studio</i> that the 
+instance will be moving at such high speeds that it will require more expensive collision detection to ensure it doesn't pass through other instances undetected.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+with (instance_create(x, y, obj_Shoot))<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;phy_bullet = true;<br>
+&nbsp;&nbsp;&nbsp;physics_apply_local_impulse(0, 10, 0, 200);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code creates a new instance and then defiens it as being a "bullet" in the physics world before giving it a massive impulse along the y axis.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Physics Variables</a>
+	</div>
+	<div style="float:right">
+		next : <a href="phy_com_x.html">phy_com_x</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+phy_bullet
+--> 

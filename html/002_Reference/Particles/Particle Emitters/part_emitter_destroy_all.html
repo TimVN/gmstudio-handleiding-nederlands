@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>part_emitter_destroy_all</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>part_emitter_destroy_all</h1>
+
+<h2>Destroys all emitters in the given particle system.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">part_emitter_destroy_all( ps );</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ps</td>
+	<td>The particle system to destroy all emitters from.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will remove all defined emitters from the given system and clear them from memory (this will also stop any particles from being produced by the given emitter, but it does <i>NOT</i> 
+remove them from the room). This function should always be called when the emitters are no longer needed for the system to prevent memory leaks and errors.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if lives = 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;part_emitter_destroy_all(global.Sname);<br>
+&nbsp;&nbsp;&nbsp;room_goto(rm_Menu);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the built in global variable "lives" and if it is 0, it destroyes all particle emitters and then changes room.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Particles</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="part_emitter_exists.html">part_emitter_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+part_emitter_destroy_all
+-->

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>keyboard_check_pressed</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>keyboard_check_pressed</h1>
+  
+<h2>Returns whether the given key on the keyboard has just been pressed.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">keyboard_check_pressed(key);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>key</td>
+	<td>The key to check the pressed state of.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can check to see if a key has been pressed or not. Unlike the <a href="keyboard_check.html"><tt>keyboard_check</tt></a> function, this function will only run once for every time the key is pressed down, 
+so for it to trigger again, the key must be first released and then pressed again.<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if keyboard_check_pressed(vk_anykey)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;room_goto_next();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will advance to the next room if the player presses any of the keyboard's keys (working like a 'Press Any Key to Continue' prompt).
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Keyboard Input</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="keyboard_check_released.html">keyboard_check_released</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+keyboard_check_pressed
+-->

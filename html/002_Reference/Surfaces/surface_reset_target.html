@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>surface_reset_target</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>surface_reset_target</h1>
+
+<h2>Sets the drawing target back to the screen, which is the default setting.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">surface_reset_target();</p>
+
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you reset all further drawing from the target surface back to the screen. Please note that to start drawing to a surface you must first have called the function <a href="surface_set_target.html">
+<tt>surface_set_target</tt></a> and then this one after you have finished or else nothing will be drawn on the screen as all further drawing (even in other instances) will be done on the surface. You should 
+also realise that nothing will be seen if the surface itself is not drawn on the screen in the draw event of an instance.
+<br>
+<br>
+
+<i><b>NOTE : </b>if you have not previously set a render target with the function <a href="surface_set_target.html"><tt>surface_set_target</tt></a>, using this function will silently (ie: without any error 
+messages) end all further code execution for the event.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if view_current = 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>
+&nbsp;&nbsp;&nbsp;with (obj_Effect)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_self();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;surface_reset_target();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check to see which view is currently being drawn, and if it is view[0] it sets the draw target to a surface and draws all instances of the object "obj_Effect" before reseting the 
+draw target again. If the view is not view[0] the surface is drawn to the screen.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Surfaces</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="surface_copy.html">surface_copy</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+surface_reset_target
+-->

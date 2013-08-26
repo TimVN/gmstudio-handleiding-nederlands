@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>mp_grid_draw</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>mp_grid_draw</h1>
+  
+<h2>This function draws the specified mp_grid.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">mp_grid_draw(id);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>id</td>
+	<td>Index of the mp_grid that is to be drawn</td></tr>
+		
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Boolean.
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will draw the specified mp_grid, marking free cells as green and forbidden cells as red. This function is essential as a debug tool but it should be noted that it is <i>very</i> slow and only works when 
+used in the <b>draw</b> event of the instance.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_alpha(0.3);<br>
+mp_grid_draw(grid);<br>
+draw_set_alpha(1);<br>
+</p>
+<p>
+The above code will draw the mp_grid indexed in the variable "grid" as a semi-transparent overlay (but only if the instance running the code has a depth lower than all the rest).
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Motion Planning</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="mp_grid_draw.html">mp_grid_draw</a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+mp_grid_draw
+-->

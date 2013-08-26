@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>lengthdir_y</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>lengthdir_y</h1>
+  
+<h2>Returns the horizontal y-component of the vector determined by the indicated length and direction.</h2>
+  
+<h3><b>Syntax :</b></h3>
+<p class="code">lengthdir_y(len, dir);</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>len</td>
+	<td>The length away of the point to return.</td></tr>
+	
+	<tr><td>dir</td>
+	<td>The direction of the point to return.</td></tr>
+
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p><b>Returns : </b>Real</p>
+  
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function seems confusing at first, but it's not really. It is used to get the y component of a position "len" pixels from the starting point and in direction "dir". Imagine a circle around your instance, 
+then imagine a point anywhere on that circle. To move to that point we need to move the object so many pixels in that direction... so this function (when used with <a href="lengthdir_x.html"><tt>lengthdir_x</tt></a>) 
+gets the position of that point on the circle to be used in code by the instance. See the image below for details :
+<br>
+<br>
+
+<img class="center" src="Lengthdir_Image.png"></img>
+
+<p>
+<br>
+</p>
+
+<h3><b>Example :</b></h3>
+<p class="code">
+instance_create(x + lengthdir_x(64, image_angle), y + lengthdir_y(64, image_angle), obj_bullet);
+</p>
+<p>
+This will create a bullet instance at (x,y), but with 64 pixels added in the direction of image_angle. This is typically used for syncing a bullets start position with the end of a gun in game.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Real Number Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="round.html">round</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+lengthdir_y
+-->

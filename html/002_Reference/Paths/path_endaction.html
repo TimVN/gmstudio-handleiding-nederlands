@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>path_endaction</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>path_endaction</h1>
+
+<h2>Sets what to do when the instance hits the end of the path.</h2>
+
+<h3><b>Syntax :</b></h3>
+<p class="code">path_endaction;</p>
+
+<p>
+<br>
+</p>
+ 
+<p><b>Returns:</b> N/A.
+
+</p>
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to change the reaction of an instance when it reaches the end of the current path. Normally you would set this when you start the path using <a href="path_start.html"><tt>path_start</tt></a> 
+but you may wish to change this behaviour depending any number of events in your game. The available values are :
+<ul>
+	<li>0 = stop the path
+	<li>1 = continue from start position, jumping to the start if the path is not closed
+	<li>2 = start the path again from the current position
+	<li>3 = reverse the speed of the path (run the path in reverse)
+</ul>
+<p>
+
+<p>
+<br>
+</p>
+<h3><b>Example :</b></h3>
+<p class="code">
+path_endaction = irandom(3);
+</p>
+<p>
+The above code will change the path end action randomly to any of the three possible choices.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Paths</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="path_index.html">path_index</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+path_endaction
+-->

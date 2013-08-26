@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>The Draw GUI Event</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>The Draw GUI Event</h1>
+
+<h2>The Draw GUI Event is one of the many events that can be triggered in an instance and may contain code or actions.</h2>
+
+<p>
+<b><img src="../../Images/Event_Draw.png" align="middle" align="left">Draw GUI Event</b>
+<br>
+This is a sub-event of the <a href="Draw%20Event.html">Draw Event</a> and is specifically  designed for drawing GUI (Graphical User Interface) elements that are not affected by the view scale or rotation. 
+This means that you can have an instance draw all the elements for your HUD without having to base all the positioning on the position within the room of the instance and the position of the current view either. 
+<br>
+<br>
+
+When drawing in this event it is important that you understand that the draw coordinates do not change even when views are active and 0,0 is always the top left hand corner with the width and height of 
+the display being your maximum drawing width and height. Depth ordering is still maintained between different instances (so an instance at a low depth will draw over one at a higher depth) and also within 
+the event itself (the first things drawn will appear underneath the later things being drawn) and it can also be used in conjunction with the normal Draw Event (which will be affected by the view position, 
+scale and rotation as normal). If you have no Draw Event but you <i>do</i> have Draw GUI Event, then <i>GameMaker:Studio</i> will still default draw the sprite for the instance (if it has one) as normal.
+<br>
+<br>
+
+You may notice depth issues when using this event due to the fact that it is <i>not</i> dealt with the same was as the traditional draw event. What happens is that the normal draw event for all instances 
+is resolved first and <i>then</i> the draw GUI event for all instances is resolved. So the depth order between instances with draw GUI events is always respected, as is the depth order between instances with 
+normal draw events, <b>but</b> the draw GUI event will always draw over anything drawn in the normal draw event, even if the instance doing the drawing it is at a higher depth than other instances.
+<br>
+<br>
+
+<i><b>NOTE : </b>This event will, by default, draw 1:1 with the background <b>canvas</b> size, which can make things a little complicated, and perhaps unexpected in places, on those target platforms 
+that permit a fullscreen mode (HTML5, Windows, Ubuntu (Linux) and MacOS).</i> For example on HTML5, going fullscreen the GUI draws pretty small when everything else gets bigger because the background 
+surface is now the size of the screen. However, on Windows, Ubuntu (Linux) and MacOS when you go fullscreen it doesn't always change the size of the background canvas, meaning that whatever is drawn in 
+this event can be scaled up like everything else, but you can get around this if you use the <a href="../../002_Reference/Windows%20and%20Views/The%20Game%20Window/window_set_size.html">
+<tt>window_set_size</tt></a> to <i>force</i> it to be the same as the client area, then it will be small, just like the HTML5 one. You may also lock the GUI event to a specific size and this will then be 
+scaled to fit the display dimensions automatically by using the function <a href="../../002_Reference/Windows%20And%20Views/display_set_gui_size.html"><tt>display_set_gui_size</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Events</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Resize%20Event.html">The Resize Event</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw GUI event
+-->

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_arrow</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_arrow</h1>
+
+<h2>Draws an arrow, with a one pixel wide stem and the point defined by the user.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">draw_arrow(x1, y1, x2, y2, size);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+	
+		<tr><th>Argument</th><th>Description</th></tr>
+
+		<tr><td>x1</td>
+		<td>The x coordinate of the start of the line.</td></tr>
+
+		<tr class="alt"><td>y1</td>
+		<td>The y coordinate of the start of the line.</td></tr>
+
+		<tr><td>x2</td>
+		<td>The x coordinate of the end of the line (where the arrowhead ends).</td></tr>
+
+		<tr class="alt"><td>y2</td>
+		<td>The y coordinate of the end of the line (where the arrowhead ends).</td></tr>
+
+		<tr><td>size</td>
+		<td>The length of the arrow in pixels.</td></tr>
+		
+	</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will draw an arrow from point (x1,y1) to point (x2,y2). The stem of the arrow is drawn along these points with the actual arrow head being drawn at the end, where the size of the arrowhead is 
+defined by the argument "size" and is calculated as being part of the stem so that the end point is always aligned with the position defined by x2,y2. The width of the arrow head is calculated automatically 
+in proportion to the length.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_arrow(x, y, mouse_x, mouse_y, 10);
+</p>
+<p>
+The above code will draw an arrow from the position of the instance to the position of the mouse, with the arrow head being 10 pixels long.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Drawing Basic Forms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_circle.html">draw_circle</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_arrow
+-->

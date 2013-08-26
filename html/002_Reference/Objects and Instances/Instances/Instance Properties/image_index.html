@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>image_index</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>image_index</h1>
+
+<h2>The current sub-image being shown for the instance sprite.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">image_index</p>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+A sprite is made up of one or more <i>sub-images</i> which can make the sprite appear animated as they switch from one to the other, or can they can be switched between in code to give different "states", 
+much like a button has in windows. If the sprite is animated, then you can get the current frame of the animation by checking the <tt>image_index</tt> variable, or if you want to change the 
+state of a static sprite, you can select a new sub-image by setting this variable to the desired sub-image for the sprite. Please note that for changes in this variable to be visible, the instance 
+should have either <i>no</i> draw event (and so <i>GameMaker:Studio</i> will default draw the sprite) or be drawn using one of the extended drawing functions like 
+<a href="../../../Drawing/Drawing%20Sprites%20And%20Backgrounds/draw_self.html"><tt>draw_self()</tt></a> or <a href="../../../Drawing/Drawing%20Sprites%20And%20Backgrounds/draw_sprite_ext.html">
+<tt>draw_sprite_ext()</tt></a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if image_speed &gt; 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;if image_index &gt; image_number - 1 instance_destroy();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks to see if the sprite is animating, and if it is it then checks to see if the current image_index is greater than the number of sub-images and if it is it destroys the instance.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Properties</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="image_number.html">image_number</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+image_index
+-->

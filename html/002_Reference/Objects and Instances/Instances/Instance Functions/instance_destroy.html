@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>instance_destroy</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>instance_destroy</h1>
+  
+<h2>Destroys the calling instance, removing it from the room.</h2>
+  
+<h3>Syntax:</h3>
+<p class="code">instance_destroy();</p>
+
+<p>
+<br>
+</p>
+  
+<p> <b>Returns:</b> N/A</p>
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You call this event whenever you wish to "destroy" an instance which will remove it from the room, but you should note a couple of things about this however.
+<br>
+<br>
+
+First, when you destroy an instance, it's destroy event is called <i>immediately</i> after the code or action that calls the destroy. Second, although the destroy event is performed, the instance is not 
+immediately removed from the game, as it will continue to perform the code contained in the current event and only when the current event is over will it be removed from the game.
+<br>
+<br>
+
+So, if you have, for example, this code :
+
+<p class="code">
+if hp &#60=0 instance_destroy(); <br>
+score += 10; <br>
+</p>
+
+<p>
+The variable "score" will be incremented <i>even though the <tt>instance_destroy</tt> function has been called, and the instance will finally be removed from your game at the end of the event. Be careful of 
+this, as if you have (for example) created a dynamic resource for the instance, like a data structure, then destroyed that resource in the destroy event, if there are any references to it after the destroy function 
+or action has been performed then you will get an "unkown resource" error, as the destroy event removed it from the game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<p><b>Example:</b> </p>
+ <p class="code">
+with (obj_Enemy)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp; instance_destroy();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+
+<p>
+The above code will destroy all active instances of "obj_Enemy".
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Instance Functions</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="instance_exists.html">instance_exists</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+instance_destroy
+-->

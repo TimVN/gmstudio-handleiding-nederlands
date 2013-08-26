@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>view_vspeed</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>view_vspeed</h1>
+
+<h2>Maximal vertical speed of the view.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">view_vspeed[0...7]</p>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This variable controls the vertical movement speed of the view when it has an instance to follow (this can be set with the <a href="view_object.html"><tt>view_object</tt></a> variable or in the 
+<a href="../../../001_Advanced%20Use/More%20about%20rooms/Views.html">room editor</a>). Care should be taken when setting this value, as setting it too low can result in the instance moving faster than the view can and 
+so it may disappear out one side of the view until it stops and the view catches it again.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+view_hspeed[0] = view_object[0].hspeed;<br>
+view_vspeed[0] = view_object[0].vspeed;<br>
+</p>
+<p>
+The above code sets the speed of the view following to be the same as the currently selected follow object.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Views</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="view_xport.html">view_xport</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+view_vspeed
+-->

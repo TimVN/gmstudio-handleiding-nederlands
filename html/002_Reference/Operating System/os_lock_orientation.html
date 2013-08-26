@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>os_lock_orientation</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>os_lock_orientation</h1>
+  
+<h2>this function can be used to lock the orientacion to that chosen in the global game settings.</h2>
+
+<h3><b>Syntax :</b></h3> 
+<p class="code">os_lock_orientation(flag)</p>
+  
+<p>
+<br>
+</p>
+  
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>flag</td>
+	<td>Set to <tt>true</tt> or <tt>false</tt> to enable or disable orientacion locking.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set your device to "lock" to the chosen orientacion (as set by the <a href="../../001_Advanced%20Use/Global%20game%20settings/index.html">Global Game Settings</a> tab for 
+the target device). This mainly applies to iOS devices where you can have a "left" and "right" orientation, meaning that a tilt game may actually be reversed if the device is tilted too far, in which 
+case you would want this flagged as <tt>true</tt> to prevent this flipping of the game.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if os_type == os_android || os_type == os_ios<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;os_lock_orientation(true);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code checks the OS type and if it is either Android or an iOS then the orientacion locking is flagged as <tt>true</tt>.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Operating Systems</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="os_browser.html">os_browser</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+os_lock_orientation
+-->

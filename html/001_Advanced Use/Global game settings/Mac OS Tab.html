@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>The Mac OS Tab</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>The Mac Os Tab</h1>
+
+<h2>This section deals with the Mac OS tab of the Global Games Settings Window.</h2>
+
+<p>
+This MacOS tab is split into three separate <i>sub-tabs</i> (accessible on the left of the window) to make changing and updating the information for your game clearer and less complicated. These tabs are 
+explained in the following sections.
+
+<h3>General</h3>
+<p>
+
+<img class="center" src="Mac_General_Tab.png"></img>
+
+The first thing to do is fill in the <b>Display Name</b> of your game then go down to the <i>Product Information</i> section and fill in its <b>Version Number</b>, <b>App id</b>,  <b>App Output</b> file 
+and the <b>Copyright</b> details. Once that is done you will need to give your game <b>Icons</b> and a <b>Splash Screen</b>. The icons should be authored as a single *.png file with a size of 1024x1024px. 
+The splash screen should be the size of the first room in your game as this is what will briefly be shown while the game assets are being loaded. Smaller or larger images are permitted but will be scaled to fit.
+<br>
+<br>
+ 
+Once you have configured the game details and presentation graphics, you should configure the two following options:
+
+<blockquote>
+<ul>
+	<li><b>Allow Menu and Dock in Fullscreen</b> - When checked, this option will show the OS menu and dock if the game is in fullscreen mode.</li><br>
+
+	<li><b>Display the Cursor</b> - This toggles the mouse cursor visibility in your game.</li><br>
+</ul>
+</blockquote>
+
+<h3>Graphics</h3>
+<p>
+
+<img class="center" src="Mac_Graphics_Tab.png"></img>
+
+The graphics options will determine how your game is displayed when run and affect the way things like scaling and interpolation are handled. The following options exist:
+
+<blockquote>
+<ul>
+	<li><b>Start In Fullscreen Mode</b> - If this is checked, the game will start in fullscreen mode.</li><br>
+	
+	<li><b>Interpolate Colors Between Pixels</b> - Turns on interpolation, which basically "smooths" pixels. for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed 
+	edge graphics it is better left on.</li><br>
+	
+	<li><b>Use Synchronization To Avoid Tearing</b> - This toggles v-sync on or off. Note, that if you have a game with a roomspeed of 120 and the player has a monitor with a refresh rate of 60, 
+	turning this option on will lock your game speed to 60 too.</li><br>
+	
+	<li><b>Allow The Player To Resize The Game Window</b> - Checking this permits the user to change the size of the game window.</li><br>
+	
+	<li><b>Scaling</b> - Here you can choose to maintain aspect ratio (so a 4:3 room will be "letterboxed" on a 16:9) or to scale fully (stretching the image to fit the full screen).</li><br>
+	
+	<li><b>Allow Switching To Fullscreen</b> - Checking this will allow the user to toggle the game from windowed to fullscreen mode using <i>&lt;CNTRL&gt; + &lt;CMD&gt; + &lt;F&gt;</i>.</li><br>	
+</ul>
+</blockquote>
+
+<p>
+Finally there is the option to set the size of the <b>Texture Page</b>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to a 
+whopping 8192x8192! There is also a button marked <b>View</b> which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be 
+very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary.
+<br>
+<br>
+
+<i><b>NOTE : </b>Be aware that the larger the size of the texture page, the less compatible your game will be.</i>
+<br>
+<br>
+
+<h3>AppStore</h3>
+<p>
+
+<img class="center" src="Mac_AppStore_Tab.png"></img>
+
+If you wish the finished game to be <i>App Store Ready</i> then you need to check the <b>Build for Mac App Store</b> option, but be aware that this will only function if you are a registered Developer 
+and have the necessary certificates. Under that are two sub-options that you should <i>only check if they are true</i> as Apple can reject your app if they are checked when they are not needed or vice-versa. 
+These options simply permit your game to use the <a href="../../002_Reference/Asynchronous%20Functions/http_get.html"><tt>http_</tt></a> and 
+<a href="../../002_Reference/HTML5/url_open.html"><tt>url_</tt></a> functions.
+<br>
+<br>
+
+Finally, you need to select its <b>App Category</b> (for more information, see <a href="https://developer.apple.com/library/mac/#releasenotes/General/SubmittingToMacAppStore/_index.html">here</a>).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+<p>
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Global Game Settings</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Win8%20Tab.html">The Windows 8 Tab</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+-->

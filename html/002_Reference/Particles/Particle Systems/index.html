@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Particle Systems</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+
+<h1>Particle Systems</h1>
+
+<h2>This section deals with setting up, maintaining and destroying particle systems.</h2>
+
+<p>
+Before you can create particles you need to create a particle system. This is a "container" where you place your particles and emitters (if you need them) ready for use, and you can put as many or as 
+few particles into any one system as you think necessary, and you can have as many systems as you think necessary too. However, it is always better to keep this number as small as possible due to 
+the fact that each system, emitter and particle takes up memory and having too many of them may slow your game down or cause problems. For example, if you need some effects to appear above 
+instances, and other effects to appear beneath instances, you would create two systems and set their depths to get the desired effect, with all particles that are added to each system being drawn 
+at the depth you specify.
+<br>
+<br>
+
+<h3>System Functions</h3>
+<p>
+Since a particle system is a dynamically created resource, you must create it and store the returned index in a variable to reference the system in all further function calls, and it is very important that 
+you also destroy the system when it is no longer needed or else you will have a memory leak that will slow down and eventually crash your game. It is also worth noting that particle systems will live 
+on forever after they are created, even if the index is no longer stored. So even if you change room or restart the game, the systems and the particles will remain, and be visible, in all further rooms 
+so you better make sure you destroy them once you no longer need them.
+<br>
+<br>
+The basic functions for setting up a particle system are listed below:
+<blockquote>
+	<ol>
+  		<li><a href="part_system_exists.html">part_system_exists<br></a>
+  		<li><a href="part_system_create.html">part_system_create<br></a>
+  		<li><a href="part_system_clear.html">part_system_clear<br></a>
+  		<li><a href="part_system_depth.html">part_system_depth<br></a>
+  		<li><a href="part_system_position.html">part_system_position<br></a>
+  		<li><a href="part_system_destroy.html">part_system_destroy<br></a>
+  		<li><a href="part_particles_clear.html">part_particles_clear<br></a>
+  		<li><a href="part_particles_count.html">part_particles_count<br></a>
+	</ol>
+</blockquote>
+
+<h3>Particle System Drawing</h3>
+<p>
+Once particles are added to a particle system and then burst or streamed into the room, they are normally automatically updated each step and drawn based on the parameters that you have used to define 
+them. However it can sometimes be necessary to control when and how the system is updated as well as how the system should be drawn, and for that <i>GameMaker:Studio</i> provides the following 
+functions:
+<blockquote>
+	<ol>
+  		<li><a href="part_system_automatic_update.html">part_system_automatic_update<br></a>
+  		<li><a href="part_system_automatic_draw.html">part_system_automatic_draw<br></a>
+  		<li><a href="part_system_update.html">part_system_update<br></a>
+  		<li><a href="part_system_drawit.html">part_system_drawit<br></a>
+  		<li><a href="part_system_draw_order.html">part_system_draw_order<br></a>
+	</ol>
+</blockquote>
+
+<h3>Creating Particles Directly</h3>
+<p>
+Normally you would use <a href="../Particle%20Emitters/index.html">particle emitters</a> to burst or stream particles from an area, but in many cases these are not necessary and it is actually better to just 
+create the particles directly using the following functions:
+<p>
+<blockquote>
+	<ol>
+  		<li><a href="part_particles_create.html">part_particles_create<br></a>
+  		<li><a href="part_particles_create_color.html">part_particles_create_color<br></a>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Particles</a>
+	</div>
+	<!--<div style="float:right">
+		Next : <a href="Setting_Up_GM.html">  </a>
+	</div>-->
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+-->

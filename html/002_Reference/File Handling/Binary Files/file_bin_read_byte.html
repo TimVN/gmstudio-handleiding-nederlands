@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>file_bin_read_byte</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>file_bin_read_byte</h1>
+  
+<h2>Reads a byte of data from the file and returns this.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">file_bin_read_byte(fname);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>fname</td>
+	<td>The name of the file to get the data from.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>real.
+</p>
+
+<p>
+<i><b>NOTE : </b>These functions <b>do not</b> work when the target module is HTML5</i>.
+<br>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+file = file_bin_open('myfile.bin', 2);<br>
+data = file_bin_read_byte(file);<br>
+file_bin_close(file);<br>
+</p>
+<p>
+This would open a file from the same directory as the game, and get a byte of data from it before closing it again.
+<p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Binary Files</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="file_bin_open.html">file_bin_open</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!--KEYWORDS
+file_bin_read_byte
+-->

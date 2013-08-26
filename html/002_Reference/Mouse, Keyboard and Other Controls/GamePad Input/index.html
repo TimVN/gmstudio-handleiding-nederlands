@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>GamePad Input</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>GamePad Input</h1>
+
+<h2>This section deals with gamepad input for your game.</h2>
+
+<p>
+<i>GameMaker:Studio</i> has a number of dedicated functions that can be used to detect both analogue and digital controls from multiple connected gamepads. These functions work similar to the 
+<a href="../Device%20input/index.html">Device Inputs</a>, in that you can detect up to four different gamepads that are connected and deal with the input from each one using the same functions.
+<br>
+<br>
+
+When working with the gamepad functions, there are a number of built-in constants that should be used for getting/defining buttons and stick axis etc... :
+<p>
+<div class="compat">
+	<table>
+	
+		<tr><th>Constant</th><th>Description</th></tr>
+		<tr><td>gp_face1</td><td>Top button 1 (this maps to the <i>"A"</i> on an Xbox 360 controller and the <i>cross</i> on a PS3 controller)</td></tr>
+		<tr class="alt"><td>gp_face2</td><td>Top button 2 (this maps to the <i>"B"</i> on an Xbox 360 controller and the <i>circle</i> on a PS3 controller)</td></tr>
+		<tr><td>gp_face3</td><td>Top button 3 (this maps to the <i>"X"</i> on an Xbox 360 controller and the <i>square</i> on a PS3 controller)</td></tr>
+		<tr class="alt"><td>gp_face4</td><td>Top button 4 (this maps to the <i>"Y"</i> on an Xbox 360 controller and the <i>triangle</i> on a PS3 controller)</td></tr>
+		
+		<tr><td>gp_shoulderl</td><td>Left shoulder button</td></tr>
+		<tr class="alt"><td>gp_shoulderr</td><td>Right shoulder button</td></tr>
+		
+		<tr><td>gp_shoulderrb</td><td>Left shoulder trigger</td></tr>
+		<tr class="alt"><td>gp_shoulderrb</td><td>Right shoulder trigger</td></tr>
+
+		<tr><td>gp_select</td><td>The select button</td></tr>
+		<tr class="alt"><td>gp_start</td><td>The start button</td></tr>
+		
+		<tr><td>gp_stickl</td><td>The left stick pressed (as a button)</td></tr>
+		<tr class="alt"><td>gp_stickr</td><td>The right stick pressed (as a button)</td></tr>
+		
+		<tr><td>gp_padu</td><td>D-pad up</td></tr>
+		<tr class="alt"><td>gp_padd</td><td>D-pad down</td></tr>
+		<tr><td>gp_padl</td><td>D-pad left</td></tr>
+		<tr class="alt"><td>gp_padr</td><td>D-pad right</td></tr>
+		
+		<tr><td>gp_axislh</td><td>Left stick horizontal axis (analogue)</td></tr>
+		<tr class="alt"><td>gp_axislv</td><td>Left stick vertical axis  (analogue)</td></tr>
+		<tr><td>gp_axisrh</td><td>Right stick horizontal axis  (analogue)</td></tr>
+		<tr class="alt"><td>gp_axisrv</td><td>Right stick vertical axis  (analogue)</td></tr>
+		
+	</table>
+</div>
+<p>
+<br>
+To better understand exactly what part of the controller each constant represents, you can refer to the following image of a standard gamepad:
+
+<img class="center" src="GamePad.png"></img>
+
+<p>
+Below you can find a list of all the gamepad functions:
+<blockquote>
+	<ol>
+		<li><a href="gamepad_is_supported.html">gamepad_is_supported</a><br>
+		<li><a href="gamepad_get_device_count.html">gamepad_get_device_count</a><br>
+		<li><a href="gamepad_is_connected.html">gamepad_is_connected</a><br>		
+		<li><a href="gamepad_get_description.html">gamepad_get_description</a><br>
+		<li><a href="gamepad_get_button_threshold.html">gamepad_get_button_threshold</a><br>
+		<li><a href="gamepad_set_button_threshold.html">gamepad_set_button_threshold</a><br>
+		<li><a href="gamepad_axis_count.html">gamepad_axis_count</a><br>
+		<li><a href="gamepad_axis_value.html">gamepad_axis_value</a><br>
+		<li><a href="gamepad_button_check.html">gamepad_button_check</a><br>
+		<li><a href="gamepad_button_check_pressed.html">gamepad_button_check_pressed</a><br>
+		<li><a href="gamepad_button_check_released.html">gamepad_button_check_released</a><br>
+		<li><a href="gamepad_button_count.html">gamepad_button_count</a><br>
+		<li><a href="gamepad_button_value.html">gamepad_button_value</a><br>
+		<li><a href="gamepad_set_vibration.html">gamepad_set_vibration</a><br>
+	</ol>
+</blockquote>
+
+<h3>Compatibility</h3>
+<p>
+The following list shows current compatibility across the platforms (note that this will change with future updates):
+<blockquote>
+	<ul>
+		<li>Windows is fully supported with up to a maximum of 4 connected devices permitted at once.<br><br>
+		
+		<li>MacOS is fully supported with up to a maximum of 4 connected devices permitted at once.<br><br>
+		
+		<li>HTML5 games are only supported by Google Chrome (which should theoretically support any number of devices). At the moment no other browsers support gamepads like this, but future 
+		updates should extend this functionality to full, cross-browser support.<br><br>
+
+		<li>Gamepad support also extends to iOS with the <b>iCade</b> cabinet. The left axis maps to the stick controller (although the input is digital, not analogue), the four "face" buttons map to the 
+		cabinet front buttons, and the four shoulder buttons map to those at the back of the cabinet.<br><br>
+		
+		<li>Android supports NYKO controllers and generic Bluetooth controllers, but only when they are enabled, meaning that you will have to tick the iCade/Bluetooth option in the 
+		<a href="../../../001_Advanced%20Use/Global%20game%20settings/Android%20Tab.html">Android Tab</a> of the <b>Global Game Settings</b>. They require API level 12 for them to work fully and it should be noted that 
+		<i>GameMaker:Studio</i> will register as connected any Bluetooth devices that your device is paired with, whether or not it’s actually connected. Therfore this should be taken into account when assigning 
+		and checking "slots".<br><br>
+	</ul>
+</blockquote>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="../index.html">Mouse, Keyboard and Other Controls</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="../Joystick%20Input/index.html">Joystick Input</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+GamePad Input
+xbox controllers
+iCade
+playstation controllers
+analogue controllers
+joypad
+gp_face1
+gp_face2
+gp_face3
+gp_face4
+gp_shoulderl
+gp_shoulderr
+gp_shoulderrb
+gp_shoulderrb
+gp_select
+gp_start
+gp_stickl
+gp_stickr
+gp_padu
+gp_padd
+gp_padl
+gp_padr
+gp_axislh
+gp_axislv
+gp_axisrh
+gp_axisrv
+-->

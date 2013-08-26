@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>buffer_base64_decode</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>buffer_base64_decode</h1>
+  
+<h2>Decode a base64 encoded string into a buffer at the given offset.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">buffer_base64_decode(buffer, string, offset);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+	<table>
+		<tr><th>Argument</th><th>Description</th></tr>
+		
+		<tr><td>buffer</td>
+		<td>The index of the buffer to decode the string into.</td></tr>
+		
+		<tr class="alt"><td>string</td>
+		<td>The base64 encoded string to decode.</td></tr>
+		
+		<tr><td>offset</td>
+		<td>The data offset value.</td></tr>
+		
+	</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can decode a base64 encoded string (created using the <a href="buffer_base64_encode.html"><tt>buffer_base64_encode</tt></a> function) into a buffer. Unlike the function 
+<a href="buffer_base64_decode.html"><tt>buffer_base64_decode</tt></a>, this will <i>not</i> create a buffer for you, but rather you should already have created the buffer (see 
+<a href="buffer_create.html"><tt>buffer_create</tt></a>), the id of which you would then use with this function. The "offset" is the position within the buffer to decode the given string (in bytes).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+buff = buffer_create(16384, buffer_grow, 2);<br>
+ini_open("Save.ini");<br>
+var str = ini_read_string("Save", "Slot1", "");<br>
+buffer_base64_decode_ext(buff, str, 0);<br>
+ini_close();
+</p>
+<p>
+The above code will create a buffer and store the unique id for it in the variable "buff", then open an ini file and read a string from it into the local variable "str". This string is then decoded into 
+the newly created buffer before closing the ini file again.
+</p>
+</p>
+<p>
+
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Buffers</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="buffer_create.html">buffer_create</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5>
+</body>
+</html>
+
+<!-- KEYWORDS
+buffer_base64_decode
+--> 

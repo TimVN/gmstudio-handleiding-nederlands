@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>room_duplicate</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>room_duplicate</h1>
+
+<h2>This will duplicate a room.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">room_duplicate(ind);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>ind</td>
+	<td>The index of the original room to be duplicated.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This will duplicate a given room and return the duplicates index to be used in all further calls to reference the new room.
+<br>
+<br>
+
+<i><b>NOTE : </b> New rooms are not part of usual room ordering, so they do not have a "previous" or "next" room (meaning that the functions <a href="room_next.html"><tt>room_next</tt></a> 
+and <a href="room_previous.html"><tt>room_previous</tt></a> will not work). To jump from the added room to another, you must use the index of the room itself.</i>
+<br>
+<br>
+
+<i><b>NOTE : </b>This functionality is limited to the <a href="../../000_Using%20GameMaker/Versions.html">Standard Version</a> of <i>GameMaker:Studio</i> and above.</i>
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+global.myroom = room_duplicate(rm_level);
+</p>
+<p>
+This will duplicate the room indexed by "rm_level" and assign the room index of this new room to the variable "global.myroom".
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Rooms</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="room_assign.html">room_assign</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+room_duplicate
+-->

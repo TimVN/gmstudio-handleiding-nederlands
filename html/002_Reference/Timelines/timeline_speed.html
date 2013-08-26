@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>timeline_speed</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>timeline_speed</h1>
+
+<h2>Sets the speed that a time line will run at.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">timeline_speed;</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>Real
+</p>
+
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+Normally, in each step the position in the time line is increased by 1, however you can change this amount by setting this variable to a different value. You can use real numbers (like 0.5, or 2.4 for example) 
+and if the value is larger than one, several moments can happen within the same time step (they will all be performed in the same order as defined for the time line, so no actions will be skipped). You can 
+also use a negative value to let the time line play backwards (until it reaches moment 0, at which point it will stop unless the <a href="timeline_loop.html"><tt>timeline_loop</tt></a> variable is set to 
+true).
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if !timeline_running<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;timeline_running = true;<br>
+&nbsp;&nbsp;&nbsp;timeline_speed = 0.5;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will check and see if the instance is running its associated time line and if it is not, it will start the time line running at half speed.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Timelines</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="timeline_position.html">timeline_position</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+timeline_speed
+-->

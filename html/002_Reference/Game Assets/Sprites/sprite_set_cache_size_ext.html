@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>sprite_set_cache_size_ext</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>sprite_set_cache_size_ext</h1>
+
+<h2>Sets the size of the cache for a given sub-image of a sprite.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">sprite_set_cache_size_ext(ind, index, max);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>ind</td>
+	<td>The index of the sprite to change the cache size of.</td></tr>
+	
+	<tr class="alt"><td>index</td>
+	<td>The subimage of ind to change the cache size of.</td></tr>
+	
+	<tr><td>max</td>
+	<td>The maximum number of cached copies of the sprite that can be stored.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+When performing image blending, HTML5 cannot do it dynamically in the same way an executable could be performed. Therefore <i>GameMaker:Studio</i> has to temporarily save a blended 
+copy of the image and load it in. This function sets how many blended copies of the given sprite can be cached before old ones are overwritten. Default is 4. This is applied to one single given 
+subimage of the sprite.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+sprite_set_cache_size_ext(sprite0, 0, 2);
+</p>
+<p>
+This will set the sprite cache of the first subimage of sprite0 to 2 copies.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sprites</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="sprite_save.html">sprite_save</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+  
+<!--KEYWORDS
+sprite_set_cache_size_ext
+-->

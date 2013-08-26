@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Expressions</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Expressions</h1>
+
+<h2>This section deals with the different mathematical expressions.</h2>
+<p>
+Expressions can be real numbers (e.g. 3.4), hexadecimal numbers starting with a $ sign (e.g. $00FFAA), strings between single or double quotes (e.g. 'hello' or "hello") or more complicated expressions. 
+For expressions, the following binary operators exist (in order of priority):
+<br>
+<br>
+<br>
+
+<blockquote>
+	<b>=</b> - Used to assign a value to a variable. Note that this can <i>also</i> be used for comparing variables in <i>GameMaker:Studio</i> and you may see this in examples and other peoples codes. 
+	However, this is a legacy from old <i>GameMaker</i> versions and you should use the <b>==</b> operators for comparing and <b>=</b> for assigning, as shown in these examples:<br><br>
+		<p class="code">
+		a = 12;
+		speed = 5;
+		val = (old_val + 5);
+		</p>
+	<p>
+	<hr>
+	<br>
+
+	<b>&amp;&amp;, ||, ^^ (and, or and xor)</b> - Combine Boolean values to give either true or false. If any of the following examples resolves to <tt>true</tt> then the code would be run:
+		<p class="code">
+		if (a == b &amp;&amp; c == d) {do something...}// and<br>
+		if (a == b || c ==d) {do something...}// or<br>
+		if (a == b ^^ c == d) {do something...} // xor<br>
+		</p>
+	<p>
+	<hr>
+	<br>
+
+	<b>&lt;, &lt;=, ==, !=, &gt;, &gt;=</b> - These are comparisons and can only give a <tt>true</tt> or <tt>false</tt> result (where true can also be interpreted as 1, and false as 0). Examples of use:
+		<p class="code">
+		if (a &lt; b)  {do something...}<br>
+		if (a != b)  {do something...}<br>
+		</p>
+	<p>
+	<hr>
+	<br>
+
+	<b>|, &amp;, ^, &lt;&lt;, &gt;&gt;</b> : You can perform bitwise operations with these, where | = bitwise or, &amp; = bitwise and, ^ = bitwise xor, &lt;&lt; = shift left, &gt;&gt; = shift right. Examples of use:
+		<p class="code">
+		x = (x &amp; $ffffffe0) + 32;<br>
+		if (y ^ $1f) > 0 {do something...};<br>
+		</p>
+	<p>
+	<hr>
+	<br>
+
+	<b>+, -, *, /</b> - Add, subtract, multiply and divide. Examples of use:
+		<p class="code">
+		c = a * b; <br>
+		str = a + "world"; <br>
+		</p>
+	<p>
+	<hr>
+	<br>
+	
+	<b>++, --</b> - Add or subtract <i>one</i> from a value. It is worth noting that placing this before or after the value to be added to or subtracted from will have slightly different results. For example:
+		<ul>
+			<li><b>++a</b> will increment the variable and return the incremented value.
+			<li><b>a++</b> will increment the variable but return the value before it was incremented.
+		</ul>
+	<p>
+	Therefore, if you have something like this:
+		<p class="code">
+		var a = 1;<br>
+		show_debug_message(string(a++));<br>
+		show_debug_message(string(++a));<br>
+		</p>
+	<p>
+	The debug output would be 1 and 3. Here are some examples of use:
+		<p class="code">
+		for (i = 0; i &lt; 10; i++) {do something...};<br>
+		if hit == true score--;<br>
+		</p>
+	<p>
+	<hr>
+	<br>
+
+	<b>div, mod (%)</b> - Division and modulo, where div gives you the amount a value can be divided into in whole numbers with no remainders, while mod gives you only the remainder of a division. Examples 
+	of use:
+		<p class="code">
+		secs = time mod 60;<br>
+		time_str = string(time div 60);<br>
+		</p>
+	<p>
+	<hr>
+	<br>
+</blockquote>
+
+<p>
+Also, the following unary operators exist:
+<blockquote>
+	<ul>
+	  <li><b>! (not)</b> : not, turns true into false and false into true</li>
+	  <li><b>-</b> : negates the next value</li>
+	  <li><b>~</b> : negates the next value bitwise</li>
+	</ul>
+</blockquote>
+
+<p>
+As values you can use numbers, variables, or functions that return a value, and sub-expressions can be placed between brackets too. All operators work for real values, but comparisons also work for strings 
+and + concatenates strings.
+<br>
+<br>
+
+<p>
+<b><i>Note : </b>Contrary to certain languages, both arguments to a Boolean operation are always computed, even when the first argument already determines the outcome.</i>
+<br>
+<br>
+
+<p>
+Here are some final examples of the various different expressions:
+<br>
+<br>
+<p class="code">
+{<br>
+  x = 23;<br>
+  color = $FFAA00;<br>
+  str = 'hello world';<br>
+  y += 5;<br>
+  x *= y;<br>
+  x = y &lt;&lt; 2;<br>
+  x = 23 * ((2 + 4) / sin(y));<br>
+  str = 'hello' + &quot; world&quot;;<br>
+  b = (x &lt; 5) &amp;&amp; !(x==2 || x==4);<br>
+}<br>
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_07_if.html">The "If" Statement</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+div
+mod
+bitwise operators
+bitshift
+and
+or
+xor 
+&amp;&amp;
+||
+^^
+%
+|
+&amp;
+^
+&lt;&lt;
+&gt;&gt;
+bitwise or
+bitwise and
+bitwise xor
+bitshift left
+bitshift right
+&lt;
+&lt;=
+==
+!=
+&gt;
+&gt;=
+++
+--
+--> 

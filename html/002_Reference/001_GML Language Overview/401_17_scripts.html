@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Scripts</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+</head>
+<body>
+
+<h1>Scripts</h1>
+
+<h2>Scripts are an important part of GML and this section explains their use.</h2>
+<p>
+
+When you create a script, you want to access the arguments passed to it, either when using the script action, or when calling the script as a function from a program (or from another, or even the same script). These
+arguments are stored in the variables <tt>argument0</tt>, <tt>argument1</tt>, ..., <tt>argument15</tt>. So there can be at most 16 arguments. (Note that when calling the script from an action, only the first 
+5 arguments can be specified.) You can also use <tt>argument[0 ... 15]</tt> to reference the arguments passed to the script as an array.
+<br>
+<br>
+
+<p>
+Scripts can also return a value, so that they can be used in expressions. For this end you use the return statement:
+
+<p class="code">
+return &lt;expression&gt;
+</p>
+
+<p>
+<br>
+It should be noted that the execution of the script ends at the return statement, meaning that any code which comes after the return has been called <i>will not be run</i>. Here is a short example 
+script called "scr_sqr" which calculates the square of whatever value is passed to it, and it includes error catching in case the argument that it is passed is not a real number :
+<br>
+<br>
+<p class="code">
+{<br>
+if !is_real(argument0)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;return 0;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;return (argument0 * argument0);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+}
+</p>
+
+<p>
+<br>
+To call a script from within a piece of code, just act the same way as when calling functions - that is, write the script name with the argument values in parentheses. So, the above script would be called 
+like this :
+<br>
+<br>
+<p class="code">
+if keyboard_check_pressed(vk_enter)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;val = scr_sqr(amount);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+
+<p>
+It is sometimes necessary for you to know how many arguments that a script has been passed from the code that calls it, and so <i>GameMaker:Studio</i> also provides the following <b>read-only</b> 
+variable for this:
+<blockquote>
+	<ol>
+	<a href="argument_count.html">argument_count</a>
+	</ol>
+</blockquote>
+
+<p>
+<br>
+<br>
+For more information on scripts please see <a href="../../001_Advanced%20Use/006_Scripts.html">Advanced Use - Scripts</a>.
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">GML Overview</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="401_19_comment.html">Comments in Code</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+return
+scripts
+arguments
+--> 

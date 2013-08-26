@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>network_set_timeout</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>network_set_timeout</h1>
+  
+<h2>Set the timeout for readeing and writing data through a socket.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">network_set_timeout(socket, read_timeout, write_timeout);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>socket</td>
+	<td>The id of the socket to use.</td></tr>
+	
+	<tr><td>read_timeout</td>
+	<td>The milliseconds in which a transfer from a server will timeout.</td></tr>
+
+	<tr><td>write_timeout</td>
+	<td>The milliseconds in which a transfer to a server will timeout.</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns: </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the timeout for reading and writing data to/from a server through the given socket. Note that the timeout does not generate any type of event, so you will need to deal with timeouts 
+yourself using alarms (for example). 
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+network_set_timeout(sock, 3000, 3000);</p>
+<p>
+The above code will set the timeout for reading and writing data through the socket indexed in the variable "sock" to 3 seconds.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Networking</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="network_send_broadcast.html">network_send_broadcast</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+network_set_timeout
+--> 

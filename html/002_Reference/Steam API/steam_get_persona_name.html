@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>steam_get_persona_name</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>steam_get_persona_name</h1>
+  
+<h2>Get the name of the user currently logged into the Steam client.</h2>
+  
+<h3>Syntax :</h3>
+<p class="code">steam_get_persona_name();</p>
+  
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns:</b> String
+</p>
+  
+<p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+You can use this function to return the user name of the user currently logged into the Steam client. This is the visible screen name and <i>not</i> the unique <b>user id</b> (this can be found using the 
+function <a href="steam_get_user_steam_id.html"><tt>steam_get_user_steam_id</tt></a>).
+<br>
+<br>
+
+<p>
+<br>
+</p>
+  
+<h3>Example :</h3>
+<p class="code">
+if steam_initialised()<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.p_name = steam_get_persona_name();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+</p>
+<p>
+The above code will set a global variable to current users screen name if the Steam client API is correctly initialised.
+</p>
+  
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Steam API</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="steam_get_user_steam_id.html">steam_get_user_steam_id</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+steam_get_persona_name
+-->

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>texture_set_blending</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>texture_set_blending</h1>
+
+<h2>Indicates whether to use blending with colors and alpha values.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">texture_set_blending(blend);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>blend</td>
+	<td>Turn blending on (<tt>true</tt>) or off (<tt>false</tt>)</td></tr>
+	
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function can be used to turn off all alpha and color blending in <i>GameMaker:Studio</i>. This will over-ride all other functions and means that all image assets (sprites and backgrounds) with an image alpha or 
+image blend other than 1 and c_white, will be drawn with an alpha of 1 and blended with the default white color. Switching this off can give a minor performance boost, but the default value is <tt>true</tt>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+if global.Blend<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;texture_set_blending(true);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;texture_set_blending(false);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+<p>
+The above code will turn interpolation on or off depending on the value of a global variable.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Drawing</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="texture_set_repeat.html">texture_set_repeat</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+texture_set_blending
+-->

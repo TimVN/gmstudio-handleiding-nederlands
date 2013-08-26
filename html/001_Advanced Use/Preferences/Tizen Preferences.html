@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Tizen Preferences</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>Tizen Preferences</h1>
+
+<h2>The section details the Tizen preferences tab.</h2>
+
+<p>
+<img class="center" src="Tizen_Prefs.png">
+
+The first thing to do before starting to test or create a Tizen game, is to set up this section of the preferences for the Tizen module. You must have the <b>Tizen SDK</b> installed (see the page on 
+<a href="../../000_Using%20GameMaker/001_Installation.html">Installation</a>) which you would then "point" to from the file dialogue labelled <b>Tizen SDK Location</b>. Apart from the SDK you will 
+also need to link to the <b>Java Runtime Location</b> as the Tizen SDK requires this.
+<br>
+<br>
+
+Once you have located the necessary files, you should proceed to <b>Check the Tizen SDK</b> by pressing the appropriate button on this tab, as this will get <i>GameMaker:Studio</i> to check that 
+the components  are installed and communicating with the program properly. If this shows <i>"SDK + JRE OK"</i> then you can begin to test your games on the Tizen target platform.
+<br>
+<br>
+
+If your development setup permits the creation of a virtual Tizen device, you should also press the <b>Create Emulator VM</b> to initialise the Tizen emulator and create a "template" of the 
+<i>GameMaker:Studio</i> virtual Tizen device, otherwise your game will not run correctly (if at all).
+<br>
+<br>
+
+Finally, you can add the signing certificate that the Tizen SDK generates. This is not necessary for testing the JS (Web) Tizen module or even for creating a final <b>*.wgt</b> file, but without it your game 
+will not be accepted onto the official Tizen Store. If you are compiling to the Native module, then the <b>*.p12</b> file is essential as without it your game will not compile. Further information on setting 
+up the Tizen module and aquiring the necessary files can be found on the <a href="http://wiki.yoyogames.com/index.php/Setup_GameMaker:Studio_for_Tizen" target="_blank">YoYo Games Wiki</a>.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Preferences</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="Mac%20Preferences.html">MacOSX Preferences</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+JRE
+Tizen
+Tizen SDK
+Tizen emulator
+Create Emulator VM
+-->

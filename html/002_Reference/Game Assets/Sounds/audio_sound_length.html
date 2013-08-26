@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>audio_sound_length</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>audio_sound_length</h1>
+
+<h2>Returns the length of the indexed sound.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">audio_sound_length(index);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>index</td>
+	<td>The index of the sound to check.</td></tr>
+
+</table>
+</div>
+<p>
+<br>
+</p>
+
+<p>
+<b>Returns : </b>Real
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+This function will return the length of the given sound in seconds. The sound can either be a referenced from index for an individual sound being played which has been stored in a variable when using the 
+<a href="audio_play_sound.html"><tt>audio_play_sound</tt></a> or <a href="audio_play_sound_at.html"><tt>audio_play_sound_at</tt></a> functions, or an actual sound asset from the resource tree.
+
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+var len;<br>
+len = audio_sound_length(snd_Beam);<br>
+audio_play_sound(snd_Beam, 1);<br>
+alarm[0] = room_speed * len;<br>
+</p>
+<p>
+The above code gets the length (in seconds) of the sound indexed in the variable "snd_Beam", then plays the sound and sets an alarm to go off when the sound has finished playing using the length of the sound to 
+calculate the time needed for the alarm.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Sound</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="audio_sound_pitch.html">audio_sound_pitch</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+audio_sound_length
+-->

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>buffer_poke</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>buffer_poke</h1>
+  
+<h2>Add data to a buffer at a specific position.</h2>
+
+<h3>Syntax :</h3>
+<p class="code">buffer_poke(buffer, offset, type, value);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+
+	<tr><td>buffer</td>
+	<td>The index of the buffer to use.</td></tr>
+	
+	<tr class="alt"><td>offset</td>
+	<td>The offset position (in bytes) within the buffer to write the given data to.</td></tr>
+	
+	<tr><td>type</td>
+	<td>The type of data that is to be written to the buffer (see the list of constants <a href="buffer_read.html">here</a>).</td></tr>
+	
+	<tr class="alt"><td>value</td>
+	<td>The data to add to the buffer, in accordance with the type specified.</td></tr>
+		
+</table>
+</div>
+
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With the <a href="buffer_write.html"><tt>buffer_write</tt></a> function, you can write data to the given buffer at the current "seek" position, with each piece of data advancing this position by the bytes being 
+written or read. However, it may be necessary for you to change a given piece of data without wanting to change the current seek position, and that's when you would use this function. You simply supply the function 
+with a buffer index, and then the offset position from the buffer start (in bytes) within that buffer to write to, as well as the data type and the value to be written.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+buffer_poke(buff, 3, buffer_u8, color_get_blue(image_blend));
+</p>
+<p>
+The above code will add the blue component value of the color used for the image blend into the buffer indexed in the variable "buff", at the third position in the buffer and as an unsigned 8bit value.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Buffers</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="buffer_save.html">buffer_save</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+buffer_poke
+--> 

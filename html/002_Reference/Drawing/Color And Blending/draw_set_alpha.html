@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>draw_set_alpha</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen" title="style" charset="utf-8"/>
+	</head>
+<body>
+
+<h1>draw_set_alpha</h1>
+
+<h2>Sets the base alpha blend for the draw functions.</h2>
+
+<h3>Syntax:</h3>
+<p class="code">draw_set_alpha(alpha);</p>
+
+<p>
+<br>
+</p>
+
+<div class="param">
+<table>
+	<tr><th>Argument</th><th>Description</th></tr>
+	
+	<tr><td>alpha</td>
+	<td>The alpha to set (between 0 and 1)</td></tr>
+</table>
+</div>
+<p>
+<br>
+</p>
+  
+<p>
+<b>Returns : </b>N/A
+</p>
+
+ <p>
+<br>
+</p>
+
+<h3>Description</h3>
+<p>
+With this function you can set the base draw alpha for the game. This value can be set from 0 to 1 with 0 being fully transparent and 1 being fully opaque (the default value), and will affect all further drawing, 
+including backgrounds, sprites, fonts, primitives and 3D. If any of those assets are drawn with their own alpha value changed, this will be added to the base alpha value set by this function, so a base alpha of 0.5 
+and a sprite being drawn with an alpha of 0.5 will actually draw the sprite with an alpha of 0.25.
+<br>
+<br>
+
+<p>
+<br>
+</p>
+
+<h3>Example :</h3>
+<p class="code">
+draw_set_alpha(0.5);<br>
+draw_set_color(c_black);<br>
+draw_text(x+5, y+5, "LEVEL 1");<br>
+draw_set_alpha(1);<br>
+draw_set_color(c_white);<br>
+draw_text(x, y, "LEVEL 1");<br>
+</p>
+<p>
+The above code will draw some text at the specified position with a shadow effect created by modified draw alpha and color.
+</p>
+
+<p>
+<br>
+</p>
+<p>
+
+<div class="clear">
+	<div style="float:left">
+		Back : <a href="index.html">Color And blending</a>
+	</div>
+	<div style="float:right">
+		Next : <a href="draw_set_color.html">draw_set_color</a>
+	</div>
+</div>
+</p>
+
+<h5>&copy; Copyright YoYo Games Ltd. 2013 All Rights Reserved</h5></body>
+</html>
+
+<!-- KEYWORDS
+draw_set_alpha
+-->
