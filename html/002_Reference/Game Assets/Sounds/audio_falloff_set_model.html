@@ -70,13 +70,13 @@ The falloff models that are affected by these arguments are represented in <i>Ga
 		<tr><td>audio_falloff_exponent_distance</td>								<td><br>gain = (listener_distance / reference_distance) ^ (-falloff_factor)<br><br></td></tr>
 		<tr class="alt"><td>audio_falloff_exponent_distance_clamped</td>	<td><br>distance = clamp(listener_distance, reference_distance, maximum_distance)<br>
 																													gain = (distance / reference_distance) ^ (-falloff_factor)<br><br></td></tr>
-		<tr><td>audio_falloff_inverse_distance</td>									<td><br>gain = reference_distance / (reference_distance + falloff_factor * (listener_distance – reference_distance))<br><br></td></tr>
+		<tr><td>audio_falloff_inverse_distance</td>									<td><br>gain = reference_distance / (reference_distance + falloff_factor * (listener_distance â€“ reference_distance))<br><br></td></tr>
 		<tr class="alt"><td>audio_falloff_inverse_distance_clamped</td>		<td><br>distance = clamp(listener_distance, reference_distance, maximum_distance)<br>
-																													gain = reference_distance / (reference_distance + falloff_factor * (distance – reference_distance))<br><br></td></tr>
+																													gain = reference_distance / (reference_distance + falloff_factor * (distance â€“ reference_distance))<br><br></td></tr>
 		<tr><td>audio_falloff_linear_distance</td>										<td><br>distance = min(distance, maximum_distance)<br>
-																													gain = (1 – falloff_factor * (distance – reference_distance) / (maximum_distance – reference_distance))<br><br></td></tr>
+																													gain = (1 â€“ falloff_factor * (distance â€“ reference_distance) / (maximum_distance â€“ reference_distance))<br><br></td></tr>
 		<tr class="alt"><td>audio_falloff_linear_distance_clamped</td>		<td><br>distance = clamp(listener_distance, reference_distance, maximum_distance)<br>
-																													gain = (1 – falloff_factor * (distance – reference_distance) / (maximum_distance – reference_distance))<br><br></td></tr>
+																													gain = (1 â€“ falloff_factor * (distance â€“ reference_distance) / (maximum_distance â€“ reference_distance))<br><br></td></tr>
 		<tr><td>audio_falloff_none</td>													<td><br>gain = 1<br><br></td></tr>
 
 	</table>

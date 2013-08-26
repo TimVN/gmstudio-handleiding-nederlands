@@ -18,7 +18,7 @@ simple GML which allows you to create even a single player game using the client
 <br>
 
 Basically, a socket is an object which can send, receive, connect and listen to <i>ports</i> on the network. These functions deal with just TCP/IP connections, which is what the internet is based on (IPv4 to 
-be more precise). In essence this lets you connect one socket using an IP address (letís say 192.168.1.10) to another socket on another IP address (say 192.168.1.11). Once connected, these two sockets can 
+be more precise). In essence this lets you connect one socket using an IP address (let‚Äôs say 192.168.1.10) to another socket on another IP address (say 192.168.1.11). Once connected, these two sockets can 
 send data back and forth using the <tt>network_send_*</tt> functions (like <a href="network_send_packet.html"><tt>network_send_packet</tt></a>) and the dedicated asynchronous event that is 
 triggered by them. This async event will generate a <a href="../../002_Reference/Data_Structures/DS_Maps/index.html"></tt>ds_map</tt></a> containing the data recieved as well as other details, and you 
 can find the complete details in the section on the <a href="../../001_Advanced%20Use/More%20About%20Async%20Events/Networking.html">Network Async Event</a>.
@@ -26,8 +26,8 @@ can find the complete details in the section on the <a href="../../001_Advanced%
 <br>
 
 Instead of programs having to read and deal with every bit of network traffic coming into a machine, IP addresses also deal with ports, which are numbered from 0 to 65535. This allows each program to get 
-only the packets of data that itís interested in, and not everything that has been sent by every program. This also saves considerable CPU time, as it seriously cuts down on data processing, so with 
-<i>GameMaker:Studio</i> you can also ìlistenî to ports. So, a server will create a socket, and then bind it to a specific port to listen to. It will then get notified of connections, disconnections and data transfers 
+only the packets of data that it‚Äôs interested in, and not everything that has been sent by every program. This also saves considerable CPU time, as it seriously cuts down on data processing, so with 
+<i>GameMaker:Studio</i> you can also ‚Äúlisten‚Äù to ports. So, a server will create a socket, and then bind it to a specific port to listen to. It will then get notified of connections, disconnections and data transfers 
 from that socket.
 <br>
 <br>

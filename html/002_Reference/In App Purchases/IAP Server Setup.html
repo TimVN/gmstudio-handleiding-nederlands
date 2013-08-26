@@ -26,13 +26,13 @@ First, when setting up your own server, you should be aware that <i>GameMaker:St
 </blockquote>
 
 <p>
-Once that is done you will need to add the necessary information too, so that when the API call of ì<b>products/purchases?product=</b>î is queried by the <i>GameMaker:Studio</i> runner the returned 
+Once that is done you will need to add the necessary information too, so that when the API call of ‚Äú<b>products/purchases?product=</b>‚Äù is queried by the <i>GameMaker:Studio</i> runner the returned 
 data is correctly formated. This means that the data must be provided in the form of JSON with the following format (using example values):
 <br>
 <br>
 <p class="code">
 [{<br>
-&nbsp;&nbsp;&nbsp;ìprice":"0.69",<br>
+&nbsp;&nbsp;&nbsp;‚Äúprice":"0.69",<br>
 &nbsp;&nbsp;&nbsp;"name":"Extra Levels Pack 1",<br>
 &nbsp;&nbsp;&nbsp;"product_id":3,<br>
 &nbsp;&nbsp;&nbsp;"url":"http://MacSweeneyServer.com/ExtraLevels1.zip",<br>
@@ -42,7 +42,7 @@ data is correctly formated. This means that the data must be provided in the for
 },<br>
 {<br>
 &nbsp;&nbsp;&nbsp;"price":"1.00",<br>
-&nbsp;&nbsp;&nbsp;"name":îExtra Levels Pack 2",<br>
+&nbsp;&nbsp;&nbsp;"name":‚ÄùExtra Levels Pack 2",<br>
 &nbsp;&nbsp;&nbsp;"product_id":3,<br>
 &nbsp;&nbsp;&nbsp;"url":"http://MacSweeneyServer.com/ExtraLevels2.zip",<br>
 &nbsp;&nbsp;&nbsp;"description":"Levels Pack 2"<br>
@@ -53,18 +53,18 @@ data is correctly formated. This means that the data must be provided in the for
 
 <p>
 <br>
-Please note that the values for the ìtitleî, ìdescriptionî and ìpriceî fields are only <i>placeholders</i> for iOS titles and the actual values are filled in from the settings on the Apple Store which also 
+Please note that the values for the ‚Äútitle‚Äù, ‚Äúdescription‚Äù and ‚Äúprice‚Äù fields are only <i>placeholders</i> for iOS titles and the actual values are filled in from the settings on the Apple Store which also 
 correctly adjusts the price according to region. On Android titles no such facility exists thus the values should be provided accurately.
 <br>
 <br>
 
-One last piece of JSON that must also be included is for when the <i>GameMaker:Studio</i> runner queries the API call of ì<b>admin/verify?receipt=</b>î. The returned data must be provided in the form 
+One last piece of JSON that must also be included is for when the <i>GameMaker:Studio</i> runner queries the API call of ‚Äú<b>admin/verify?receipt=</b>‚Äù. The returned data must be provided in the form 
 of JSON with the following format:
 <br>
 <br>
 <p class="code">
 [{<br>
-ìstatusî:îtrueî<br>
+‚Äústatus‚Äù:‚Äùtrue‚Äù<br>
 }]
 </p>
 
