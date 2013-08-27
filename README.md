@@ -18,7 +18,7 @@ Om de vertaling zo consistent mogelijk te houden, zijn er een aantal richtlijnen
 
 3.  Voorbeeldcode wordt niet vertaald, comments in voorbeeldcode wel.
 
-4.  Engelse termen die in GM zelf vaak gebruikt worden (bijvoorbeeld _resource_, _sprite_, _object_, _script_, _background_, ...), worden niet vertaald, maar wel verbogen alsof het Nederlandse woorden zijn.
+4.  Engelse termen die in GM zelf vaak gebruikt worden (bijvoorbeeld _resource_, _sprite_, _object_, _script_, _background_, _real_, _string_ ...), worden niet vertaald, maar wel verbogen alsof het Nederlandse woorden zijn.
 
 5.  We gebruiken de aanspreekvorm 'je' of 'jij', niet 'u'.
 
