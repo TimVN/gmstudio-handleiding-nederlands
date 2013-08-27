@@ -35,7 +35,7 @@ normal draw events, <b>but</b> the draw GUI event will always draw over anything
 <i><b>NOTE : </b>This event will, by default, draw 1:1 with the background <b>canvas</b> size, which can make things a little complicated, and perhaps unexpected in places, on those target platforms 
 that permit a fullscreen mode (HTML5, Windows, Ubuntu (Linux) and MacOS).</i> For example on HTML5, going fullscreen the GUI draws pretty small when everything else gets bigger because the background 
 surface is now the size of the screen. However, on Windows, Ubuntu (Linux) and MacOS when you go fullscreen it doesn't always change the size of the background canvas, meaning that whatever is drawn in 
-this event can be scaled up like everything else, but you can get around this if you use the <a href="../../002_Reference/Windows%20and%20Views/The%20Game%20Window/window_set_size.html">
+this event can be scaled up like everything else, but you can get around this if you use the <a href="../../002_Reference/Windows%20And%20Views/The%20Game%20Window/window_set_size.html">
 <tt>window_set_size</tt></a> to <i>force</i> it to be the same as the client area, then it will be small, just like the HTML5 one. You may also lock the GUI event to a specific size and this will then be 
 scaled to fit the display dimensions automatically by using the function <a href="../../002_Reference/Windows%20And%20Views/display_set_gui_size.html"><tt>display_set_gui_size</tt></a>.
 <br>

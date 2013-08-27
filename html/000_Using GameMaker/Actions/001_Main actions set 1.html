@@ -20,7 +20,7 @@ sprites, sounds and moving from room to room.
 
 <h3>Instances</h3>
 <p>
-<img src="../../images/createinstance.png" align="middle" align="left"><b>Create Instance</b>
+<img src="../../Images/createinstance.png" align="middle" align="left"><b>Create Instance</b>
 <br>
 With this action you can create an instance of an object. You specify which 
 object to create and the position for the new instance. If you check the <b>Relative</b> box, 
@@ -32,7 +32,7 @@ created instance the creation event is executed.
 <br>
 <br>
 
-<img src="../../images/create_motion.png" align="middle" align="left"><b>Create Moving</b>
+<img src="../../Images/create_motion.png" align="middle" align="left"><b>Create Moving</b>
 <br>
 This action works the same as the action above but with two additional fields. 
 You can now also specify the speed and direction of the newly created instance. 
@@ -46,7 +46,7 @@ in which the instance is moving.)
 <br>
 <br>
 
-<img src="../../images/create_multiple.png" align="middle" align="left"><b>Create Random</b>
+<img src="../../Images/create_multiple.png" align="middle" align="left"><b>Create Random</b>
 <br>
 This action lets you create an instance of one out of four objects. You specify
 the four objects and the position. An instance of one of these four objects
@@ -57,7 +57,7 @@ This is for example useful to generate a random enemy at a location.
 <br>
 <br>
 
-<img src="../../images/change.png" align="middle" align="left"><b>Change Instance</b>
+<img src="../../Images/change.png" align="middle" align="left"><b>Change Instance</b>
 <br>
 With this action you can change the current instance into an instance of 
 another object. So for example, you can change an instance of a bomb into 
@@ -67,14 +67,14 @@ event for the current object and the creation event for the new object.
 <br>
 <br>
 
-<img src="../../images/destroy.png" align="middle" align="left"><b>Destroy Instance</b>
+<img src="../../Images/destroy.png" align="middle" align="left"><b>Destroy Instance</b>
 <br>
 With this action you destroy the current instance. The destroy event 
 for the instance is executed.
 <br>
 <br>
 
-<img src="../../images/destroy_at.png" align="middle" align="left"><b>Destroy at Position</b>
+<img src="../../Images/destroy_at.png" align="middle" align="left"><b>Destroy at Position</b>
 <br>
 With this action you destroy all instances whose bounding box contains a 
 given position. This is useful, for example, when you use an exploding bomb. 
@@ -85,7 +85,7 @@ the position of the current instance.
 
 <h3>Sprites</h3>
 <p>
-<img src="../../images/set_sprite.png" align="middle" align="left"><b>Change Sprite</b>
+<img src="../../Images/set_sprite.png" align="middle" align="left"><b>Change Sprite</b>
 <br>
 Use this action to change the sprite for the instance. You indicate which new sprite. 
 You can also indicate with subimage must be shown. Normally you would use 0 for
@@ -102,7 +102,7 @@ you set the direction of motion and the sprite.
 <br>
 <br>
 
-<img src="../../images/set_sprite_scale.png" align="middle" align="left"><b>Transform Sprite</b>
+<img src="../../Images/set_sprite_scale.png" align="middle" align="left"><b>Transform Sprite</b>
 <br>
 Use this action to change the size and orientation of the sprite for the instance.
 Use the scale factors to make it larger or smaller. The angle gives the counter-clockwise
@@ -112,7 +112,7 @@ indicate whether the sprite should be mirrored horizontally and/or flipped verti
 <br>
 <br>
 
-<img src="../../images/set_sprite_color.png" align="middle" align="left"><b>Color Sprite</b>
+<img src="../../Images/set_sprite_color.png" align="middle" align="left"><b>Color Sprite</b>
 <br>
 Normally the sprite is drawn as it is defined. Using this action you can change the
 color of the sprite. This color is blended with the sprite, that is, it is combined
@@ -127,7 +127,7 @@ making explosions.
 
 <h3>Sounds</h3>
 <p>
-<img src="../../images/sound_play.png" align="middle" align="left"><b>Play Sound</b>
+<img src="../../Images/sound_play.png" align="middle" align="left"><b>Play Sound</b>
 <br>
 With this action you play one of the sound resources you added to your game. 
 You can select the sound you want to play and choose whether it should play only once 
@@ -137,14 +137,14 @@ sound is stopped.
 <br>
 <br>
 
-<img src="../../images/sound_stop.png" align="middle" align="left"><b>Stop Sound</b>
+<img src="../../Images/sound_stop.png" align="middle" align="left"><b>Stop Sound</b>
 <br>
 This action stops the indicated sound. If multiple instances of this sound 
 are playing all are stopped.
 <br>
 <br>
 
-<img src="../../images/if_sound.png" align="middle" align="left"><b>Check Sound</b>
+<img src="../../Images/if_sound.png" align="middle" align="left"><b>Check Sound</b>
 <br>
 If the indicated sound is playing the next action is performed. Otherwise 
 it is skipped. You can select <b>Not</b> to indicate that the next action 
@@ -160,7 +160,7 @@ it for a while (e.g. because of echo) and the action will still return true.
 
 <h3>Rooms</h3>
 <p>
-<img src="../../images/previous_room.png" align="middle" align="left"><b>Previous Room</b>
+<img src="../../Images/previous_room.png" align="middle" align="left"><b>Previous Room</b>
 <br>
 Move to the previous room. You can indicate the type of transition effect 
 between the rooms. You should experiment to see what works best for you. When the rooms do
@@ -169,33 +169,33 @@ If you are in the first room you get an error.
 <br>
 <br>
 
-<img src="../../images/next_room.png" align="middle" align="left"><b>Next Room</b>
+<img src="../../Images/next_room.png" align="middle" align="left"><b>Next Room</b>
 <br>
 Move to the next room. You can indicate the transition.
 <br>
 <br>
 
-<img src="../../images/current_room.png" align="middle" align="left"><b>Restart Room</b>
+<img src="../../Images/current_room.png" align="middle" align="left"><b>Restart Room</b>
 <br>
 The current room is restarted. You indicate the transition effect.
 <br>
 <br>
 
-<img src="../../images/goto_room.png" align="middle" align="left"><b>Different Room</b>
+<img src="../../Images/goto_room.png" align="middle" align="left"><b>Different Room</b>
 <br>
 With this action you can go to a particular room. You indicate the room and the 
 transition effect.
 <br>
 <br>
 
-<img src="../../images/previous_room.png" align="middle" align="left"><b> Check Previous</b>
+<img src="../../Images/previous_room.png" align="middle" align="left"><b> Check Previous</b>
 <br>
 This action tests whether the previous room exists. If so, the next action 
 is executed. You normally need this test before moving to the previous room.
 <br>
 <br>
 
-<img src="../../images/if_next_room.png" align="middle" align="left"><b>Check Next</b>
+<img src="../../Images/if_next_room.png" align="middle" align="left"><b>Check Next</b>
 <br>
 This action tests whether the next room exists. If so, the next action 
 is executed. You normally need this test before moving to the next room.

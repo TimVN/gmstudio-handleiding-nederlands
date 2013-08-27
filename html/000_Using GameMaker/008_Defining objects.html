@@ -42,7 +42,7 @@ and the instance is what we place in a room to make our game.
 To create an object in your game, choose <b>Create Object</b> from the <b>Resources</b> menu (or click the equivalent button on the toolbar) and the following window will open :
 
 <p>
-<img class="center" src="../images/form_object.png">
+<img class="center" src="../Images/form_object.png">
 
 <p>
 At first glance this may seem rather confusing, but the window is split into sections and we shall cover each one individually so you can get an overview of what they are for. Starting on the left, 
@@ -86,7 +86,7 @@ from collisions with non-solid objects and as such you are strongly advised to u
 You can set the <b>Depth</b> of the instances of an object, which basically controls whether they go below or above other objects at other depths. When instances are drawn on the screen they are drawn in 
 order of depth, with instances that have the highest depth being drawn first and instances with the lowest depth being drawn last. The following image illustrates this behaviour :#
 
-<img class="center" src="../images/Depth_Order.png">
+<img class="center" src="../Images/Depth_Order.png">
 
 It should be noted here that instances of the same depth that over-lap each other in the room editor (or in game) have <b>no</b> guaranteed priority over which one will be "on top" of the other and. If you want 
 to guarantee that an object lies on top of the others then you must give it a negative (or low) depth. Conversely If you want to make sure it lies below other instances then you have to give it a positive (high) depth. 
@@ -108,7 +108,7 @@ but unless you take great care to create and destroy persistent objects correctl
 One of the most powerful options within the object properties is the ability to assign a parent. Every object in the game can have a parent object, but what does this mean? Well, when an object has a parent, it can share code, 
 actions and events with that parent. This is called "inheritance" and an object that has a parent is called a "child". But that's not all! You can also do checks and run code on parent objects which automatically include the child 
 objects too which saves a lot of time and energy. Another way to look at a parent object is as a way to "group" objects together under the same umbrella and have them share certain things without loosing their own identity. 
-For more information on parents (and other advanced object properties) see <a href="../001_Advanced%20Use/More%20about%20Objects/index.html">More About objects</a>. Please note that you can click the <b>Parent</b> button 
+For more information on parents (and other advanced object properties) see <a href="../001_Advanced%20Use/More%20about%20objects/index.html">More About objects</a>. Please note that you can click the <b>Parent</b> button 
 to automatically open the assigned parent object.
 <br>
 <br>
@@ -134,7 +134,7 @@ to debug something within the object.
 <h3>Uses Physics</h3>
 <p>
 When you check this box you are telling <i>GameMaker:Studio</i> that this object should be part of a physics world. This will also open another part of the object window where you can define the physical properties of all 
-instances of this object. More information on this can be found in the Advanced Use section of the manual under <a href="../001_Advanced%20Use/More%20about%20Objects/index.html">More About objects</a>.
+instances of this object. More information on this can be found in the Advanced Use section of the manual under <a href="../001_Advanced%20Use/More%20about%20objects/index.html">More About objects</a>.
 <br>
 <br>
 

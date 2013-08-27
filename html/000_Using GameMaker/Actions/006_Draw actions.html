@@ -22,7 +22,7 @@ as invisible through code or through the object properties "visible" setting bei
 <h3>Drawing</h3>
 <p>
 
-<img src="../../images/drawself.png" align="middle" align="left"><b> Draw Self</b>
+<img src="../../Images/drawself.png" align="middle" align="left"><b> Draw Self</b>
 <br>
 When you add any type of action or code to the draw event of an object, you are telling <i>GameMaker:Studio</i> that you are taking over the draw event and that you will tell it what to draw from now on. This means 
 that any assigned sprite will no longer be drawn unless you explicitlt say so, which when you would use this action. This simply draws the assigned sprite for the object with any transforms that may have been set in previous 
@@ -30,20 +30,20 @@ events (like scaling, blending or changes in alpha) at the current sub-image.
 <br>
 <br>
 
-<img src="../../images/draw_sprite.png" align="middle" align="left"><b> Draw Sprite</b>
+<img src="../../Images/draw_sprite.png" align="middle" align="left"><b> Draw Sprite</b>
 <br>
 This will draw a sprite somewhere in the room. You specify the sprite, the position (either absolute or relative to the current instance position) and the subimage of the sprite (The subimages are numbered from 0 upwards). 
 If you have an animated sprite and you want it to draw the subimages as normal, use number -1. This action will not draw the sprite transformed, even if you have changed the image blend or scale.
 <br>
 <br>
 
-<img src="../../images/draw_background.png" align="middle" align="left"><b> Draw Background</b>
+<img src="../../Images/draw_background.png" align="middle" align="left"><b> Draw Background</b>
 <br>
 This will draw a background resource somewhere within the room. You indicate the background image, the position (absolute or relative) and whether the image should be tiled all over the room or not.
 <br>
 <br>
 
-<img src="../../images/draw_text.png" align="middle" align="left"><b> Draw Text</b>
+<img src="../../Images/draw_text.png" align="middle" align="left"><b> Draw Text</b>
 <br>
 With this action you can draw text anywhere in the room. You specify the text and the position to draw, but please note that there are certain conventions to follow when drawing text :
 <blockquote>
@@ -56,54 +56,54 @@ With this action you can draw text anywhere in the room. You specify the text an
 </blockquote>
 <p>
 
-<img src="../../images/draw_text_scaled.png" align="middle" align="left"><b> Draw Scaled Text</b>
+<img src="../../Images/draw_text_scaled.png" align="middle" align="left"><b> Draw Scaled Text</b>
 <br>
 This action is similar to the previous action but this time you can also specify a horizontal and vertical scaling factor to change the size of the text and you can also specify an angle to rotate it. 
 <br>
 <br>
 
-<img src="../../images/draw_rectangle.png" align="middle" align="left"><b> Draw Rectangle</b>
+<img src="../../Images/draw_rectangle.png" align="middle" align="left"><b> Draw Rectangle</b>
 <br>
 You specify the coordinates of the two opposite corners of the rectangle, either absolute or relative to the current instance position, and you can tell <i>GameMaker:Studio</i> to draw either a solid filled rectangle, or 
 just the outline. The color of the rectangle depends on the currently selected draw color (see the <b>Set Color</b> action below).
 <br>
 <br>
 
-<img src="../../images/draw_gradient_hor.png" align="middle" align="left"><b> Horizontal Gradient</b>
+<img src="../../Images/draw_gradient_hor.png" align="middle" align="left"><b> Horizontal Gradient</b>
 <br>
 This action also draws a rectangle but this time using a color gradient that changes from left to right. You can specify the size and position of the rectangle, either absolute or relative to the current instance position, and 
 the two colors to use in the gradient.
 <br>
 <br>
 
-<img src="../../images/draw_gradient_vert.png" align="middle" align="left"><b> Vertical Gradient</b>
+<img src="../../Images/draw_gradient_vert.png" align="middle" align="left"><b> Vertical Gradient</b>
 <br>
 This action also draws a rectangle but this time using a color gradient that changes from top to bottom. You can specify the size and position of the rectangle, either absolute or relative to the current instance position, and 
 the two colors to use in the gradient.
 <br>
 <br>
 
-<img src="../../images/draw_ellipse.png" align="middle" align="left"><b> Draw Ellipse</b>
+<img src="../../Images/draw_ellipse.png" align="middle" align="left"><b> Draw Ellipse</b>
 <br>
 With this action you can draw an ellipse. You specify the coordinates of the two opposite corners of the rectangle that would border the ellipse, either absolute or relative to the current instance position, and you can 
 tell <i>GameMaker:Studio</i> to draw either a solid filled ellipse, or just the outline. The color of the ellipse depends on the currently selected draw color (see the <b>Set Color</b> action below).
 <br>
 <br>
 
-<img src="../../images/draw_ellipse_gradient.png" align="middle" align="left"><b> Gradient Ellipse</b>
+<img src="../../Images/draw_ellipse_gradient.png" align="middle" align="left"><b> Gradient Ellipse</b>
 <br>
 As above, you draw an ellipse, but this time you can select a gradient of two colors to fill it from the center out to the border.
 <br>
 <br>
 
-<img src="../../images/draw_line.png" align="middle" align="left"><b> Draw Line</b>
+<img src="../../Images/draw_line.png" align="middle" align="left"><b> Draw Line</b>
 <br>
 This simply draws a line between the two points that you specify in the action, either absolute or relative to the current instance position. The color of the line depends on the currently selected draw color 
 (see the <b>Set Color</b> action below).
 <br>
 <br>
 
-<img src="../../images/draw_arrow.png" align="middle" align="left"><b> Draw Arrow</b>
+<img src="../../Images/draw_arrow.png" align="middle" align="left"><b> Draw Arrow</b>
 <br>
 With this action you can draw a simple arrow. Much like the <b>Draw Line</b> action, you specify the coordinates of the two endpoints of the arrow, either absolute or relative to the current instance position, 
 and the size of the arrow tip. The size is in pixels and is measured backwards from the end of the line, so that the point of the arrow adds nothing to the overall length. The color of the line depends on the currently 
@@ -118,19 +118,19 @@ need to set their action once in a game.
 <br>
 <br>
 
-<img src="../../images/set_color.png" align="middle" align="left"><b> Set Color</b>
+<img src="../../Images/set_color.png" align="middle" align="left"><b> Set Color</b>
 <br>
 Lets you set the color used for drawing shapes, lines, and text. This does not influence in any way sprites and backgrounds are drawn.
 <br>
 <br>
 
-<img src="../../images/set_font.png" align="middle" align="left"><b> Set Font</b>
+<img src="../../Images/set_font.png" align="middle" align="left"><b> Set Font</b>
 <br>
 You can set the font that is from this moment on used for drawing text, but this must be one of the font resources you have defined previously in the resource tree. If you choose No Font a default 12 point Arial font is used.
 <br>
 <br>
 
-<img src="../../images/fullscreen.png" align="middle" align="left"><b> Set Full Screen</b>
+<img src="../../Images/fullscreen.png" align="middle" align="left"><b> Set Full Screen</b>
 <br>
 With this action you can change the screen mode from windowed to fullscreen and back. You can indicate whether to toggle the mode or whether to go to windowed or fullscreen mode, making it an ideal action for use in any 
 kind of options menu for your game.
@@ -143,12 +143,12 @@ The following actions do <i>not</i> need to be called from the draw event.
 <br>
 <br>
 
-<img src="../../images/snapshot.png" align="middle" align="left"><b> Take Snapshot</b>
+<img src="../../Images/snapshot.png" align="middle" align="left"><b> Take Snapshot</b>
 <br>
 With this action you can take a snapshot image of the game while it is being played and store it in a .png file, the name of which you specify in the action.<br>
 <br>
 
-<img src="../../images/explosion.png" align="middle" align="left"><b> Create Effect</b>
+<img src="../../Images/explosion.png" align="middle" align="left"><b> Create Effect</b>
 <br>
 With this action you can create all sorts of basic effects in a very simple way. You specify the type of effect, e.g. an explosion or smoke, its position, its size and its color and whether it should be shown below the objects 
 (at a depth of 100000) or on top of them (at a depth of -100000). The rest is done automatically for you by the in-built <i>GameMaker:Studio</i> particle system (for more information on particles see - 

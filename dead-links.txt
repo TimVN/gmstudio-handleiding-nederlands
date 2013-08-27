@@ -1,0 +1,272 @@
+In file ./000_Using GameMaker/009_Distributing your game.html
+	011_Runtime.html
+	./000_Using GameMaker/011_Runtime.html
+
+In file ./000_Using GameMaker/Rooms/Backgrounds Tab.html
+	../../images/color_picker.png
+	./images/color_picker.png
+
+In file ./000_Using GameMaker/Versions.html
+	003_Getting started.html.html
+	./000_Using GameMaker/003_Getting started.html.html
+
+In file ./001_Advanced Use/Extensions/Creating Extensions.html
+	Creating_Extensions.html
+	./001_Advanced Use/Extensions/Creating_Extensions.html
+
+In file ./001_Advanced Use/Global game settings/Android Tab.html
+	Android_Amazon_Tab.png
+	./001_Advanced Use/Global game settings/Android_Amazon_Tab.png
+
+In file ./001_Advanced Use/Global game settings/Win8 Tab.html
+	Tizen	Tab.html
+	./001_Advanced Use/Global game settings/Tizen	Tab.html
+
+In file ./001_Advanced Use/index.html
+	More About Async Events/User Interactions.html
+	./001_Advanced Use/More About Async Events/User Interactions.html
+
+In file ./001_Advanced Use/More about sprites/Edit Menus/Edit Menu.html
+	Editing Sub-images.html
+	./001_Advanced Use/More about sprites/Edit Menus/Editing Sub-images.html
+
+In file ./001_Advanced Use/More about sprites/Edit Menus/Images Menu.html
+	colorizePartial_Image.png
+	./001_Advanced Use/More about sprites/Edit Menus/colorizePartial_Image.png
+
+In file ./001_Advanced Use/More about sprites/Edit Menus/Images Menu.html
+	colorize_Image.png
+	./001_Advanced Use/More about sprites/Edit Menus/colorize_Image.png
+
+In file ./001_Advanced Use/More about sprites/index.html
+	../Global game settings/007_Texture Groups.html
+	./001_Advanced Use/Global game settings/007_Texture Groups.html
+
+In file ./002_Reference/Mouse, Keyboard and Other Controls/index.html
+	../005_Game Graphics/index.html
+	./002_Reference/005_Game Graphics/index.html
+
+In file ./002_Reference/Mouse, Keyboard and Other Controls/Keyboard Input/keyboard_clear.html
+	keyboard_key_pressed.html
+	./002_Reference/Mouse, Keyboard and Other Controls/Keyboard Input/keyboard_key_pressed.html
+
+In file ./002_Reference/Mouse, Keyboard and Other Controls/Keyboard Input/keyboard_clear.html
+	keyboard_key_released.html
+	./002_Reference/Mouse, Keyboard and Other Controls/Keyboard Input/keyboard_key_released.html
+
+In file ./002_Reference/Mouse, Keyboard and Other Controls/Virtual Keys/index.html
+	../005_Game Graphics/index.html
+	./002_Reference/Mouse, Keyboard and Other Controls/005_Game Graphics/index.html
+
+In file ./002_Reference/017_Obsolete Functions/Obsolete Miscellaneous Functions.html
+	*.html
+	./002_Reference/017_Obsolete Functions/*.html
+
+In file ./002_Reference/Advertising and Analytics/index.html
+	../../001_Advanced UseGlobal game settingsAdvertising Tab.html
+	./001_Advanced UseGlobal game settingsAdvertising Tab.html
+
+In file ./002_Reference/Advertising and Analytics/index.html
+	../016_Misc functions/index.html
+	./002_Reference/016_Misc functions/index.html
+
+In file ./002_Reference/Asynchronous Functions/index.html
+	../Platform Specific Functions/index.html
+	./002_Reference/Platform Specific Functions/index.html
+
+In file ./002_Reference/Buffers/buffer_load.html
+	buffer.save.html
+	./002_Reference/Buffers/buffer.save.html
+
+In file ./002_Reference/Buffers/buffer_load_ext.html
+	buffer.save.html
+	./002_Reference/Buffers/buffer.save.html
+
+In file ./002_Reference/Buffers/index.html
+	../016_Misc functions/index.html
+	./002_Reference/016_Misc functions/index.html
+
+In file ./002_Reference/Cloud Services/index.html
+	../016_Misc functions/index.html
+	./002_Reference/016_Misc functions/index.html
+
+In file ./002_Reference/Date and Time/date_time_string.html
+	date_valid_date.html
+	./002_Reference/Date and Time/date_valid_date.html
+
+In file ./002_Reference/Date and Time/date_valid_datetime.html
+	date_valid_time.html
+	./002_Reference/Date and Time/date_valid_time.html
+
+In file ./002_Reference/Debugging/index.html
+	Setting_Up_GM.html
+	./002_Reference/Debugging/Setting_Up_GM.html
+
+In file ./002_Reference/Drawing/Color And Blending/index.html
+	../Sound/index.html
+	./002_Reference/Drawing/Sound/index.html
+
+In file ./002_Reference/Drawing/Drawing 3D/index.html
+	Setting_Up_GM.html
+	./002_Reference/Drawing/Drawing 3D/Setting_Up_GM.html
+
+In file ./002_Reference/Drawing/Drawing Basic Forms/index.html
+	Setting_Up_GM.html
+	./002_Reference/Drawing/Drawing Basic Forms/Setting_Up_GM.html
+
+In file ./002_Reference/Drawing/Drawing Surfaces/index.html
+	Setting_Up_GM.html
+	./002_Reference/Drawing/Drawing Surfaces/Setting_Up_GM.html
+
+In file ./002_Reference/Drawing/Drawing Text/index.html
+	../Sound/index.html
+	./002_Reference/Drawing/Sound/index.html
+
+In file ./002_Reference/Drawing/index.html
+	../Sound/index.html
+	./002_Reference/Sound/index.html
+
+In file ./002_Reference/File Handling/File System Limits.html
+	../011_Data Structures/index.html
+	./002_Reference/011_Data Structures/index.html
+
+In file ./002_Reference/File Handling/index.html
+	../011_Data Structures/index.html
+	./002_Reference/011_Data Structures/index.html
+
+In file ./002_Reference/File Handling/Ini files/ini_section_delete.html
+	ini_set.html
+	./002_Reference/File Handling/Ini files/ini_set.html
+
+In file ./002_Reference/Game Assets/Backgrounds/Background Tiles/index.html
+	Setting_Up_GM.html
+	./002_Reference/Game Assets/Backgrounds/Background Tiles/Setting_Up_GM.html
+
+In file ./002_Reference/Game Assets/Fonts/index.html
+	Setting_Up_GM.html
+	./002_Reference/Game Assets/Fonts/Setting_Up_GM.html
+
+In file ./002_Reference/Game Assets/index.html
+	Setting_Up_GM.html
+	./002_Reference/Game Assets/Setting_Up_GM.html
+
+In file ./002_Reference/Game Assets/Sounds/index.html
+	Setting_Up_GM.html
+	./002_Reference/Game Assets/Sounds/Setting_Up_GM.html
+
+In file ./002_Reference/Game Assets/Sounds/Legacy Sound/index.html
+	Setting_Up_GM.html
+	./002_Reference/Game Assets/Sounds/Legacy Sound/Setting_Up_GM.html
+
+In file ./002_Reference/HTML5/index.html
+	../016_Misc functions/index.html
+	./002_Reference/016_Misc functions/index.html
+
+In file ./002_Reference/In App Purchases/index.html
+	../016_Misc functions/index.html
+	./002_Reference/016_Misc functions/index.html
+
+In file ./002_Reference/Maths/index.html
+	../Dates and Times/index.html
+	./002_Reference/Dates and Times/index.html
+
+In file ./002_Reference/Movement and Collisions/Movement/move_wrap.html
+	.html
+	./002_Reference/Movement and Collisions/Movement/.html
+
+In file ./002_Reference/Networking/index.html
+	../../002_Reference/Data_Structures/DS_Maps/index.html
+	./002_Reference/Data_Structures/DS_Maps/index.html
+
+In file ./002_Reference/Networking/index.html
+	../016_Misc functions/index.html
+	./002_Reference/016_Misc functions/index.html
+
+In file ./002_Reference/Objects and Instances/index.html
+	../n/index.html
+	./002_Reference/n/index.html
+
+In file ./002_Reference/Objects and Instances/Instances/Instance Functions/instance_position.html
+	Setting_Up_GM.html
+	./002_Reference/Objects and Instances/Instances/Instance Functions/Setting_Up_GM.html
+
+In file ./002_Reference/Objects and Instances/Objects/object_set_mask.html
+	object_set_parent.html
+	./002_Reference/Objects and Instances/Objects/object_set_parent.html
+
+In file ./002_Reference/Operating System/index.html
+	../016_Misc functions/index.html
+	./002_Reference/016_Misc functions/index.html
+
+In file ./002_Reference/Particles/index.html
+	Setting_Up_GM.html
+	./002_Reference/Particles/Setting_Up_GM.html
+
+In file ./002_Reference/Particles/Particle Emitters/index.html
+	Setting_Up_GM.html
+	./002_Reference/Particles/Particle Emitters/Setting_Up_GM.html
+
+In file ./002_Reference/Particles/Particle Systems/index.html
+	Setting_Up_GM.html
+	./002_Reference/Particles/Particle Systems/Setting_Up_GM.html
+
+In file ./002_Reference/Particles/Particle Types/index.html
+	aaaa.html
+	./002_Reference/Particles/Particle Types/aaaa.html
+
+In file ./002_Reference/Particles/Simple Effects/index.html
+	Setting_Up_GM.html
+	./002_Reference/Particles/Simple Effects/Setting_Up_GM.html
+
+In file ./002_Reference/Rooms/index.html
+	Setting_Up_GM.html
+	./002_Reference/Rooms/Setting_Up_GM.html
+
+In file ./002_Reference/Social Gaming/Achievements and Leaderboards/index.html
+	../016_Misc functions/index.html
+	./002_Reference/Social Gaming/016_Misc functions/index.html
+
+In file ./002_Reference/Social Gaming/Facebook/index.html
+	../016_Misc functions/index.html
+	./002_Reference/Social Gaming/016_Misc functions/index.html
+
+In file ./002_Reference/Social Gaming/index.html
+	../016_Misc functions/index.html
+	./002_Reference/016_Misc functions/index.html
+
+In file ./002_Reference/Strings/index.html
+	../Dealing with Dates and time/index.html
+	./002_Reference/Dealing with Dates and time/index.html
+
+In file ./002_Reference/Surfaces/index.html
+	Setting_Up_GM.html
+	./002_Reference/Surfaces/Setting_Up_GM.html
+
+In file ./002_Reference/Timelines/index.html
+	../Rooms/index.html.html
+	./002_Reference/Rooms/index.html.html
+
+In file ./002_Reference/Timelines/index.html
+	timeline_moment_add_script.html
+	./002_Reference/Timelines/timeline_moment_add_script.html
+
+In file ./002_Reference/Windows And Views/index.html
+	../The Window/index.html
+	./002_Reference/The Window/index.html
+
+In file ./002_Reference/Windows And Views/Views/index.html
+	Setting_Up_GM.html
+	./002_Reference/Windows And Views/Views/Setting_Up_GM.html
+
+In file ./002_Reference/Windows8/index.html
+	../016_Misc functions/index.html
+	./002_Reference/016_Misc functions/index.html
+
+In file ./002_Reference/Windows8/Windows 8 Live Tile Templates.html
+	.html
+	./002_Reference/Windows8/.html
+
+In file ./002_Reference/Windows8/Windows 8 Phone/index.html
+	../016_Misc functions/index.html
+	./002_Reference/Windows8/016_Misc functions/index.html
+

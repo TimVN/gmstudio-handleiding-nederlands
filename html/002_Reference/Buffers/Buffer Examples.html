@@ -43,7 +43,7 @@ game_save_buffer(SaveBuffer);<br>
 </p>
 <p>
 The above will first set the control variable to true (so that this is saved when we save the game to the buffer) and then <i>seek</i> to the start of the buffer before writing the current save state into it. Why do 
-we use <a href="buffer_seek.html"><tt>buffer_seek</tt></a>? Well, as mentioned on the <a href="Using%20buffers.html">Using Buffers</a> page, you read and write to a buffer from the last position that data 
+we use <a href="buffer_seek.html"><tt>buffer_seek</tt></a>? Well, as mentioned on the <a href="Using%20Buffers.html">Using Buffers</a> page, you read and write to a buffer from the last position that data 
 was added to. This means that if you don't set the buffer <i>tell</i> back to the start then when you save you will be adding the data into the buffer at the current buffer read/write position, so we use the 
 function <tt>buffer_seek</tt> to move the <i>tell</i> to the buffer start.
 <br>

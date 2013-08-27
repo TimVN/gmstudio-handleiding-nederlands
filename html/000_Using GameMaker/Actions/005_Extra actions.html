@@ -19,7 +19,7 @@ The extras tab is dedicated mainly to the creation and use of <i>Particles</i> i
 
 <h3>Other Actions</h3>
 <p>
-<img src="../../images/setmouse.png" align="middle" align="left"><b>Set Mouse Cursor</b>
+<img src="../../Images/setmouse.png" align="middle" align="left"><b>Set Mouse Cursor</b>
 <br>
 This function allows you to set the cursor for the game to a sprite that you can choose from the resource tree. You are also given the option to hide the standard mouse cursor as well. This functionality is only valid 
 for Windows, Linux (Ubunto), MacOS and HTML5 targets.
@@ -37,14 +37,14 @@ and debris. Below you can finda list of all the actions available to create a pa
 <br>
 <br>
 
-<img src="../../images/partsystcreate.png" align="middle" align="left"><b>Particle System Create</b><br>
+<img src="../../Images/partsystcreate.png" align="middle" align="left"><b>Particle System Create</b><br>
 Before you can create any particles, you have to create the "system" that they are created in. This action will create that system and ask you for the depth that any particles you create will be drawn at. As with 
 objects and tiles, this depth can be a positive or a negative integer, with a high negative value placing it "above" other things and a high positive value placing it "below".
 <br>
 <br>
 
 <p>
-<img src="../../images/partsystdestroy.png" align="middle" align="left"><b>Particle System Destroy</b>
+<img src="../../Images/partsystdestroy.png" align="middle" align="left"><b>Particle System Destroy</b>
 <br>
 Particle systems take up memory space and if they are not managed properly, they can slow down and even crash your game. To prevent this you must destroy them when not in use with this action. Normally it 
 would go in the destroy event of the object that has the Particle System Create action, or in the <b>room end event</b> if there is nothing going to destroy it sooner (or even both events).
@@ -52,7 +52,7 @@ would go in the destroy event of the object that has the Particle System Create 
 <br>
 
 <p>
-<img src="../../images/partsystclear.png" align="middle" align="left"><b>Particle System Clear</b>
+<img src="../../Images/partsystclear.png" align="middle" align="left"><b>Particle System Clear</b>
 <br>
 This action will clear a system of all particles in it making all those that are visible on the screen disappear. This does <i>not</i> destroy the particle system, nor the particles and emitters, it only clears the screen 
 until moreparticles are emitted.
@@ -60,7 +60,7 @@ until moreparticles are emitted.
 <br>
 
 <p>
-<img src="../../images/parttypecreate.png" align="middle" align="left"><b>Particle Type Create</b>
+<img src="../../Images/parttypecreate.png" align="middle" align="left"><b>Particle Type Create</b>
 <br>
 Before you can see any particles in a system, they have to be created and defined, first with this action, and then (if necessary) with the other actions listed below. In this action you are able to specify the name of 
 the particle (type0 - type15), and choose whether to use your own custom sprite or one of the included particles which are shown in the image below :
@@ -74,7 +74,7 @@ grow (positive number) or shrink (negative number) after it has been created on 
 <br>
 
 <p>
-<img src="../../images/parttypecolor.png" align="middle" align="left"><b>Particle Color</b>
+<img src="../../Images/parttypecolor.png" align="middle" align="left"><b>Particle Color</b>
 <br>
 With this action you can set the colors of the particles as well as the alpha (transparency, with 1 being fully opaque and 0 being fully transparent) and how the colors are to be used, either fading over the life of 
 the particle from color1 to color2 (changing) or having each particle choose a permanent color from those specified (mixed). Note that "alpha" has a start and end value so you can make particles fade out or in over 
@@ -83,7 +83,7 @@ their lifetime on the screen.
 <br>
 
 <p>
-<img src="../../images/parttypelife.png" align="middle" align="left"><b>Particle Life</b>
+<img src="../../Images/parttypelife.png" align="middle" align="left"><b>Particle Life</b>
 <br>
 The lifetime of a particle is the time it takes, in steps, from the moment it is created to the moment it disappears from the screen. With this action you specify the particle and a minimum and maximum lifetime 
 or your particles, with each individual particle having a life somewhere within that range. If you wish them all to have the same lifetime then set both values to be the same.
@@ -91,7 +91,7 @@ or your particles, with each individual particle having a life somewhere within 
 <br>
 
 <p>
-<img src="../../images/parttypespeed.png" align="middle" align="left"><b>Particle Speed</b>
+<img src="../../Images/parttypespeed.png" align="middle" align="left"><b>Particle Speed</b>
 <br>
 This action not only sets the speed of the particle but also its direction and whether or not it is affected by friction (causing it to slowdown over time). As with all other particle actions, you must first select a particle 
 type for the action to work on and then set the maximum and minimum speeds for the particles to be created with. Finally you set a directional range too, based on the standard <i>GameMaker:Studio</i> angles 
@@ -100,7 +100,7 @@ system, with 0 being right, 90 up, 180 left and 270 down and you can also set th
 <br>
 
 <p>
-<img src="../../images/parttypegravity.png" align="middle" align="left"><b>Particle Gravity</b>
+<img src="../../Images/parttypegravity.png" align="middle" align="left"><b>Particle Gravity</b>
 <br>
 Particles can be affected by gravity too, so with this action you can select the particle type it has to affect and also the amount and the direction that it should "pull". The direction is based on the standard 
 <i>GameMaker:Studio</i> angles sytem, with 0 being right, 90 up, 180 left and 270 down.
@@ -108,7 +108,7 @@ Particles can be affected by gravity too, so with this action you can select the
 <br>
 
 <p>
-<img src="../../images/parttypesecondary.png" align="middle" align="left"><b>Particle Secondary</b>
+<img src="../../Images/parttypesecondary.png" align="middle" align="left"><b>Particle Secondary</b>
 <br>
 This action allows you to tell a particle to emit other particles at different times. The options are outlined below :
 <ul>
@@ -122,7 +122,7 @@ This action allows you to tell a particle to emit other particles at different t
 <p>
 
 <p>
-<img src="../../images/partemitcreate.png" align="middle" align="left"><b>Create Emitter</b>
+<img src="../../Images/partemitcreate.png" align="middle" align="left"><b>Create Emitter</b>
 <br>
 Once you have created your particle you will want to see it in the room, and when using actions the only way to do that is to use an emitter. An emitter is just another part of the particle system whose sole purpose 
 is to emit particles based on the parameters that you have defined for it. These parameters are the name (id) of the emitter, the shape of the emitter (an ellipse or a rectangle) and the coordinates <i>within the 
@@ -132,14 +132,14 @@ equal 0, the xmax equal the room width and the ymin equal 0 and the ymax equal t
 <br>
 
 <p>
-<img src="../../images/partemitdestroy.png" align="middle" align="left"><b>Destroy Emitter</b>
+<img src="../../Images/partemitdestroy.png" align="middle" align="left"><b>Destroy Emitter</b>
 <br>
 Like other things in a particle system, emitters take up memory and when one is no longer needed it should be destroyed using this action.
 <br>
 <br>
 
 <p>
-<img src="../../images/partemitburst.png" align="middle" align="left"><b>Burst From Emitter</b>
+<img src="../../Images/partemitburst.png" align="middle" align="left"><b>Burst From Emitter</b>
 <br>
 Particles can be either burst or streamed from an emitter, which means that they are all created at once (burst) or they are created over a set number of steps (streamed). This action controls the bursting of particles 
 and should be placed in any event where you need to create a group of particles at once (like in a mouse button event, for example). You choose the emitter to use, the particle type to burst and the number of those 
@@ -149,7 +149,7 @@ particle will be emitted.
 <br>
 
 <p>
-<img src="../../images/partemitstream.png" align="middle" align="left"><b>Stream From Emitter</b>
+<img src="../../Images/partemitstream.png" align="middle" align="left"><b>Stream From Emitter</b>
 <br>
 Particles can be either burst or streamed from an emitter, which means that they are all created at once (burst) or they are created over a set number of steps (streamed). This action controls the streaming of particles 
 and should only normally be used once in any instance. You choose the emitter to use, the particle type to stream and the number of those particles that should be emitted <i>every step</i> of the game while the 

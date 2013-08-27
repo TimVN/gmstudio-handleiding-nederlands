@@ -20,7 +20,7 @@ with a series of in-built variables that deal with these things, and these varia
 
 <h3>Score</h3>
 <p>
-<img src="../../images/set_score.png" align="middle" align="left"><b> Set Score</b>
+<img src="../../Images/set_score.png" align="middle" align="left"><b> Set Score</b>
 <br>
 With this action you can set the score to a value of your choice. Note that "score" is a <i>global</i> variable (see this section for more information : 
 <a href="../../002_Reference/001_GML%20Language%20Overview/Variables/index.html">Variables And Variable Scope</a>) and as such, this action can be placed in any object, meaning that (for example) 
@@ -29,20 +29,20 @@ flag it will just set the score to 10! You would normally un-check the relative 
 <br>
 <br>
 
-<img src="../../images/if_score.png" align="middle" align="left"><b> Test Score</b>
+<img src="../../Images/if_score.png" align="middle" align="left"><b> Test Score</b>
 <br>
 This action will check the value of the score against the value you input and return true if it meats the condition. The condition can be either equal to, greater than or less than and in this way you can have specific behaviours 
 for an instance depending on the current value of the score variable.
 <br>
 <br>
 
-<img src="../../images/draw_score.png" align="middle" align="left"><b> Draw Score</b>
+<img src="../../Images/draw_score.png" align="middle" align="left"><b> Draw Score</b>
 <br>
 You can use this action to draw the score variable anywhere on the screen, just provide the position and the caption to be shown beside the value. Please note that this action will only be valid when used in the <b>Draw Event</b>.
 <br>
 <br>
 
-<img src="../../images/highscore_clear.png" align="middle" align="left"><b> Clear Highscore</b>
+<img src="../../Images/highscore_clear.png" align="middle" align="left"><b> Clear Highscore</b>
 <br>
 With this action you are telling <i>GameMaker:Studio</i> to clear the high score table. <i>Warning!</i> This cannot be undone!
 <br>
@@ -50,7 +50,7 @@ With this action you are telling <i>GameMaker:Studio</i> to clear the high score
 
 <h3>Lives</h3>
 <p>
-<img src="../../images/set_life.png" align="middle" align="left"><b> Set Lives</b>
+<img src="../../Images/set_life.png" align="middle" align="left"><b> Set Lives</b>
 <br>
 Another global variable included with <i>GameMaker:Studio</i> is the one for lives (for more information on global variables see :
 <a href="../../002_Reference/001_GML%20Language%20Overview/Variables/index.html">Variables And Variable Scope</a>). Normally you would set it to some value like 3 at the beginning of the game 
@@ -59,21 +59,21 @@ the number of lives becomes 0 (or less than 0) a "no more lives" event is genera
 <br>
 <br>
 
-<img src="../../images/if_life.png" align="middle" align="left"><b> Test Lives</b>
+<img src="../../Images/if_life.png" align="middle" align="left"><b> Test Lives</b>
 <br>
 With this question action you can check whether the number of lives has reached a particular value. You indicate the value and whether the number of lives should be equal to, be smaller than, or be larger than the value. This can 
 be used, for example, to limit the lives that a player can pickup while playing a game and so keep them from going above a maximum value.
 <br>
 <br>
 
-<img src="../../images/draw_life.png" align="middle" align="left"><b> Draw Lives</b>
+<img src="../../Images/draw_life.png" align="middle" align="left"><b> Draw Lives</b>
 <br>
 You can use this action to draw the number of lives directly to the screen. You provide the position and the caption that must be placed in front of the number of lives, and then number of lives is drawn in the current font. 
 Please note that this action will only be valid when used in the <b>Draw Event</b>.
 <br>
 <br>
 
-<img src="../../images/draw_life_images.png" align="middle" align="left"><b> Draw Life Images</b>
+<img src="../../Images/draw_life_images.png" align="middle" align="left"><b> Draw Life Images</b>
 <br>
 Many games prefer to represent lives with some sort of graphic rather than straight text, and so <i>GameMaker:Studio</i> provides this action so you can get the same effect. You specify the position and the sprite image 
 to be used for each life and at the indicated position the number of lives is drawn as images. Please note that this action will only be valid when used in the <b>Draw Event</b>.
@@ -82,7 +82,7 @@ to be used for each life and at the indicated position the number of lives is dr
 
 <h3>Health</h3>
 <p>
-<img src="../../images/set_health.png" align="middle" align="left"><b> Set Health</b>
+<img src="../../Images/set_health.png" align="middle" align="left"><b> Set Health</b>
 <br>
 <i>GameMaker</i> includes a built-in health global variable (for more information on global variables see :
 <a href="../../002_Reference/001_GML%20Language%20Overview/Variables/index.html">Variables And Variable Scope</a>), and like the previous actions for score and lives, you can use this action to set and 
@@ -91,21 +91,21 @@ clamped to be within the range of 0 to 100 (where 0 is no health and 100 is full
 <br>
 <br>
 
-<img src="../../images/if_health.png" align="middle" align="left"><b> Test Health</b>
+<img src="../../Images/if_health.png" align="middle" align="left"><b> Test Health</b>
 <br>
 With this question action you can check whether the health has reached a particular value. You indicate the value and whether the health should be equal to, less than or greater than the value. One use for this is that when the 
 player health gets below a certain amount you could make some object flash to draw their attention to the fact.
 <br>
 <br>
 
-<img src="../../images/draw_health.png" align="middle" align="left"><b> Draw Health</b>
+<img src="../../Images/draw_health.png" align="middle" align="left"><b> Draw Health</b>
 <br>
 We have all seen a players health drawn in the game in the form of a bar that increases or decreases as the status of the player changes, well, this action permits you to draw the health variable in this way too. When the health 
 is at 100 the full bar is drawn and when it is at 0 the bar is empty, and you can indicate the position and size of the health bar as well as the color of the bar and its background.
 <br>
 <br>
 
-<img src="../../images/set_caption.png" align="middle" align="left"><b> Score Caption</b>
+<img src="../../Images/set_caption.png" align="middle" align="left"><b> Score Caption</b>
 <br>
 Normally in the window caption the name of the room and the score is displayed, but with this action you can change this to show the score, lives, health and what the caption for each of these must be, or not, as you wish. This 
 functionality is only valid for Windows, Ubuntu (Linux) and MacOS targets.
