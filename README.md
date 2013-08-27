@@ -6,6 +6,29 @@ Het doel van dit project is om de officiële GM:Studio handleiding te vertalen n
 Voor meer informatie:
 http://www.game-maker.nl/forums/topic,80474.0
 
+
+Richtlijnen voor vertalen
+-------------------------
+
+Om de vertaling zo consistent mogelijk te houden, zijn er een aantal richtlijnen die je moet volgen.
+
+1.  Bestandsnamen worden *nooit* vertaald.
+
+2.  Functienamen, constanten, en standaard globale en lokale variabelen worden *nooit* vertaald.
+
+3.  Voorbeeldcode wordt niet vertaald, comments in voorbeeldcode wel.
+
+4.  Engelse termen die in GM zelf vaak gebruikt worden (bijvoorbeeld _resource_, _sprite_, _object_, _script_, _background_, ...), worden niet vertaald, maar wel verbogen alsof het Nederlandse woorden zijn.
+
+5.  We gebruiken de aanspreekvorm 'je' of 'jij', niet 'u'.
+
+6.  In het Engels worden vaak meerdere woorden van een titel gescreven met een hoofdletter, bijvoorbeeld _Mouse, Keyboard and Other Controls_. In het Nederlands schrijven we dat met maar één hoofdletter, dus dit wordt _Muis, toetsenbord en andere besturingen_.
+
+7.  Het is het beste als meerdere bestanden van hetzelfde onderwerp vertaald worden door dezelfde persoon, dit geeft een consistentere vertaling.
+
+Deze richtlijnen zullen waarschijnlijk worden aangevuld naarmate de vertaling vordert.
+
+
 GitHub voor dummies
 -------------------
 
