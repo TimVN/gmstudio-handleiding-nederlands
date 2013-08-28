@@ -8,40 +8,38 @@
 </head>
 <body>
 
-<h1>Move Actions</h1>
+<h1>Bewegings acties</h1>
 
-<h2>The first set of actions consists of those related to the movement of instances.</h2>
+<h2>De eerste set acties bestaat uit acties gerelateerd aan de beweging van instanties.</h2>
 
 <p>
-The following actions can all be found on the first tab that you see when you open an object and has the label "<b>move</b>". These actions are all related in some way to the movement and position of an instance within the room.
+De volgende acties kunnen allemaal gevonden worden onder de eerste tab wanneer je een object opent. Het heeft het label "<b>move</b>". Deze acties zijn op een manier allemaal gerelateerd aan de beweging en positie van een instantie binnen de "room".
 <br>
 <br>
 
-<h3>Move</h3>
+<h3>Bewegen</h3>
 <p>
 <img src="../../Images/move.png" align="middle" align="left"><b>Move Fixed</b>
 <br>
-Use this action to start the instance moving in a particular direction. 
-You can indicate the direction using the buttons with the arrows on it. 
-Use the middle button to stop the motion. Also you need to specify 
-the speed of the motion. This speed is given in pixels per step. 
-Preferably don't use negative speeds. 
-You can specify multiple directions. In this case a random choice is made. 
-In this way you can let a monster start moving either left or right.
+Gebruik deze actie om een instantie te laten bewegen in een bepaalde richting.
+Je kunt de richting aangeven met de knoppen waar de pijlen op staan.
+Gebruik de middelste knop om de beweging te stoppen. Je moet ook de snelheid 
+an de beweging aangeven. Deze snelheid is gegeven in pixels per "step".
+Liever geen negatieve snelheden.
+Je kunt meerdere richtingen aangeven. In dit geval wordt er een willekeurige keuze gemaakt.
+Op deze manier kun je een monster bijvoorbeeld links of rechts laten bewegen.
 <br>
 <br>
 
 <img src="../../Images/set_direction.png" align="middle" align="left"><b>Move Free</b>
 <br>
-This is the second way to specify a motion. Here you can indicate a precise direction. 
-This is an angle between 0 and 360 degrees. 0 means to the right. 
-The direction is counter-clockwise. So for example 90 indicates an 
-upward direction. If you want an arbitrary direction, you can type 
-<tt>random(360)</tt>. As you will see below the function <tt>random</tt> gives 
-a random number smaller than the indicated value. As you might have noticed there 
-is a checkbox labeled <b>Relative</b>. If you check this, the new motion is added 
-to the previous one. For example, if the instance is moving upwards and you 
-add some motion to the left, the new motion will be upwards to the left.
+Dit is de tweede manier om een beweging aan te geven. Hier kun je een preciese richting aangeven.
+Dit is een hoek tussen 0 en 360 graden. 0 betekent rechts.
+De richting is linksom. 90 is bijvoorbeeld naar boven. Als je een willekeurige richting wil, kun je <tt>tandom(360)</tt> invoeren.
+Zoals je hieronder zult zien zal de functie <tt>random</tt> een willekeurige waarde geven die kleiner is dan de aangegeven waarde.
+Zoals je misschien wel gezien hebt is er een checkbox <b>Relative</b>. Als je dit aan checkt, wordt de nieuwe
+beweging toegevoegd aan de vorige. Als de instantie bijvoorbeeld omhoog aan het bewegen is en 
+je voegt een beweging naar links toe, zal de nieuwe beweging naar linksboven zijn.
 <br>
 <br>
 
